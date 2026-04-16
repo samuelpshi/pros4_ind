@@ -99,3 +99,39 @@
   - ACO: evaluate switching from current EMA fair value to KELP-style filtered mmbot mid + reversion_beta = −0.40 to −0.50
   - ACO: prototype the medium-term oscillation regime filter (position in trailing-500-tick range → directional bias)
   - Backtest all changes across all 3 days; accept only if mean PnL increases without large variance increase
+
+---
+
+## 2026-04-16 (Session 5) — Prep Pass 3: Code-Ready Strategy Plan
+
+**What we did:**
+- Read all 8 required source docs in order: ipr_mm_synthesis.md (BINDING), r1_eda_summary.md, r1_eda.ipynb, r1_product_mechanics.md, imc3_r1_playbook.md, pepper_root_findings.md, trader-v8-173159.py, backtest.py
+- Wrote `Round 1/strategies/PLAN.md` — full code-ready plan for Pass 4 implementation
+
+**Findings / decisions:**
+
+ACO (new strategy):
+- Strategy family committed: KELP (imc3_r1_playbook.md §2) — filtered mmbot mid + reversion-beta fair value, take/clear/make stack
+- Timescale decision: trade fast timescale only (OU half-life 8.4 ts); incorporate slow timescale (1000–2000 ts oscillation, lag-2000 autocorr −0.340) as passive sizing bias on make layer — not a separate signal stream
+- Fair value: mmbot_mid (adverse_volume=15, KELP default) + reversion_beta=−0.45 (midpoint of empirical −0.40 to −0.50 range)
+- Window: 1 lag (no rolling window needed; only prev_mmbot_mid required, stored in traderData)
+- Slow-oscillation bias: trailing 500-tick deque; top/bottom 20% of range halves passive size on that side
+- PnL marking: mark-to-mid (matches backtest.py, no backtest changes required; resolves ACO-5)
+- Success threshold: mean ACO PnL >= +3,000/day vs. current baseline +2,206/day
+
+IPR (targeted deltas only — Config A untouched):
+- Delta (a): passive entry bids at fv(t)−spread/2 during accumulation; fv(t) = price_at_day_start + 0.10013/tick × t; fallback to greedy take after N=20 ts
+- Delta (b): skim_offset 2→1, skim_size 5→8; keeps skim_min_pos=75 and refill_max_size=10
+- Delta (c): long-only floor hard-coded; remove symmetric short-skim block from ipr_orders()
+- Delta (d): drift-reversal circuit breaker — W=500 ts, k=5.0, replaces EMA gap logic entirely; action = freeze target at 0 (no active dump)
+- Circuit breaker cost of false alarm at midday: ~40,052 XIRECS (acceptable given W=500+k=5 gives effectively-zero false-trigger rate on training data)
+- Open question triage: 2 Answered (ACO-5, IPR-6), 2 Validate live (ACO-1, IPR-3), 3 Unresolvable/assumption (ACO-3, IPR-2, IPR-5)
+
+**Next session starts with:**
+- Pass 4: Implement PLAN.md directly into `Round 1/traders/trader-v8-173159.py`
+  - Step 1: ACO — replace ACO_CFG + aco_take/aco_make with ACO_CFG_V2 + aco_mmbot_mid + aco_fair_value + aco_take_v2 + aco_clear_v2 + aco_make_v2 + kill switch
+  - Step 2: IPR deltas — (c) long-only floor + remove dead short-skim block; (d) circuit breaker replacing EMA gap logic; (a) passive entry bid with greedy fallback; (b) skim_offset=1, skim_size=8
+  - Step 3: run backtest.py, confirm ACO PnL >= +3,000/day and IPR PnL >= +79,350/day; compare full 3-day totals
+  - Step 4: parameter sweep ACO reversion_beta (−0.25 to −0.55, step 0.05) and IPR skim_offset (1 to 3)
+  - Step 5: run drift-reversal stress test (ts 25/50/75% reversal) on IPR circuit breaker
+  - Commit passing version as v10
