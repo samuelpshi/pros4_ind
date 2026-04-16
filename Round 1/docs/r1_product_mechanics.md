@@ -178,48 +178,6 @@
 
 ---
 
-## Manual Trading Challenge — Exchange Auction ("An Intarian Welcome")
-
-**Products:** `DRYLAND_FLAX`, `EMBER_MUSHROOM`. These are **not** traded in continuous algorithmic markets. They exist only inside the one-time Exchange Auction held at the start of Round 1.
-
-### Submission Rules
-
-- Each participant submits **one limit order per product** — a single `(price, quantity)` pair.
-- The algorithm / participant submits **last**: no further bids or asks enter the auction book after submission, and no existing volumes change.
-- Re-submission is allowed until the round closes; only the **last** submitted order is executed.
-- Orders are entered via the Manual Challenge Overview window in the competition UI, not through the algorithmic `Trader.run()` API.
-
-### Clearing Rules
-
-- The exchange selects a single clearing price per product using a two-step rule:
-  1. Choose the clearing price that **maximizes total traded volume**.
-  2. On ties, **choose the higher price**.
-- All bids with price ≥ clearing price execute; all asks with price ≤ clearing price execute; every executed order clears at the **clearing price** regardless of its individual limit price.
-- Allocation at a given price level follows **price priority, then time priority**. Because we submit last, we are last in the queue at any price level we share with an existing order.
-
-### Merchant Guild Buyback (Fixed-Price, Post-Auction)
-
-- Immediately after the auction, the Merchant Guild purchases any inventory acquired at fixed, guaranteed prices:
-  - **`DRYLAND_FLAX`:** 30 XIRECs per unit, no fees.
-  - **`EMBER_MUSHROOM`:** 20 XIRECs per unit, minus a 0.10 XIREC per-unit fee (effective proceeds: 19.90 per unit).
-- The buyback price is independent of the auction's clearing price.
-
-### Rules-Level Strategy Implications (Not Recommendations)
-
-- The problem is a sealed-visible auction: we see the opposing book, everyone else's orders are locked in, and we submit last with full information.
-- Each product has a **price floor** equal to its buyback value, net of fees. A bid above the floor guarantees a loss per filled unit; a bid at or below the floor is risk-free from the buyback leg alone but still competes on time priority within its level.
-- Since the buyback is fixed-price and guaranteed, the edge per unit is approximately `buyback_price − clearing_price − fees`, which we can compute exactly from the visible book and our chosen bid.
-
-### Open Questions — Exchange Auction
-
-1. **Is the pre-submission order book fully visible, including all depth levels, or is visibility truncated?** The rules state we submit last but don't specify exactly what we observe before submitting.
-2. **Can the submission be a sell order (negative quantity), or is it restricted to bids?** The submission-UI prose says "choose a bid price", implying bids only. The clearing rule, however, is written generically for bids **and** asks. Worth confirming before assuming short-side strategies are unavailable.
-3. **Does the Merchant Guild buy back all inventory acquired in the auction, or is there a per-participant cap?** No cap is mentioned, but this is not explicitly ruled out either.
-4. **Are auction profits counted toward the 200,000 XIREC Round 1 objective, or tracked as a separate manual-trading score?** The Round 1 objective section and the manual-challenge section reference profit independently; the pooling rule is not stated.
-5. **Is there any position limit during the auction itself, analogous to the 80-unit cap on algorithmic products?** The rules specify only a single `(price, quantity)` order per product, which bounds orders but not positions directly.
-
----
-
 ## Cross-Product Notes
 
 - Both products share the same simulation infrastructure: same iteration cadence (timestamp step 100), same timeout budget, same position-limit enforcement rules.
