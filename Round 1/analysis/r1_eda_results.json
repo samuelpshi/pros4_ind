@@ -1,0 +1,459 @@
+{
+  "data_summary": {
+    "aco_price_rows": 27644,
+    "ipr_price_rows": 27688,
+    "aco_trade_rows": 1265,
+    "ipr_trade_rows": 1011
+  },
+  "stationarity": {
+    "ACO": {
+      "adf": [
+        {
+          "day": -2,
+          "adf_stat": -3.6537945863820815,
+          "adf_pval": 0.004812064557107992,
+          "n": 9187
+        },
+        {
+          "day": -1,
+          "adf_stat": -4.864558906655715,
+          "adf_pval": 4.085861522734974e-05,
+          "n": 9225
+        },
+        {
+          "day": 0,
+          "adf_stat": -3.304187549740899,
+          "adf_pval": 0.014692325420917255,
+          "n": 9232
+        }
+      ],
+      "autocorr": [
+        {
+          "lag": 1,
+          "acf": -0.4943230760129066
+        },
+        {
+          "lag": 5,
+          "acf": 0.015702158342693524
+        },
+        {
+          "lag": 20,
+          "acf": 0.009273591743599747
+        },
+        {
+          "lag": 100,
+          "acf": 0.0051355886732044834
+        }
+      ],
+      "variance_ratio": [
+        {
+          "q": 2,
+          "vr_mean": 0.505595418442358
+        },
+        {
+          "q": 4,
+          "vr_mean": 0.2715072797113514
+        },
+        {
+          "q": 8,
+          "vr_mean": 0.14882856905979014
+        },
+        {
+          "q": 16,
+          "vr_mean": 0.08923909081350952
+        }
+      ],
+      "hurst": 0.7925054782619328,
+      "ou_half_life": 8.419352451100988,
+      "ou_beta": -0.07903003024766235
+    },
+    "IPR": {
+      "adf": [
+        {
+          "day": -2,
+          "adf_stat": -0.22681381930453362,
+          "adf_pval": 0.9352490923565766,
+          "n": 9216
+        },
+        {
+          "day": -1,
+          "adf_stat": -0.8560508117554009,
+          "adf_pval": 0.8021009252622996,
+          "n": 9219
+        },
+        {
+          "day": 0,
+          "adf_stat": -0.48900703327562045,
+          "adf_pval": 0.8941439067522053,
+          "n": 9253
+        }
+      ],
+      "autocorr": [
+        {
+          "lag": 1,
+          "acf": -0.48820156576324136
+        },
+        {
+          "lag": 5,
+          "acf": -0.014322109141675676
+        },
+        {
+          "lag": 20,
+          "acf": 0.001319408843581324
+        },
+        {
+          "lag": 100,
+          "acf": -0.012636511389011174
+        }
+      ],
+      "variance_ratio": [
+        {
+          "q": 2,
+          "vr_mean": 0.5112484245070718
+        },
+        {
+          "q": 4,
+          "vr_mean": 0.252585493543977
+        },
+        {
+          "q": 8,
+          "vr_mean": 0.12629940070816836
+        },
+        {
+          "q": 16,
+          "vr_mean": 0.06425447773263503
+        }
+      ],
+      "hurst": 1.0006054748774393,
+      "ou_half_life": 279697.2524037298,
+      "ou_beta": -2.478202112238057e-06
+    }
+  },
+  "microstructure": {
+    "ACO": {
+      "sign_imbalance_vs_ret_r": -0.002018789438617946,
+      "sign_imbalance_vs_ret_p": 0.9061634525064645,
+      "size_weighted_flow_note": "signed_vol_sum is already size-weighted (quantity * sign)",
+      "depth_pct": {
+        "-2": {
+          "n_rows": 9187,
+          "bid_lv1_pct": 100.0,
+          "bid_lv2_pct": 68.74931969086754,
+          "bid_lv3_pct": 2.8300859910743443,
+          "ask_lv1_pct": 100.0,
+          "ask_lv2_pct": 67.6825949711549,
+          "ask_lv3_pct": 2.601502122564493
+        },
+        "-1": {
+          "n_rows": 9225,
+          "bid_lv1_pct": 100.0,
+          "bid_lv2_pct": 67.65311653116531,
+          "bid_lv3_pct": 2.5365853658536586,
+          "ask_lv1_pct": 100.0,
+          "ask_lv2_pct": 67.96747967479675,
+          "ask_lv3_pct": 2.569105691056911
+        },
+        "0": {
+          "n_rows": 9232,
+          "bid_lv1_pct": 100.0,
+          "bid_lv2_pct": 67.20103986135182,
+          "bid_lv3_pct": 2.794627383015598,
+          "ask_lv1_pct": 100.0,
+          "ask_lv2_pct": 67.9159445407279,
+          "ask_lv3_pct": 2.5454939341421143
+        }
+      }
+    },
+    "IPR": {
+      "sign_imbalance_vs_ret_r": -0.006517697309815369,
+      "sign_imbalance_vs_ret_p": 0.7335132764774093,
+      "size_weighted_flow_note": "signed_vol_sum is already size-weighted (quantity * sign)",
+      "depth_pct": {
+        "-2": {
+          "n_rows": 9216,
+          "bid_lv1_pct": 100.0,
+          "bid_lv2_pct": 67.32855902777777,
+          "bid_lv3_pct": 1.4105902777777777,
+          "ask_lv1_pct": 100.0,
+          "ask_lv2_pct": 67.68663194444444,
+          "ask_lv3_pct": 1.5733506944444444
+        },
+        "-1": {
+          "n_rows": 9219,
+          "bid_lv1_pct": 100.0,
+          "bid_lv2_pct": 67.76223017680877,
+          "bid_lv3_pct": 1.4860613949452217,
+          "ask_lv1_pct": 100.0,
+          "ask_lv2_pct": 67.79477166720902,
+          "ask_lv3_pct": 1.7572404816140579
+        },
+        "0": {
+          "n_rows": 9253,
+          "bid_lv1_pct": 100.0,
+          "bid_lv2_pct": 66.83237868799309,
+          "bid_lv3_pct": 1.6751323894952987,
+          "ask_lv1_pct": 100.0,
+          "ask_lv2_pct": 67.52404625526856,
+          "ask_lv3_pct": 1.556252026369826
+        }
+      }
+    }
+  },
+  "bot_identity": {
+    "ACO": {
+      "named_bots": [],
+      "extremes": {}
+    },
+    "IPR": {
+      "named_bots": [],
+      "extremes": {}
+    }
+  },
+  "cross_product": {
+    "level_corr_r": 0.27609603691497103,
+    "level_corr_p": 0.0,
+    "return_corr_r": 0.0069964481635163105,
+    "return_corr_p": 0.26384238531165377,
+    "cointegration": [
+      {
+        "day": -2,
+        "coint_stat": -3.6572675686233067,
+        "coint_pval": 0.020775243711608635
+      },
+      {
+        "day": -1,
+        "coint_stat": -4.854270151875878,
+        "coint_pval": 0.0003023696703738959
+      },
+      {
+        "day": 0,
+        "coint_stat": -3.2916404899458174,
+        "coint_pval": 0.05589203307049196
+      }
+    ]
+  },
+  "regime": {
+    "table": [
+      {
+        "product": "ACO",
+        "day": -2,
+        "n_rows": 9187,
+        "volatility_per_tick": 1.9114372376881958,
+        "range": 27.5,
+        "drift": -6.5
+      },
+      {
+        "product": "ACO",
+        "day": -1,
+        "n_rows": 9225,
+        "volatility_per_tick": 1.921660153824768,
+        "range": 27.0,
+        "drift": 10.0
+      },
+      {
+        "product": "ACO",
+        "day": 0,
+        "n_rows": 9232,
+        "volatility_per_tick": 1.9623210842172032,
+        "range": 36.0,
+        "drift": 4.0
+      },
+      {
+        "product": "IPR",
+        "day": -2,
+        "n_rows": 9216,
+        "volatility_per_tick": 1.5782474141650276,
+        "range": 1003.0,
+        "drift": 1003.0
+      },
+      {
+        "product": "IPR",
+        "day": -1,
+        "n_rows": 9219,
+        "volatility_per_tick": 1.7761629448888754,
+        "range": 1003.0,
+        "drift": 999.5
+      },
+      {
+        "product": "IPR",
+        "day": 0,
+        "n_rows": 9253,
+        "volatility_per_tick": 1.8742011814504678,
+        "range": 1002.0,
+        "drift": 1001.5
+      }
+    ],
+    "quartile": [
+      {
+        "product": "ACO",
+        "day": -2,
+        "quartile": "Q1",
+        "mean_ret": 0.00021767522855898998
+      },
+      {
+        "product": "ACO",
+        "day": -2,
+        "quartile": "Q2",
+        "mean_ret": -0.0028310104529616726
+      },
+      {
+        "product": "ACO",
+        "day": -2,
+        "quartile": "Q3",
+        "mean_ret": 0.00043554006968641115
+      },
+      {
+        "product": "ACO",
+        "day": -2,
+        "quartile": "Q4",
+        "mean_ret": -0.00065302568567697
+      },
+      {
+        "product": "ACO",
+        "day": -1,
+        "quartile": "Q1",
+        "mean_ret": 0.0039028620988725065
+      },
+      {
+        "product": "ACO",
+        "day": -1,
+        "quartile": "Q2",
+        "mean_ret": 0.0008673026886383347
+      },
+      {
+        "product": "ACO",
+        "day": -1,
+        "quartile": "Q3",
+        "mean_ret": -0.0039028620988725065
+      },
+      {
+        "product": "ACO",
+        "day": -1,
+        "quartile": "Q4",
+        "mean_ret": 0.003469210754553339
+      },
+      {
+        "product": "ACO",
+        "day": 0,
+        "quartile": "Q1",
+        "mean_ret": -0.004332755632582322
+      },
+      {
+        "product": "ACO",
+        "day": 0,
+        "quartile": "Q2",
+        "mean_ret": 0.0030329289428076256
+      },
+      {
+        "product": "ACO",
+        "day": 0,
+        "quartile": "Q3",
+        "mean_ret": -0.002600780234070221
+      },
+      {
+        "product": "ACO",
+        "day": 0,
+        "quartile": "Q4",
+        "mean_ret": 0.005632582322357019
+      },
+      {
+        "product": "IPR",
+        "day": -2,
+        "quartile": "Q1",
+        "mean_ret": 0.1095920138888889
+      },
+      {
+        "product": "IPR",
+        "day": -2,
+        "quartile": "Q2",
+        "mean_ret": 0.10894097222222222
+      },
+      {
+        "product": "IPR",
+        "day": -2,
+        "quartile": "Q3",
+        "mean_ret": 0.10768562744246635
+      },
+      {
+        "product": "IPR",
+        "day": -2,
+        "quartile": "Q4",
+        "mean_ret": 0.1091579861111111
+      },
+      {
+        "product": "IPR",
+        "day": -1,
+        "quartile": "Q1",
+        "mean_ret": 0.110412147505423
+      },
+      {
+        "product": "IPR",
+        "day": -1,
+        "quartile": "Q2",
+        "mean_ret": 0.10828993055555555
+      },
+      {
+        "product": "IPR",
+        "day": -1,
+        "quartile": "Q3",
+        "mean_ret": 0.1076388888888889
+      },
+      {
+        "product": "IPR",
+        "day": -1,
+        "quartile": "Q4",
+        "mean_ret": 0.10737527114967461
+      },
+      {
+        "product": "IPR",
+        "day": 0,
+        "quartile": "Q1",
+        "mean_ret": 0.10916558581928232
+      },
+      {
+        "product": "IPR",
+        "day": 0,
+        "quartile": "Q2",
+        "mean_ret": 0.10830090791180286
+      },
+      {
+        "product": "IPR",
+        "day": 0,
+        "quartile": "Q3",
+        "mean_ret": 0.10830090791180286
+      },
+      {
+        "product": "IPR",
+        "day": 0,
+        "quartile": "Q4",
+        "mean_ret": 0.10722006052745352
+      }
+    ]
+  },
+  "aco_pattern": [
+    {
+      "lag": 100,
+      "acf": 0.7526882966912358
+    },
+    {
+      "lag": 200,
+      "acf": 0.5824306522090343
+    },
+    {
+      "lag": 500,
+      "acf": 0.24635769448098035
+    },
+    {
+      "lag": 1000,
+      "acf": -0.12347154493785875
+    },
+    {
+      "lag": 2000,
+      "acf": -0.33999796786530295
+    },
+    {
+      "lag": 5000,
+      "acf": -0.1638890482940745
+    }
+  ]
+}
