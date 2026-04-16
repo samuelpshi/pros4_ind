@@ -23,7 +23,7 @@ import pandas as pd
 import numpy as np
 
 # Add trader directory to path so we can import the trader
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'our_trader'))
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'traders'))
 
 # --- Stubs for the IMC datamodel ---
 
@@ -62,7 +62,7 @@ sys.modules['datamodel'] = datamodel_mod
 from importlib import import_module
 import importlib.util
 spec = importlib.util.spec_from_file_location("trader_module",
-    os.path.join(os.path.dirname(__file__), '..', 'our_trader', '173159.py'))
+    os.path.join(os.path.dirname(__file__), '..', 'traders', 'trader-v8-173159.py'))
 trader_mod = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(trader_mod)
 TraderClass = trader_mod.Trader
@@ -139,7 +139,7 @@ def match_orders(orders, depth, pos, limit):
 
 
 def run_backtest():
-    DATA_DIR = os.path.join(os.path.dirname(__file__), '..', 'ROUND1')
+    DATA_DIR = os.path.join(os.path.dirname(__file__), '..', 'r1_data_capsule')
     DAYS = [-2, -1, 0]
 
     all_results = []

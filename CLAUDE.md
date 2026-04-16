@@ -26,7 +26,7 @@ At the end of every session, when the user signals we're wrapping up:
 ## Repo Layout
 IMC-Prosperity-2026/
 └── Round 1/
-├── ROUND1/                       ← raw data from IMC (CSVs)
+├── r1_data_capsule/              ← raw data from IMC (CSVs)
 │   ├── prices_round_1_day_-2.csv
 │   ├── prices_round_1_day_-1.csv
 │   ├── prices_round_1_day_0.csv
@@ -34,16 +34,16 @@ IMC-Prosperity-2026/
 │   ├── trades_round_1_day_-1.csv
 │   └── trades_round_1_day_0.csv
 ├── analysis/
+│   ├── backtest.py                  ← local backtester (reads r1_data_capsule, loads traders/trader-v8-173159.py)
 │   ├── pepper_root_deep_dive.ipynb  ← main analysis notebook
-│   └── pepper_root_findings.md      ← verified findings with numbers
-├── our_trader/
-│   ├── 173159.py                 ← active trader (v9, Config A) — THIS is what we improve
-│   ├── 173159.json               ← submission trade data
-│   └── 173159.log                ← submission log
-├── bid_ask_analysis.ipynb        ← Ethan's basic EDA (visual only, no stats)
-├── bid_ask_round1.png
-├── bid_ask_round1_zoomed.png
-└── trader.py                     ← Ethan's separate trader (REFERENCE ONLY, do not edit)
+│   ├── pepper_root_findings.md      ← verified findings with numbers
+│   └── bid_ask_analysis.ipynb       ← Ethan's basic EDA (visual only, no stats)
+├── traders/
+│   ├── trader-v8-173159.py          ← active trader (v9, Config A) — THIS is what we improve
+│   ├── trader-v8-173159-jmerle.py   ← same strategy + jmerle Logger for visualizer
+│   └── trader1.py                   ← Ethan's separate trader (REFERENCE ONLY, do not edit)
+└── logs/
+    └── 173159.log                   ← submission log
 ## Data Format Reference
 
 **Prices file** (`prices_round_1_day_X.csv`, semicolon-separated):
@@ -69,7 +69,7 @@ IMC-Prosperity-2026/
 
 ## What the Current Trader Does (v9 — Config A)
 
-`our_trader/173159.py` handles two products:
+`traders/trader-v8-173159.py` handles two products:
 
 **ASH_COATED_OSMIUM (ACO):** Standard market making with EMA-tracked fair value, take orders inside fair value +/- edge, post passive bids/asks around fair value with inventory skew. Logic unchanged from v8; only position limit updated (40->80).
 
@@ -133,7 +133,7 @@ bid, ask, order book, mid-price, spread, fair value (true price), edge, alpha, m
 
 - ACO logic stays untouched (only limit updated 40->80)
 - IPR is the active battleground
-- Working from `our_trader/173159.py` (v9, Config A), not Ethan's `trader.py`
+- Working from `traders/trader-v8-173159.py` (v9, Config A), not Ethan's `traders/trader1.py`
 - **Strategy call: Config A committed** — target_long=80 for max drift capture
 - Config B (target=70) rejected: skim would need 16x v8's estimated productivity to break even
 
@@ -142,7 +142,7 @@ bid, ask, order book, mid-price, spread, fair value (true price), edge, alpha, m
 When starting a session:
 1. Read this file
 2. Read `analysis/pepper_root_deep_dive.ipynb` if it exists
-3. Read `our_trader/173159.py`
+3. Read `traders/trader-v8-173159.py`
 4. Summarize current state in 2 sentences before doing anything else
 
 When proposing strategy changes:
