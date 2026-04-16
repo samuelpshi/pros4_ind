@@ -24,26 +24,35 @@ At the end of every session, when the user signals we're wrapping up:
 3. Suggest a git commit message summarizing the session
 
 ## Repo Layout
-IMC-Prosperity-2026/
+IMC-Prosperity-2026-personal/
+├── CLAUDE.md                                     ← project instructions (this file)
+├── WORKLOG.md                                    ← running dev log; read at session start
+├── IMC3_r1.md                                    ← R1 reference notes
+├── "Round 1 - Trading groundwork".html           ← IMC tutorial HTML
+├── "Writing an Algorithm in Python.html"         ← IMC tutorial HTML
+├── images/                                       ← chart exports (PNGs)
 └── Round 1/
-├── r1_data_capsule/              ← raw data from IMC (CSVs)
-│   ├── prices_round_1_day_-2.csv
-│   ├── prices_round_1_day_-1.csv
-│   ├── prices_round_1_day_0.csv
-│   ├── trades_round_1_day_-2.csv
-│   ├── trades_round_1_day_-1.csv
-│   └── trades_round_1_day_0.csv
-├── analysis/
-│   ├── backtest.py                  ← local backtester (reads r1_data_capsule, loads traders/trader-v8-173159.py)
-│   ├── pepper_root_deep_dive.ipynb  ← main analysis notebook
-│   ├── pepper_root_findings.md      ← verified findings with numbers
-│   └── bid_ask_analysis.ipynb       ← Ethan's basic EDA (visual only, no stats)
-├── traders/
-│   ├── trader-v8-173159.py          ← active trader (v9, Config A) — THIS is what we improve
-│   ├── trader-v8-173159-jmerle.py   ← same strategy + jmerle Logger for visualizer
-│   └── trader1.py                   ← Ethan's separate trader (REFERENCE ONLY, do not edit)
-└── logs/
-    └── 173159.log                   ← submission log
+    ├── r1_data_capsule/              ← raw data from IMC (CSVs); days -2/-1/0 are historical samples leading up to the live round
+    │   ├── prices_round_1_day_-2.csv
+    │   ├── prices_round_1_day_-1.csv
+    │   ├── prices_round_1_day_0.csv
+    │   ├── trades_round_1_day_-2.csv
+    │   ├── trades_round_1_day_-1.csv
+    │   └── trades_round_1_day_0.csv
+    ├── analysis/
+    │   ├── backtest.py                  ← local backtester; run as `python backtest.py` from `Round 1/analysis/`; hard-coded data paths via os.path relative to __file__; adjacent `traders/` dir inserted into sys.path; no argparse
+    │   ├── pepper_root_deep_dive.ipynb  ← main analysis notebook
+    │   ├── pepper_root_findings.md      ← verified findings with numbers
+    │   └── bid_ask_analysis.ipynb       ← Ethan's basic EDA (visual only, no stats)
+    ├── docs/
+    │   ├── r1_product_mechanics.md      ← R1 rules spec
+    │   └── imc3_r1_playbook.md          ← distilled IMC3 R1 historical playbook
+    ├── traders/                         ← naming convention: trader-v<N>-<suffix>.py (version + optional variant suffix)
+    │   ├── trader-v8-173159.py          ← base submission trader (v9, Config A) — THIS is what we improve
+    │   ├── trader-v8-173159-jmerle.py   ← identical strategy + Logger class (~+86 lines) for jmerle visualizer compatibility; -jmerle suffix = visualizer-instrumented variant
+    │   └── trader1.py                   ← Ethan's separate trader (REFERENCE ONLY, do not edit)
+    └── logs/
+        └── 173159.log                   ← submission log
 ## Data Format Reference
 
 **Prices file** (`prices_round_1_day_X.csv`, semicolon-separated):

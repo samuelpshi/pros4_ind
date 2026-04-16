@@ -44,3 +44,27 @@
 - Cell 3: trade size histogram + Olivia signal hunt
 - Consider simplifying trader (remove dead reversal/deep-bid code paths)
 - Consider raising or removing reversal thresholds to avoid catastrophic false trigger on unseen data
+
+---
+
+## 2026-04-16 (Session 3) — Prep Pass 1: mechanics, historical playbook, repo audit
+
+**What we did:**
+- Ran Prep Pass 1 as three parallel agents (Product Mechanics Analyst, Historical Strategy Archivist, Repository Steward)
+- Created `Round 1/docs/` with two new reference docs
+- Updated `CLAUDE.md` Repo Layout, backtester invocation, jmerle variant description, strategy-naming convention, data-day convention
+
+**Outputs:**
+- `Round 1/docs/r1_product_mechanics.md` — R1 rules spec for osmium + pepper root (~1,350 words; 5 open questions for osmium, 6 for pepper root)
+- `Round 1/docs/imc3_r1_playbook.md` — IMC3 R1 historical playbook for RAINFOREST_RESIN, KELP, SQUID_INK (~3,235 words; ~55 preserved numeric parameters) with bidirectional archetype↔product mapping matrix
+- `CLAUDE.md` — minimal-churn updates to Repo Layout only; Hard Rules / Verified Findings / Position-Limit Rules / Vocabulary left intact
+
+**Findings / flags:**
+- Mechanics doc blocker: `Round 1 - "Trading groundwork".html` filename contains Unicode curly quotes that prevented Read/Grep from opening it. Round-specific product lore, fundamental anchors, and any insider mechanic stated in that HTML are currently unconfirmed — flagged as open questions in the mechanics doc. Needs a follow-up pass (rename the file or read via an alternate method).
+- Playbook preserves specific numerics (e.g. RAINFOREST_RESIN fair_value=10,000, passive quotes at 9,999/10,001; KELP reversion_beta=-0.229, adverse_volume=15; SQUID_INK zscore_period=150, entry_z=1.25, exit_z=0.3).
+- Prior-round archetypes identified: stable MM (Resin), mean-reverting / adverse-selection-aware (Kelp), trending / momentum-driven (Squid Ink). Pass 2 will match current R1 products to these archetypes.
+
+**Next session starts with:**
+- Resolve the Trading groundwork HTML read blocker (rename file with ASCII quotes, or read via a tool that handles Unicode path bytes) and fill in the mechanics doc's open questions
+- Prep Pass 2: synthesize mechanics + playbook + current findings into concrete strategy deltas for `trader-v8-173159.py` (pepper root first)
+- Revisit deferred Session 2 follow-ups: Cell 3 Olivia hunt, dead-code cleanup, reversal-threshold review

@@ -1,0 +1,1150 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Writing an Algorithm in Python</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="40fe6958-c11a-83fa-ab6f-81dfcffd872f" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">💻</span></div><h1 class="page-title" dir="auto">Writing an Algorithm in Python</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="auto"><p id="0e9e6958-c11a-837e-83d9-01c57d26e781" class="">The explanation below assumes familiarity with the basics of Object-Oriented Programming in Python. To refresh this knowledge you can have a look at the source provided on the .</p></div><div style="display:contents" dir="ltr"><nav id="95ce6958-c11a-832e-8fa6-8153cbc4e9cd" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#126e6958-c11a-8384-980c-812140249254">The Challenge</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#284e6958-c11a-822d-ab10-01a8b83af41c">Overview of the <code>Trader</code> class</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#b34e6958-c11a-82bf-95dd-01e54979a853">Overview of the <code>TradingState</code> class</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#c04e6958-c11a-8330-98eb-014bbca5d1a2"><code>Trade</code> class</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#cfbe6958-c11a-8294-ac0b-8197bc246e77"><code>OrderDepth</code> class</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#798e6958-c11a-83ba-99a4-811009a0046e"><code>Observation</code> class</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#e87e6958-c11a-8377-b058-018df1751230">How to send orders using the <code>Order</code> class</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#92fe6958-c11a-82dc-8522-01d64574a168">Position Limits</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#144e6958-c11a-82cc-99a2-019e265ddbba">Example of Trading</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#cf8e6958-c11a-828f-b5bd-01843c994ac3">Technical Notes</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#3fee6958-c11a-82e4-911e-0148a1a68585">Available Resources to Help Build the Algorithm</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#3cce6958-c11a-8341-8e0d-818e23daad3b">Appendix A: <code>Trader</code> Class Example</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#c01e6958-c11a-83b3-b5d4-0187eeac1c3b">Appendix B: <a href="http://datamodel.py">datamodel.py</a> file</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#493e6958-c11a-8364-8001-817e10f3d826">Appendix C: Supported libraries</a></div></nav></div><div style="display:contents" dir="auto"><h1 id="126e6958-c11a-8384-980c-812140249254" class="">The Challenge</h1></div><div style="display:contents" dir="auto"><p id="1f2e6958-c11a-83e8-957f-0123c7eb62a3" class="">For the algorithmic trading challenge, you will be writing and uploading a trading algorithm class in Python, which will then be set loose on Prosperity’s exchange. On this exchange, the algorithm will trade against a number of bots, with the aim of earning as many <mark class="highlight-default_background">XIRECs (the currency in Prosperity 4)</mark> as possible. The algorithmic trading challenge consists of several rounds, that take place on different days of the challenge. At the beginning of each round, it is disclosed which products will be available for trading on that day. Sample data for these products is provided that players can use to get a better understanding of the price dynamics of these products, and consequently build a better algorithm for trading them. </p></div><div style="display:contents" dir="auto"><p id="83ae6958-c11a-82ee-864a-01c453daf00a" class="">The format for the trading algorithm will be a predefined <code>Trader</code> class, which has a <code>run()</code> method that contains all the trading logic coded up by the trader. For Algorithmic Trading Round 2, the <code>Trader</code> class should also define a <code>bid()</code> method. It is fine to have a <code>bid()</code> method in every submission for every round, it will be ignored for all rounds except Round 2.</p></div><div style="display:contents" dir="auto"><p id="991e6958-c11a-82ac-b164-818292f8b1f8" class="">Once your algorithm is uploaded it will be run in the simulation environment. The simulation consists of a large number of iterations (1_000 during testing when you develop your algorithm on historical data; 10_000 for the final simulation that determines your PnL for the round). During each iteration the run method will be called and provided with a <code>TradingState</code> object. This object contains an overview of all the trades that have happened since the last iteration, both the algorithms own trades as well as trades that happened between other market participants. Even more importantly, the <code>TradingState</code> will contain a per product overview of all the outstanding buy and sell orders (also called “quotes”) originating from the bots. Based on the logic in the <code>run</code> method the algorithm can then decide to either send orders that will fully or partially match with the existing orders, e.g. sending a buy (sell) order with a price equal to or higher (lower) than one of the outstanding bot quotes, which will result in a trade. If the algorithm sends a buy (sell) order with an associated quantity that is larger than the bot sell (buy) quote that it is matched to, the remaining quantity will be left as an outstanding buy (sell) quote with which the trading bots will then potentially trade. When the next iteration begins, the <code>TradingState</code> will then reveal whether any of the bots decided to “trade on” the player’s outstanding quote. If none of the bots trade on an outstanding player quote, the quote is automatically cancelled at the end of the iteration.</p></div><div style="display:contents" dir="auto"><p id="39ae6958-c11a-82e4-8b9a-8144fc360a77" class="">Every trade done by the algorithm in a certain product changes the “position” of the algorithm in that product. A position just specifies how much of a product you hold, e.g. “<em>position=3 in NVIDIA</em>” could mean holding 3 stocks in NVIDIA.</p></div><div style="display:contents" dir="ltr"><figure class="block-color-purple_background callout" style="white-space:pre-wrap;display:flex" id="356e6958-c11a-8240-b26f-81ff1f3b9f35"><div style="font-size:1.5em"><span class="icon">📃</span></div><div style="width:100%"><div style="display:contents" dir="auto"><p id="949e6958-c11a-8325-827f-8163a1beef9a" class=""><strong>Example</strong>: if the initial ‘position’ in product X was 2, and the algorithm buys an additional quantity of 3, the position in product X is then 5. If the algorithm then subsequently sells a quantity of 7, the position in product X will be -2, also called being “short 2”.</p></div></div></figure></div><div style="display:contents" dir="auto"><p id="28fe6958-c11a-834c-ac9c-010e25e15665" class="">Like in the real world, the algorithms are restricted by per product position limits, which define the absolute position (long or short) that the algorithm is not allowed to exceed. If the aggregated quantity of all the buy (sell) orders an algorithm sends during a certain iteration would, if all fully matched, result in the algorithm obtaining a long (short) position exceeding the position limit, all the orders are cancelled by the exchange.</p></div><div style="display:contents" dir="auto"><p id="583e6958-c11a-82a2-9040-81ef9fa3824b" class="">In the first section, the general outline of the <code>Trader</code> class that the player will be creating is outlined.</p></div><div style="display:contents" dir="auto"><h1 id="284e6958-c11a-822d-ab10-01a8b83af41c" class="">Overview of the <code>Trader</code> class</h1></div><div style="display:contents" dir="auto"><p id="060e6958-c11a-82c8-a614-01ce69ac3f21" class="">Below an abstract representation of what the trader class should look like is shown. The class requires a single method called <code>run</code>, which is called by the simulation every time a new <code>TraderState</code> is available. The logic within this <code>run</code> method is written by the player and determines the behaviour of the algorithm. The output of the method is a dictionary, where the key is a product name and the value is a list that contains all the orders that the algorithm decides to send based on this logic. (Again, for Algo Round 2, the <code>Trader</code> class should also define a <code>bid()</code> method. It is fine to have a <code>bid()</code> method in every submission for every round, it will be ignored for all rounds except Round 2.)</p></div><div style="display:contents" dir="auto"><p id="d2ee6958-c11a-8241-a6ea-814c528d1f42" class="">
+</p></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js" integrity="sha512-AKaNmg8COK0zEbjTdMHJAPJ0z6VeNqvRvH4/d5M4sHJbQQUToMBtodq4HaV4fa+WV2UTfoperElm66c9/8cKmQ==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><pre id="88ce6958-c11a-823c-a074-81f6d18bb9b8" class="code code-wrap"><code class="language-python" style="white-space:pre-wrap;word-break:break-all">from datamodel import OrderDepth, UserId, TradingState, Order
+from typing import List
+import string
+
+class Trader:
+
+    def bid(self):
+        return 15
+    
+    def run(self, state: TradingState):
+        &quot;&quot;&quot;Only method required. It takes all buy and sell orders for all
+        symbols as an input, and outputs a list of orders to be sent.&quot;&quot;&quot;
+
+        print(&quot;traderData: &quot; + state.traderData)
+        print(&quot;Observations: &quot; + str(state.observations))
+
+        # Orders to be placed on exchange matching engine
+        result = {}
+        for product in state.order_depths:
+            order_depth: OrderDepth = state.order_depths[product]
+            orders: List[Order] = []
+            acceptable_price = 10  # Participant should calculate this value
+            print(&quot;Acceptable price : &quot; + str(acceptable_price))
+            print(&quot;Buy Order depth : &quot; + str(len(order_depth.buy_orders)) + &quot;, Sell order depth : &quot; + str(len(order_depth.sell_orders)))
+    
+            if len(order_depth.sell_orders) != 0:
+                best_ask, best_ask_amount = list(order_depth.sell_orders.items())[0]
+                if int(best_ask) &lt; acceptable_price:
+                    print(&quot;BUY&quot;, str(-best_ask_amount) + &quot;x&quot;, best_ask)
+                    orders.append(Order(product, best_ask, -best_ask_amount))
+    
+            if len(order_depth.buy_orders) != 0:
+                best_bid, best_bid_amount = list(order_depth.buy_orders.items())[0]
+                if int(best_bid) &gt; acceptable_price:
+                    print(&quot;SELL&quot;, str(best_bid_amount) + &quot;x&quot;, best_bid)
+                    orders.append(Order(product, best_bid, -best_bid_amount))
+            
+            result[product] = orders
+    
+        # String value holding Trader state data required. 
+        # It will be delivered as TradingState.traderData on next execution.
+        traderData = &quot;SAMPLE&quot; 
+        
+        # Sample conversion request. Check more details below. 
+        conversions = 1
+        return result, conversions, traderData</code></pre></div><div style="display:contents" dir="auto"><p id="8b6e6958-c11a-829e-828e-81d5f866bcc6" class="">Example implementation above presents placing order idea as well.</p></div><div style="display:contents" dir="auto"><p id="095e6958-c11a-82c3-86ba-81a563a6e15f" class="">When you send the Trader implementation there is always submission identifier generated. It’s a <em>UUID</em> value of the form <code>59f81e67-f6c6-4254-b61e-39661eac6141</code>, and then generates a <em>runID</em>, e.g. <code>&quot;498&quot;</code>, <code>&quot;499&quot;</code>, or <code>“500”</code>. Should any questions arise on the results, feel free to reach out to Prosperity staff, e.g. on Discord channels. An identifier is extremely helpful in answering questions (as it allows us to trace your submission), so please do always include it!</p></div><div style="display:contents" dir="auto"><p id="854e6958-c11a-836d-8c14-015456d52003" class="">Technical implementation for the trading container is based on Amazon Web Services Lambda function. Based on the fact that Lambda is stateless, <em>AWS can not guarantee any class or global variables will stay in place on subsequent calls</em>. We provide possibility of defining a traderData string value as an opportunity to keep the state details. Any Python variable could be serialised into string with jsonpickle library and deserialised on the next call based on TradingState.traderData property. Container will not interfere with the content. Please be aware of the content size in this field. External framework will cut the string created to 50 000 characters in order to avoid timing out the call to container. It might become unusable when you try to restore values.</p></div><div style="display:contents" dir="auto"><p id="8b7e6958-c11a-8287-93cc-01f8001a7e0f" class="">To get a better feel for what this <code>TradingState</code> object is exactly and how players can use it, a description of the class is provided below.</p></div><div style="display:contents" dir="auto"><h1 id="b34e6958-c11a-82bf-95dd-01e54979a853" class="">Overview of the <code>TradingState</code> class</h1></div><div style="display:contents" dir="auto"><p id="ef3e6958-c11a-8346-837a-818818c47931" class="">The <code>TradingState</code> class holds all the important market information that an algorithm needs to make decisions about which orders to send. Below the definition is provided for the <code>TradingState</code> class:</p></div><div style="display:contents" dir="auto"><pre id="957e6958-c11a-8381-92fc-8178e33af080" class="code code-wrap"><code class="language-python" style="white-space:pre-wrap;word-break:break-all">Time = int
+Symbol = str
+Product = str
+Position = int
+
+class TradingState(object):
+   def __init__(self,
+                 traderData: str,
+                 timestamp: Time,
+                 listings: Dict[Symbol, Listing],
+                 order_depths: Dict[Symbol, OrderDepth],
+                 own_trades: Dict[Symbol, List[Trade]],
+                 market_trades: Dict[Symbol, List[Trade]],
+                 position: Dict[Product, Position],
+                 observations: Observation):
+        self.traderData = traderData
+        self.timestamp = timestamp
+        self.listings = listings
+        self.order_depths = order_depths
+        self.own_trades = own_trades
+        self.market_trades = market_trades
+        self.position = position
+        self.observations = observations
+        
+    def toJSON(self):
+        return json.dumps(self, default=lambda o: o.__dict__, sort_keys=True)</code></pre></div><div style="display:contents" dir="auto"><p id="919e6958-c11a-82ba-acb0-01e0013e14ac" class="">The most important properties</p></div><div style="display:contents" dir="auto"><ul id="de7e6958-c11a-8366-b91c-018082397289" class="bulleted-list"><li style="list-style-type:disc"><strong>own_trades</strong>: the trades the algorithm itself has done since the last <code>TradingState</code> came in. This property is a dictionary of <code>Trade</code> objects with key being a product name. The definition of the <code>Trade</code> class is provided in the subsections below.</li></ul></div><div style="display:contents" dir="auto"><ul id="33fe6958-c11a-82d0-956f-8125debfaf04" class="bulleted-list"><li style="list-style-type:disc"><strong>market_trades</strong>: the trades that other market participants have done since the last <code>TradingState</code> came in. This property is also a dictionary of <code>Trade</code> objects with key being a product name.</li></ul></div><div style="display:contents" dir="auto"><ul id="5c1e6958-c11a-833e-b4ca-8161f9511070" class="bulleted-list"><li style="list-style-type:disc"><strong>position</strong>: the long or short position that the player holds in every tradable product. This property is a dictionary with the product as the key for which the value is a signed integer denoting the position, e.g. <code>{product1: 2, product2: -1}</code>.</li></ul></div><div style="display:contents" dir="auto"><ul id="f13e6958-c11a-83c9-a28b-014e368fe2d6" class="bulleted-list"><li style="list-style-type:disc"><strong>order_depths</strong>: all the buy and sell orders per product that other market participants have sent and that the algorithm is able to trade with. This property is a dict where the keys are the products and the corresponding values are instances of the <code>OrderDepth</code> class. This <code>OrderDepth</code> class then contains all the buy and sell orders. An overview of the <code>OrderDepth</code> class is also provided in the subsections below.</li></ul></div><div style="display:contents" dir="auto"><h2 id="c04e6958-c11a-8330-98eb-014bbca5d1a2" class=""><code>Trade</code> class</h2></div><div style="display:contents" dir="auto"><p id="ccae6958-c11a-8226-b7c9-81c6f321d41b" class="">Both the <code>own_trades</code> property and the <code>market_trades</code> property provide the traders with a list of trades per products. Every individual trade in each of these lists is an instance of the <code>Trade</code> class.</p></div><div style="display:contents" dir="auto"><pre id="8bfe6958-c11a-83f9-8a54-01ddf6c33b5e" class="code code-wrap"><code class="language-python" style="white-space:pre-wrap;word-break:break-all">Symbol = str
+UserId = str
+
+class Trade:
+    def __init__(self, symbol: Symbol, price: int, quantity: int, buyer: UserId = None, seller: UserId = None, timestamp: int = 0) -&gt; None:
+        self.symbol = symbol
+        self.price: int = price
+        self.quantity: int = quantity
+        self.buyer = buyer
+        self.seller = seller
+        self.timestamp = timestamp
+
+    def __str__(self) -&gt; str:
+        return &quot;(&quot; + self.symbol + &quot;, &quot; + self.buyer + &quot; &lt;&lt; &quot; + self.seller + &quot;, &quot; + str(self.price) + &quot;, &quot; + str(self.quantity) + &quot;, &quot; + str(self.timestamp) + &quot;)&quot;
+
+    def __repr__(self) -&gt; str:
+        return &quot;(&quot; + self.symbol + &quot;, &quot; + self.buyer + &quot; &lt;&lt; &quot; + self.seller + &quot;, &quot; + str(self.price) + &quot;, &quot; + str(self.quantity) + &quot;, &quot; + str(self.timestamp) + &quot;)&quot; + self.symbol + &quot;, &quot; + self.buyer + &quot; &lt;&lt; &quot; + self.seller + &quot;, &quot; + str(self.price) + &quot;, &quot; + str(self.quantity) + &quot;)&quot;</code></pre></div><div style="display:contents" dir="auto"><p id="ec7e6958-c11a-8297-9350-81f1d705d52f" class="">These trades have 5 distinct properties (besides the <code>timestamp</code> property). On Prosperity’s exchange, like on most real-world exchanges, counterparty information is often not disclosed. Therefore, <code>self.buyer</code> and <code>self.seller</code> will only be non-empty strings if the algorithm itself is the buyer (<code>self.buyer = “SUBMISSION”</code>) or the seller (<code>self.seller=“SUBMISSION”</code>).</p></div><div style="display:contents" dir="auto"><h2 id="cfbe6958-c11a-8294-ac0b-8197bc246e77" class=""><code>OrderDepth</code> class</h2></div><div style="display:contents" dir="auto"><p id="5f4e6958-c11a-839a-bca2-01b5bffb4f85" class="">Provided by the <code>TradingState</code> class is also the <code>OrderDepth</code> per symbol. This object contains the collection of all outstanding buy and sell orders, or “quotes” that were sent by the trading bots, for a certain symbol. </p></div><div style="display:contents" dir="auto"><pre id="c6ae6958-c11a-8314-b743-0186b007facf" class="code code-wrap"><code class="language-python" style="white-space:pre-wrap;word-break:break-all">class OrderDepth:
+    def __init__(self):
+        self.buy_orders: Dict[int, int] = {}
+        self.sell_orders: Dict[int, int] = {}</code></pre></div><div style="display:contents" dir="auto"><p id="36fe6958-c11a-828f-9a07-81dd7b0d981e" class="">All the orders on a single side (buy or sell) are aggregated in a dict, where the keys indicate the price associated with the order, and the corresponding values indicate the total volume on that price level. </p></div><div style="display:contents" dir="ltr"><figure class="block-color-purple_background callout" style="white-space:pre-wrap;display:flex" id="468e6958-c11a-82ce-809e-01bb60e648e7"><div style="font-size:1.5em"><span class="icon">📃</span></div><div style="width:100%"><div style="display:contents" dir="auto"><p id="f66e6958-c11a-8342-ac8a-81e8d94511f5" class=""><strong>Example</strong>: if the buy_orders property would look like this for a certain product: <code>self.buy_orders = {9: 5, 10: 4}</code>, then there is a total buy order quantity of 5 at the price level of 9, and a total buy order quantity of 4 at a price level of 10. Players should note that in the sell_orders property, the quantities specified will be negative. E.g., <code>{12: -3, 11: -2}</code> would mean that the aggregated sell order volume at price level 12 is 3, and 2 at price level 11.</p></div></div></figure></div><div style="display:contents" dir="auto"><p id="236e6958-c11a-8399-9185-01946656223e" class="">Every price level at which there are buy orders should always be strictly lower than all the levels at which there are sell orders. If not, then there is a potential match between buy and sell orders, and a trade between the bots should have happened.</p></div><div style="display:contents" dir="auto"><h2 id="798e6958-c11a-83ba-99a4-811009a0046e" class=""><code>Observation</code> class</h2></div><div style="display:contents" dir="ltr"><figure class="block-color-yellow_background callout" style="white-space:pre-wrap;display:flex" id="e08e6958-c11a-8214-bc84-8127addafd7f"><div style="font-size:1.5em"><span class="icon">⚠️</span></div><div style="width:100%"><div style="display:contents" dir="auto"><p id="e82e6958-c11a-83d3-81b0-8177e1264d88" class="">Observation details help to decide on eventual orders or ‘conversion requests’, although we expect you won’t really need to work much with this class (feel free to skip).</p></div></div></figure></div><div style="display:contents" dir="auto"><p id="c50e6958-c11a-82ba-adf0-81dc39f4d6d2" class="">There are two items delivered inside the TradingState instance:</p></div><div style="display:contents" dir="auto"><ol type="1" id="46be6958-c11a-830f-b25f-01c6a804624f" class="numbered-list" start="1"><li>Simple product to value dictionary inside plainValueObservations</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="840e6958-c11a-829f-b1e8-81352cab2632" class="numbered-list" start="2"><li>Dictionary of complex <strong>ConversionObservation </strong>values for respective products. Used to place conversion requests from Trader class. Structure visible below.</li></ol></div><div style="display:contents" dir="auto"><pre id="66ae6958-c11a-82a3-bb28-81d4ff66a839" class="code code-wrap"><code class="language-python" style="white-space:pre-wrap;word-break:break-all">class ConversionObservation:
+
+    def __init__(self, bidPrice: float, askPrice: float, transportFees: float, exportTariff: float, importTariff: float, sunlight: float, humidity: float):
+        self.bidPrice = bidPrice
+        self.askPrice = askPrice
+        self.transportFees = transportFees
+        self.exportTariff = exportTariff
+        self.importTariff = importTariff
+        self.sugarPrice = sugarPrice
+        self.sunlightIndex = sunlightIndex</code></pre></div><div style="display:contents" dir="auto"><p id="f80e6958-c11a-8365-a0e0-81a1b29d79df" class="">In case you decide to place a conversion request on a product, then the listed integer number should be returned as a “conversions” value from the <code>run()</code> method. Based on logic defined inside Prosperity container it will convert positions acquired by submitted code. There is a number of conditions for conversion to happen:</p></div><div style="display:contents" dir="auto"><ul id="7c3e6958-c11a-8389-89ca-01c6fd01a792" class="bulleted-list"><li style="list-style-type:disc">You need to obtain either long or short position earlier.</li></ul></div><div style="display:contents" dir="auto"><ul id="319e6958-c11a-82a8-ac23-013d9f20ff55" class="bulleted-list"><li style="list-style-type:disc">Conversion request cannot exceed possessed items count. </li></ul></div><div style="display:contents" dir="auto"><ul id="53ce6958-c11a-82e4-87b7-0181013f86c8" class="bulleted-list"><li style="list-style-type:disc">In case you have 10 items short (-10) you can only request from 1 to 10. Request for 11 or more will be fully ignored.</li></ul></div><div style="display:contents" dir="auto"><ul id="4f1e6958-c11a-82ac-9ac5-01fc027cec8e" class="bulleted-list"><li style="list-style-type:disc">While conversion happens you will need to cover transportation and import/export tariff.</li></ul></div><div style="display:contents" dir="auto"><ul id="db3e6958-c11a-826b-b3d2-8176334bed53" class="bulleted-list"><li style="list-style-type:disc">Conversion request is not mandatory. You can send 0 or None as value.</li></ul></div><div style="display:contents" dir="auto"><h1 id="e87e6958-c11a-8377-b058-018df1751230" class="">How to send orders using the <code>Order</code> class</h1></div><div style="display:contents" dir="auto"><p id="787e6958-c11a-8311-b4fd-013382911a05" class="">After performing logic on the incoming order state, the <code>run</code> method defined by the player should output a dictionary containing the orders that the algorithm wants to send. The keys of this dictionary should be all the products that the algorithm wishes to send orders for. These orders should be instances of the <code>Order</code> class. Each order has three important properties. These are:</p></div><div style="display:contents" dir="auto"><ol type="1" id="f1de6958-c11a-8380-b64d-817de0fe6f86" class="numbered-list" start="1"><li>The symbol of the product for which the order is sent.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="b51e6958-c11a-8276-ab0b-8183c0067e50" class="numbered-list" start="2"><li>The price of the order: the maximum price at which the algorithm wants to buy in case of a BUY order, or the minimum price at which the algorithm wants to sell in case of a SELL order.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="afde6958-c11a-83d1-8b7d-01fd56dc2757" class="numbered-list" start="3"><li>The quantity of the order: the maximum quantity that the algorithm wishes to buy or sell. If the sign of the quantity is positive, the order is a buy order, if the sign of the quantity is negative it is a sell order.</li></ol></div><div style="display:contents" dir="auto"><pre id="d1fe6958-c11a-8338-9fd7-81f05f94cf5c" class="code code-wrap"><code class="language-python" style="white-space:pre-wrap;word-break:break-all">Symbol = str
+
+class Order:
+    def __init__(self, symbol: Symbol, price: int, quantity: int) -&gt; None:
+        self.symbol = symbol
+        self.price = price
+        self.quantity = quantity
+
+    def __str__(self) -&gt; str:
+        return &quot;(&quot; + self.symbol + &quot;, &quot; + str(self.price) + &quot;, &quot; + str(self.quantity) + &quot;)&quot;
+
+    def __repr__(self) -&gt; str:
+        return &quot;(&quot; + self.symbol + &quot;, &quot; + str(self.price) + &quot;, &quot; + str(self.quantity) + &quot;)&quot;</code></pre></div><div style="display:contents" dir="auto"><p id="671e6958-c11a-82ea-aa26-0154b4b38078" class="">If there are active orders from counterparties for the same product against which the algorithms’ orders can be matched, the algorithms’ order will be (partially) executed right away. If no immediate or partial execution is possible, the remaining order quantity will be visible for the bots in the market, and it might be that one of them sees it as a good trading opportunity and will trade against it. If none of the bots decides to trade against the remaining order quantity, it is cancelled. Note that after cancellation of the algorithm’s orders, but before the next <code>Tradingstate</code> comes in, bots might also trade with each other.<br/><br/>Note that on Prosperity’s exchange, execution of orders is instantaneous, which means that all their orders arrive in the exchange matching engine without any delay. Therefore, all the orders that a player sends that could be immediately matched with an order from one of the bots, and result in a trade if matched. In other words, none of the bots can send an order that is faster than the player’s order and get the opportunity instead.</p></div><div style="display:contents" dir="auto"><p id="923e6958-c11a-8213-89d6-01cfedc12abb" class="">See  for a more elaborate explanation of order execution in financial markets.</p></div><div style="display:contents" dir="auto"><h2 id="92fe6958-c11a-82dc-8522-01d64574a168" class="">Position Limits</h2></div><div style="display:contents" dir="auto"><p id="506e6958-c11a-8324-96b1-818c8fae874d" class="">Just like in the real world of trading, there are position limits, i.e. limits to the size of the position that the algorithm can trade into in a single product. These position limits are defined on a per-product basis, and refer to the absolute allowable position size. So for a hypothetical position limit of 10, the position can neither be greater than 10 (long) nor less than -10 (short). On the Prosperity exchange, this position limit is enforced by the exchange. If at any iteration, the player’s algorithm tries to send buy (sell) orders for a product with an aggregated quantity that would cause the player to go over long (short) position limits if all orders would be fully executed, all orders will be rejected automatically. </p></div><div style="display:contents" dir="ltr"><figure class="block-color-purple_background callout" style="white-space:pre-wrap;display:flex" id="37ae6958-c11a-83b0-8bee-81b1ca150d76"><div style="font-size:1.5em"><span class="icon">📃</span></div><div style="width:100%"><div style="display:contents" dir="auto"><p id="3efe6958-c11a-82c4-ae54-8118129ac733" class=""><strong>Example</strong>: say the position limit in product X is 30 and the current position is -5, then any aggregated buy order volume exceeding 30 - (-5) = 35 would result in an order rejection. However, an order with volume/quantity 35 itself is perfectly legal!</p></div></div></figure></div><div style="display:contents" dir="auto"><p id="53ae6958-c11a-8229-9795-0179c8fe41e5" class="">For an overview of the per-product position limits, please refer to the ‘Rounds’ section on Wiki. The position limits are listed per round.</p></div><div style="display:contents" dir="auto"><h1 id="144e6958-c11a-82cc-99a2-019e265ddbba" class="">Example of Trading</h1></div><div style="display:contents" dir="auto"><p id="25fe6958-c11a-830c-a67c-0193790de5a4" class="">Two example iterations are provided below to give an idea what the simulation behaviour looks like.</p></div><div style="display:contents" dir="auto"><p id="483e6958-c11a-83eb-ad59-815e7b474f3f" class="">For the following example we assume a situation with two products:</p></div><div style="display:contents" dir="auto"><ul id="f28e6958-c11a-8309-b5ae-01de4cf4ca94" class="bulleted-list"><li style="list-style-type:disc">PRODUCT1 with position limit 10</li></ul></div><div style="display:contents" dir="auto"><ul id="e2ee6958-c11a-822c-8d04-815a7b0aab87" class="bulleted-list"><li style="list-style-type:disc">PRODUCT2 with position limit 20</li></ul></div><div style="display:contents" dir="auto"><p id="0ace6958-c11a-8353-a1e0-01a3780435f9" class="">At the start of the first iteration the run method is called with the <code>TradingState</code> generated by the below code. Note: the <a href="http://datamodel.py">datamodel.py</a> file from which the classes are imported is provided in Appendix B. The code can also be used to test algorithms locally.</p></div><div style="display:contents" dir="auto"><pre id="a70e6958-c11a-83db-82ee-81f8f7939730" class="code code-wrap"><code class="language-python" style="white-space:pre-wrap;word-break:break-all">from datamodel import Listing, OrderDepth, Trade, TradingState
+
+timestamp = 1000
+
+listings = {
+	&quot;PRODUCT1&quot;: Listing(
+		symbol=&quot;PRODUCT1&quot;, 
+		product=&quot;PRODUCT1&quot;, 
+		denomination= &quot;XIRECS&quot;
+	),
+	&quot;PRODUCT2&quot;: Listing(
+		symbol=&quot;PRODUCT2&quot;, 
+		product=&quot;PRODUCT2&quot;, 
+		denomination= &quot;XIRECS&quot;
+	),
+}
+
+order_depths = {
+	&quot;PRODUCT1&quot;: OrderDepth(
+		buy_orders={10: 7, 9: 5},
+		sell_orders={11: -4, 12: -8}
+	),
+	&quot;PRODUCT2&quot;: OrderDepth(
+		buy_orders={142: 3, 141: 5},
+		sell_orders={144: -5, 145: -8}
+	),	
+}
+
+own_trades = {
+	&quot;PRODUCT1&quot;: [],
+	&quot;PRODUCT2&quot;: []
+}
+
+market_trades = {
+	&quot;PRODUCT1&quot;: [
+		Trade(
+			symbol=&quot;PRODUCT1&quot;,
+			price=11,
+			quantity=4,
+			buyer=&quot;&quot;,
+			seller=&quot;&quot;,
+			timestamp=900
+		)
+	],
+	&quot;PRODUCT2&quot;: []
+}
+
+position = {
+	&quot;PRODUCT1&quot;: 3,
+	&quot;PRODUCT2&quot;: -5
+}
+
+observations = {}
+traderData = &quot;&quot;
+
+state = TradingState(
+	traderData,
+	timestamp,
+  listings,
+	order_depths,
+	own_trades,
+	market_trades,
+	position,
+	observations
+)</code></pre></div><div style="display:contents" dir="auto"><p id="c17e6958-c11a-837a-9d32-015684fe8093" class="">Let’s say that at this point in the simulation, the algorithm has the following convictions:</p></div><div style="display:contents" dir="auto"><ol type="1" id="fbfe6958-c11a-83b8-8ff7-01fbceb33c55" class="numbered-list" start="1"><li>PRODUCT1 is worth 13</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="656e6958-c11a-83a4-a139-817432622307" class="numbered-list" start="2"><li>PRODUCT2 is worth 142</li></ol></div><div style="display:contents" dir="auto"><p id="ed4e6958-c11a-8381-9df8-01fcf509005a" class="">It could then potentially decide on the following</p></div><div style="display:contents" dir="auto"><ol type="1" id="bbce6958-c11a-8393-8488-81094eb9b2ec" class="numbered-list" start="1"><li>Since the sell orders in PRODUCT1 at price 11 (qty 4) and price 12 (qty 8) are both below the algorithms calculated fair value, it would like to send a buy order to trade with these sell orders. Given that the position in PRODUCT1 is already 3 long and the position limit is set at 10, sending one or more buy orders with an aggregated quantity of &gt;7 would result in rejection of all buy orders, the algorithm sends a buy order with quantity 7 and a price of 12.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="6c0e6958-c11a-82a6-a684-81bd3e78c31f" class="numbered-list" start="2"><li>Versus the fair value of 142 neither the sell orders nor the buy orders look profitable. The algorithm therefore decides to see if any of the bots is willing to buy at 143, and sends a sell order of quantity 5 at that price level.</li></ol></div><div style="display:contents" dir="auto"><p id="2eee6958-c11a-83ac-abc9-011297687307" class="">Based on the above the <code>run</code> method output would then be generated as shown below:</p></div><div style="display:contents" dir="auto"><pre id="fcae6958-c11a-82a1-8f1d-810ba9412e76" class="code code-wrap"><code class="language-python" style="white-space:pre-wrap;word-break:break-all">result[&quot;PRODUCT1&quot;] = [Order(&quot;PRODUCT1&quot;, 12, 7)]
+result[&quot;PRODUCT2&quot;] = [Order(&quot;PRODUCT2&quot;, 143, -5)]</code></pre></div><div style="display:contents" dir="auto"><p id="d50e6958-c11a-83a9-8c85-01156834ac41" class="">An example of what the next <code>TradingState</code> will look like is generated by the code below.</p></div><div style="display:contents" dir="auto"><pre id="f6ce6958-c11a-8304-a183-01f8423a7bdf" class="code code-wrap"><code class="language-python" style="white-space:pre-wrap;word-break:break-all">from datamodel import Listing, OrderDepth, Trade, TradingState
+
+timestamp = 1100
+
+listings = {
+	&quot;PRODUCT1&quot;: Listing(
+		symbol=&quot;PRODUCT1&quot;, 
+		product=&quot;PRODUCT1&quot;, 
+		denomination: &quot;XIRECS&quot;
+	),
+	&quot;PRODUCT2&quot;: Listing(
+		symbol=&quot;PRODUCT2&quot;, 
+		product=&quot;PRODUCT2&quot;, 
+		denomination: &quot;XIRECS&quot;
+	),
+}
+
+order_depths = {
+	&quot;PRODUCT1&quot;: OrderDepth(
+		buy_orders={10: 7, 9: 5},
+		sell_orders={12: -5, 13: -3}
+	),
+	&quot;PRODUCT2&quot;: OrderDepth(
+		buy_orders={142: 3, 141: 5},
+		sell_orders={144: -5, 145: -8}
+	),	
+}
+
+own_trades = {
+	&quot;PRODUCT1&quot;: [
+		Trade(
+			symbol=&quot;PRODUCT1&quot;,
+			price=11,
+			quantity=4,
+			buyer=&quot;SUBMISSION&quot;,
+			seller=&quot;&quot;,
+			timestamp=1000
+		),
+		Trade(
+			symbol=&quot;PRODUCT1&quot;,
+			price=12,
+			quantity=3,
+			buyer=&quot;SUBMISSION&quot;,
+			seller=&quot;&quot;,
+			timestamp=1000
+		)
+	],
+	&quot;PRODUCT2&quot;: [
+		Trade(
+			symbol=&quot;PRODUCT2&quot;,
+			price=143,
+			quantity=2,
+			buyer=&quot;&quot;,
+			seller=&quot;SUBMISSION&quot;,
+			timestamp=1000
+		),
+	]
+}
+
+market_trades = {
+	&quot;PRODUCT1&quot;: [],
+	&quot;PRODUCT2&quot;: []
+}
+
+position = {
+	&quot;PRODUCT1&quot;: 10,
+	&quot;PRODUCT2&quot;: -7
+}
+
+observations = {}
+traderData = &quot;&quot;
+
+state = TradingState(
+	traderData,
+	timestamp,
+  listings,
+	order_depths,
+	own_trades,
+	market_trades,
+	position,
+	observations
+)</code></pre></div><div style="display:contents" dir="auto"><p id="5d2e6958-c11a-83a0-8170-01aade80b145" class="">A few observations can be made from this <code>TradingState</code>&#x27;s properties:</p></div><div style="display:contents" dir="auto"><ol type="1" id="325e6958-c11a-833f-af6b-019bae9f4aee" class="numbered-list" start="1"><li>The algorithm’s buy orders for <code>“PRODUCT1&quot;</code> matched first with the full quantity of the sell order at price 11. As a result the order is now gone from the order_depths and a corresponding own_trade is created.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="86de6958-c11a-83ac-afd4-01674e8d58df" class="numbered-list" start="2"><li>The remaining order quantity of 3 then matched with part of the order at price 12, resulting in a second trade at price 12. As can be seen in the order_depths the quantity of the corresponding sell order is now reduced by 3 as well.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="04de6958-c11a-836e-bb2b-812a70f4e145" class="numbered-list" start="3"><li>For “PRODUCT2” a trade at price 143 with a quantity 2 can be observed, which indicates that one of the bots decided to send a buy order of quantity 2 as a reaction to the player’s sell order at that price level. For the player’s initial order this means that a quantity of 3 of the 5 total remains unexecuted. None of the bots decides to trade against this order, and the full order quantity is automatically cancelled.</li></ol></div><div style="display:contents" dir="auto"><h1 id="cf8e6958-c11a-828f-b5bd-01843c994ac3" class="">Technical Notes</h1></div><div style="display:contents" dir="auto"><p id="23ae6958-c11a-8286-9d25-013c1b64bb0e" class="">There are a few technicalities that players should take into account when writing an algorithms:</p></div><div style="display:contents" dir="auto"><ol type="1" id="52ee6958-c11a-8235-8fec-8140a8558f3b" class="numbered-list" start="1"><li>Only the libraries noted at the bottom of this page under “Supported Libraries” are allowed to be used by the algorithm. These are listed in Appendix C.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="b2be6958-c11a-8220-ba9b-0138ece2832a" class="numbered-list" start="2"><li>Each time the “run” method is called, it should generate a response in 900ms, which should be reasonable as the average is ≤ 100ms; otherwise, the function call will time out. Players should make sure that their algorithms are sufficiently lightweight to make sure this requirement is met. </li></ol></div><div style="display:contents" dir="auto"><h1 id="3fee6958-c11a-82e4-911e-0148a1a68585" class="">Available Resources to Help Build the Algorithm</h1></div><div style="display:contents" dir="auto"><p id="a25e6958-c11a-823c-8c50-81e5d509ea8b" class="">To aid players in building the algorithm several resources are made available:</p></div><div style="display:contents" dir="auto"><ol type="1" id="bcae6958-c11a-833b-8b68-81dddf94d7cc" class="numbered-list" start="1"><li>For every new product introduced several days of sample data are provided. For each of these days two .csv’s are available, one containing a list of all the trades done on that day, and one showing the market orders at every time step. Examples of the file formats:<div style="display:contents" dir="auto"><ol type="a" id="318e6958-c11a-8201-ae1f-01b4d1df3a24" class="numbered-list" start="1"><li>.csv file with trade example</li></ol></div><div style="display:contents" dir="auto"><ol type="a" id="af7e6958-c11a-832c-9ed0-016dfeee9304" class="numbered-list" start="2"><li>.csv file with market orders example</li></ol></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="06be6958-c11a-82db-9b44-0187f39b5ab3" class="numbered-list" start="2"><li>When players upload their algorithms on the Prosperity platform, the algorithm is tested for 1000 iterations using data from a sample day (different than the actual day that will be used for the challenge). After the run a log file is provided which can aid players in debugging their algorithms. To aid debugging, the log file also contains the output of any print statements that players put within the <code>run</code> method of their trading class.</li></ol></div><div style="display:contents" dir="auto"><h1 id="3cce6958-c11a-8341-8e0d-818e23daad3b" class="">Appendix A: <code>Trader</code> Class Example</h1></div><div style="display:contents" dir="auto"><p id="db4e6958-c11a-8369-b836-8166878af741" class="">Below an example of an implementation of the <code>Trader</code> class is provided. While very simple and likely not profitable, this example algorithm does include all the necessary logic to send orders<mark class="highlight-pink_background">. </mark></p></div><div style="display:contents" dir="auto"><p id="c26e6958-c11a-8389-afdd-01cc7f927fbc" class=""> ⬇️ Download</p></div><div style="display:contents" dir="ltr"><figure id="448e6958-c11a-83ee-83e3-812e4d82bdde"><div class="source"><a href="Writing%20an%20Algorithm%20in%20Python/example.py">example.py</a></div></figure></div><div style="display:contents" dir="auto"><pre id="798e6958-c11a-837d-8f21-81dd25c36fbb" class="code code-wrap"><code class="language-python" style="white-space:pre-wrap;word-break:break-all">from datamodel import OrderDepth, UserId, TradingState, Order
+from typing import List
+import string
+
+class Trader:
+
+    def bid(self):
+        return 15
+    
+    def run(self, state: TradingState):
+        &quot;&quot;&quot;Only method required. It takes all buy and sell orders for all
+        symbols as an input, and outputs a list of orders to be sent.&quot;&quot;&quot;
+
+        print(&quot;traderData: &quot; + state.traderData)
+        print(&quot;Observations: &quot; + str(state.observations))
+
+        # Orders to be placed on exchange matching engine
+        result = {}
+        for product in state.order_depths:
+            order_depth: OrderDepth = state.order_depths[product]
+            orders: List[Order] = []
+            acceptable_price = 10  # Participant should calculate this value
+            print(&quot;Acceptable price : &quot; + str(acceptable_price))
+            print(&quot;Buy Order depth : &quot; + str(len(order_depth.buy_orders)) + &quot;, Sell order depth : &quot; + str(len(order_depth.sell_orders)))
+    
+            if len(order_depth.sell_orders) != 0:
+                best_ask, best_ask_amount = list(order_depth.sell_orders.items())[0]
+                if int(best_ask) &lt; acceptable_price:
+                    print(&quot;BUY&quot;, str(-best_ask_amount) + &quot;x&quot;, best_ask)
+                    orders.append(Order(product, best_ask, -best_ask_amount))
+    
+            if len(order_depth.buy_orders) != 0:
+                best_bid, best_bid_amount = list(order_depth.buy_orders.items())[0]
+                if int(best_bid) &gt; acceptable_price:
+                    print(&quot;SELL&quot;, str(best_bid_amount) + &quot;x&quot;, best_bid)
+                    orders.append(Order(product, best_bid, -best_bid_amount))
+            
+            result[product] = orders
+    
+        traderData = &quot;&quot;  # No state needed - we check position directly
+        conversions = 0
+        return result, conversions, traderData</code></pre></div><div style="display:contents" dir="auto"><h1 id="c01e6958-c11a-83b3-b5d4-0187eeac1c3b" class="">Appendix B: <a href="http://datamodel.py">datamodel.py</a> file</h1></div><div style="display:contents" dir="auto"><p id="bd3e6958-c11a-825f-8c63-8122842e298a" class="block-color-yellow_background">Observation details help to decide on eventual orders or ‘conversion requests’, although we expect you won’t really need to work much with this class (feel free to skip).</p></div><div style="display:contents" dir="auto"><pre id="320e6958-c11a-8339-8f90-81e06c39fd03" class="code code-wrap"><code class="language-python" style="white-space:pre-wrap;word-break:break-all">import json
+from typing import Dict, List
+from json import JSONEncoder
+import jsonpickle
+
+Time = int
+Symbol = str
+Product = str
+Position = int
+UserId = str
+ObservationValue = int
+
+
+class Listing:
+
+    def __init__(self, symbol: Symbol, product: Product, denomination: Product):
+        self.symbol = symbol
+        self.product = product
+        self.denomination = denomination
+        
+                 
+class ConversionObservation:
+
+    def __init__(self, bidPrice: float, askPrice: float, transportFees: float, exportTariff: float, importTariff: float, sunlight: float, humidity: float):
+        self.bidPrice = bidPrice
+        self.askPrice = askPrice
+        self.transportFees = transportFees
+        self.exportTariff = exportTariff
+        self.importTariff = importTariff
+        self.sugarPrice = sugarPrice
+        self.sunlightIndex = sunlightIndex
+        
+
+class Observation:
+
+    def __init__(self, plainValueObservations: Dict[Product, ObservationValue], conversionObservations: Dict[Product, ConversionObservation]) -&gt; None:
+        self.plainValueObservations = plainValueObservations
+        self.conversionObservations = conversionObservations
+        
+    def __str__(self) -&gt; str:
+        return &quot;(plainValueObservations: &quot; + jsonpickle.encode(self.plainValueObservations) + &quot;, conversionObservations: &quot; + jsonpickle.encode(self.conversionObservations) + &quot;)&quot;
+     
+
+class Order:
+
+    def __init__(self, symbol: Symbol, price: int, quantity: int) -&gt; None:
+        self.symbol = symbol
+        self.price = price
+        self.quantity = quantity
+
+    def __str__(self) -&gt; str:
+        return &quot;(&quot; + self.symbol + &quot;, &quot; + str(self.price) + &quot;, &quot; + str(self.quantity) + &quot;)&quot;
+
+    def __repr__(self) -&gt; str:
+        return &quot;(&quot; + self.symbol + &quot;, &quot; + str(self.price) + &quot;, &quot; + str(self.quantity) + &quot;)&quot;
+    
+
+class OrderDepth:
+
+    def __init__(self):
+        self.buy_orders: Dict[int, int] = {}
+        self.sell_orders: Dict[int, int] = {}
+
+
+class Trade:
+
+    def __init__(self, symbol: Symbol, price: int, quantity: int, buyer: UserId=None, seller: UserId=None, timestamp: int=0) -&gt; None:
+        self.symbol = symbol
+        self.price: int = price
+        self.quantity: int = quantity
+        self.buyer = buyer
+        self.seller = seller
+        self.timestamp = timestamp
+
+    def __str__(self) -&gt; str:
+        return &quot;(&quot; + self.symbol + &quot;, &quot; + self.buyer + &quot; &lt;&lt; &quot; + self.seller + &quot;, &quot; + str(self.price) + &quot;, &quot; + str(self.quantity) + &quot;, &quot; + str(self.timestamp) + &quot;)&quot;
+
+    def __repr__(self) -&gt; str:
+        return &quot;(&quot; + self.symbol + &quot;, &quot; + self.buyer + &quot; &lt;&lt; &quot; + self.seller + &quot;, &quot; + str(self.price) + &quot;, &quot; + str(self.quantity) + &quot;, &quot; + str(self.timestamp) + &quot;)&quot;
+
+
+class TradingState(object):
+
+    def __init__(self,
+                 traderData: str,
+                 timestamp: Time,
+                 listings: Dict[Symbol, Listing],
+                 order_depths: Dict[Symbol, OrderDepth],
+                 own_trades: Dict[Symbol, List[Trade]],
+                 market_trades: Dict[Symbol, List[Trade]],
+                 position: Dict[Product, Position],
+                 observations: Observation):
+        self.traderData = traderData
+        self.timestamp = timestamp
+        self.listings = listings
+        self.order_depths = order_depths
+        self.own_trades = own_trades
+        self.market_trades = market_trades
+        self.position = position
+        self.observations = observations
+        
+    def toJSON(self):
+        return json.dumps(self, default=lambda o: o.__dict__, sort_keys=True)
+
+    
+class ProsperityEncoder(JSONEncoder):
+
+        def default(self, o):
+            return o.__dict__</code></pre></div><div style="display:contents" dir="auto"><h1 id="493e6958-c11a-8364-8001-817e10f3d826" class="">Appendix C: Supported libraries</h1></div><div style="display:contents" dir="auto"><p id="d1fe6958-c11a-8256-a344-0115c865a5ed" class="">All the standard python libraries included in Python 3.12 are fully supported, including the libraries below that might be of interest to you to run during the simulation. Importing other, external libraries is not supported.</p></div><div style="display:contents" dir="auto"><p id="250e6958-c11a-836b-b6e7-01604636db68" class=""><a href="https://pandas.pydata.org/">pandas</a></p></div><div style="display:contents" dir="auto"><p id="d03e6958-c11a-83bc-b490-01324ce6ac17" class=""><a href="https://numpy.org/">NumPy</a></p></div><div style="display:contents" dir="auto"><p id="bdde6958-c11a-83a9-999b-81915825dccb" class=""><a href="https://docs.python.org/3.9/library/statistics.html">statistics</a></p></div><div style="display:contents" dir="auto"><p id="bfae6958-c11a-821c-aa79-01cc69df5361" class=""><a href="https://docs.python.org/3.9/library/math.html">math</a></p></div><div style="display:contents" dir="auto"><p id="6d6e6958-c11a-8206-8eb6-01e4832cab33" class=""><a href="https://docs.python.org/3.9/library/typing.html">typing</a></p></div><div style="display:contents" dir="auto"><p id="e5fe6958-c11a-82f8-a98e-0154bf0d5b98" class=""><a href="https://jsonpickle.github.io/">jsonpickle</a></p></div><div style="display:contents" dir="auto"><p id="535e6958-c11a-83a8-8086-01598e86ad3a" class="">
+</p></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
