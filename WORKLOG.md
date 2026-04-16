@@ -68,3 +68,34 @@
 - Resolve the Trading groundwork HTML read blocker (rename file with ASCII quotes, or read via a tool that handles Unicode path bytes) and fill in the mechanics doc's open questions
 - Prep Pass 2: synthesize mechanics + playbook + current findings into concrete strategy deltas for `trader-v8-173159.py` (pepper root first)
 - Revisit deferred Session 2 follow-ups: Cell 3 Olivia hunt, dead-code cleanup, reversal-threshold review
+
+---
+
+## 2026-04-16 (Session 4) — Prep Pass 2: Statistical EDA, ACO analysis, bot identity
+
+**What we did:**
+- Installed scipy + statsmodels
+- Wrote and executed `Round 1/analysis/r1_eda_script.py` (all computations, saves JSON + PNGs)
+- Created `Round 1/analysis/r1_eda.ipynb` (12 cells, all executed end-to-end, 12 PNG plots in `plots/`)
+- Created `Round 1/analysis/r1_eda_summary.md` with findings, strategy recommendations, and 11-question triage
+
+**Findings (specific numbers):**
+- ACO ADF: stationary within each day (p=0.0048, 0.0000, 0.0147 for days -2, -1, 0). OU half-life = 8.4 timesteps. Archetype = KELP.
+- ACO return autocorr: lag-1 = −0.494 (strong mean reversion), lags 5/20/100 ≈ 0 (no persistence). Variance ratio VR(2)=0.506, VR(16)=0.089.
+- ACO "hidden pattern": level autocorr at lag-1000 = −0.123, lag-2000 = −0.340. Bounded oscillation with half-period ~1000–2000 timesteps. This IS the lore-hinted pattern.
+- ACO suggested reversion_beta: −0.40 to −0.50 (vs KELP's −0.229; ACO reverts harder).
+- IPR ADF: unit root on all 3 days (p=0.935, 0.802, 0.894). OU half-life = 279,697 timesteps (infinite). Archetype = novel deterministic drift, no IMC3 analog.
+- IPR intraday quartile mean return: uniformly 0.107–0.110 XIRECS/tick across all 4 quartiles and all 3 days. No timing advantage.
+- IPR cross-product return correlation: r=0.007, p=0.264 (not significant). ACO and IPR are independent.
+- Cointegration: statistical artifact — apparent cointegration is driven by ACO's own stationarity, not co-movement.
+- Trade-sign flow → next-tick return: ACO r=−0.002 (p=0.906), IPR r=−0.007 (p=0.734). No adverse-selection signal in either product.
+- Order-book depth: L1=100%, L2≈68%, L3≈1.6–2.6% — effectively 1–2 levels. L3 is negligible.
+- Bot identity: all buyer/seller values are NaN (anonymized). No Olivia-style signal exists in Round 1.
+- Open questions triage: 4 resolved by EDA, 0 by HTML re-read, 7 still open.
+
+**Next session starts with:**
+- Pass 3: synthesize EDA findings into concrete strategy code changes for `traders/trader-v8-173159.py`
+  - IPR: remove reversal thresholds (zero reversals in 3 days; false trigger is catastrophic; raise guard to EMA delta < −50 minimum if keeping at all)
+  - ACO: evaluate switching from current EMA fair value to KELP-style filtered mmbot mid + reversion_beta = −0.40 to −0.50
+  - ACO: prototype the medium-term oscillation regime filter (position in trailing-500-tick range → directional bias)
+  - Backtest all changes across all 3 days; accept only if mean PnL increases without large variance increase
