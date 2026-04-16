@@ -136,27 +136,28 @@ Source: `Round 1/docs/r1_product_mechanics.md` — 5 ACO questions + 6 IPR quest
 
 | # | Question (paraphrase) | Status | Evidence / Notes |
 |---|----------------------|--------|-----------------|
-| ACO-1 | Is a `ConversionObservation` populated for ACO? | **Still open** | Not detectable from price/trade CSVs. Suggested disposition: assume no conversion; flag if live observations contain non-null conversion fields. |
+| ACO-1 | Is a `ConversionObservation` populated for ACO? | **Resolved by HTML re-read (2026-04-16)** | `R1_Trading groundwork.html` contains zero mentions of the word "conversion"; `Writing an Algorithm in Python.html` describes the ConversionObservation class generically and adds "we expect you won't really need to work much with this class (feel free to skip)." Round 1 has no conversion mechanic for ACO. Defensive check: `state.observations.conversionObservations.get("ASH_COATED_OSMIUM") is None` expected in live. |
 | ACO-2 | What is the structure of ACO's "hidden pattern"? | **Resolved by EDA** | `r1_eda.ipynb` Cell 11; `plots/aco_long_lag_autocorr.png`. Level autocorr turns negative at lag ~1000 (−0.123) and most negative at lag ~2000 (−0.340). Pattern is a bounded oscillation with half-period ~1000–2000 timesteps. ADF confirms stationarity with OU half-life 8.4 ts. |
-| ACO-3 | Are there bot-specific quoting rules for ACO? | **Still open** | All buyer/seller values are NaN. Bot quoting behavior not identifiable from anonymized trade data. Suggested disposition: assume symmetric bots; use adverse-volume filter to distinguish mm-bots from retail. |
+| ACO-3 | Are there bot-specific quoting rules for ACO? | **Resolved by user (2026-04-16)** | No product in any round has explicit bot-specific quoting rules. Price/trade data = training set; live submission runs against analogous unseen bot behavior. Strategy correctly relies on adverse-volume filter (≥15 units) as bot-identification proxy. |
 | ACO-4 | Is the 3-level order-book depth a hard cap or export artifact? | **Resolved by EDA** | `r1_eda.ipynb` Cell 5; `plots/aco_depth_distribution.png`. L3 is quoted only ~2.6% of the time — the cap is effectively 1–2 levels in practice. Strategy should not rely on L3. |
-| ACO-5 | Is PnL marked to mid or to IMC's internal fair value? | **Still open** | The `profit_and_loss` column exists in the prices CSV but its formula is not verifiable from the data alone without knowing the true fair value. Suggested disposition: assume mid-price marking; any discrepancy will show up in live vs. backtest comparison. |
+| ACO-5 | Is PnL marked to mid or to IMC's internal fair value? | **Resolved by PLAN.md Pass 3** | Local `backtest.py` uses mark-to-mid explicitly (lines 239-247). IMC's internal marking formula is not stated in HTMLs; any discrepancy vs website score is acceptable per CLAUDE.md Hard Rule 4. |
 
 ### IPR Open Questions
 
 | # | Question (paraphrase) | Status | Evidence / Notes |
 |---|----------------------|--------|-----------------|
 | IPR-1 | Is the growth rate constant or does it vary by day/hidden state? | **Resolved by EDA** | `r1_eda.ipynb` Cells 9 + 10; `plots/intraday_quartile_returns.png`. Mean drift per quartile is 0.1077–0.1096 XIRECS/tick across all 4 quartiles and all 3 days. Growth rate is constant within each day and nearly constant across days (1003.0, 999.5, 1001.5 total drift per day). |
-| IPR-2 | Does IPR carry position AND price across days, or reset? | **Still open** | Price is confirmed to carry over (day -2 ends at 11001.5; day -1 starts at 10998.5 — very close). Position carry-over is not confirmed from data alone; mechanics doc flags this. Suggested disposition: assume position resets to 0 at day boundaries (consistent with how the v9 trader behaves — it re-buys 80 units at day start). |
-| IPR-3 | Is a `ConversionObservation` populated for IPR? | **Still open** | Not detectable from CSV data. Same as ACO-1. Suggested disposition: assume no conversion. |
+| IPR-2 | Does IPR carry position AND price across days, or reset? | **Resolved by user (2026-04-16)** | Days are effectively continuous — treat as single connected data set for strategy design and backtesting. Price carries (day -2→-1 gap ~3 XIRECS). Position-reset behavior consistent with v9 trader's implicit assumption (re-buys 80 at each day start) and IMC's standard per-day submission model. |
+| IPR-3 | Is a `ConversionObservation` populated for IPR? | **Resolved by HTML re-read (2026-04-16)** | Same as ACO-1. `R1_Trading groundwork.html` has zero mentions of "conversion". Round 1 has no conversion mechanic for IPR. |
 | IPR-4 | Do one-sided book events represent a rules-defined state? | **Resolved by EDA** | `r1_eda.ipynb` Cell 5; `plots/ipr_depth_distribution.png`. L1 = 100% after cleaning. One-sided events (7.7% of raw rows per teammate finding) are real market-maker absences, not artifacts. Strategy correctly guards against this (v9 line 274: `if not depth.buy_orders or not depth.sell_orders: continue`). |
-| IPR-5 | Does the drift ever reverse (harvest/maturity event)? | **Still open — HIGH RISK** | Zero reversals observed in 3 days of data. But this is only 3 days. No reversal does NOT confirm a reversal can never happen. Suggested disposition: retain reversal guard in trader, but raise threshold from −8 to at minimum −50 EMA delta to avoid false triggers on normal drift noise. |
-| IPR-6 | Can you go short IPR and is there borrowing cost? | **Still open** | Mechanically allowed (position limit −80 to +80). No borrowing cost described in rules. However, shorting IPR with a deterministic upward drift is irrational under the current thesis. Suggested disposition: do not short IPR unless drift reversal is confirmed live. |
+| IPR-5 | Does the drift ever reverse (harvest/maturity event)? | **Still open — HIGH RISK** (user confirmed: 3 days data, no additional context; assume drift continues as primary, build defensive infrastructure) | Zero reversals observed in 3 days. Primary mitigation: drift-reversal circuit breaker in PLAN.md §IPR (d) (W=500, k=5.0, freeze target at 0). |
+| IPR-6 | Can you go short IPR and is there borrowing cost? | **Resolved by HTML re-read (2026-04-16)** | Neither HTML contains the words "borrow", "short sell", "shorting", "funding", "margin", "interest", or "carry". No explicit shorting cost exists by rule; only engine constraint is `position ∈ [−80, +80]`. The long-only floor in PLAN.md §IPR (c) is a strategic choice under the drift thesis, not a compliance requirement. |
 
-**Triage summary:**
-- Resolved by EDA: **5** (ACO-2, ACO-4, IPR-1, IPR-4, and IPR-4 duplicate — net 4 unique EDA resolutions)
-- Resolved by EDA: ACO-2, ACO-4, IPR-1, IPR-4 → **4 questions**
-- Still open: ACO-1, ACO-3, ACO-5, IPR-2, IPR-3, IPR-5, IPR-6 → **7 questions**
-- Resolved by re-reading HTML: **0 questions** (all rules text already captured in mechanics doc)
+**Triage summary (post-user-confirmation 2026-04-16):**
+- **Resolved by EDA (4):** ACO-2, ACO-4, IPR-1, IPR-4
+- **Resolved by HTML re-read (3):** ACO-1, IPR-3, IPR-6
+- **Resolved by PLAN.md Pass 3 (1):** ACO-5
+- **Resolved by user (2):** ACO-3 (no per-product bot rules in any round), IPR-2 (days are continuous; strategy assumption holds)
+- **Still open (1):** IPR-5 (drift reversal) — HIGH RISK, user confirmed defensive infrastructure approach is correct
 
-**Corrected count:** 4 Resolved by EDA | 0 Resolved by HTML re-read | 7 Still open.
+**Final count: 4 EDA | 3 HTML | 1 Plan | 2 User | 1 Still open (of 11 original).**
