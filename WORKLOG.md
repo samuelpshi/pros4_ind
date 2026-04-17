@@ -135,3 +135,27 @@ IPR (targeted deltas only — Config A untouched):
   - Step 4: parameter sweep ACO reversion_beta (−0.25 to −0.55, step 0.05) and IPR skim_offset (1 to 3)
   - Step 5: run drift-reversal stress test (ts 25/50/75% reversal) on IPR circuit breaker
   - Commit passing version as v10
+---
+
+## 2026-04-17 — Round 1 directory cleanup (post-Pass 2.5 archive)
+
+**What we did:**
+- Built KEEP/ARCHIVE/DELETE classification over all Round 1/, runs/, scratch/ artifacts
+- Created Round 1/archive/ preserving subdir structure and moved 38 files (v9-r1 KELP rewrite + jmerle/aco-only/ipr-only variants, Pass 3/4 strategies/ planning MDs, Pass 5/6 sweep logs, patchC1 logs, mark_test logs, 7 scratch scripts/JSON, 8 Pass 2 plots not referenced by Pass 2.5)
+- Deleted tracked clutter: 4 .DS_Store files, 3 __pycache__ directories (19 .pyc files)
+- Wrote Round 1/archive/README.md with layout, reasoning, and the trader-v9-cb.py clarification note
+- Verified trader-v8-173159.py carries the expected ACO_CFG (ema_alpha=0.12, quote_offset=2, take_edge=3, max_skew=5, panic_threshold=0.75) and aco_take/aco_make functions — A3's accounting identity is consistent
+- Updated CLAUDE.md: Active Context broadened to both products; added Pass 2.5 ship candidate to Repo Layout; added both ACO param sets with "pending R1 live verification" note; updated Decisions Made So Far
+- Repointed 9 log paths in pass_ipr_sweep_analysis.md + sweep_log_index_ipr.md to Round 1/archive/runs/ipr_sweep/
+- Repointed 1 trader reference in aco_slow_ema_calibration.md to Round 1/archive/traders/trader-v9-r1-aco-only.py
+- Committed in two logical commits: (1) filesystem moves + archive README, (2) MD text updates + this WORKLOG entry
+
+**Findings:**
+- trader-v9-cb.py (referenced in the Pass 2.5 A1 dispatch as "v8 baseline for decomposition") does NOT exist on disk — repo-wide glob for `**/trader-v9-cb*` returns zero hits. A3's actual baseline was trader-v8-173159.py; the v9-cb name was a working-copy label for the same content.
+- Active Round 1/traders/ after cleanup: 4 trader files (v8 + v8-jmerle + Pass 2.5 ship candidate + Ethan's trader1.py) + 2 _mark_test scripts. Was 8 before (4 archived).
+- Active runs/ after cleanup: 7 log files (v8_day-{-2,-1,0}.log + v8_merged.log as A3 ground truth; qo5_ms8_te3_day-{-2,-1,0}.log as A8 ship-candidate verification). Was 29 before (22 archived).
+
+**Next session starts with:**
+- Confirm R1 live submission: which trader is going in — v8 baseline (trader-v8-173159.py) or Pass 2.5 ship candidate (trader-v9-aco-qo5-ms8-te3.py)?
+- If Pass 2.5 candidate ships: capture the live log, compare live ACO PnL vs local backtest, update CLAUDE.md "Decisions Made So Far" with the verified outcome, and promote (or revert) accordingly.
+- If v8 ships: keep ship candidate on the bench, treat Pass 2.5 as deferred for R2.

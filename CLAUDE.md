@@ -3,7 +3,7 @@
 ## Active Context
 
 - Round 1 of the competition (April 14–17, 2026)
-- Active focus: **INTARIAN_PEPPER_ROOT only**. Do not modify ASH_COATED_OSMIUM logic unless explicitly asked.
+- Active focus: both products have been worked on. IPR was Phase 1 (drift capture, Config A committed); ACO Pass 2.5 produced a ship candidate pending R1 live verification. Default to not modifying either product's logic unless explicitly asked.
 - Working in a shared GitHub repo with at least one teammate (Ethan)
 - Goal: analyze data thoroughly, understand whether the current trader is sound, then improve the pepper-root strategy
 
@@ -50,7 +50,9 @@ IMC-Prosperity-2026-personal/
     ├── traders/                         ← naming convention: trader-v<N>-<suffix>.py (version + optional variant suffix)
     │   ├── trader-v8-173159.py          ← base submission trader (v9, Config A) — THIS is what we improve
     │   ├── trader-v8-173159-jmerle.py   ← identical strategy + Logger class (~+86 lines) for jmerle visualizer compatibility; -jmerle suffix = visualizer-instrumented variant
+    │   ├── trader-v9-aco-qo5-ms8-te3.py ← Pass 2.5 ACO ship candidate (qo=5, ms=8, te=3); PENDING R1 live verification
     │   └── trader1.py                   ← Ethan's separate trader (REFERENCE ONLY, do not edit)
+    ├── archive/                         ← superseded artifacts (v9-r1 KELP attempt, Pass 3–6 runs/plots); see archive/README.md
     └── logs/
         └── 173159.log                   ← submission log
 ## Data Format Reference
@@ -81,6 +83,10 @@ IMC-Prosperity-2026-personal/
 `traders/trader-v8-173159.py` handles two products:
 
 **ASH_COATED_OSMIUM (ACO):** Standard market making with EMA-tracked fair value, take orders inside fair value +/- edge, post passive bids/asks around fair value with inventory skew. Logic unchanged from v8; only position limit updated (40->80).
+
+Two parameter sets exist:
+- **v8 baseline (shipped):** `quote_offset=2, max_skew=5, take_edge=3` — `traders/trader-v8-173159.py`.
+- **Pass 2.5 ship candidate (pending R1 live verification):** `quote_offset=5, max_skew=8, take_edge=3` — `traders/trader-v9-aco-qo5-ms8-te3.py`. Local backtest showed +45%/+55%/+72% over v8 on days -2/-1/0. Not yet promoted to submission; final choice deferred until the R1 live log confirms the local ranking.
 
 **INTARIAN_PEPPER_ROOT (IPR):** Full directional + small skim overlay:
 - Aggressively buy **80** units at day start (max drift capture at position limit)
@@ -140,7 +146,7 @@ bid, ask, order book, mid-price, spread, fair value (true price), edge, alpha, m
 
 ## Decisions Made So Far
 
-- ACO logic stays untouched (only limit updated 40->80)
+- ACO: v8 logic remains the shipped default (limit 40->80). Pass 2.5 produced a tuned-parameter ship candidate (qo=5, ms=8, te=3) pending R1 live verification before promotion.
 - IPR is the active battleground
 - Working from `traders/trader-v8-173159.py` (v9, Config A), not Ethan's `traders/trader1.py`
 - **Strategy call: Config A committed** — target_long=80 for max drift capture
