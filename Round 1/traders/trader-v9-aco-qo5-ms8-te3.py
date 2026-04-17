@@ -30,15 +30,13 @@ from datamodel import OrderDepth, TradingState, Order  # type: ignore
 from typing import Dict, List, Tuple
 import jsonpickle  # type: ignore
 import math
-import os
 
 # ---------------------------------------------------------------------------
-# IPR parameter overrides via environment variables (for sweep injection).
-# Fallback defaults are the original v8 values; no env vars = identical PnL.
+# IPR parameters — defaults match v8's IPR_CFG.
 # ---------------------------------------------------------------------------
-_IPR_SKIM_SIZE        = int(os.environ.get("IPR_SKIM_SIZE",        "5"))
-_IPR_SKIM_OFFSET      = int(os.environ.get("IPR_SKIM_OFFSET",      "2"))
-_IPR_REFILL_MAX_SIZE  = int(os.environ.get("IPR_REFILL_MAX_SIZE",  "10"))
+_IPR_SKIM_SIZE        = 5
+_IPR_SKIM_OFFSET      = 2
+_IPR_REFILL_MAX_SIZE  = 10
 
 # ---------------------------------------------------------------------------
 POSITION_LIMITS: Dict[str, int] = {
