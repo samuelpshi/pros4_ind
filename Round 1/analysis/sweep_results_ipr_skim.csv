@@ -1,0 +1,9 @@
+skim_size,skim_offset,refill_max_size,scenario,ipr_pnl,aco_pnl,total_pnl,max_ipr_pos,log_path
+3,1,5,merged,238018,18556,256574,,runs/ipr_sweep/sz3_off1_rfl5_merged.log
+3,1,20,merged,238018,18556,256574,,runs/ipr_sweep/sz3_off1_rfl20_merged.log
+3,5,5,merged,238054,18556,256610,,runs/ipr_sweep/sz3_off5_rfl5_merged.log
+3,5,20,merged,238054,18556,256610,,runs/ipr_sweep/sz3_off5_rfl20_merged.log
+15,1,5,merged,237963,18556,256519,,runs/ipr_sweep/sz15_off1_rfl5_merged.log
+15,1,20,merged,237963,18556,256519,,runs/ipr_sweep/sz15_off1_rfl20_merged.log
+15,5,5,merged,238054,18556,256610,,runs/ipr_sweep/sz15_off5_rfl5_merged.log
+15,5,20,merged,238054,18556,256610,,runs/ipr_sweep/sz15_off5_rfl20_merged.log

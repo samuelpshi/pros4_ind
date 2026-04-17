@@ -49,12 +49,14 @@ POSITION_LIMITS: Dict[str, int] = {
 TIMESTAMP_MAX = 999_900
 EOD_START     = 950_000
 
-# ACO - UNCHANGED  
+# ACO - A7 recommended params: quote_offset=5, max_skew=8, take_edge=3
+# Justified by A7 LOO-CV (worst_LOO=2034 CSV, vs v8 worst_LOO=892.5 CSV)
+# GT validation required before shipping (A8 step 1)
 ACO_CFG = {
     "ema_alpha":       0.12,
-    "quote_offset":    2,
-    "take_edge":       3,
-    "max_skew":        5,
+    "quote_offset":    5,   # A7: wider passive quotes capture more spread per fill
+    "take_edge":       3,   # A7: tighter take-edge for more aggressive fills
+    "max_skew":        8,   # A7: stronger inventory skew
     "panic_threshold": 0.75,
 }
 

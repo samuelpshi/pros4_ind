@@ -1,0 +1,310 @@
+{
+  "v8_day-2": {
+    "errors": [],
+    "warnings": [],
+    "exceeded_limit_total": 118,
+    "exceeded_limit_ipr": 0,
+    "exceeded_limit_aco": 118,
+    "circuit_trigger_count": 0,
+    "circuit_trigger_timestamps": [],
+    "products": {
+      "ASH_COATED_OSMIUM": {
+        "final_pnl": 6335.0,
+        "pnl_series_len": 10000,
+        "max_drawdown": 1365940.0,
+        "max_position": 80,
+        "min_position": -80,
+        "final_position": 66
+      },
+      "INTARIAN_PEPPER_ROOT": {
+        "final_pnl": 79543.0,
+        "pnl_series_len": 10000,
+        "max_drawdown": 879120.0,
+        "max_position": 80,
+        "min_position": 0,
+        "final_position": 80
+      }
+    },
+    "total_final_pnl": 85878.0
+  },
+  "v8_day-1": {
+    "errors": [],
+    "warnings": [],
+    "exceeded_limit_total": 127,
+    "exceeded_limit_ipr": 0,
+    "exceeded_limit_aco": 127,
+    "circuit_trigger_count": 0,
+    "circuit_trigger_timestamps": [],
+    "products": {
+      "ASH_COATED_OSMIUM": {
+        "final_pnl": 6972.0,
+        "pnl_series_len": 10000,
+        "max_drawdown": 800754.0,
+        "max_position": 32,
+        "min_position": -80,
+        "final_position": 31
+      },
+      "INTARIAN_PEPPER_ROOT": {
+        "final_pnl": 79162.0,
+        "pnl_series_len": 10000,
+        "max_drawdown": 955360.0,
+        "max_position": 80,
+        "min_position": 0,
+        "final_position": 80
+      }
+    },
+    "total_final_pnl": 86134.0
+  },
+  "v8_day0": {
+    "errors": [],
+    "warnings": [],
+    "exceeded_limit_total": 151,
+    "exceeded_limit_ipr": 0,
+    "exceeded_limit_aco": 151,
+    "circuit_trigger_count": 0,
+    "circuit_trigger_timestamps": [],
+    "products": {
+      "ASH_COATED_OSMIUM": {
+        "final_pnl": 5249.0,
+        "pnl_series_len": 10000,
+        "max_drawdown": 1138820.0,
+        "max_position": 61,
+        "min_position": -80,
+        "final_position": -66
+      },
+      "INTARIAN_PEPPER_ROOT": {
+        "final_pnl": 79319.0,
+        "pnl_series_len": 10000,
+        "max_drawdown": 1020800.0,
+        "max_position": 80,
+        "min_position": 0,
+        "final_position": 80
+      }
+    },
+    "total_final_pnl": 84568.0
+  },
+  "v8_merged": {
+    "errors": [],
+    "warnings": [],
+    "exceeded_limit_total": 396,
+    "exceeded_limit_ipr": 0,
+    "exceeded_limit_aco": 396,
+    "circuit_trigger_count": 0,
+    "circuit_trigger_timestamps": [],
+    "products": {
+      "ASH_COATED_OSMIUM": {
+        "final_pnl": 18556.0,
+        "pnl_series_len": 30000,
+        "max_drawdown": 1365940.0,
+        "max_position": 158,
+        "min_position": -80,
+        "final_position": 31
+      },
+      "INTARIAN_PEPPER_ROOT": {
+        "final_pnl": 238024.0,
+        "pnl_series_len": 30000,
+        "max_drawdown": 1020800.0,
+        "max_position": 240,
+        "min_position": 0,
+        "final_position": 240
+      }
+    },
+    "total_final_pnl": 256580.0
+  },
+  "v9_day-2": {
+    "errors": [],
+    "warnings": [],
+    "exceeded_limit_total": 171,
+    "exceeded_limit_ipr": 0,
+    "exceeded_limit_aco": 171,
+    "circuit_trigger_count": 0,
+    "circuit_trigger_timestamps": [],
+    "products": {
+      "ASH_COATED_OSMIUM": {
+        "final_pnl": 4278.5,
+        "pnl_series_len": 10000,
+        "max_drawdown": 1028520.0,
+        "max_position": 80,
+        "min_position": -80,
+        "final_position": 67
+      },
+      "INTARIAN_PEPPER_ROOT": {
+        "final_pnl": 79184.0,
+        "pnl_series_len": 10000,
+        "max_drawdown": 879120.0,
+        "max_position": 80,
+        "min_position": 0,
+        "final_position": 80
+      }
+    },
+    "total_final_pnl": 83462.5
+  },
+  "v9_day-1": {
+    "errors": [],
+    "warnings": [],
+    "exceeded_limit_total": 173,
+    "exceeded_limit_ipr": 0,
+    "exceeded_limit_aco": 173,
+    "circuit_trigger_count": 0,
+    "circuit_trigger_timestamps": [],
+    "products": {
+      "ASH_COATED_OSMIUM": {
+        "final_pnl": 4736.0,
+        "pnl_series_len": 10000,
+        "max_drawdown": 836398.0,
+        "max_position": 74,
+        "min_position": -80,
+        "final_position": 73
+      },
+      "INTARIAN_PEPPER_ROOT": {
+        "final_pnl": 78670.0,
+        "pnl_series_len": 10000,
+        "max_drawdown": 955360.0,
+        "max_position": 80,
+        "min_position": 0,
+        "final_position": 80
+      }
+    },
+    "total_final_pnl": 83406.0
+  },
+  "v9_day0": {
+    "errors": [],
+    "warnings": [],
+    "exceeded_limit_total": 222,
+    "exceeded_limit_ipr": 0,
+    "exceeded_limit_aco": 222,
+    "circuit_trigger_count": 0,
+    "circuit_trigger_timestamps": [],
+    "products": {
+      "ASH_COATED_OSMIUM": {
+        "final_pnl": 3433.0,
+        "pnl_series_len": 10000,
+        "max_drawdown": 779769.0,
+        "max_position": 39,
+        "min_position": -80,
+        "final_position": -52
+      },
+      "INTARIAN_PEPPER_ROOT": {
+        "final_pnl": 78434.0,
+        "pnl_series_len": 10000,
+        "max_drawdown": 1020800.0,
+        "max_position": 80,
+        "min_position": 0,
+        "final_position": 80
+      }
+    },
+    "total_final_pnl": 81867.0
+  },
+  "v9_merged": {
+    "errors": [],
+    "warnings": [],
+    "exceeded_limit_total": 566,
+    "exceeded_limit_ipr": 0,
+    "exceeded_limit_aco": 566,
+    "circuit_trigger_count": 0,
+    "circuit_trigger_timestamps": [],
+    "products": {
+      "ASH_COATED_OSMIUM": {
+        "final_pnl": 12447.5,
+        "pnl_series_len": 30000,
+        "max_drawdown": 1028520.0,
+        "max_position": 179,
+        "min_position": -80,
+        "final_position": 88
+      },
+      "INTARIAN_PEPPER_ROOT": {
+        "final_pnl": 236288.0,
+        "pnl_series_len": 30000,
+        "max_drawdown": 1020800.0,
+        "max_position": 240,
+        "min_position": 0,
+        "final_position": 240
+      }
+    },
+    "total_final_pnl": 248735.5
+  },
+  "v9_merged_worse": {
+    "errors": [],
+    "warnings": [],
+    "exceeded_limit_total": 566,
+    "exceeded_limit_ipr": 0,
+    "exceeded_limit_aco": 566,
+    "circuit_trigger_count": 0,
+    "circuit_trigger_timestamps": [],
+    "products": {
+      "ASH_COATED_OSMIUM": {
+        "final_pnl": 12445.5,
+        "pnl_series_len": 30000,
+        "max_drawdown": 1028520.0,
+        "max_position": 183,
+        "min_position": -80,
+        "final_position": 92
+      },
+      "INTARIAN_PEPPER_ROOT": {
+        "final_pnl": 236323.0,
+        "pnl_series_len": 30000,
+        "max_drawdown": 1020800.0,
+        "max_position": 240,
+        "min_position": 0,
+        "final_position": 240
+      }
+    },
+    "total_final_pnl": 248768.5
+  },
+  "v9_aco_only_merged": {
+    "errors": [],
+    "warnings": [],
+    "exceeded_limit_total": 566,
+    "exceeded_limit_ipr": 0,
+    "exceeded_limit_aco": 566,
+    "circuit_trigger_count": 0,
+    "circuit_trigger_timestamps": [],
+    "products": {
+      "ASH_COATED_OSMIUM": {
+        "final_pnl": 12447.5,
+        "pnl_series_len": 30000,
+        "max_drawdown": 1028520.0,
+        "max_position": 179,
+        "min_position": -80,
+        "final_position": 88
+      },
+      "INTARIAN_PEPPER_ROOT": {
+        "final_pnl": 0.0,
+        "pnl_series_len": 30000,
+        "max_drawdown": 0.0,
+        "max_position": 0,
+        "min_position": 0,
+        "final_position": 0
+      }
+    },
+    "total_final_pnl": 12447.5
+  },
+  "v9_ipr_only_merged": {
+    "errors": [],
+    "warnings": [],
+    "exceeded_limit_total": 0,
+    "exceeded_limit_ipr": 0,
+    "exceeded_limit_aco": 0,
+    "circuit_trigger_count": 0,
+    "circuit_trigger_timestamps": [],
+    "products": {
+      "ASH_COATED_OSMIUM": {
+        "final_pnl": 0.0,
+        "pnl_series_len": 30000,
+        "max_drawdown": 0.0,
+        "max_position": 0,
+        "min_position": 0,
+        "final_position": 0
+      },
+      "INTARIAN_PEPPER_ROOT": {
+        "final_pnl": 236288.0,
+        "pnl_series_len": 30000,
+        "max_drawdown": 1020800.0,
+        "max_position": 240,
+        "min_position": 0,
+        "final_position": 240
+      }
+    },
+    "total_final_pnl": 236288.0
+  }
+}
