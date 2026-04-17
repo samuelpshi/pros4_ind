@@ -30,6 +30,15 @@ from datamodel import OrderDepth, TradingState, Order  # type: ignore
 from typing import Dict, List, Tuple
 import jsonpickle  # type: ignore
 import math
+import os
+
+# ---------------------------------------------------------------------------
+# IPR parameter overrides via environment variables (for sweep injection).
+# Fallback defaults are the original v8 values; no env vars = identical PnL.
+# ---------------------------------------------------------------------------
+_IPR_SKIM_SIZE        = int(os.environ.get("IPR_SKIM_SIZE",        "5"))
+_IPR_SKIM_OFFSET      = int(os.environ.get("IPR_SKIM_OFFSET",      "2"))
+_IPR_REFILL_MAX_SIZE  = int(os.environ.get("IPR_REFILL_MAX_SIZE",  "10"))
 
 # ---------------------------------------------------------------------------
 POSITION_LIMITS: Dict[str, int] = {
@@ -62,13 +71,14 @@ IPR_CFG = {
     "entry_take_cap":        80,      # fill entire target greedily at open
 
     # SKIM ASK (the new income source)
-    "skim_offset":           2,      # post sell at ask_top + 2
-    "skim_size":             5,      # only 5 units (small skim)
-    "skim_min_pos":          75,     # skim only when within 5 of target
-    
+    # Values read from env vars at import time; defaults match original v8.
+    "skim_offset":           _IPR_SKIM_OFFSET,    # post sell at ask_top + skim_offset
+    "skim_size":             _IPR_SKIM_SIZE,       # units per skim quote
+    "skim_min_pos":          75,                   # skim only when within 5 of target
+
     # REFILL BID (when below target)
-    "refill_offset":         1,      # post buy at bid_top + 1
-    "refill_max_size":       10,     # max units per tick to refill
+    "refill_offset":         1,                    # post buy at bid_top + 1 (not swept)
+    "refill_max_size":       _IPR_REFILL_MAX_SIZE, # max units per tick to refill
     
     # Defensive deep bids (catch flash crashes)
     "deep_bid_offsets":      [3, 5],

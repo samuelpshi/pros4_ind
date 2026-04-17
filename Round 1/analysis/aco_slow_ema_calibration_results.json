@@ -1,0 +1,150 @@
+{
+  "days": {
+    "-2": {
+      "n_rows": 9187,
+      "method_a_acf": {
+        "zero_cross_lag": 658.0281049224023,
+        "argmin_lag": 1137,
+        "acf_min_value": -0.3572173390212589,
+        "half_period": 1137.0
+      },
+      "method_b_spectral": {
+        "period": 2296.75,
+        "half_period": 1148.375
+      },
+      "methods_disagreement_pct": 0.009905300968760205,
+      "ema_half_life_range_method_a": [
+        361.91834059097,
+        568.5
+      ],
+      "ema_half_life_range_method_b": [
+        365.53911554631065,
+        574.1875
+      ],
+      "median_candidate_hl": 467.0195577731553,
+      "signal_magnitude_stddev": 3.9104247734686792,
+      "raw_acf_at_lags": {
+        "lag_1000": -0.228987875877197,
+        "lag_1500": -0.1611463927251998,
+        "lag_2000": 0.04996019411287451,
+        "lag_2500": -0.04685459122654807,
+        "lag_3000": -0.1583575350949097
+      }
+    },
+    "-1": {
+      "n_rows": 9225,
+      "method_a_acf": {
+        "zero_cross_lag": 782.9459314549911,
+        "argmin_lag": 1314,
+        "acf_min_value": -0.2076550301735998,
+        "half_period": 1314.0
+      },
+      "method_b_spectral": {
+        "period": 2306.25,
+        "half_period": 1153.125
+      },
+      "methods_disagreement_pct": 0.12243150684931507,
+      "ema_half_life_range_method_a": [
+        418.25919044550096,
+        657.0
+      ],
+      "ema_half_life_range_method_b": [
+        367.05108750568365,
+        576.5625
+      ],
+      "median_candidate_hl": 497.4108452227505,
+      "signal_magnitude_stddev": 3.4646989230346588,
+      "raw_acf_at_lags": {
+        "lag_1000": -0.039716038454804675,
+        "lag_1500": -0.10568083439332218,
+        "lag_2000": -0.06130316745549961,
+        "lag_2500": 0.06638886082853912,
+        "lag_3000": -0.02073719088539531
+      }
+    },
+    "0": {
+      "n_rows": 9232,
+      "method_a_acf": {
+        "zero_cross_lag": 847.3396781626795,
+        "argmin_lag": 2284,
+        "acf_min_value": -0.3220009679096252,
+        "half_period": 2284.0
+      },
+      "method_b_spectral": {
+        "period": 4616.0,
+        "half_period": 2308.0
+      },
+      "methods_disagreement_pct": 0.010398613518197574,
+      "ema_half_life_range_method_a": [
+        727.0197800437779,
+        1142.0
+      ],
+      "ema_half_life_range_method_b": [
+        734.6592173121888,
+        1154.0
+      ],
+      "median_candidate_hl": 938.3296086560945,
+      "signal_magnitude_stddev": 4.748465892564793,
+      "raw_acf_at_lags": {
+        "lag_1000": -0.11996984614166065,
+        "lag_1500": -0.2628351459508757,
+        "lag_2000": -0.29885977739338454,
+        "lag_2500": -0.19358174825091323,
+        "lag_3000": -0.13444426528665213
+      }
+    }
+  },
+  "series_choice_comparison": {
+    "-2": {
+      "raw_acf_lag2000": 0.05011969607129014,
+      "mmbot_acf_lag2000": 0.04996019411287451,
+      "raw_inc_std": 1.9113331940750393,
+      "mmbot_inc_std": 0.6013849206904
+    },
+    "-1": {
+      "raw_acf_lag2000": -0.06212962976997343,
+      "mmbot_acf_lag2000": -0.06130316745549961,
+      "raw_inc_std": 1.9215559846877448,
+      "mmbot_inc_std": 0.6058079378260461
+    },
+    "0": {
+      "raw_acf_lag2000": -0.2804651510851382,
+      "mmbot_acf_lag2000": -0.29885977739338454,
+      "raw_inc_std": 1.9622147916036206,
+      "mmbot_inc_std": 0.5957043646524081
+    }
+  },
+  "price_series_used": "mmbot_mid",
+  "cross_day": {
+    "per_day_half_period_method_a": [
+      1137.0,
+      1314.0,
+      2284.0
+    ],
+    "per_day_half_period_method_b": [
+      1148.375,
+      1153.125,
+      2308.0
+    ],
+    "method_a_cross_day_spread_pct": 0.5021891418563923,
+    "method_b_cross_day_spread_pct": 0.5024371750433275,
+    "union_hl_low": 361.91834059097,
+    "union_hl_high": 1154.0
+  },
+  "recommended_sweep_grid": [
+    350,
+    475,
+    650,
+    875,
+    1150
+  ],
+  "signal_magnitude_summary": {
+    "per_day_resid_std": [
+      3.9104247734686792,
+      3.4646989230346588,
+      4.748465892564793
+    ],
+    "min": 3.4646989230346588,
+    "median": 3.9104247734686792
+  }
+}
