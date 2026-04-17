@@ -110,14 +110,14 @@ Do NOT recommend SHIP_V8_TUNED. 91 XIRECS of signal over a 3-day merged scenario
 
 | skim_size | skim_offset | refill_max_size | scenario | IPR PnL | log_path |
 |-----------|-------------|-----------------|----------|---------|----------|
-| 3 | 1 | 5 | merged | 238,018 | `runs/ipr_sweep/sz3_off1_rfl5_merged.log` |
-| 3 | 1 | 20 | merged | 238,018 | `runs/ipr_sweep/sz3_off1_rfl20_merged.log` |
-| 3 | 5 | 5 | merged | 238,054 | `runs/ipr_sweep/sz3_off5_rfl5_merged.log` |
-| 3 | 5 | 20 | merged | 238,054 | `runs/ipr_sweep/sz3_off5_rfl20_merged.log` |
-| 15 | 1 | 5 | merged | 237,963 | `runs/ipr_sweep/sz15_off1_rfl5_merged.log` |
-| 15 | 1 | 20 | merged | 237,963 | `runs/ipr_sweep/sz15_off1_rfl20_merged.log` |
-| 15 | 5 | 5 | merged | 238,054 | `runs/ipr_sweep/sz15_off5_rfl5_merged.log` |
-| 15 | 5 | 20 | merged | 238,054 | `runs/ipr_sweep/sz15_off5_rfl20_merged.log` |
-| (baseline) | (no env vars) | (default) | merged | 238,024 | `runs/ipr_sweep/baseline_no_envvars_merged.log` |
+| 3 | 1 | 5 | merged | 238,018 | `Round 1/archive/runs/ipr_sweep/sz3_off1_rfl5_merged.log` |
+| 3 | 1 | 20 | merged | 238,018 | `Round 1/archive/runs/ipr_sweep/sz3_off1_rfl20_merged.log` |
+| 3 | 5 | 5 | merged | 238,054 | `Round 1/archive/runs/ipr_sweep/sz3_off5_rfl5_merged.log` |
+| 3 | 5 | 20 | merged | 238,054 | `Round 1/archive/runs/ipr_sweep/sz3_off5_rfl20_merged.log` |
+| 15 | 1 | 5 | merged | 237,963 | `Round 1/archive/runs/ipr_sweep/sz15_off1_rfl5_merged.log` |
+| 15 | 1 | 20 | merged | 237,963 | `Round 1/archive/runs/ipr_sweep/sz15_off1_rfl20_merged.log` |
+| 15 | 5 | 5 | merged | 238,054 | `Round 1/archive/runs/ipr_sweep/sz15_off5_rfl5_merged.log` |
+| 15 | 5 | 20 | merged | 238,054 | `Round 1/archive/runs/ipr_sweep/sz15_off5_rfl20_merged.log` |
+| (baseline) | (no env vars) | (default) | merged | 238,024 | `Round 1/archive/runs/ipr_sweep/baseline_no_envvars_merged.log` |
 
 Source index: `Round 1/analysis/sweep_log_index_ipr.md` (Agent 11 canonical log).

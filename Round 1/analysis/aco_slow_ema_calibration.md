@@ -12,7 +12,7 @@
 
 ## 1. Setup — Price series chosen
 
-**Chosen series: `mmbot_mid`** = midpoint of the filtered book where each side is restricted to quotes with absolute volume ≥ 15 (matches `ACO_ADVERSE_VOLUME = 15` in `traders/trader-v9-r1-aco-only.py`, line 44). When either filtered side is empty, fall back to the previous `mmbot_mid` value, mirroring the trader's online logic.
+**Chosen series: `mmbot_mid`** = midpoint of the filtered book where each side is restricted to quotes with absolute volume ≥ 15 (matches `ACO_ADVERSE_VOLUME = 15` in `Round 1/archive/traders/trader-v9-r1-aco-only.py`, line 44; trader archived after Pass 2.5 superseded v9-r1). When either filtered side is empty, fall back to the previous `mmbot_mid` value, mirroring the trader's online logic.
 
 **Why mmbot_mid over raw mid.**
 

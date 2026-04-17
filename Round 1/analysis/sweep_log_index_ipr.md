@@ -4,15 +4,15 @@ Corner test only (gate FAILED: spread=91 < threshold=5,000).
 
 | skim_size | skim_offset | refill_max_size | scenario | ipr_pnl | total_pnl | log_path |
 |-----------|-------------|-----------------|----------|---------|-----------|----------|
-| 3 | 1 | 5 | merged | 238018 | 256574 | `runs/ipr_sweep/sz3_off1_rfl5_merged.log` |
-| 3 | 1 | 20 | merged | 238018 | 256574 | `runs/ipr_sweep/sz3_off1_rfl20_merged.log` |
-| 3 | 5 | 5 | merged | 238054 | 256610 | `runs/ipr_sweep/sz3_off5_rfl5_merged.log` |
-| 3 | 5 | 20 | merged | 238054 | 256610 | `runs/ipr_sweep/sz3_off5_rfl20_merged.log` |
-| 15 | 1 | 5 | merged | 237963 | 256519 | `runs/ipr_sweep/sz15_off1_rfl5_merged.log` |
-| 15 | 1 | 20 | merged | 237963 | 256519 | `runs/ipr_sweep/sz15_off1_rfl20_merged.log` |
-| 15 | 5 | 5 | merged | 238054 | 256610 | `runs/ipr_sweep/sz15_off5_rfl5_merged.log` |
-| 15 | 5 | 20 | merged | 238054 | 256610 | `runs/ipr_sweep/sz15_off5_rfl20_merged.log` |
-| (baseline) | (no env vars) | (default) | merged | 238024 | 256580 | `runs/ipr_sweep/baseline_no_envvars_merged.log` |
+| 3 | 1 | 5 | merged | 238018 | 256574 | `Round 1/archive/runs/ipr_sweep/sz3_off1_rfl5_merged.log` |
+| 3 | 1 | 20 | merged | 238018 | 256574 | `Round 1/archive/runs/ipr_sweep/sz3_off1_rfl20_merged.log` |
+| 3 | 5 | 5 | merged | 238054 | 256610 | `Round 1/archive/runs/ipr_sweep/sz3_off5_rfl5_merged.log` |
+| 3 | 5 | 20 | merged | 238054 | 256610 | `Round 1/archive/runs/ipr_sweep/sz3_off5_rfl20_merged.log` |
+| 15 | 1 | 5 | merged | 237963 | 256519 | `Round 1/archive/runs/ipr_sweep/sz15_off1_rfl5_merged.log` |
+| 15 | 1 | 20 | merged | 237963 | 256519 | `Round 1/archive/runs/ipr_sweep/sz15_off1_rfl20_merged.log` |
+| 15 | 5 | 5 | merged | 238054 | 256610 | `Round 1/archive/runs/ipr_sweep/sz15_off5_rfl5_merged.log` |
+| 15 | 5 | 20 | merged | 238054 | 256610 | `Round 1/archive/runs/ipr_sweep/sz15_off5_rfl20_merged.log` |
+| (baseline) | (no env vars) | (default) | merged | 238024 | 256580 | `Round 1/archive/runs/ipr_sweep/baseline_no_envvars_merged.log` |
 
 ## Gate Verdict
 
