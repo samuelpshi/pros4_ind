@@ -1,0 +1,52 @@
+{
+  "seed": 42,
+  "n_samples": 300,
+  "params": [
+    {
+      "name": "quote_offset",
+      "type": "int",
+      "low": 2,
+      "high": 8,
+      "current": 5,
+      "justification": "Pass 2.5 A7 grid went only to qo=5 (grid axis [1,2,3,4,5]); qo=5 was the right boundary — monotonically increasing spread_capture with offset. A4 fill-probability table shows edge per fill is nearly constant ~7.5-8.2 across all offsets tested; fill rate halves every 2 ticks. The champion qo=5 gain of +45-72% over v8 (qo=2) is explained entirely by higher edge per fill (A0: 96.4% spread_capture). Extending to qo=8 tests whether still-wider quotes add more edge per fill than they lose in fill rate — the monotone trend from P2.5 suggests yes, up to some ceiling set by the 16-tick half-spread."
+    },
+    {
+      "name": "max_skew",
+      "type": "int",
+      "low": 4,
+      "high": 12,
+      "current": 8,
+      "justification": "Pass 2.5 A7 sensitivity shows max_skew is near-flat across the plateau [3,10]: all values produce within 1.4% of peak worst_LOO. The current value of 8 is within the stable plateau but essentially arbitrary (A8 summary: 'the specific value of ms=8 within the plateau [3,10] is not fully data-grounded'). Extending range slightly to [4,12] brackets the current value and may find that higher skew (10-12) accelerates inventory recovery when pos approaches limit, which A0 identifies as EOD flatten contributing 3.3% of GT PnL — small but real."
+    },
+    {
+      "name": "take_edge",
+      "type": "float",
+      "low": 1.5,
+      "high": 5.0,
+      "current": 3.0,
+      "justification": "A0 decomposition: aggressive-take bucket = 0.0 XIREC across all 3 days (0 aggressive fills for qo5). Pass 2.5 A7 grid used only {999, 5, 3} — never tested below 3. The ACO EMA tracks mid with alpha=0.12; at fv vs mid gap = ~0.5 tick (OU halflife ~0.5 ticks from A1), the fv-edge threshold is rarely triggered at te=3. Lowering to te=1.5 (floor at fv-1.5) would fire every time best_ask is 2+ ticks below fv — which happens during the brief mean-reversion windows identified by VR(50)=0.29. This is the ONLY way to test whether qo5 is at a local optimum that ignores take-edge entirely, or whether adding aggressive fills is genuinely unprofitable. Including te in [1.5, 5.0] keeps current value (3.0) in range and covers both tighter (1.5-2.5) and looser (3.5-5.0) regimes."
+    },
+    {
+      "name": "ema_alpha",
+      "type": "float",
+      "low": 0.05,
+      "high": 0.25,
+      "current": 0.12,
+      "justification": "Not searched in Pass 2.5 at all (fixed at 0.12 per A7 source: 'Fixed params held at v8 values'). A1 OU halflife = ~0.503 ticks confirms the ACO price process reverts extremely fast. Alpha=0.12 gives ~95% weight over 25 ticks — much slower than the OU halflife of 0.5 ticks. A faster alpha (0.20-0.25) would make fv track mid more tightly, reducing inventory carry and making take_edge triggers more accurate (fv closer to true fair value). A slower alpha (0.05-0.08) would smooth noise further but add more lag. A4 shows that edge per fill is nearly constant across offsets, so the dominant effect of alpha is on take_edge trigger frequency (how often fv-alpha diverges from best_ask by >= take_edge) — a free parameter never tested that could interact with the take_edge dimension above."
+    }
+  ],
+  "excluded": [
+    {
+      "name": "panic_threshold",
+      "reason": "Explicitly labelled 'intuition-picked' in A8 summary (aco_deep_eda_summary.md Section I): 'No empirical test performed. Carried from v8 unchanged.' However, the panic logic in aco_make() only fires when abs(inv_ratio) >= 0.75 (i.e., |pos| >= 60). A0 decomposition shows inventory_carry = 0.3% of PnL and passive spread capture = 96.4%. The panic branch does not appear to meaningfully alter fill counts or PnL buckets under current champion params. Adding it to the search consumes a parameter slot for a lever that has never been shown to fire in a meaningful way on training data. Excluded to preserve the 6-parameter budget for take_edge and ema_alpha, which have stronger mechanistic upside."
+    },
+    {
+      "name": "quote_size_bid",
+      "reason": "Mechanically, fills are bounded to 1 unit per incoming trade event in the backtester fill model (aco_param_search.py line ~337: `record_fill(j, bid_px, 1, 'passive')` — one fill per tick regardless of quoted size). The current 'fill remaining room' behavior posts a large quote but fill outcomes are independent of quoted size above 1 unit. A cap of quote_size_bid=N is equivalent to unlimited for any N >= 1 in the current engine model. The aco_make_patch.py scratch file confirms the patch is mechanically sound (6 lines, 0 new branches) but the parameter has near-zero marginal effect on actual PnL. Excluded to preserve parameter budget. See Round 1/analysis/scratch/a1_aco_make_patch.py for full rationale."
+    },
+    {
+      "name": "quote_size_ask",
+      "reason": "Same reasoning as quote_size_bid. Symmetric argument applies to the ask side. See a1_aco_make_patch.py."
+    }
+  ]
+}
