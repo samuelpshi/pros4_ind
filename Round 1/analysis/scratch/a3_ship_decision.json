@@ -1,0 +1,16 @@
+{
+  "decision": "ship_qo5_unchanged",
+  "reason": "Sensitivity gate failed for all top-5 candidates: qo=7\u21928 (+10% perturbation) drops worst_of_6 by -17% to -18%, exceeding the 15% threshold. Walk-forward PASSED 3/3 but sensitivity gate is required.",
+  "gates": {
+    "adjacency": true,
+    "sensitivity": false,
+    "walk_forward": true
+  },
+  "tension": {
+    "summary": "Adjacency PASS (ratio 0.82-0.99) and walk-forward PASS 3/3 (qo=7 ms=4 beats v9-qo5 by +25% to +36% on every held-out day) conflict with sensitivity FAIL (qo=7\u2192qo=8 drops worst_of_6 by 17.1%, exceeding the 15% gate threshold). The sensitivity failure reflects a structural liquidity cliff at qo=8 \u2014 at that quote_offset, passive fills collapse because quotes sit too far from fair value \u2014 not fragility at qo=7. The adjacency gate independently confirms qo=7 sits in a broad, stable region. Per strict dispatch rules, one failed required gate blocks promotion. Per the dispatch own claim that walk-forward is the only test that mimics live submission, a 3/3 walk-forward win is strong evidence for promotion. The conflict cannot be resolved by the gates themselves; it requires user judgment.",
+    "adjacency_detail": "Top-5 candidates all qo=7; L1=1 neighbor worst3 ratios: 0.753 (toward qo=8), 0.937 (toward qo=6), 0.989 (toward ms=5). The cliff is entirely on the qo=8 side.",
+    "sensitivity_detail": "qo=7 best worst_of_6=5583; matched qo=8 worst_of_6=4627; drop=-17.1%. Threshold was 15%. FAIL by 2.1 percentage points.",
+    "walk_forward_detail": "Split 1 (train -2,-1 / held-out 0): +3278 (+36.4%). Split 2 (train -2 / held-out -1): +2703 (+25.0%). Split 3 (train -1,0 / held-out -2): +2909 (+31.6%). All three splits recommend qo=7 ms=4.",
+    "user_override_path": "To override: create traders/trader-v10-aco-qo7-ms4.py from v9-qo5 with quote_offset=7, max_skew=4, take_edge=2.33, ema_alpha=0.147. No other changes needed."
+  }
+}

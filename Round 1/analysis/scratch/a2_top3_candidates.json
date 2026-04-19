@@ -1,0 +1,41 @@
+{
+  "result": "candidates",
+  "top3": [
+    {
+      "quote_offset": 7,
+      "max_skew": 5,
+      "take_edge": 2.6849,
+      "ema_alpha": 0.1468,
+      "panic_threshold": 0.75,
+      "gt_day_-2": 12017.0,
+      "gt_day_-1": 12908.0,
+      "gt_day_0": 12051.0,
+      "gt_worst3": 12017.0,
+      "gt_sum3": 36976.0
+    },
+    {
+      "quote_offset": 7,
+      "max_skew": 5,
+      "take_edge": 4.2578,
+      "ema_alpha": 0.1692,
+      "panic_threshold": 0.75,
+      "gt_day_-2": 12002.0,
+      "gt_day_-1": 12835.0,
+      "gt_day_0": 11997.0,
+      "gt_worst3": 11997.0,
+      "gt_sum3": 36834.0
+    },
+    {
+      "quote_offset": 7,
+      "max_skew": 4,
+      "take_edge": 4.2985,
+      "ema_alpha": 0.0921,
+      "panic_threshold": 0.75,
+      "gt_day_-2": 11954.5,
+      "gt_day_-1": 13369.0,
+      "gt_day_0": 11981.0,
+      "gt_worst3": 11954.5,
+      "gt_sum3": 37304.5
+    }
+  ]
+}
