@@ -33,7 +33,9 @@
 
 ## Session Workflow
 
-NOTE: WORKLOG.md has been fully reset for R3
+NOTE: WORKLOG.md was reset for R3.
+
+### When working solo (one Claude Code session at a time)
 
 At the start of every session:
 1. Read CLAUDE.md (this file) for project rules and structure
@@ -48,6 +50,32 @@ At the end of every session, when the user signals we're wrapping up:
    - Next session starts with
 2. If any structural change happened (new file location, new tool installed, new product focus), update CLAUDE.md to reflect it
 3. Suggest a git commit message summarizing the session
+4. Do not commit — Sam handles git
+
+### When multiple agents work in parallel (Phase 1 EDA, Phase 2 sweeps, etc.)
+
+Multiple agents writing to a single WORKLOG.md causes merge conflicts. Instead:
+
+1. Each agent owns its own log file at `Round 3/analysis/agent_logs/<agent_id>_log.md`
+2. Agent IDs follow conventions: N1-N4 for EDA notebooks; P2_<short-name> for Phase 2 work (e.g., P2_v1_baseline, P2_smile_sweep, P2_ema_sweep)
+3. Each agent log uses the same three-section format (What we did / Findings / Next session starts with)
+4. Numbers, not vibes — every claim is backed by a specific cell output, file path, or backtest run ID
+5. Agents do not edit other agents' logs
+6. Agents do not append to WORKLOG.md directly while working in parallel
+
+After all parallel agents finish, a separate consolidation pass (run by Sam or a dedicated consolidator agent):
+1. Reads all the agent_logs/*_log.md files for that phase
+2. Writes one dated WORKLOG.md entry summarizing the full phase
+3. Suggests a single git commit message
+4. Sam commits manually
+
+### Numbers, not vibes — examples
+
+Bad: "Showed clear mean reversion."
+Good: "Lag-1 ACF = -0.13 on HYDROGEL_PACK returns, 12σ negative, see notebook 01 cell 18."
+
+Bad: "Backtest looked promising."
+Good: "v1-baseline mean PnL across 3 days = 14,200 (std 3,100); per-product breakdown in backtest_results.md row 4."
 
 ## Repo Layout
 
@@ -76,7 +104,7 @@ IMC-Prosperity-2026-personal/
     │   ├── 02_voucher_market_structure.ipynb
     │   ├── 03_iv_smile_analysis.ipynb
     │   ├── 04_signal_validation_and_fh_features.ipynb
-│   ├── findings.md                           ← aggregated EDA takeaways
+    │   ├── agent_logs/                           ← per-agent work logs
     │   ├── backtest_results.csv                  ← machine-readable backtest log (append-only)
     │   └── backtest_results.md                   ← human-readable backtest commentary
     ├── traders/                                  ← naming: trader-r3-v<N>-<suffix>.py
