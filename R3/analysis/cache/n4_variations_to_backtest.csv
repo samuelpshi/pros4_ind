@@ -1,0 +1,11 @@
+rank,knob,FH_baseline,variations_to_test,why
+1,EMA demeaning (CRITICAL),EMA20 of raw residual,no-demean (raw); EMA5; EMA50; EMA100; EWMA with alpha tuned,raw residuals on R3 have rho1 +0.83 (drift); demeaning flips sign so this knob decides whether scalp works at all
+2,Switch gate threshold,0.7 (FH),RECALIBRATE: try 0.05 / 0.10 / 0.20 / off (always trade),FH's 0.7 is on P3 voucher price scale; on R3 the threshold is NEVER tripped (0% open). Either drop the gate or rescale by typical |residual|
+3,Open / close thresholds,"OPEN=0.5, CLOSE=0.0 (FH)","OPEN in {0.2, 0.3, 0.5, 1.0}; CLOSE in {0.0, 0.1, 0.2}",FH's units are price; needs sanity-check against R3 residual stdev (~0.4–1.1 per ATM strike)
+4,Smile fit,"hardcoded pooled (a,b,c) from this notebook",per-tick refit; ATM-vega-weighted pooled fit; rolling-window pooled,"per-tick fit is noisier (success rate 100% but variance in c_t is small), hardcoded baseline is likely better starting point"
+5,Market-price anchor,wall_mid,best_bid_ask_mid; microprice (size-weighted),wall_mid has slightly lower residual stdev but ALSO higher raw lag-1 autocorr (sign of staleness). best_mid+EMA-demean may be better
+6,Strike triage,scalp candidates: 5000–5500 (median vega ~5–10),"drop 4000/4500 (low coverage); drop 6000/6500 (vega ~0, behave as zero); test deep-OTM as cheap-vega-buy if vol expands",VEV_4000 IV coverage 10%; VEV_4500 only 29%; VEV_6000/6500 vega ≈ 0 → uninvertable / no scalp edge
+7,Explicit delta hedge,off (FH's choice at TTE=3d),rebalance when |net delta|>20; or every 100 ticks; band=50; band=100,joint-cap math: 3 ATM strikes at full size = ~450 delta vs VEV cap 200; we MUST hedge or cap voucher size
+8,Base-IV MR overlay,off,trade ATM voucher when |c_z|>1.5 (rolling window 500) on top of RV scalp,Part B in-sample PnL = +2490; small but consistent additive signal
+9,Underlying VEV MR overlay,off,"FH-style ema_u_dev with thr=15, window=10 (verify against N1 findings)",depends on N1 finding VEV is mean-reverting; FH's overlay was high variance
+10,Low-vega threshold adj,+0.5 when vega<=1 (FH),rescale to R3 vega scale: maybe +adj when vega<2; or scale linearly with 1/vega,median vega is much higher on R3 ATM strikes than FH's P3; FH's vega<=1 cutoff catches different strikes here
