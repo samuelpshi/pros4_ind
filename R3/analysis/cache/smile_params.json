@@ -1,0 +1,26 @@
+{
+  "pooled_unweighted": {
+    "a": 0.15778350517995657,
+    "b": -0.004635562961957218,
+    "c": 0.2322130330996711
+  },
+  "pooled_weighted_atm": {
+    "a": 0.1388544607870745,
+    "b": -0.004583856745787679,
+    "c": 0.2380120886957786
+  },
+  "pooled_weighted_vega": {
+    "a": 0.13789065832681635,
+    "b": -0.004853917354630172,
+    "c": 0.23531708495218354
+  },
+  "fh_p3_reference": {
+    "a": 0.27362531,
+    "b": 0.01007566,
+    "c": 0.14876677
+  },
+  "moneyness_convention": "log(K/S)/sqrt(T)",
+  "tte_formula": "(8 - day_idx - timestamp/1e6) / 365",
+  "extrinsic_eps_used_for_iv_filter": 0.5,
+  "n_obs_in_fit": 182696
+}

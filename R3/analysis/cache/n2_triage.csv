@@ -1,0 +1,11 @@
+strike,pct_two_sided,pct_atm,pct_within_2_strikes,extrinsic_med,floor_pegged,class
+4000,100.0,0.0,0.0,0.0,False,drop
+4500,100.0,0.0,0.0,0.0,False,drop
+5000,100.0,0.0,51.800000000000004,4.5,False,primary_scalp
+5100,100.0,0.0,100.0,16.5,False,primary_scalp
+5200,100.0,51.800000000000004,100.0,45.5,False,primary_scalp
+5300,100.0,48.199999999999996,100.0,47.0,False,primary_scalp
+5400,100.0,0.0,100.0,16.5,False,primary_scalp
+5500,100.0,0.0,48.199999999999996,6.5,False,secondary
+6000,100.0,0.0,0.0,0.5,True,drop
+6500,100.0,0.0,0.0,0.5,True,drop
