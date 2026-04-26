@@ -1,0 +1,40 @@
+
+=== z_open = 1.5 ===
+  mean PnL/day =  -373.17  stdev =  529.33  trades/day =  35.3  (20.2s)
+  per-strike fills (3d): {5000: 81, 5100: 90, 5200: 25, 5300: 60, 5400: 52, 5500: 148}
+  per-strike PnL    (3d): 5000=-442.5, 5100=-283.0, 5200=-286.0, 5300=-25.0, 5400=-45.0, 5500=-38.0
+  per-strike cap/cost  : 5000=+0.77, 5100=+0.38, 5200=+nan, 5300=+1.09, 5400=-0.04, 5500=+0.81
+
+=== z_open = 2.0 ===
+  mean PnL/day =  -101.83  stdev =  105.78  trades/day =  37.0  (16.6s)
+  per-strike fills (3d): {5000: 108, 5100: 83, 5200: 20, 5300: 151, 5400: 30, 5500: 82}
+  per-strike PnL    (3d): 5000=782.0, 5100=-1476.5, 5200=-1.0, 5300=497.0, 5400=-8.0, 5500=-99.0
+  per-strike cap/cost  : 5000=+0.21, 5100=+nan, 5200=+nan, 5300=-0.16, 5400=+2.38, 5500=+0.44
+
+=== z_open = 2.5 ===
+  mean PnL/day =  -416.00  stdev =  824.06  trades/day =  18.3  (16.3s)
+  per-strike fills (3d): {5000: 85, 5100: 85, 5200: 20, 5300: 16, 5400: 36, 5500: 0}
+  per-strike PnL    (3d): 5000=220.5, 5100=-1532.5, 5200=-1.0, 5300=78.0, 5400=-13.0, 5500=0.0
+  per-strike cap/cost  : 5000=+nan, 5100=+nan, 5200=+nan, 5300=+nan, 5400=+3.08, 5500=+nan
+
+=== z_open = 3.0 ===
+  mean PnL/day =  -415.67  stdev =  824.39  trades/day =  16.7  (16.5s)
+  per-strike fills (3d): {5000: 85, 5100: 85, 5200: 0, 5300: 16, 5400: 36, 5500: 0}
+  per-strike PnL    (3d): 5000=220.5, 5100=-1532.5, 5200=0.0, 5300=78.0, 5400=-13.0, 5500=0.0
+  per-strike cap/cost  : 5000=+nan, 5100=+nan, 5200=+nan, 5300=+nan, 5400=+3.08, 5500=+nan
+
+=== z_open = 3.5 ===
+  mean PnL/day =    20.67  stdev =   35.80  trades/day =   0.7  (16.7s)
+  per-strike fills (3d): {5000: 0, 5100: 0, 5200: 0, 5300: 6, 5400: 0, 5500: 0}
+  per-strike PnL    (3d): 5000=0.0, 5100=0.0, 5200=0.0, 5300=62.0, 5400=0.0, 5500=0.0
+  per-strike cap/cost  : 5000=+nan, 5100=+nan, 5200=+nan, 5300=+nan, 5400=+nan, 5500=+nan
+
+Results JSON: /Users/samuelshi/IMC-Prosperity-2026-personal/R3/analysis/zopen_diagnostic_results.json
+
+Summary table:
+ z_open   mean_pnl    stdev   trades/d   trades/3d
+    1.5    -373.17   529.33       35.3         106
+    2.0    -101.83   105.78       37.0         111
+    2.5    -416.00   824.06       18.3          55
+    3.0    -415.67   824.39       16.7          50
+    3.5      20.67    35.80        0.7           2

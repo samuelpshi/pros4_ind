@@ -135,3 +135,140 @@ Phase-1 numbers above; the ranked A/B sweep list is in
   no variants ship that improve mean but inflate variance without
   justification. Results to `R3/analysis/backtest_results.csv` /
   `backtest_results.md`.
+
+---
+
+## 2026-04-26 — VEV mean-reversion module: full Phase-3 investigation, shipped honestly
+
+### What we did
+
+Standalone delta-1 mean-reversion module for VELVETFRUIT_EXTRACT.
+No vouchers, no delta hedging. Owner: P3_vev_meanrev. Full per-step
+detail in `R3/analysis/agent_logs/P3_vev_meanrev_log.md`.
+
+1. Built MM-template trader `R3/traders/trader-r3-v1-vev-meanrev.py`
+   (forked from hydrogel.py) with a drift-kill state machine and
+   diagnostic baseline `R3/traders/trader-r3-v1-vev-scalp.py` (pure
+   z-score scalp).
+2. Stage-1 sanity. MM at qo=1: 16 fills/3d (wall is at fv±2.5,
+   we sat inside it); pinned qo=2 going forward as a live-vs-local
+   unknown rather than a sweep axis. Scalp blew up: -32k/3d at
+   |z|>1.5 entry, -17k/3d after corrected |z|>2 + opposite-side
+   overshoot exit. Per-tick σ on VEV (~1.1) is below the 5-tick
+   spread, so no aggressive-crossing scalp can profit on this product.
+3. Pre-sweep attribution at the pilot D2 winner config.
+   Forward-50-tick mid edge per fill: aggressive zone (|p-fv|≤1.5)
+   avg -75 to -110/fill; passive zone avg -57 to -11/fill. Passive
+   zone delivered total +12 PnL across 125 fills vs ~+500 expected
+   from naive spread capture. Mid moves AGAINST every fill type.
+4. Stage-2 96-combo 3-day sweep
+   (`R3/analysis/sweep_vev_meanrev.py`). 49/96 positive mean,
+   9/96 positive score. Best by score: vmr-ema30-te1-sk0.5-tc30
+   (mean=+2148, std=1472, score=+676). Selected for ship: rank-3
+   vmr-ema120-te2-sk2.0-tc30 (mean=+2058, std=1397, score=+661);
+   tied with #1 on score but uses the more robust te=2 take regime.
+   Axis break-outs: te=2 dominates (mean +214, 22/32 positive),
+   te=0 strictly worst (-728); skew flat across {0.5..2.0};
+   ema=30 best regime, ema=50 worst.
+5. Trajectory measurement on all 96 configs: max|pos| range [81, 100],
+   median 92; pinned at |pos|>80 median = 29546 / 30000 ticks (98.5%).
+   **Drift kill (threshold=150) never fires on any of the 96 configs.**
+6. Architectural fix attempts (Option B, after stop-and-check):
+   - **(B1) kill_threshold=80, kill_release=40** at rank-3 base. PnL
+     collapsed from +2058 to -12723 mean, trade count 77 → 779.
+     Failure mode: aggressive takes are not gated by kill_active, so
+     the strategy churns into a saturate→drain→saturate cycle that
+     pays spread cost on every leg.
+   - **(C) force-flatten last 500 ticks** at rank-3 base, kill back at
+     150. End-of-day pos = 0 on all 3 days (mechanism works). PnL:
+     mean dropped 2058 → 698, delta -1360/day. Half-spread cost
+     would explain ~200/day; actual loss was 6.8× that. Confirms the
+     +2058 baseline was a 3-of-3 close-direction MTM gift on the
+     held inventory.
+7. Decision rule: ship rank-3 baseline as a bounded-downside variance
+   contribution (NOT an edge strategy). Stripped the force-flatten
+   code, finalized rank-3 config, rewrote the trader's docstring with
+   honest framing referencing the attribution and force-flatten
+   diagnostics. Verified `kill_threshold=150`, no `flatten_window`
+   code, no `os` import. Reproduced the +2058 mean.
+8. Tasks 5 and 6 collapsed to short writeups since the long form
+   isn't justified by the data:
+   - `R3/analysis/vev_meanrev_comparison.md` — one-page MM vs scalp
+     summary with the resolved decision row.
+   - `R3/analysis/vev_meanrev_v2_hybrid_design.md` — single paragraph
+     on why a z-gated hybrid does not address the actual problem
+     (passive-zone bleed > aggressive-zone bleed; z-gate addresses
+     only ~30% of the loss).
+
+### Findings (numbers, not vibes)
+
+- **MM template, rank-3 ship config (ema=120, te=2, sk=2.0, tc=30,
+  qo=2, kill=150)**: D0=+491, D1=+2511, D2=+3173 → mean=+2058,
+  std=1397, score=+661. 77 trades / 3d. max|pos| = 95.
+- **Pure scalp (corrected |z|>2 + Z_EXIT=0.3)**: D0=-20244, D1=-20304,
+  D2=-10833 → mean=-17127, std=4664. 1023 trades / 3d.
+- **Attribution (rank-3 family at pilot D2 winner)**: 3-day forward-
+  50-tick edge sums = aggressive -3879, passive -4511. Both negative
+  on every sample day.
+- **(B1) tightened kill (threshold=80)**: mean=-12723, std=6231,
+  trade count 779 (vs 77 baseline). Saturate/drain churn.
+- **(C) force-flatten last 500 ticks**: mean=+698, std=722,
+  end_pos=0/0/0 ✓. Delta vs baseline = -1360/day = 6.8× the
+  half-spread cost; remaining +698 is a small mix of passive
+  spread that didn't get realized adversely.
+- Drift kill never fired across any of 96 sweep configs at
+  threshold=150 (max|pos| ≤ 100 universally). At threshold=80 it
+  fires immediately and creates the cycle above.
+- Hard Rule #10 verified: no `import os` / `from os` in either trader
+  file (`grep -cE "^(import|from)\s+os" → 0`).
+
+### Files touched
+
+New / authored this session:
+- `R3/traders/trader-r3-v1-vev-meanrev.py`
+- `R3/traders/trader-r3-v1-vev-scalp.py`
+- `R3/traders/configs/vev_meanrev_v1.json`
+- `R3/analysis/sweep_vev_meanrev.py`
+- `R3/analysis/sweep_vev_meanrev.log`
+- `R3/analysis/sweep_vev_meanrev_pilot.json`
+- `R3/analysis/sweep_vev_meanrev_results.json`
+- `R3/analysis/attribution_vev_meanrev.py`
+- `R3/analysis/vev_meanrev_comparison.md`
+- `R3/analysis/vev_meanrev_v2_hybrid_design.md`
+- `R3/analysis/agent_logs/P3_vev_meanrev_log.md`
+
+Modified:
+- `R3/analysis/backtest_results.csv` (appended sweep + Stage 1 rows)
+- `R3/analysis/backtest_results.md` (appended VEV meanrev sweep
+  writeup with top 10 + axis tables + decision-question answers)
+
+### Next session starts with
+
+VEV mean-reversion module is **closed**. The MM-template trader is
+shipped as-is at the rank-3 config; if R4 requires VEV revisited it
+should be a clean architectural restart (event-driven rather than
+continuous-quote MM), not an extension of this module.
+
+Next active focus: voucher work (R3 P3.7 noTrade-5100 signal sweep on
+`z_open × demean_window × zscore_stdev_window`) per the prior
+WORKLOG entry, plus the HYDROGEL_PACK module which already has a
+working positive-PnL strategy.
+
+### Suggested commit message
+
+```
+Ship VEV mean-reversion module (rank-3 baseline) as honest variance contribution
+
+96-combo Stage-2 sweep + pre-sweep attribution + force-flatten
+diagnostic together show no captureable per-fill edge on VEV under
+the local trade-replay engine. The rank-3 winner's positive 3-day
+mean (+2058, score=+661) is a 3-of-3 close-direction MTM gift on
+held inventory, not spread capture. Pure z-scalp loses outright due
+to per-tick σ ~1.1 << 5-tick spread cost.
+
+Ships trader-r3-v1-vev-meanrev.py at ema=120/te=2/sk=2.0/tc=30/
+kill=150 with an honest docstring. Tasks 5 (comparison writeup) and
+6 (hybrid sketch) collapsed to one-page and one-paragraph forms
+respectively. Full investigation arc in P3_vev_meanrev_log.md and
+WORKLOG.md.
+```

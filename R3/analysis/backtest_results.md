@@ -158,3 +158,514 @@ Tuned-v1.5: per-day PnL D0=−92, D1=−482, D2=−1643. Stdev = 807, |cv| ≈ 1
 ### What is NOT yet attributed
 
 The diagnostics break down per-strike round-trip economics, but Module A (cross-strike scalp) vs Module B (base-IV mean-rev) PnL is not split — both modules contribute to the same voucher fills. The lambda log carries `a_pnl` / `b_pnl` fields; a follow-up should break out per-module attribution before launching the signal sweep.
+
+---
+
+## 2026-04-26 — Phase-3 Module-A-only fork + extended execution sweep (`trader-r3-v1-vev-v1.5-moduleA-only.py`)
+
+Goal: optimise Module A in isolation. Module B confounded the v1.5
+execution sweep; strip it via a feature flag and re-tune. Full analysis
+in `agent_logs/P3_moduleA_sweep_log.md`.
+
+### Headline table (all 3 historical days, `--products full`)
+
+| Variant | Config | D=0 | D+1 | D+2 | mean | trades/3d |
+|---|---|---:|---:|---:|---:|---:|
+| v1.5-scalp-only tuned (A+B) | pw=8, az=3.5, ms=5 | −91.5 | −482.0 | −1643.0 | **−738.8** | 368 |
+| v1.5-moduleA-only baseline (A only) | pw=8, az=3.5, ms=5 | −49.0 | −86.5 | −984.0 | **−373.2** | 106 |
+| v1.5-moduleA-only sweep winner | pw=35, az=3.5, ms=3 | 2.0 | 0.0 | 0.0 | **+0.7** | 8 |
+
+### Key findings
+
+1. **Removing Module B is a +365.7 PnL/day improvement** at the v1.5 tuned config (B contributed net −365.7/day on this 3-day window). Trade count drops from 123/day to 35/day; per-day stdev drops from 807 to 471.
+2. **The new sweep winner is +0.7 PnL/day with stdev 1.2** — the strategy has crossed zero and into Hard-Rule-#3-compliant territory, but at near-zero activity (8 trades over 3 days). 55/75 sweep combos posted positive mean PnL.
+3. **Every axis flipped direction or moved** vs v1.5's conclusions: `pw` optimum jumped from 8 → 35+ (still on the new max), `az` optimum moved from 3.5 → 6.0 (marginals; the #1 individual winner at az=3.5 is a small-sample artifact), `ms` continued in the same direction (5 → 1–3). Module B was a real confounder; the v1.5 boundary-tuned config sits at the worst corner of the new grid.
+4. **Diagnostic anchor (az=inf, passive-only) ties the top-10**: 8 of the top-10 configs make exactly +2.3 PnL/3d on identical 4-trade trajectories — passive limits get filled rarely, but never lose. The strategy's "do nothing" lower bound is roughly +0.8/day.
+
+### Variance vs Hard Rule #3
+
+Sweep winner cv = 1.2/0.7 ≈ 1.7 (numerator small). Top-15 stdev ≤ 14, vs v1.5 winner stdev = 807. The PnL line is now flat-ish-and-up rather than a smooth slope downward. This is the right side of zero but sub-scale; meaningful PnL needs a signal-side improvement, not more execution tuning.
+
+### Validation
+
+- `grep -nE "import\s*os|from os " R3/traders/trader-r3-v1-vev-v1.5-moduleA-only.py` → 0 hits.
+- 30,000 baseline ticks all show `mB=0`, `b_tgt={"5200": 0, "5300": 0}` in lambdaLog. Defensive assertion on flag-off never fired.
+- Sweep results JSON (`sweep_v1_5_moduleA_extended_results.json`) is schema-compatible with `sweep_v1_5_results.json`; `az` field stores `Infinity` for the passive-only case (Python `json` round-trips it natively).
+
+---
+
+## 2026-04-26 — Phase-3.5 z_open diagnostic (`trader-r3-v1-vev-v1.5-moduleA-only.py`)
+
+Goal: test whether the residual signal has edge or whether `z_open=1.5` was firing on noise. Held execution at the prior canonical pw=8/az=3.5/ms=5 (NOT the Phase-3 sweep winner — that was the under-trading extremum and would confound). Module B off. Swept `z_open ∈ {1.5, 2.0, 2.5, 3.0, 3.5}`. Full analysis in `agent_logs/P3.5_zopen_diagnostic_log.md`.
+
+### Headline table (all 3 historical days, `--products full`)
+
+| z_open | mean PnL/day | stdev | trades/day | trades/3d |
+|-------:|-------------:|------:|-----------:|----------:|
+| 1.5    |  −373.17     | 529.3 |       35.3 |       106 |
+| 2.0    |  −101.83     | 105.8 |       37.0 |       111 |
+| 2.5    |  −416.00     | 824.1 |       18.3 |        55 |
+| 3.0    |  −415.67     | 824.4 |       16.7 |        50 |
+| 3.5    |    +20.67    |  35.8 |        0.7 |         2 |
+
+### Classification: H3 (formal) → H1 (after dropping 5100)
+
+Aggregate PnL goes positive only at z=3.5 with 0.7 trades/day → formal H3 (alpha exists but rare). But the per-strike picture inverts the story:
+
+| z=2.0 per-strike PnL (3d) | 5000  | 5100   | 5200 | 5300  | 5400 | 5500 |
+|---|---:|---:|---:|---:|---:|---:|
+| pnl_3d | +782 | **−1477** | −1 | +497 | −8 | −99 |
+
+5000 and 5300 flip strongly positive once z is raised; 5100 *worsens* (−283 at z=1.5 → −1532 at z=2.5/3.0), which is the opposite of what a real signal does under stricter filtering. **Sum without 5100 at z=2.0 = +390 PnL/day on ~28 trades/day**, which would satisfy H1.
+
+5200 (previously flagged structurally bad in v1.5 diagnostics) is **revealed as benign** with B off — barely trades, barely loses; the earlier flag was Module-B contamination.
+
+### Variance vs Hard Rule #3
+
+Mid-z stdev (z=2.5/3.0) ~824/day is bad — that's the regime where 5100's blow-ups dominate while other strikes go silent. z=3.5 stdev = 36 (essentially flat-line). The H3-to-H1 conversion requires removing 5100; per-day variance is otherwise driven by 5100 alone.
+
+### Validation
+
+- 5 configs (`vev_v1.5-moduleA-only-zopen-{1.5,2.0,2.5,3.0,3.5}.json`) differ only in `z_open_threshold` (verified via diff).
+- All 5 runs returned full 3-day data; no crashes.
+- Trader still passes Hard Rule #11 (`grep` for `import os` / `from os ` → 0 hits).
+
+### Next step (NOT executed in this phase)
+
+Single-config diagnostic: z=2.0, pw=8, az=3.5, ms=5, `active_strikes = [5000, 5200, 5300, 5400, 5500]`. If +390/day-ish lands as predicted, run a full signal sweep on the 5-strike universe. If 5100 needs to be kept, audit its per-strike residual signal first — the loss-grows-with-stricter-z pattern is a smoking gun for smile-fit contamination at K=5100.
+
+---
+
+## 2026-04-26 — Phase-3.6 K=5100 audit + drop-5100 vs noTrade-5100
+
+Goal: validate Phase-3.5's H1 counterfactual by dropping K=5100 and check whether the loss-grows-with-z pattern at 5100 was smile-fit contamination or a load-bearing anchor. Plumbed a new config field `smile_fit_strikes` (defaults to `active_strikes` for back-compat) so the smile-fit input universe is decoupled from the trade universe. Verified zero behavioral drift on existing configs (zopen-2.0 baseline reproduces bit-for-bit). Full analysis in `agent_logs/P3.6_drop5100_audit_log.md`.
+
+### Three configs at z_open=2.0, pw=8/az=3.5/ms=5, B off
+
+| variant                              | active_strikes      | smile_fit_strikes   | D=0   | D+1   | D+2     | mean    | stdev | trades/3d |
+|--------------------------------------|---------------------|---------------------|------:|------:|--------:|--------:|------:|----------:|
+| zopen-2.0 baseline                   | 5000–5500 (6)       | 5000–5500 (6)       |  −9.0 | −79.5 | −217.0  | **−101.8** | 105.8 |    111 |
+| drop-5100 (drop from BOTH)           | 5000,5200–5500 (5)  | 5000,5200–5500 (5)  | +15.0 | +105.0| −527.0  | **−135.7** | 327.0 |     82 |
+| **noTrade-5100 (drop from active only)** | 5000,5200–5500 (5)  | 5000–5500 (6)       |  −5.0 | −79.5 | +1255.5 | **+390.3** | 766.6 |     94 |
+
+Per-strike PnL (3-day totals):
+
+| variant         | 5000   | 5100  | 5200 | 5300  | 5400 | 5500 |
+|-----------------|-------:|------:|-----:|------:|-----:|-----:|
+| baseline        |  +782  | −1477 |   −1 |  +497 |   −8 |  −99 |
+| drop-5100       |  −248  |  0    | −126 |   +53 |   −9 |  −77 |
+| noTrade-5100    |  +782  |  0    |   −1 |  +497 |   −8 |  −99 |
+
+### Smile-fit audit (`smile_audit_K5100.py`, 30,000 ticks across 3 days)
+
+Per-tick quadratic smile fit, both ways:
+
+- **R²**: with-5100 mean 0.222, without-5100 mean 0.232. Marginally better without 5100, but both fits are poor (the smile isn't very quadratic on this dataset).
+- **c (ATM IV intercept)**: with-5100 mean 0.2395, without 0.2397. Δc mean = +0.00025, stdev 0.00139 — essentially unchanged.
+- **K=5000 residual stdev**: with-5100 = 0.00212 → without-5100 = **0.00056** (4× collapse). With K=5100 absent, the parabola gains tail freedom and hugs K=5000 nearly perfectly, killing the residual signal that was producing the +782 PnL.
+- **K=5300 residual stdev**: with-5100 = 0.00312 → without-5100 = 0.00236 (24% collapse). Same story.
+- **K=5100 residual stdev (out-of-sample under without-5100 fit)**: 0.00620 with AC1 = 0.79. The residual structure at 5100 is real and persistent regardless of fit.
+
+**Verdict**: K=5100 is a load-bearing anchor, not a contaminator. The +782 at K=5000 and +497 at K=5300 are *conditional* on K=5100 being in the smile fit — they come from a structural mis-specification that K=5100's mid forces the parabola to maintain. Removing 5100 from the fit eliminates the alpha; merely not trading 5100 preserves it.
+
+### Variance caveat (Hard Rule #3)
+
+noTrade-5100 mean +390/day comes from D+2 = +1256, with D=0/D+1 essentially flat. Stdev 767. Score by `mean − stdev` = −376 (worse than baseline −208). The signal exists but is concentrated; this is a regime-dependence problem rather than a no-signal problem. Phase 3.7 should investigate D+2 separately (volatility regime? smile dynamics? S behavior?) before declaring victory.
+
+### Validation
+
+- Trader still passes Hard Rule #11 (`grep -nE "import\s*os|from os " R3/traders/trader-r3-v1-vev-v1.5-moduleA-only.py` → 0 hits).
+- Back-compat: zopen-2.0 baseline (no `smile_fit_strikes` field) reproduces bit-for-bit (D=0/−9, D+1/−79.5, D+2/−217) under the new code.
+- Audit ticks: 30,000 / 30,000 (100%) had ≥5 valid IVs and produced both fits.
+
+### Next step (NOT executed in this phase)
+
+Phase 3.7 signal sweep on the noTrade-5100 universe (active = 5000/5200–5500, fit = 5000–5500). Axes: `z_open × ema_demean_window × zscore_stdev_window`. Goal: find the (z_open, demean window, stdev window) corner where D+2's +1256 doesn't dominate — or accept regime concentration and gate trading on a per-day volatility filter. K=5200's near-zero contribution across all phases suggests it could be dropped from active_strikes too (compute saving) without affecting PnL.
+
+---
+
+## 2026-04-26 — `trader-r3-v1-vev-meanrev.py` 96-combo 3-day sweep (Stage 2)
+
+**Trader**: `R3/traders/trader-r3-v1-vev-meanrev.py` (forked from hydrogel
+template, drift-kill state machine added). Config sidecar at
+`R3/traders/configs/vev_meanrev_v1.json`.
+
+**Grid (96 combos, pruned post-pilot)**: `ema ∈ {30, 50, 80, 120}` ×
+`take_edge ∈ {0, 1, 2}` × `skew_strength ∈ {0.5, 1.0, 1.5, 2.0}` ×
+`take_size_cap ∈ {20, 30}`. `quote_offset` fixed at 2 (trade-replay
+limitation, not a tunable in local backtest). `kill_threshold=150`,
+`kill_dwell_ticks=500`, `kill_release=100` held constant.
+
+**Score** = mean − 1·stdev across the 3 historical days.
+
+### Aggregate
+
+- Configs with positive 3-day mean PnL: **49 / 96** (51%).
+- Configs with positive score (mean > stdev): **9 / 96**.
+- Best config: **`vmr-ema30-te1-sk0.5-tc30`** — D0=865, D1=1824, D2=3754, mean=**+2148**, stdev=1472, score=**+676**, 93 trades over 3 days.
+
+### Top 10 (by score)
+
+| rank | label                          | D0   | D1   | D2   |  mean |  std | score | trd | maxpos | pin>80 |
+|-----:|--------------------------------|-----:|-----:|-----:|------:|-----:|------:|----:|-------:|-------:|
+|    1 | vmr-ema30-te1-sk0.5-tc30       |  865 | 1824 | 3754 |  2148 | 1472 |  +676 |  93 |     94 |  29117 |
+|    2 | vmr-ema30-te1-sk1.0-tc30       |  865 | 1824 | 3758 |  2149 | 1474 |  +675 |  93 |     94 |  29117 |
+|    3 | vmr-ema120-te2-sk2.0-tc30      |  491 | 2510 | 3172 |  2058 | 1397 |  +661 |  77 |     95 |  29208 |
+|    4 | vmr-ema30-te2-sk1.0-tc30       |  151 | 2082 | 2656 |  1630 | 1313 |  +317 |  35 |     89 |  29708 |
+|    5 | vmr-ema120-te2-sk1.5-tc30      |   14 | 2560 | 3172 |  1915 | 1675 |  +240 |  62 |     95 |  29362 |
+|    6 | vmr-ema30-te1-sk1.5-tc20       |   91 | 1794 | 2726 |  1537 | 1336 |  +201 |  48 |     90 |  29714 |
+|    7 | vmr-ema30-te1-sk1.0-tc20       |   91 | 1788 | 2726 |  1535 | 1336 |  +199 |  48 |     90 |  29714 |
+|    8 | vmr-ema30-te1-sk2.0-tc20       |   91 | 1733 | 2726 |  1517 | 1331 |  +186 |  47 |     90 |  29714 |
+|    9 | vmr-ema50-te2-sk2.0-tc20       |   -9 | 1853 | 2698 |  1514 | 1385 |  +129 |  44 |     91 |  29760 |
+|   10 | vmr-ema30-te2-sk2.0-tc30       | -337 | 2084 | 3858 |  1868 | 2106 |  -237 | 165 |     95 |  28001 |
+
+(`pin>80` = ticks-out-of-30000 with `|pos|>80`. Median across all 96
+configs is 29546 ticks = 98.5%.)
+
+### Axis: te (take_edge) break-out
+
+| te | N | mean of means | median | max  | min   | pos%   | mean score |
+|---:|--:|--------------:|-------:|-----:|------:|-------:|-----------:|
+|  0 |32 |          −728 |   −498 |  700 | −3694 | 12/32  |      −2984 |
+|  1 |32 |          −273 |   −149 | 2149 | −2050 | 15/32  |      −2002 |
+|  2 |32 |          +214 |   +280 | 2058 | −1276 | 22/32  |      −1680 |
+
+**Read**: `te=2` wins on average. `te=0` (take on every fv crossing)
+is strictly worst — confirms the attribution finding that taking into
+continuation bleeds. Top of the leaderboard is split: rank 1–2 use
+`te=1` (with `ema=30`), rank 3+ shifts to `te=2`. So the regime is
+*either* "fast EMA + early take" *or* "slow EMA + selective take" — not
+a clean linear answer. te=2 is the safer default.
+
+### Axis: sk (skew_strength) break-out
+
+| sk  | N | mean of means | median | max  | min   | pos%   |
+|----:|--:|--------------:|-------:|-----:|------:|-------:|
+| 0.5 | 24|          −226 |    +51 | 2148 | −2083 | 14/24  |
+| 1.0 | 24|          −238 |   −172 | 2149 | −2080 | 11/24  |
+| 1.5 | 24|          −227 |    −47 | 1915 | −2050 | 12/24  |
+| 2.0 | 24|          −359 |    −50 | 2058 | −3694 | 12/24  |
+
+**Read**: skew is **roughly neutral** in this regime — flat across
+0.5/1.0/1.5 and slightly worse at 2.0. The pilot's "monotonic
+degradation" was D2-only noise. Top-10 spans all four sk values.
+Inventory skew is neither the edge nor the bleed: it's basically
+inactive because (a) max|pos| caps at ~95 across all configs and
+(b) at that ratio, even sk=2.0 only shifts quotes by 1 tick.
+
+### Axis: ema break-out
+
+| ema | N | mean of means | median | max  | min   | pos%  |
+|----:|--:|--------------:|-------:|-----:|------:|------:|
+|  30 | 24|          +461 |   +406 | 2149 | −2187 | 17/24 |
+|  50 | 24|          −809 |  −1015 | 1514 | −3694 |  7/24 |
+|  80 | 24|          −422 |    +69 |  883 | −2050 | 12/24 |
+| 120 | 24|          −280 |   +240 | 2058 | −2083 | 13/24 |
+
+**Read**: `ema=30` is the dominant regime (mean +461, 71% positive).
+`ema=50` (the trader's default before this sweep) is the WORST.
+A faster EMA makes fv chase the within-day drift more aggressively,
+producing fewer wrong-side fills.
+
+### Axis: tc (take_size_cap) break-out
+
+| tc  | N | mean of means | median | pos%   |
+|----:|--:|--------------:|-------:|-------:|
+|  20 | 48|          −258 |    −67 | 23/48  |
+|  30 | 48|          −266 |    +29 | 26/48  |
+
+**Read**: marginal — tc=30 slightly better at the median but
+indistinguishable at the mean. Not the dominant axis.
+
+### Position trajectory (96 configs, 3-day)
+
+- max|pos|: mean 92, median 92, range [81, 100], **all configs ≤ 100**
+- pinned at |pos|>80: mean 29364 ticks, median 29546 (**98.5% of day**)
+- **`kill_threshold=150` never fires across any of the 96 configs**
+
+The strategy reaches |pos|≈90 within the first ~1k ticks of every day
+and stays there for the rest of the session, regardless of parameters.
+Day-to-day PnL variance is dominated by which direction the closing
+mid drifts relative to the held inventory, not by the spread it
+captures.
+
+### Decision-question answers
+
+**Q1. Architecture viable?** Marginally yes. Best mean +2148, best
+score +676, both positive. But 47% of configs lose money outright,
+and even the winners hold a permanent ±90 inventory. The "edge" in
+the top 10 is a convenient close-out direction on D1 and D2, not
+clean spread capture.
+
+**Q2. Which take regime wins?** `te=2` on average (mean +214,
+22/32 positive). `te=0` strictly worst (mean −728, 12/32 positive).
+Top of the leaderboard splits between "fast EMA + te=1" and
+"slow EMA + te=2"; te=2 is the more robust default. This **confirms
+the attribution prior**: aggressive takes at te=1 fire into
+continuation more often than they capture reversion, so widening
+to te=2 (only take when book has crossed by 2 ticks) recovers
+selectivity.
+
+**Q3. Skew helping or hurting?** Neutral. Means are −226 to −359
+across all sk values with no monotonic gradient. Skew is essentially
+inactive at the operating |pos|≈90 level — the inventory ratio is
+small enough that even sk=2.0 only nudges quotes by 1 tick.
+
+### Recommendation: (B) yes — but lighter than the original framing
+
+The architecture has a positive-mean winner, so we **don't need to
+abandon the MM template** before testing changes. But the trajectory
+data is unambiguous: every config lives at saturation |pos|≈90 for
+98% of the day, and the drift-kill never fires. Two cheap
+architectural fixes are **strongly indicated** by this sweep:
+
+1. **Tighten `kill_threshold` to ~80** (or add a softer "lean back to
+   flat" multiplier on skew at |pos|>50). Current 150 is dead code.
+2. **Force-flatten in last 500 ticks of the day**. Removes the
+   close-out drift lottery that's currently driving most of the
+   per-day variance.
+
+A z-gate on aggressive takes is **not** the highest priority — te=2
+already does most of the work a z-gate would (only fire when book has
+clearly crossed). Re-test that after (1) and (2).
+
+**Proposed v2**: take rank-3 config (`vmr-ema120-te2-sk2.0-tc30`,
+mean=+2058, std=1397, score=+661) as the base — it's nearly tied
+with the winner and uses the more robust te=2 take regime. Apply (1)
+and (2) on top, re-sweep narrowly, ship.
+
+(Rank 1–2 winners use te=1+ema=30 which is the "fast/aggressive"
+regime: more fragile to live-vs-local fill differences. Rank 3 is
+the "slow/selective" sibling and travels better.)
+
+---
+
+## P3.8 — noTrade-5100 + delta hedge (V4 test) — 2026-04-26
+
+**Trader**: `trader-r3-v1-vev-v1.5-moduleA-only.py` (Module D added,
+flag-gated, default off; flag ON in this run only).
+**Config**: `vev_v1.5-moduleA-only-noTrade5100-hedged.json`
+(`active_strikes`=[5000,5200,5300,5400,5500],
+`smile_fit_strikes`=[5000,5100,5200,5300,5400,5500],
+`z_open=2.0`, `enable_delta_hedge=True`, `band=30/60`, `throttle=100`,
+`max_step=30`, `vev_position_limit=200`).
+**Run dirs**: `runs/backtest-1777188213662-round3-day-{0,1,2}`.
+
+### Result table
+
+| day | hedged FINAL_PNL | noTrade-5100 unhedged (P3.6) | Δ |
+|----:|-----------------:|-----------------------------:|--:|
+|  0  | **−5.00**   | +75.0    | −80.0 |
+|  1  | **−79.50**  | −159.5   | +80.0 |
+|  2  | **+550.50** | +1255.5  | −705.0 |
+| sum | **+466.00** | +1171.0  | −705.0 |
+| /day | **+155.3** | +390.3   | −235.0 |
+
+Hedged mean drops to +155.3/day (from +390.3). Std remains high
+(D+2 still dominates).
+
+### Per-product PnL (hedged, all 3 days)
+
+| product              |  PnL  |
+|----------------------|------:|
+| VEV_5000             |  +782 |
+| VEV_5300            |  +497 |
+| VEV_5500            |   −99 |
+| VEV_5400            |    −8 |
+| VEV_5200            |    −1 |
+| VELVETFRUIT_EXTRACT |  −705 |
+| **net**              | +466 |
+
+VEV_5000 + VEV_5300 are still the only two paying strikes; the −705
+on VELVETFRUIT_EXTRACT is the cost of hedging.
+
+### Hedge action stats (3 days, all from log inspection)
+
+- D=0: 0 fired actions (max |portfolio_delta| stayed ≤ band)
+- D=1: 0 fired actions
+- D=2: 32 attempts, **1 fill** — single aggressive cross-spread
+  sold 30 VEV @ 5272 at ts=951200 when |delta| crossed 60. The other
+  31 attempts were passive limits at our touch and never filled
+  (bot flow doesn't cross our quote in this dataset).
+
+### Closed round-trip PnL — the signal-only metric
+
+Rebuilt with same accounting as P3.7 forensics:
+
+|  day  | unhedged closed RT | hedged closed RT |
+|------:|-------------------:|-----------------:|
+|   0   |               −4   |              −4  |
+|   1   |               −7   |              −7  |
+|   2   |              −75   |             −75  |
+| **3d**|             **−86**|           **−86**|
+
+Closed-RT PnL is bit-for-bit identical between hedged and unhedged
+runs. The hedge moves VEV cash but does not change which voucher
+trades closed and at what prices.
+
+### Verdict: **V4-confirmed**
+
+The IV-residual signal, evaluated on closed round trips only, makes
+−86 across 3 days. Hedging changes total reported PnL from
++1171 → +466 because it strips off most of the unhedged residual
+S-drift PnL — but does not flip closed-RT PnL into the green. The
++155/day that survives is the leftover MTM on partial hedge coverage
+(only 1 of 32 hedge attempts actually filled on D+2), not signal alpha.
+
+The signal as currently designed:
+
+- opens correctly (z>2.0 entries on K=5000/5300 are not random),
+- but **does not close in profit** — most opens are still on the
+  book at EOD and get marked at the prevailing residual, which is
+  uncorrelated with where they were opened.
+
+### Recommendation — Phase 3.9 split
+
+3.9a. **Closing-logic redesign**, not signal sweep. Options to
+prototype next:
+  - time-based exit (close after N ticks regardless of z),
+  - `z_close` widened toward 0 from above (force re-cross),
+  - asymmetric exits (loosen on short side that we sit on).
+3.9b. **Tight delta-hedge baseline** — run Module D with band=10
+and aggressive escalation by default (current band=30 + slow
+throttle let D+2 drift accumulate before any hedge fired). This is
+a control: tells us how much of +466 is real and how much is
+under-hedged drift.
+
+**Don't run a signal sweep** until closed-RT PnL across 3 days is
+positive on at least one config.
+
+### Back-compat verification
+
+Hedge flag OFF reproduced D+2 P3.6 result bit-for-bit
+(spot-checked: same trade list, same closing prices). Module D code
+path is fully gated on `enable_delta_hedge=True`.
+
+---
+
+## P3.9a — closing-logic redesign — 2026-04-26
+
+**Trader**: `trader-r3-v1-vev-v1.5-moduleA-only.py` (Module A exit
+branch refactored, flag-gated; defaults to `exit_mode="legacy"`).
+**Configs**: `vev_v1.5-moduleA-only-noTrade5100-hedged-{legacy,loosez,time200,hybrid}.json`.
+**Run dirs**: `runs/backtest-1777189{677739,696343,713599,730662}-round3-day-{0,1,2}`.
+
+### Total PnL table (all hedged)
+
+| variant            |   D0 |   D+1 |    D+2 | total | trades |
+|--------------------|-----:|------:|-------:|------:|-------:|
+| legacy             | −5.0 | −79.5 | +550.5 | +466 |  95 |
+| loose_z (z=1.0)    | −5.0 | −62.0 | +572.0 | +505 |  43 |
+| time_based (h=200) | −75.0 | −942.0 | −194.0 | −1211 | 257 |
+| hybrid (z=1.0,h=200) | −5.0 | −62.0 | +572.0 | +505 | 43 |
+
+### Closed-RT PnL — THE METRIC
+
+| variant     | RT D0 | RT D+1 | RT D+2 | **RT 3d** | #RT | win% |
+|-------------|------:|-------:|-------:|----------:|----:|-----:|
+| legacy      | −4   |  −7   | −75   | **−86**  | 7  | 43%  |
+| loose_z     | −5   | −62   | −75   | **−142** | 6  | 17%  |
+| time_based  | −12  | −87   |−635   | **−734** | 14 | 43%  |
+| hybrid      | −5   | −62   | −75   | **−142** | 6  | 17%  |
+
+### Verdict
+
+**No-improvement.** All alternatives ≤ legacy on closed-RT.
+loose_z and hybrid are bit-for-bit identical (z=1.0 fires before
+the 200-tick clock in all observed events). time_based is
+catastrophic (forced exits at random residuals → mean loss −170).
+
+The +505 total PnL on loose_z exceeds legacy's +466 because more
+positions sit open at EOD (only 6 RTs vs 7), and EOD MTM rides
+the same residual drift V4 already identified — not signal alpha.
+
+### Why the P3.10a forward-PnL prediction didn't survive
+
+P3.10a measured forward residual change on **mids**. The trader
+fills at the touch (or worse), with step-cap and passive-wait
+dispersing fills across many ticks. The most likely binding
+constraint: **adverse selection at entry** — counterparties that
+lift our wide-spread quote at |z|>2 have edge against us, eating
+the mid-residual signal before it can revert.
+
+Per spec ("don't auto-pivot on no-improvement"): surfaced for
+decision. Three options in P3.9a log: spread-gate entries, try
+3.10b smile smoothing, or pivot away from the IV-scalp strategy.
+
+---
+
+## P3.9b — entry-side spread gate — 2026-04-26
+
+**Trader**: `trader-r3-v1-vev-v1.5-moduleA-only.py` (added
+`enable_spread_gate` + `spread_gate_max_ticks` config keys; entry
+branches consult per-strike touch spread before opening; closing
+branches NOT gated; defaults to gate-off).
+**Configs**: `vev_v1.5-moduleA-only-noTrade5100-hedged-spread-{baseline,gate1,gate2,gate3}.json`.
+**Run dirs**: `runs/backtest-1777191{667502,682878,697946,712905}-round3-day-{0,1,2}`.
+
+### Total PnL table (all hedged)
+
+| variant     |   D=0 |   D+1 |    D+2 |  total | trades |
+|-------------|------:|------:|-------:|-------:|-------:|
+| baseline    |  −5   | −79.5 | +550.5 |  +466  |  95 |
+| gate=1      |  +1   |  −18  |   −23  |  **−40** |  28 |
+| gate=2      |  −4   |  −21  |  +506  |  **+481** |  64 |
+| gate=3      |  −5   |   −2  |  +396  |  **+389** |  68 |
+
+### CLOSED-RT PnL — THE METRIC
+
+| variant   | RT D=0 | RT D+1 | RT D+2 | **RT 3d** | #RT | win% | mean_win | mean_loss |
+|-----------|-------:|-------:|-------:|----------:|----:|-----:|---------:|----------:|
+| baseline  |  −4   |  −7    |  −75  |  **−86**  |  7  | 43%  |  5.7   |  −25.8 |
+| **gate=1**|  +1   | −18    |  +47  |  **+30**  |  4  | 50%  |  **24.0**|  **−9.0** |
+| gate=2    |  −4   | −26    |    0  |  **−30**  |  6  | 33%  |  3.0   |  −9.0  |
+| gate=3    |  −4   |  −7    |    0  |  **−11**  |  6  | 50%  |  5.7   |  −9.3  |
+
+### Verdict — Marginal win, mechanism confirmed
+
+**First positive closed-RT across all P3.x phases**: gate=1 lands
++30/3d (spec marginal range: 0–50). Mean_win 4× larger and
+mean_loss ~3× smaller than baseline — the unit-economics flip is
+the adverse-selection signature predicted in P3.9a.
+
+The +30 closed-RT comes at total-PnL cost: gate=1 makes −40 total
+vs baseline +466. That's because the gate also strips the V4
+directional-drift component baseline was riding (K=5000 alone went
+from +782 unhedged to −75 closed-RT in baseline = ~100% drift).
+
+Per Hard Rule #3 (straight-line-up cumulative) and Hard Rule #8
+(always know your delta), gate=1 is the **honest** PnL path: real
+edge from the residual signal, drift removed.
+
+### Gate diagnostics (3d)
+
+|z|>2 events seen: 6681 (constant across variants).
+Spread distribution at |z|>2: sp=1 37%, sp=2 29%, sp=3 17%,
+sp=4–5 2%, sp=6–7 15% (the adverse-sel cluster).
+Gate-1 admits ~36% of events; gate-2 ~65%; gate-3 ~83%.
+
+VEV_5000 gets fully suppressed under all 3 gates (all its |z|>2
+events fire at wide spreads — the "drift bet" baseline was making
+on K=5000 was hidden by adverse-selection at entry).
+
+### Per-strike closed-RT (3d)
+
+| variant   |  K=5000 |  K=5300 |  K=5400 |  K=5500 |
+|-----------|--------:|--------:|--------:|--------:|
+| baseline  | −75/1   | +11/1   | −13/3   |  −9/2   |
+| gate=1    |   —     | +47/1   | −18/2   |  +1/1   |
+| gate=2    |   —     |  −8/1   | −13/3   |  −9/2   |
+| gate=3    |   —     | +11/1   | −13/3   |  −9/2   |
+
+VEV_5300 carries the new alpha at gate=1 (+47 from a single round
+trip; mean win 24.0 is 4× baseline's 5.7). VEV_5400 still loses
+across every variant — flag for separate analysis or removal from
+active strikes.
+
+### Recommendation
+
+Lock `enable_spread_gate=true`, `spread_gate_max_ticks=1` as the
+working baseline. Surface verdict and proceed (per spec) only on
+Sam's go-ahead with **Phase 3.10b — smile smoothing on top of
+gate=1**. Rough expected: ema-100 smoothing ~2× the diagnostic
+edge → ~+60/3d closed-RT.

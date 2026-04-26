@@ -1,0 +1,111 @@
+Running 96 combos (full 3-day)...
+[  1/96] vmr-ema30-te0-sk0.5-tc20           mean=    700.5 std=  1878.1 score=  -1177.6  trd= 101  maxpos=100 pin>29266  eta=5.2min
+[  2/96] vmr-ema30-te0-sk0.5-tc30           mean=    343.2 std=  1578.6 score=  -1235.5  trd= 117  maxpos= 88 pin>29043  eta=5.0min
+[  3/96] vmr-ema30-te0-sk1.0-tc20           mean=    597.5 std=  1752.6 score=  -1155.1  trd= 101  maxpos= 88 pin>29237  eta=5.0min
+[  4/96] vmr-ema30-te0-sk1.0-tc30           mean=    345.8 std=  1581.7 score=  -1235.8  trd= 117  maxpos= 88 pin>29043  eta=5.0min
+[  5/96] vmr-ema30-te0-sk1.5-tc20           mean=    597.5 std=  1752.6 score=  -1155.1  trd= 101  maxpos= 88 pin>29237  eta=4.9min
+[  6/96] vmr-ema30-te0-sk1.5-tc30           mean=    341.8 std=  1578.1 score=  -1236.2  trd= 117  maxpos= 88 pin>29043  eta=4.9min
+[  7/96] vmr-ema30-te0-sk2.0-tc20           mean=  -1913.3 std=  3413.7 score=  -5327.1  trd= 152  maxpos= 85 pin>28826  eta=4.8min
+[  8/96] vmr-ema30-te0-sk2.0-tc30           mean=  -2187.2 std=  3538.8 score=  -5725.9  trd= 162  maxpos= 88 pin>28643  eta=4.7min
+[  9/96] vmr-ema30-te1-sk0.5-tc20           mean=    466.0 std=  2089.9 score=  -1623.9  trd=  36  maxpos= 90 pin>29845  eta=4.6min
+[ 10/96] vmr-ema30-te1-sk0.5-tc30           mean=   2147.7 std=  1471.8 score=    675.9  trd=  93  maxpos= 94 pin>29117  eta=4.6min
+[ 11/96] vmr-ema30-te1-sk1.0-tc20           mean=   1534.8 std=  1335.5 score=    199.3  trd=  48  maxpos= 90 pin>29714  eta=4.5min
+[ 12/96] vmr-ema30-te1-sk1.0-tc30           mean=   2149.0 std=  1474.0 score=    675.0  trd=  93  maxpos= 94 pin>29117  eta=4.5min
+[ 13/96] vmr-ema30-te1-sk1.5-tc20           mean=   1536.8 std=  1336.1 score=    200.7  trd=  48  maxpos= 90 pin>29714  eta=4.4min
+[ 14/96] vmr-ema30-te1-sk1.5-tc30           mean=   -345.0 std=  2053.3 score=  -2398.3  trd= 121  maxpos= 85 pin>28723  eta=4.4min
+[ 15/96] vmr-ema30-te1-sk2.0-tc20           mean=   1516.7 std=  1330.8 score=    185.9  trd=  47  maxpos= 90 pin>29714  eta=4.3min
+[ 16/96] vmr-ema30-te1-sk2.0-tc30           mean=  -1322.7 std=  2590.6 score=  -3913.2  trd= 207  maxpos= 84 pin>27758  eta=4.2min
+[ 17/96] vmr-ema30-te2-sk0.5-tc20           mean=     50.7 std=  2088.1 score=  -2037.4  trd=  27  maxpos= 91 pin>29781  eta=4.2min
+[ 18/96] vmr-ema30-te2-sk0.5-tc30           mean=     51.0 std=  2076.8 score=  -2025.8  trd=  26  maxpos= 86 pin>29777  eta=4.1min
+[ 19/96] vmr-ema30-te2-sk1.0-tc20           mean=    -89.8 std=  2313.3 score=  -2403.1  trd=  28  maxpos= 99 pin>29781  eta=4.1min
+[ 20/96] vmr-ema30-te2-sk1.0-tc30           mean=   1629.8 std=  1312.5 score=    317.3  trd=  35  maxpos= 89 pin>29708  eta=4.0min
+[ 21/96] vmr-ema30-te2-sk1.5-tc20           mean=   -101.3 std=  2297.1 score=  -2398.5  trd=  28  maxpos= 99 pin>29785  eta=4.0min
+[ 22/96] vmr-ema30-te2-sk1.5-tc30           mean=   1255.2 std=  2945.4 score=  -1690.2  trd= 136  maxpos= 98 pin>28222  eta=3.9min
+[ 23/96] vmr-ema30-te2-sk2.0-tc20           mean=   -101.3 std=  2297.1 score=  -2398.5  trd=  28  maxpos= 99 pin>29785  eta=3.9min
+[ 24/96] vmr-ema30-te2-sk2.0-tc30           mean=   1868.5 std=  2105.8 score=   -237.3  trd= 165  maxpos= 95 pin>28001  eta=3.8min
+[ 25/96] vmr-ema50-te0-sk0.5-tc20           mean=     40.5 std=  1974.5 score=  -1934.0  trd=  59  maxpos= 84 pin>29563  eta=3.8min
+[ 26/96] vmr-ema50-te0-sk0.5-tc30           mean=    194.0 std=  2318.5 score=  -2124.5  trd=  31  maxpos= 95 pin>29708  eta=3.7min
+[ 27/96] vmr-ema50-te0-sk1.0-tc20           mean=   -695.7 std=  2876.2 score=  -3571.9  trd= 121  maxpos= 98 pin>29008  eta=3.7min
+[ 28/96] vmr-ema50-te0-sk1.0-tc30           mean=  -1709.0 std=  3997.1 score=  -5706.1  trd= 169  maxpos= 83 pin>28203  eta=3.6min
+[ 29/96] vmr-ema50-te0-sk1.5-tc20           mean=   -651.3 std=  2821.4 score=  -3472.7  trd= 120  maxpos= 85 pin>29008  eta=3.6min
+[ 30/96] vmr-ema50-te0-sk1.5-tc30           mean=  -1610.0 std=  3845.6 score=  -5455.6  trd= 173  maxpos= 88 pin>28197  eta=3.5min
+[ 31/96] vmr-ema50-te0-sk2.0-tc20           mean=   -577.3 std=  2679.7 score=  -3257.0  trd=  97  maxpos= 86 pin>29318  eta=3.5min
+[ 32/96] vmr-ema50-te0-sk2.0-tc30           mean=  -3694.2 std=  2098.8 score=  -5793.0  trd= 205  maxpos= 84 pin>27926  eta=3.4min
+[ 33/96] vmr-ema50-te1-sk0.5-tc20           mean=   -997.8 std=  1495.6 score=  -2493.4  trd=  47  maxpos=100 pin>29698  eta=3.4min
+[ 34/96] vmr-ema50-te1-sk0.5-tc30           mean=    203.7 std=  2195.0 score=  -1991.3  trd=  88  maxpos= 91 pin>29084  eta=3.3min
+[ 35/96] vmr-ema50-te1-sk1.0-tc20           mean=  -1684.3 std=   244.6 score=  -1929.0  trd= 153  maxpos= 85 pin>28429  eta=3.3min
+[ 36/96] vmr-ema50-te1-sk1.0-tc30           mean=   -253.2 std=  4197.9 score=  -4451.1  trd= 180  maxpos= 96 pin>28158  eta=3.2min
+[ 37/96] vmr-ema50-te1-sk1.5-tc20           mean=  -1031.3 std=  1180.1 score=  -2211.4  trd=  81  maxpos= 93 pin>29264  eta=3.2min
+[ 38/96] vmr-ema50-te1-sk1.5-tc30           mean=    299.0 std=  2296.9 score=  -1997.9  trd= 109  maxpos= 83 pin>28921  eta=3.1min
+[ 39/96] vmr-ema50-te1-sk2.0-tc20           mean=  -1425.7 std=   530.8 score=  -1956.5  trd=  68  maxpos= 85 pin>29335  eta=3.1min
+[ 40/96] vmr-ema50-te1-sk2.0-tc30           mean=  -1579.0 std=   768.9 score=  -2347.9  trd=  88  maxpos= 87 pin>29267  eta=3.1min
+[ 41/96] vmr-ema50-te2-sk0.5-tc20           mean=  -1206.3 std=  1045.0 score=  -2251.4  trd=  22  maxpos= 98 pin>29899  eta=3.0min
+[ 42/96] vmr-ema50-te2-sk0.5-tc30           mean=  -1158.0 std=  1013.5 score=  -2171.5  trd=  20  maxpos= 99 pin>29914  eta=3.0min
+[ 43/96] vmr-ema50-te2-sk1.0-tc20           mean=  -1130.0 std=  1001.1 score=  -2131.1  trd=  22  maxpos= 90 pin>29914  eta=2.9min
+[ 44/96] vmr-ema50-te2-sk1.0-tc30           mean=  -1105.8 std=   987.7 score=  -2093.6  trd=  21  maxpos= 99 pin>29869  eta=2.9min
+[ 45/96] vmr-ema50-te2-sk1.5-tc20           mean=  -1163.8 std=  1042.8 score=  -2206.6  trd=  23  maxpos= 90 pin>29912  eta=2.8min
+[ 46/96] vmr-ema50-te2-sk1.5-tc30           mean=      7.2 std=  2041.8 score=  -2034.6  trd=  34  maxpos= 99 pin>29727  eta=2.8min
+[ 47/96] vmr-ema50-te2-sk2.0-tc20           mean=   1514.2 std=  1385.2 score=    129.0  trd=  44  maxpos= 91 pin>29760  eta=2.7min
+[ 48/96] vmr-ema50-te2-sk2.0-tc30           mean=      1.0 std=  2011.0 score=  -2010.0  trd=  30  maxpos= 99 pin>29828  eta=2.7min
+[ 49/96] vmr-ema80-te0-sk0.5-tc20           mean=  -1241.8 std=   838.0 score=  -2079.8  trd=  45  maxpos= 87 pin>29628  eta=2.6min
+[ 50/96] vmr-ema80-te0-sk0.5-tc30           mean=    316.3 std=  2245.7 score=  -1929.4  trd=  28  maxpos= 95 pin>29734  eta=2.6min
+[ 51/96] vmr-ema80-te0-sk1.0-tc20           mean=  -1239.8 std=   839.2 score=  -2079.0  trd=  45  maxpos= 87 pin>29628  eta=2.5min
+[ 52/96] vmr-ema80-te0-sk1.0-tc30           mean=    317.3 std=  2244.5 score=  -1927.2  trd=  28  maxpos= 95 pin>29734  eta=2.5min
+[ 53/96] vmr-ema80-te0-sk1.5-tc20           mean=  -1247.8 std=   825.8 score=  -2073.6  trd=  45  maxpos= 87 pin>29628  eta=2.4min
+[ 54/96] vmr-ema80-te0-sk1.5-tc30           mean=    317.3 std=  2244.5 score=  -1927.2  trd=  28  maxpos= 95 pin>29734  eta=2.4min
+[ 55/96] vmr-ema80-te0-sk2.0-tc20           mean=    181.3 std=  1978.4 score=  -1797.1  trd=  57  maxpos= 86 pin>29529  eta=2.3min
+[ 56/96] vmr-ema80-te0-sk2.0-tc30           mean=  -1255.7 std=   764.4 score=  -2020.0  trd=  39  maxpos= 81 pin>29618  eta=2.2min
+[ 57/96] vmr-ema80-te1-sk0.5-tc20           mean=    -44.0 std=  2281.0 score=  -2325.0  trd=  25  maxpos=100 pin>29832  eta=2.2min
+[ 58/96] vmr-ema80-te1-sk0.5-tc30           mean=   -913.8 std=  2066.6 score=  -2980.5  trd= 173  maxpos= 92 pin>27805  eta=2.1min
+[ 59/96] vmr-ema80-te1-sk1.0-tc20           mean=    445.3 std=  2158.4 score=  -1713.1  trd=  41  maxpos=100 pin>29694  eta=2.1min
+[ 60/96] vmr-ema80-te1-sk1.0-tc30           mean=   -966.5 std=  2105.8 score=  -3072.3  trd= 170  maxpos= 92 pin>27805  eta=2.0min
+[ 61/96] vmr-ema80-te1-sk1.5-tc20           mean=  -1191.2 std=   893.6 score=  -2084.8  trd= 103  maxpos=100 pin>29173  eta=2.0min
+[ 62/96] vmr-ema80-te1-sk1.5-tc30           mean=  -2049.5 std=   689.4 score=  -2738.9  trd= 100  maxpos= 92 pin>28909  eta=1.9min
+[ 63/96] vmr-ema80-te1-sk2.0-tc20           mean=    342.2 std=  2073.8 score=  -1731.6  trd=  90  maxpos= 95 pin>29199  eta=1.8min
+[ 64/96] vmr-ema80-te1-sk2.0-tc30           mean=  -1971.5 std=  1050.8 score=  -3022.3  trd= 117  maxpos= 90 pin>28745  eta=1.8min
+[ 65/96] vmr-ema80-te2-sk0.5-tc20           mean=  -1276.0 std=  1023.9 score=  -2299.9  trd=  24  maxpos=100 pin>29913  eta=1.7min
+[ 66/96] vmr-ema80-te2-sk0.5-tc30           mean=    294.7 std=  2274.8 score=  -1980.1  trd=  13  maxpos=100 pin>29937  eta=1.7min
+[ 67/96] vmr-ema80-te2-sk1.0-tc20           mean=  -1169.2 std=   962.5 score=  -2131.6  trd=  24  maxpos= 88 pin>29870  eta=1.6min
+[ 68/96] vmr-ema80-te2-sk1.0-tc30           mean=    294.7 std=  2274.8 score=  -1980.1  trd=  13  maxpos=100 pin>29937  eta=1.6min
+[ 69/96] vmr-ema80-te2-sk1.5-tc20           mean=    550.0 std=  2380.7 score=  -1830.7  trd=  35  maxpos= 97 pin>29804  eta=1.5min
+[ 70/96] vmr-ema80-te2-sk1.5-tc30           mean=    264.7 std=  2226.4 score=  -1961.7  trd=  14  maxpos=100 pin>29936  eta=1.4min
+[ 71/96] vmr-ema80-te2-sk2.0-tc20           mean=    882.8 std=  2344.6 score=  -1461.8  trd=  81  maxpos= 86 pin>29400  eta=1.4min
+[ 72/96] vmr-ema80-te2-sk2.0-tc30           mean=    237.5 std=  2295.4 score=  -2057.9  trd=  38  maxpos= 88 pin>29693  eta=1.3min
+[ 73/96] vmr-ema120-te0-sk0.5-tc20          mean=  -2083.0 std=  1967.0 score=  -4050.0  trd=  69  maxpos= 94 pin>29409  eta=1.3min
+[ 74/96] vmr-ema120-te0-sk0.5-tc30          mean=   -419.0 std=  3361.5 score=  -3780.5  trd=  51  maxpos= 95 pin>29492  eta=1.2min
+[ 75/96] vmr-ema120-te0-sk1.0-tc20          mean=  -2080.3 std=  1967.0 score=  -4047.4  trd=  69  maxpos= 94 pin>29409  eta=1.2min
+[ 76/96] vmr-ema120-te0-sk1.0-tc30          mean=   -419.0 std=  3361.5 score=  -3780.5  trd=  51  maxpos= 95 pin>29492  eta=1.1min
+[ 77/96] vmr-ema120-te0-sk1.5-tc20          mean=  -1845.2 std=  1620.0 score=  -3465.2  trd=  95  maxpos= 83 pin>29256  eta=1.0min
+[ 78/96] vmr-ema120-te0-sk1.5-tc30          mean=   -419.7 std=  3361.5 score=  -3781.1  trd=  51  maxpos= 95 pin>29518  eta=1.0min
+[ 79/96] vmr-ema120-te0-sk2.0-tc20          mean=   -296.5 std=  3075.8 score=  -3372.3  trd= 106  maxpos= 90 pin>29189  eta=0.9min
+[ 80/96] vmr-ema120-te0-sk2.0-tc30          mean=  -1997.3 std=  1830.4 score=  -3827.7  trd=  60  maxpos= 85 pin>29476  eta=0.9min
+[ 81/96] vmr-ema120-te1-sk0.5-tc20          mean=    357.0 std=  2156.6 score=  -1799.6  trd=  36  maxpos=100 pin>29746  eta=0.8min
+[ 82/96] vmr-ema120-te1-sk0.5-tc30          mean=  -2033.5 std=  1178.4 score=  -3211.9  trd=  47  maxpos= 92 pin>29495  eta=0.8min
+[ 83/96] vmr-ema120-te1-sk1.0-tc20          mean=    367.3 std=  2156.2 score=  -1788.9  trd=  37  maxpos=100 pin>29746  eta=0.7min
+[ 84/96] vmr-ema120-te1-sk1.0-tc30          mean=  -1653.5 std=  1797.8 score=  -3451.3  trd=  57  maxpos= 92 pin>29422  eta=0.7min
+[ 85/96] vmr-ema120-te1-sk1.5-tc20          mean=    360.7 std=  2156.4 score=  -1795.8  trd=  39  maxpos=100 pin>29705  eta=0.6min
+[ 86/96] vmr-ema120-te1-sk1.5-tc30          mean=  -1574.3 std=  1755.9 score=  -3330.2  trd=  59  maxpos= 85 pin>29353  eta=0.6min
+[ 87/96] vmr-ema120-te1-sk2.0-tc20          mean=    439.7 std=  2278.9 score=  -1839.2  trd=  60  maxpos=100 pin>29586  eta=0.5min
+[ 88/96] vmr-ema120-te1-sk2.0-tc30          mean=    133.2 std=  1935.8 score=  -1802.7  trd=  48  maxpos= 86 pin>29623  eta=0.4min
+[ 89/96] vmr-ema120-te2-sk0.5-tc20          mean=    358.0 std=  2319.2 score=  -1961.2  trd=  16  maxpos=100 pin>29869  eta=0.4min
+[ 90/96] vmr-ema120-te2-sk0.5-tc30          mean=    428.7 std=  2259.7 score=  -1831.1  trd=  13  maxpos= 94 pin>29859  eta=0.3min
+[ 91/96] vmr-ema120-te2-sk1.0-tc20          mean=    358.0 std=  2319.2 score=  -1961.2  trd=  16  maxpos=100 pin>29869  eta=0.3min
+[ 92/96] vmr-ema120-te2-sk1.0-tc30          mean=    442.0 std=  2241.9 score=  -1799.9  trd=  13  maxpos= 94 pin>29836  eta=0.2min
+[ 93/96] vmr-ema120-te2-sk1.5-tc20          mean=    347.2 std=  2301.9 score=  -1954.7  trd=  35  maxpos=100 pin>29783  eta=0.2min
+[ 94/96] vmr-ema120-te2-sk1.5-tc30          mean=   1915.3 std=  1674.9 score=    240.4  trd=  62  maxpos= 95 pin>29362  eta=0.1min
+[ 95/96] vmr-ema120-te2-sk2.0-tc20          mean=    534.8 std=  2327.1 score=  -1792.2  trd=  53  maxpos=100 pin>29575  eta=0.1min
+[ 96/96] vmr-ema120-te2-sk2.0-tc30          mean=   2058.0 std=  1396.8 score=    661.2  trd=  77  maxpos= 95 pin>29208  eta=0.0min
+
+Results written to /Users/samuelshi/IMC-Prosperity-2026-personal/R3/analysis/sweep_vev_meanrev_results.json
+
+Top 10:
+  vmr-ema30-te1-sk0.5-tc30           mean=   2147.7 std=  1471.8 score=    675.9
+  vmr-ema30-te1-sk1.0-tc30           mean=   2149.0 std=  1474.0 score=    675.0
+  vmr-ema120-te2-sk2.0-tc30          mean=   2058.0 std=  1396.8 score=    661.2
+  vmr-ema30-te2-sk1.0-tc30           mean=   1629.8 std=  1312.5 score=    317.3
+  vmr-ema120-te2-sk1.5-tc30          mean=   1915.3 std=  1674.9 score=    240.4
+  vmr-ema30-te1-sk1.5-tc20           mean=   1536.8 std=  1336.1 score=    200.7
+  vmr-ema30-te1-sk1.0-tc20           mean=   1534.8 std=  1335.5 score=    199.3
+  vmr-ema30-te1-sk2.0-tc20           mean=   1516.7 std=  1330.8 score=    185.9
+  vmr-ema50-te2-sk2.0-tc20           mean=   1514.2 std=  1385.2 score=    129.0
+  vmr-ema30-te2-sk2.0-tc30           mean=   1868.5 std=  2105.8 score=   -237.3
