@@ -1,0 +1,140 @@
+Running 125 combos...
+[  1/125] v1.5-pw1-az1.8-ms5             mean=  -31077.8 std=    551.1 score=  -31628.9  eta=58.4min
+[  2/125] v1.5-pw1-az1.8-ms10            mean=  -56474.5 std=    214.0 score=  -56688.5  eta=54.6min
+[  3/125] v1.5-pw1-az1.8-ms15            mean=  -72438.0 std=    713.3 score=  -73151.3  eta=52.3min
+[  4/125] v1.5-pw1-az1.8-ms25            mean=  -94616.7 std=   2984.5 score=  -97601.1  eta=50.9min
+[  5/125] v1.5-pw1-az1.8-ms40            mean=  -98948.3 std=   3688.3 score= -102636.7  eta=49.8min
+[  6/125] v1.5-pw1-az2.0-ms5             mean=  -20613.8 std=   2430.4 score=  -23044.2  eta=49.6min
+[  7/125] v1.5-pw1-az2.0-ms10            mean=  -37577.2 std=   3221.6 score=  -40798.7  eta=48.8min
+[  8/125] v1.5-pw1-az2.0-ms15            mean=  -47953.8 std=   4140.8 score=  -52094.7  eta=48.1min
+[  9/125] v1.5-pw1-az2.0-ms25            mean=  -62942.7 std=   6184.5 score=  -69127.2  eta=47.5min
+[ 10/125] v1.5-pw1-az2.0-ms40            mean=  -65942.7 std=   6411.6 score=  -72354.3  eta=46.9min
+[ 11/125] v1.5-pw1-az2.5-ms5             mean=   -7737.0 std=   3571.1 score=  -11308.1  eta=46.2min
+[ 12/125] v1.5-pw1-az2.5-ms10            mean=  -14154.5 std=   6525.8 score=  -20680.3  eta=45.7min
+[ 13/125] v1.5-pw1-az2.5-ms15            mean=  -17698.7 std=   7188.8 score=  -24887.4  eta=45.1min
+[ 14/125] v1.5-pw1-az2.5-ms25            mean=  -22861.3 std=   7113.8 score=  -29975.1  eta=44.5min
+[ 15/125] v1.5-pw1-az2.5-ms40            mean=  -23725.2 std=   6849.5 score=  -30574.6  eta=44.1min
+[ 16/125] v1.5-pw1-az3.0-ms5             mean=   -3249.8 std=   3189.2 score=   -6439.0  eta=43.6min
+[ 17/125] v1.5-pw1-az3.0-ms10            mean=   -4929.8 std=   3639.9 score=   -8569.8  eta=43.1min
+[ 18/125] v1.5-pw1-az3.0-ms15            mean=   -5872.0 std=   3588.4 score=   -9460.4  eta=42.5min
+[ 19/125] v1.5-pw1-az3.0-ms25            mean=   -7512.3 std=   4067.6 score=  -11579.9  eta=42.0min
+[ 20/125] v1.5-pw1-az3.0-ms40            mean=   -7943.5 std=   4014.9 score=  -11958.4  eta=41.5min
+[ 21/125] v1.5-pw1-az3.5-ms5             mean=   -1399.8 std=   1608.5 score=   -3008.3  eta=41.0min
+[ 22/125] v1.5-pw1-az3.5-ms10            mean=   -2870.8 std=   2993.2 score=   -5864.0  eta=40.6min
+[ 23/125] v1.5-pw1-az3.5-ms15            mean=   -3195.3 std=   2721.4 score=   -5916.7  eta=40.1min
+[ 24/125] v1.5-pw1-az3.5-ms25            mean=   -3789.3 std=   2523.1 score=   -6312.4  eta=39.6min
+[ 25/125] v1.5-pw1-az3.5-ms40            mean=   -3888.5 std=   2338.4 score=   -6226.9  eta=39.2min
+[ 26/125] v1.5-pw2-az1.8-ms5             mean=  -25618.8 std=   1276.6 score=  -26895.4  eta=38.8min
+[ 27/125] v1.5-pw2-az1.8-ms10            mean=  -48036.0 std=   1183.8 score=  -49219.8  eta=38.5min
+[ 28/125] v1.5-pw2-az1.8-ms15            mean=  -60798.7 std=   1390.6 score=  -62189.3  eta=38.1min
+[ 29/125] v1.5-pw2-az1.8-ms25            mean=  -79633.2 std=   3494.3 score=  -83127.4  eta=37.9min
+[ 30/125] v1.5-pw2-az1.8-ms40            mean=  -84389.3 std=   3695.9 score=  -88085.3  eta=37.5min
+[ 31/125] v1.5-pw2-az2.0-ms5             mean=  -17172.7 std=   2602.0 score=  -19774.7  eta=37.0min
+[ 32/125] v1.5-pw2-az2.0-ms10            mean=  -32636.3 std=   2920.9 score=  -35557.2  eta=36.5min
+[ 33/125] v1.5-pw2-az2.0-ms15            mean=  -41477.7 std=   3488.1 score=  -44965.8  eta=36.0min
+[ 34/125] v1.5-pw2-az2.0-ms25            mean=  -54731.8 std=   6808.7 score=  -61540.6  eta=35.6min
+[ 35/125] v1.5-pw2-az2.0-ms40            mean=  -57784.8 std=   6922.8 score=  -64707.6  eta=35.1min
+[ 36/125] v1.5-pw2-az2.5-ms5             mean=   -6773.3 std=   2920.1 score=   -9693.5  eta=34.7min
+[ 37/125] v1.5-pw2-az2.5-ms10            mean=  -13256.3 std=   5952.9 score=  -19209.2  eta=34.2min
+[ 38/125] v1.5-pw2-az2.5-ms15            mean=  -16333.0 std=   6418.1 score=  -22751.1  eta=33.8min
+[ 39/125] v1.5-pw2-az2.5-ms25            mean=  -21295.0 std=   6241.1 score=  -27536.1  eta=33.4min
+[ 40/125] v1.5-pw2-az2.5-ms40            mean=  -22641.2 std=   6089.8 score=  -28731.0  eta=32.9min
+[ 41/125] v1.5-pw2-az3.0-ms5             mean=   -2739.3 std=   2759.3 score=   -5498.7  eta=32.5min
+[ 42/125] v1.5-pw2-az3.0-ms10            mean=   -4674.7 std=   3678.1 score=   -8352.7  eta=32.1min
+[ 43/125] v1.5-pw2-az3.0-ms15            mean=   -5480.8 std=   3576.6 score=   -9057.4  eta=31.7min
+[ 44/125] v1.5-pw2-az3.0-ms25            mean=   -7325.2 std=   4273.4 score=  -11598.5  eta=31.3min
+[ 45/125] v1.5-pw2-az3.0-ms40            mean=   -7652.3 std=   4119.6 score=  -11772.0  eta=30.9min
+[ 46/125] v1.5-pw2-az3.5-ms5             mean=   -1288.0 std=   1625.7 score=   -2913.7  eta=30.4min
+[ 47/125] v1.5-pw2-az3.5-ms10            mean=   -2569.3 std=   2536.6 score=   -5105.9  eta=30.0min
+[ 48/125] v1.5-pw2-az3.5-ms15            mean=   -2848.2 std=   2292.4 score=   -5140.6  eta=29.6min
+[ 49/125] v1.5-pw2-az3.5-ms25            mean=   -3409.2 std=   2047.9 score=   -5457.0  eta=29.2min
+[ 50/125] v1.5-pw2-az3.5-ms40            mean=   -3477.3 std=   1889.2 score=   -5366.5  eta=28.8min
+[ 51/125] v1.5-pw3-az1.8-ms5             mean=  -23921.8 std=   1376.2 score=  -25298.1  eta=28.4min
+[ 52/125] v1.5-pw3-az1.8-ms10            mean=  -45440.3 std=   1760.1 score=  -47200.5  eta=28.0min
+[ 53/125] v1.5-pw3-az1.8-ms15            mean=  -57620.0 std=   2577.1 score=  -60197.1  eta=27.6min
+[ 54/125] v1.5-pw3-az1.8-ms25            mean=  -75378.5 std=   3898.2 score=  -79276.7  eta=27.2min
+[ 55/125] v1.5-pw3-az1.8-ms40            mean=  -79696.7 std=   4039.5 score=  -83736.1  eta=26.8min
+[ 56/125] v1.5-pw3-az2.0-ms5             mean=  -16266.0 std=   2476.2 score=  -18742.2  eta=26.3min
+[ 57/125] v1.5-pw3-az2.0-ms10            mean=  -30817.0 std=   3053.0 score=  -33870.0  eta=25.9min
+[ 58/125] v1.5-pw3-az2.0-ms15            mean=  -39731.5 std=   3353.2 score=  -43084.7  eta=25.5min
+[ 59/125] v1.5-pw3-az2.0-ms25            mean=  -51956.0 std=   7724.4 score=  -59680.4  eta=25.2min
+[ 60/125] v1.5-pw3-az2.0-ms40            mean=  -55364.8 std=   7956.6 score=  -63321.5  eta=24.8min
+[ 61/125] v1.5-pw3-az2.5-ms5             mean=   -6250.7 std=   2698.5 score=   -8949.2  eta=24.3min
+[ 62/125] v1.5-pw3-az2.5-ms10            mean=  -12694.0 std=   5666.8 score=  -18360.8  eta=23.9min
+[ 63/125] v1.5-pw3-az2.5-ms15            mean=  -15652.7 std=   6287.4 score=  -21940.0  eta=23.6min
+[ 64/125] v1.5-pw3-az2.5-ms25            mean=  -20545.0 std=   6761.0 score=  -27306.0  eta=23.2min
+[ 65/125] v1.5-pw3-az2.5-ms40            mean=  -21970.5 std=   6867.9 score=  -28838.4  eta=22.8min
+[ 66/125] v1.5-pw3-az3.0-ms5             mean=   -2660.0 std=   2685.6 score=   -5345.6  eta=22.4min
+[ 67/125] v1.5-pw3-az3.0-ms10            mean=   -4570.8 std=   3527.7 score=   -8098.5  eta=22.1min
+[ 68/125] v1.5-pw3-az3.0-ms15            mean=   -5275.3 std=   3362.3 score=   -8637.7  eta=21.7min
+[ 69/125] v1.5-pw3-az3.0-ms25            mean=   -7039.8 std=   3975.8 score=  -11015.6  eta=21.3min
+[ 70/125] v1.5-pw3-az3.0-ms40            mean=   -7350.7 std=   4032.9 score=  -11383.5  eta=20.9min
+[ 71/125] v1.5-pw3-az3.5-ms5             mean=   -1193.0 std=   1452.8 score=   -2645.8  eta=20.5min
+[ 72/125] v1.5-pw3-az3.5-ms10            mean=   -2236.7 std=   2215.0 score=   -4451.7  eta=20.1min
+[ 73/125] v1.5-pw3-az3.5-ms15            mean=   -2527.8 std=   2001.6 score=   -4529.5  eta=19.7min
+[ 74/125] v1.5-pw3-az3.5-ms25            mean=   -3051.8 std=   1814.2 score=   -4866.1  eta=19.3min
+[ 75/125] v1.5-pw3-az3.5-ms40            mean=   -3187.3 std=   1602.8 score=   -4790.2  eta=19.0min
+[ 76/125] v1.5-pw5-az1.8-ms5             mean=  -20313.7 std=   1129.1 score=  -21442.7  eta=18.6min
+[ 77/125] v1.5-pw5-az1.8-ms10            mean=  -39076.8 std=   1652.2 score=  -40729.0  eta=18.2min
+[ 78/125] v1.5-pw5-az1.8-ms15            mean=  -49204.2 std=   1888.2 score=  -51092.4  eta=17.8min
+[ 79/125] v1.5-pw5-az1.8-ms25            mean=  -63360.2 std=   4681.0 score=  -68041.1  eta=17.4min
+[ 80/125] v1.5-pw5-az1.8-ms40            mean=  -67280.5 std=   5181.6 score=  -72462.1  eta=17.0min
+[ 81/125] v1.5-pw5-az2.0-ms5             mean=  -13908.3 std=   1701.5 score=  -15609.8  eta=16.7min
+[ 82/125] v1.5-pw5-az2.0-ms10            mean=  -26522.3 std=   2923.0 score=  -29445.3  eta=16.3min
+[ 83/125] v1.5-pw5-az2.0-ms15            mean=  -34163.8 std=   2484.9 score=  -36648.7  eta=15.9min
+[ 84/125] v1.5-pw5-az2.0-ms25            mean=  -43803.8 std=   6534.3 score=  -50338.1  eta=15.5min
+[ 85/125] v1.5-pw5-az2.0-ms40            mean=  -46845.0 std=   6473.5 score=  -53318.5  eta=15.1min
+[ 86/125] v1.5-pw5-az2.5-ms5             mean=   -5556.5 std=   2644.7 score=   -8201.2  eta=14.7min
+[ 87/125] v1.5-pw5-az2.5-ms10            mean=  -11846.5 std=   5790.1 score=  -17636.6  eta=14.4min
+[ 88/125] v1.5-pw5-az2.5-ms15            mean=  -13895.2 std=   5449.3 score=  -19344.4  eta=14.0min
+[ 89/125] v1.5-pw5-az2.5-ms25            mean=  -18583.0 std=   6400.6 score=  -24983.6  eta=13.6min
+[ 90/125] v1.5-pw5-az2.5-ms40            mean=  -19510.2 std=   6515.0 score=  -26025.2  eta=13.2min
+[ 91/125] v1.5-pw5-az3.0-ms5             mean=   -2164.0 std=   2105.2 score=   -4269.2  eta=12.8min
+[ 92/125] v1.5-pw5-az3.0-ms10            mean=   -4150.0 std=   3329.4 score=   -7479.4  eta=12.4min
+[ 93/125] v1.5-pw5-az3.0-ms15            mean=   -4754.0 std=   3322.9 score=   -8076.9  eta=12.0min
+[ 94/125] v1.5-pw5-az3.0-ms25            mean=   -6390.5 std=   4172.7 score=  -10563.2  eta=11.7min
+[ 95/125] v1.5-pw5-az3.0-ms40            mean=   -6468.2 std=   3801.5 score=  -10269.7  eta=11.3min
+[ 96/125] v1.5-pw5-az3.5-ms5             mean=   -1001.0 std=   1293.0 score=   -2294.0  eta=10.9min
+[ 97/125] v1.5-pw5-az3.5-ms10            mean=   -1771.2 std=   2364.3 score=   -4135.4  eta=10.5min
+[ 98/125] v1.5-pw5-az3.5-ms15            mean=   -2048.2 std=   2090.3 score=   -4138.4  eta=10.1min
+[ 99/125] v1.5-pw5-az3.5-ms25            mean=   -2402.8 std=   2232.0 score=   -4634.8  eta=9.8min
+[100/125] v1.5-pw5-az3.5-ms40            mean=   -2600.5 std=   1931.2 score=   -4531.7  eta=9.4min
+[101/125] v1.5-pw8-az1.8-ms5             mean=  -13195.7 std=   1835.8 score=  -15031.4  eta=9.0min
+[102/125] v1.5-pw8-az1.8-ms10            mean=  -25312.8 std=   1010.8 score=  -26323.6  eta=8.6min
+[103/125] v1.5-pw8-az1.8-ms15            mean=  -31221.2 std=    601.2 score=  -31822.4  eta=8.2min
+[104/125] v1.5-pw8-az1.8-ms25            mean=  -39118.0 std=   3462.3 score=  -42580.3  eta=7.9min
+[105/125] v1.5-pw8-az1.8-ms40            mean=  -40315.7 std=   2695.4 score=  -43011.0  eta=7.5min
+[106/125] v1.5-pw8-az2.0-ms5             mean=   -9342.3 std=   1738.9 score=  -11081.2  eta=7.1min
+[107/125] v1.5-pw8-az2.0-ms10            mean=  -18757.3 std=   1789.5 score=  -20546.8  eta=6.7min
+[108/125] v1.5-pw8-az2.0-ms15            mean=  -22648.8 std=   2139.4 score=  -24788.3  eta=6.4min
+[109/125] v1.5-pw8-az2.0-ms25            mean=  -29890.0 std=   3689.4 score=  -33579.4  eta=6.0min
+[110/125] v1.5-pw8-az2.0-ms40            mean=  -31839.5 std=   4139.8 score=  -35979.3  eta=5.6min
+[111/125] v1.5-pw8-az2.5-ms5             mean=   -4077.0 std=   1983.2 score=   -6060.2  eta=5.2min
+[112/125] v1.5-pw8-az2.5-ms10            mean=   -8878.3 std=   4518.7 score=  -13397.0  eta=4.8min
+[113/125] v1.5-pw8-az2.5-ms15            mean=  -10959.8 std=   4575.7 score=  -15535.6  eta=4.5min
+[114/125] v1.5-pw8-az2.5-ms25            mean=  -13550.7 std=   4755.9 score=  -18306.6  eta=4.1min
+[115/125] v1.5-pw8-az2.5-ms40            mean=  -15349.7 std=   5595.5 score=  -20945.1  eta=3.7min
+[116/125] v1.5-pw8-az3.0-ms5             mean=   -1442.3 std=   1340.6 score=   -2782.9  eta=3.4min
+[117/125] v1.5-pw8-az3.0-ms10            mean=   -3239.7 std=   2986.5 score=   -6226.2  eta=3.0min
+[118/125] v1.5-pw8-az3.0-ms15            mean=   -3318.2 std=   3410.9 score=   -6729.0  eta=2.6min
+[119/125] v1.5-pw8-az3.0-ms25            mean=   -4811.0 std=   3785.1 score=   -8596.1  eta=2.2min
+[120/125] v1.5-pw8-az3.0-ms40            mean=   -5011.2 std=   3347.7 score=   -8358.8  eta=1.9min
+[121/125] v1.5-pw8-az3.5-ms5             mean=    -738.8 std=    807.0 score=   -1545.8  eta=1.5min
+[122/125] v1.5-pw8-az3.5-ms10            mean=    -907.0 std=    756.1 score=   -1663.1  eta=1.1min
+[123/125] v1.5-pw8-az3.5-ms15            mean=   -1188.5 std=    437.7 score=   -1626.2  eta=0.7min
+[124/125] v1.5-pw8-az3.5-ms25            mean=   -1401.5 std=    691.7 score=   -2093.2  eta=0.4min
+[125/125] v1.5-pw8-az3.5-ms40            mean=   -1963.0 std=   1124.5 score=   -3087.5  eta=0.0min
+
+Results written to /Users/samuelshi/IMC-Prosperity-2026-personal/R3/analysis/sweep_v1_5_results.json
+
+Top 10 by score:
+  v1.5-pw8-az3.5-ms5             mean=    -738.8 std=    807.0 score=   -1545.8
+  v1.5-pw8-az3.5-ms15            mean=   -1188.5 std=    437.7 score=   -1626.2
+  v1.5-pw8-az3.5-ms10            mean=    -907.0 std=    756.1 score=   -1663.1
+  v1.5-pw8-az3.5-ms25            mean=   -1401.5 std=    691.7 score=   -2093.2
+  v1.5-pw5-az3.5-ms5             mean=   -1001.0 std=   1293.0 score=   -2294.0
+  v1.5-pw3-az3.5-ms5             mean=   -1193.0 std=   1452.8 score=   -2645.8
+  v1.5-pw8-az3.0-ms5             mean=   -1442.3 std=   1340.6 score=   -2782.9
+  v1.5-pw2-az3.5-ms5             mean=   -1288.0 std=   1625.7 score=   -2913.7
+  v1.5-pw1-az3.5-ms5             mean=   -1399.8 std=   1608.5 score=   -3008.3
+  v1.5-pw8-az3.5-ms40            mean=   -1963.0 std=   1124.5 score=   -3087.5

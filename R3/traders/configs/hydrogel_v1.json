@@ -1,0 +1,9 @@
+{
+  "fair_value_ema_window": 50,
+  "quote_offset": 3,
+  "skew_strength": 1.0,
+  "take_edge": 4,
+  "passive_quote_size": 30,
+  "aggressive_take_size_cap": 50,
+  "position_limit": 200
+}

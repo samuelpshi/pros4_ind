@@ -1,4 +1,6 @@
 __pycache__/
 *.pyc
+.DS_Store
+.claude/
 Round 1/analysis/scratch/a2_candidates/
 Round 1/analysis/scratch/a3_candidates/
