@@ -1,0 +1,3242 @@
+[
+  {
+    "ema": 50,
+    "te": 1,
+    "sk": 1.0,
+    "tc": 30,
+    "d2": 4400.0,
+    "d2_trades": 77,
+    "label": "vmr-ema50-te1-sk1.0-tc30"
+  },
+  {
+    "ema": 30,
+    "te": 2,
+    "sk": 1.0,
+    "tc": 50,
+    "d2": 4119.0,
+    "d2_trades": 52,
+    "label": "vmr-ema30-te2-sk1.0-tc50"
+  },
+  {
+    "ema": 30,
+    "te": 2,
+    "sk": 2.0,
+    "tc": 30,
+    "d2": 3858.0,
+    "d2_trades": 52,
+    "label": "vmr-ema30-te2-sk2.0-tc30"
+  },
+  {
+    "ema": 30,
+    "te": 1,
+    "sk": 1.0,
+    "tc": 30,
+    "d2": 3758.5,
+    "d2_trades": 58,
+    "label": "vmr-ema30-te1-sk1.0-tc30"
+  },
+  {
+    "ema": 30,
+    "te": 1,
+    "sk": 0.5,
+    "tc": 30,
+    "d2": 3754.5,
+    "d2_trades": 58,
+    "label": "vmr-ema30-te1-sk0.5-tc30"
+  },
+  {
+    "ema": 30,
+    "te": 2,
+    "sk": 2.5,
+    "tc": 50,
+    "d2": 3753.0,
+    "d2_trades": 56,
+    "label": "vmr-ema30-te2-sk2.5-tc50"
+  },
+  {
+    "ema": 30,
+    "te": 2,
+    "sk": 1.5,
+    "tc": 30,
+    "d2": 3697.0,
+    "d2_trades": 36,
+    "label": "vmr-ema30-te2-sk1.5-tc30"
+  },
+  {
+    "ema": 80,
+    "te": 2,
+    "sk": 2.0,
+    "tc": 20,
+    "d2": 3251.0,
+    "d2_trades": 48,
+    "label": "vmr-ema80-te2-sk2.0-tc20"
+  },
+  {
+    "ema": 120,
+    "te": 1,
+    "sk": 2.5,
+    "tc": 30,
+    "d2": 3238.0,
+    "d2_trades": 40,
+    "label": "vmr-ema120-te1-sk2.5-tc30"
+  },
+  {
+    "ema": 120,
+    "te": 1,
+    "sk": 2.5,
+    "tc": 20,
+    "d2": 3223.5,
+    "d2_trades": 26,
+    "label": "vmr-ema120-te1-sk2.5-tc20"
+  },
+  {
+    "ema": 80,
+    "te": 2,
+    "sk": 1.5,
+    "tc": 20,
+    "d2": 3188.5,
+    "d2_trades": 25,
+    "label": "vmr-ema80-te2-sk1.5-tc20"
+  },
+  {
+    "ema": 120,
+    "te": 2,
+    "sk": 1.5,
+    "tc": 30,
+    "d2": 3172.5,
+    "d2_trades": 20,
+    "label": "vmr-ema120-te2-sk1.5-tc30"
+  },
+  {
+    "ema": 120,
+    "te": 2,
+    "sk": 2.0,
+    "tc": 30,
+    "d2": 3172.5,
+    "d2_trades": 20,
+    "label": "vmr-ema120-te2-sk2.0-tc30"
+  },
+  {
+    "ema": 120,
+    "te": 2,
+    "sk": 2.5,
+    "tc": 30,
+    "d2": 3170.0,
+    "d2_trades": 20,
+    "label": "vmr-ema120-te2-sk2.5-tc30"
+  },
+  {
+    "ema": 50,
+    "te": 2,
+    "sk": 1.5,
+    "tc": 50,
+    "d2": 3138.0,
+    "d2_trades": 40,
+    "label": "vmr-ema50-te2-sk1.5-tc50"
+  },
+  {
+    "ema": 80,
+    "te": 1,
+    "sk": 3.0,
+    "tc": 30,
+    "d2": 3041.0,
+    "d2_trades": 40,
+    "label": "vmr-ema80-te1-sk3.0-tc30"
+  },
+  {
+    "ema": 80,
+    "te": 2,
+    "sk": 3.0,
+    "tc": 30,
+    "d2": 3039.5,
+    "d2_trades": 40,
+    "label": "vmr-ema80-te2-sk3.0-tc30"
+  },
+  {
+    "ema": 80,
+    "te": 2,
+    "sk": 2.5,
+    "tc": 20,
+    "d2": 3032.5,
+    "d2_trades": 43,
+    "label": "vmr-ema80-te2-sk2.5-tc20"
+  },
+  {
+    "ema": 50,
+    "te": 1,
+    "sk": 1.5,
+    "tc": 30,
+    "d2": 2911.5,
+    "d2_trades": 40,
+    "label": "vmr-ema50-te1-sk1.5-tc30"
+  },
+  {
+    "ema": 120,
+    "te": 2,
+    "sk": 0.5,
+    "tc": 50,
+    "d2": 2891.0,
+    "d2_trades": 4,
+    "label": "vmr-ema120-te2-sk0.5-tc50"
+  },
+  {
+    "ema": 120,
+    "te": 2,
+    "sk": 1.0,
+    "tc": 50,
+    "d2": 2891.0,
+    "d2_trades": 4,
+    "label": "vmr-ema120-te2-sk1.0-tc50"
+  },
+  {
+    "ema": 120,
+    "te": 2,
+    "sk": 2.0,
+    "tc": 20,
+    "d2": 2883.5,
+    "d2_trades": 27,
+    "label": "vmr-ema120-te2-sk2.0-tc20"
+  },
+  {
+    "ema": 120,
+    "te": 2,
+    "sk": 0.5,
+    "tc": 30,
+    "d2": 2867.0,
+    "d2_trades": 4,
+    "label": "vmr-ema120-te2-sk0.5-tc30"
+  },
+  {
+    "ema": 120,
+    "te": 2,
+    "sk": 1.0,
+    "tc": 30,
+    "d2": 2867.0,
+    "d2_trades": 4,
+    "label": "vmr-ema120-te2-sk1.0-tc30"
+  },
+  {
+    "ema": 120,
+    "te": 2,
+    "sk": 3.0,
+    "tc": 20,
+    "d2": 2865.5,
+    "d2_trades": 24,
+    "label": "vmr-ema120-te2-sk3.0-tc20"
+  },
+  {
+    "ema": 120,
+    "te": 2,
+    "sk": 2.5,
+    "tc": 20,
+    "d2": 2854.5,
+    "d2_trades": 25,
+    "label": "vmr-ema120-te2-sk2.5-tc20"
+  },
+  {
+    "ema": 80,
+    "te": 2,
+    "sk": 2.0,
+    "tc": 30,
+    "d2": 2854.0,
+    "d2_trades": 21,
+    "label": "vmr-ema80-te2-sk2.0-tc30"
+  },
+  {
+    "ema": 50,
+    "te": 0,
+    "sk": 0.5,
+    "tc": 30,
+    "d2": 2837.5,
+    "d2_trades": 4,
+    "label": "vmr-ema50-te0-sk0.5-tc30"
+  },
+  {
+    "ema": 80,
+    "te": 0,
+    "sk": 0.5,
+    "tc": 30,
+    "d2": 2837.5,
+    "d2_trades": 4,
+    "label": "vmr-ema80-te0-sk0.5-tc30"
+  },
+  {
+    "ema": 80,
+    "te": 0,
+    "sk": 1.0,
+    "tc": 30,
+    "d2": 2837.5,
+    "d2_trades": 4,
+    "label": "vmr-ema80-te0-sk1.0-tc30"
+  },
+  {
+    "ema": 80,
+    "te": 0,
+    "sk": 1.5,
+    "tc": 30,
+    "d2": 2837.5,
+    "d2_trades": 4,
+    "label": "vmr-ema80-te0-sk1.5-tc30"
+  },
+  {
+    "ema": 120,
+    "te": 0,
+    "sk": 0.5,
+    "tc": 30,
+    "d2": 2837.5,
+    "d2_trades": 4,
+    "label": "vmr-ema120-te0-sk0.5-tc30"
+  },
+  {
+    "ema": 120,
+    "te": 0,
+    "sk": 1.0,
+    "tc": 30,
+    "d2": 2837.5,
+    "d2_trades": 4,
+    "label": "vmr-ema120-te0-sk1.0-tc30"
+  },
+  {
+    "ema": 120,
+    "te": 0,
+    "sk": 1.5,
+    "tc": 30,
+    "d2": 2837.5,
+    "d2_trades": 4,
+    "label": "vmr-ema120-te0-sk1.5-tc30"
+  },
+  {
+    "ema": 120,
+    "te": 2,
+    "sk": 0.5,
+    "tc": 20,
+    "d2": 2830.0,
+    "d2_trades": 6,
+    "label": "vmr-ema120-te2-sk0.5-tc20"
+  },
+  {
+    "ema": 120,
+    "te": 2,
+    "sk": 1.0,
+    "tc": 20,
+    "d2": 2830.0,
+    "d2_trades": 6,
+    "label": "vmr-ema120-te2-sk1.0-tc20"
+  },
+  {
+    "ema": 30,
+    "te": 1,
+    "sk": 2.5,
+    "tc": 20,
+    "d2": 2821.5,
+    "d2_trades": 25,
+    "label": "vmr-ema30-te1-sk2.5-tc20"
+  },
+  {
+    "ema": 120,
+    "te": 2,
+    "sk": 1.5,
+    "tc": 20,
+    "d2": 2797.5,
+    "d2_trades": 25,
+    "label": "vmr-ema120-te2-sk1.5-tc20"
+  },
+  {
+    "ema": 120,
+    "te": 1,
+    "sk": 2.0,
+    "tc": 20,
+    "d2": 2782.0,
+    "d2_trades": 26,
+    "label": "vmr-ema120-te1-sk2.0-tc20"
+  },
+  {
+    "ema": 30,
+    "te": 2,
+    "sk": 3.0,
+    "tc": 50,
+    "d2": 2781.0,
+    "d2_trades": 36,
+    "label": "vmr-ema30-te2-sk3.0-tc50"
+  },
+  {
+    "ema": 80,
+    "te": 2,
+    "sk": 0.5,
+    "tc": 30,
+    "d2": 2745.0,
+    "d2_trades": 4,
+    "label": "vmr-ema80-te2-sk0.5-tc30"
+  },
+  {
+    "ema": 80,
+    "te": 2,
+    "sk": 1.0,
+    "tc": 30,
+    "d2": 2745.0,
+    "d2_trades": 4,
+    "label": "vmr-ema80-te2-sk1.0-tc30"
+  },
+  {
+    "ema": 30,
+    "te": 1,
+    "sk": 1.0,
+    "tc": 20,
+    "d2": 2726.0,
+    "d2_trades": 26,
+    "label": "vmr-ema30-te1-sk1.0-tc20"
+  },
+  {
+    "ema": 30,
+    "te": 1,
+    "sk": 1.5,
+    "tc": 20,
+    "d2": 2726.0,
+    "d2_trades": 26,
+    "label": "vmr-ema30-te1-sk1.5-tc20"
+  },
+  {
+    "ema": 30,
+    "te": 1,
+    "sk": 2.0,
+    "tc": 20,
+    "d2": 2726.0,
+    "d2_trades": 26,
+    "label": "vmr-ema30-te1-sk2.0-tc20"
+  },
+  {
+    "ema": 120,
+    "te": 0,
+    "sk": 2.5,
+    "tc": 20,
+    "d2": 2725.0,
+    "d2_trades": 25,
+    "label": "vmr-ema120-te0-sk2.5-tc20"
+  },
+  {
+    "ema": 120,
+    "te": 0,
+    "sk": 2.0,
+    "tc": 20,
+    "d2": 2722.0,
+    "d2_trades": 25,
+    "label": "vmr-ema120-te0-sk2.0-tc20"
+  },
+  {
+    "ema": 120,
+    "te": 2,
+    "sk": 3.0,
+    "tc": 50,
+    "d2": 2721.0,
+    "d2_trades": 17,
+    "label": "vmr-ema120-te2-sk3.0-tc50"
+  },
+  {
+    "ema": 30,
+    "te": 1,
+    "sk": 0.5,
+    "tc": 20,
+    "d2": 2718.0,
+    "d2_trades": 26,
+    "label": "vmr-ema30-te1-sk0.5-tc20"
+  },
+  {
+    "ema": 80,
+    "te": 3,
+    "sk": 0.5,
+    "tc": 20,
+    "d2": 2708.0,
+    "d2_trades": 5,
+    "label": "vmr-ema80-te3-sk0.5-tc20"
+  },
+  {
+    "ema": 80,
+    "te": 3,
+    "sk": 0.5,
+    "tc": 30,
+    "d2": 2708.0,
+    "d2_trades": 5,
+    "label": "vmr-ema80-te3-sk0.5-tc30"
+  },
+  {
+    "ema": 80,
+    "te": 3,
+    "sk": 0.5,
+    "tc": 50,
+    "d2": 2708.0,
+    "d2_trades": 5,
+    "label": "vmr-ema80-te3-sk0.5-tc50"
+  },
+  {
+    "ema": 80,
+    "te": 4,
+    "sk": 0.5,
+    "tc": 20,
+    "d2": 2708.0,
+    "d2_trades": 5,
+    "label": "vmr-ema80-te4-sk0.5-tc20"
+  },
+  {
+    "ema": 80,
+    "te": 4,
+    "sk": 0.5,
+    "tc": 30,
+    "d2": 2708.0,
+    "d2_trades": 5,
+    "label": "vmr-ema80-te4-sk0.5-tc30"
+  },
+  {
+    "ema": 80,
+    "te": 4,
+    "sk": 0.5,
+    "tc": 50,
+    "d2": 2708.0,
+    "d2_trades": 5,
+    "label": "vmr-ema80-te4-sk0.5-tc50"
+  },
+  {
+    "ema": 120,
+    "te": 3,
+    "sk": 0.5,
+    "tc": 20,
+    "d2": 2708.0,
+    "d2_trades": 5,
+    "label": "vmr-ema120-te3-sk0.5-tc20"
+  },
+  {
+    "ema": 120,
+    "te": 3,
+    "sk": 0.5,
+    "tc": 30,
+    "d2": 2708.0,
+    "d2_trades": 5,
+    "label": "vmr-ema120-te3-sk0.5-tc30"
+  },
+  {
+    "ema": 120,
+    "te": 3,
+    "sk": 0.5,
+    "tc": 50,
+    "d2": 2708.0,
+    "d2_trades": 5,
+    "label": "vmr-ema120-te3-sk0.5-tc50"
+  },
+  {
+    "ema": 120,
+    "te": 3,
+    "sk": 1.0,
+    "tc": 20,
+    "d2": 2708.0,
+    "d2_trades": 5,
+    "label": "vmr-ema120-te3-sk1.0-tc20"
+  },
+  {
+    "ema": 120,
+    "te": 3,
+    "sk": 1.0,
+    "tc": 30,
+    "d2": 2708.0,
+    "d2_trades": 5,
+    "label": "vmr-ema120-te3-sk1.0-tc30"
+  },
+  {
+    "ema": 120,
+    "te": 3,
+    "sk": 1.0,
+    "tc": 50,
+    "d2": 2708.0,
+    "d2_trades": 5,
+    "label": "vmr-ema120-te3-sk1.0-tc50"
+  },
+  {
+    "ema": 120,
+    "te": 4,
+    "sk": 0.5,
+    "tc": 20,
+    "d2": 2708.0,
+    "d2_trades": 5,
+    "label": "vmr-ema120-te4-sk0.5-tc20"
+  },
+  {
+    "ema": 120,
+    "te": 4,
+    "sk": 0.5,
+    "tc": 30,
+    "d2": 2708.0,
+    "d2_trades": 5,
+    "label": "vmr-ema120-te4-sk0.5-tc30"
+  },
+  {
+    "ema": 120,
+    "te": 4,
+    "sk": 0.5,
+    "tc": 50,
+    "d2": 2708.0,
+    "d2_trades": 5,
+    "label": "vmr-ema120-te4-sk0.5-tc50"
+  },
+  {
+    "ema": 120,
+    "te": 4,
+    "sk": 1.0,
+    "tc": 20,
+    "d2": 2708.0,
+    "d2_trades": 5,
+    "label": "vmr-ema120-te4-sk1.0-tc20"
+  },
+  {
+    "ema": 120,
+    "te": 4,
+    "sk": 1.0,
+    "tc": 30,
+    "d2": 2708.0,
+    "d2_trades": 5,
+    "label": "vmr-ema120-te4-sk1.0-tc30"
+  },
+  {
+    "ema": 120,
+    "te": 4,
+    "sk": 1.0,
+    "tc": 50,
+    "d2": 2708.0,
+    "d2_trades": 5,
+    "label": "vmr-ema120-te4-sk1.0-tc50"
+  },
+  {
+    "ema": 50,
+    "te": 1,
+    "sk": 0.5,
+    "tc": 30,
+    "d2": 2704.5,
+    "d2_trades": 22,
+    "label": "vmr-ema50-te1-sk0.5-tc30"
+  },
+  {
+    "ema": 50,
+    "te": 2,
+    "sk": 2.0,
+    "tc": 20,
+    "d2": 2698.5,
+    "d2_trades": 21,
+    "label": "vmr-ema50-te2-sk2.0-tc20"
+  },
+  {
+    "ema": 120,
+    "te": 1,
+    "sk": 3.0,
+    "tc": 30,
+    "d2": 2679.0,
+    "d2_trades": 18,
+    "label": "vmr-ema120-te1-sk3.0-tc30"
+  },
+  {
+    "ema": 30,
+    "te": 2,
+    "sk": 1.0,
+    "tc": 30,
+    "d2": 2656.5,
+    "d2_trades": 17,
+    "label": "vmr-ema30-te2-sk1.0-tc30"
+  },
+  {
+    "ema": 80,
+    "te": 2,
+    "sk": 1.5,
+    "tc": 30,
+    "d2": 2655.0,
+    "d2_trades": 5,
+    "label": "vmr-ema80-te2-sk1.5-tc30"
+  },
+  {
+    "ema": 120,
+    "te": 0,
+    "sk": 3.0,
+    "tc": 20,
+    "d2": 2642.5,
+    "d2_trades": 24,
+    "label": "vmr-ema120-te0-sk3.0-tc20"
+  },
+  {
+    "ema": 80,
+    "te": 2,
+    "sk": 0.5,
+    "tc": 50,
+    "d2": 2623.0,
+    "d2_trades": 3,
+    "label": "vmr-ema80-te2-sk0.5-tc50"
+  },
+  {
+    "ema": 80,
+    "te": 2,
+    "sk": 1.0,
+    "tc": 50,
+    "d2": 2623.0,
+    "d2_trades": 3,
+    "label": "vmr-ema80-te2-sk1.0-tc50"
+  },
+  {
+    "ema": 80,
+    "te": 2,
+    "sk": 2.5,
+    "tc": 30,
+    "d2": 2611.0,
+    "d2_trades": 21,
+    "label": "vmr-ema80-te2-sk2.5-tc30"
+  },
+  {
+    "ema": 50,
+    "te": 0,
+    "sk": 3.0,
+    "tc": 20,
+    "d2": 2610.5,
+    "d2_trades": 51,
+    "label": "vmr-ema50-te0-sk3.0-tc20"
+  },
+  {
+    "ema": 80,
+    "te": 1,
+    "sk": 2.0,
+    "tc": 20,
+    "d2": 2610.0,
+    "d2_trades": 26,
+    "label": "vmr-ema80-te1-sk2.0-tc20"
+  },
+  {
+    "ema": 120,
+    "te": 0,
+    "sk": 2.0,
+    "tc": 50,
+    "d2": 2608.5,
+    "d2_trades": 35,
+    "label": "vmr-ema120-te0-sk2.0-tc50"
+  },
+  {
+    "ema": 120,
+    "te": 0,
+    "sk": 2.5,
+    "tc": 50,
+    "d2": 2604.5,
+    "d2_trades": 35,
+    "label": "vmr-ema120-te0-sk2.5-tc50"
+  },
+  {
+    "ema": 120,
+    "te": 0,
+    "sk": 1.5,
+    "tc": 50,
+    "d2": 2602.5,
+    "d2_trades": 35,
+    "label": "vmr-ema120-te0-sk1.5-tc50"
+  },
+  {
+    "ema": 120,
+    "te": 0,
+    "sk": 1.0,
+    "tc": 50,
+    "d2": 2594.5,
+    "d2_trades": 35,
+    "label": "vmr-ema120-te0-sk1.0-tc50"
+  },
+  {
+    "ema": 120,
+    "te": 0,
+    "sk": 0.5,
+    "tc": 50,
+    "d2": 2591.5,
+    "d2_trades": 35,
+    "label": "vmr-ema120-te0-sk0.5-tc50"
+  },
+  {
+    "ema": 30,
+    "te": 2,
+    "sk": 1.5,
+    "tc": 50,
+    "d2": 2579.0,
+    "d2_trades": 16,
+    "label": "vmr-ema30-te2-sk1.5-tc50"
+  },
+  {
+    "ema": 30,
+    "te": 2,
+    "sk": 2.0,
+    "tc": 50,
+    "d2": 2579.0,
+    "d2_trades": 16,
+    "label": "vmr-ema30-te2-sk2.0-tc50"
+  },
+  {
+    "ema": 80,
+    "te": 1,
+    "sk": 0.5,
+    "tc": 20,
+    "d2": 2542.0,
+    "d2_trades": 5,
+    "label": "vmr-ema80-te1-sk0.5-tc20"
+  },
+  {
+    "ema": 80,
+    "te": 1,
+    "sk": 1.0,
+    "tc": 20,
+    "d2": 2542.0,
+    "d2_trades": 5,
+    "label": "vmr-ema80-te1-sk1.0-tc20"
+  },
+  {
+    "ema": 120,
+    "te": 1,
+    "sk": 0.5,
+    "tc": 20,
+    "d2": 2542.0,
+    "d2_trades": 5,
+    "label": "vmr-ema120-te1-sk0.5-tc20"
+  },
+  {
+    "ema": 120,
+    "te": 1,
+    "sk": 1.0,
+    "tc": 20,
+    "d2": 2542.0,
+    "d2_trades": 5,
+    "label": "vmr-ema120-te1-sk1.0-tc20"
+  },
+  {
+    "ema": 120,
+    "te": 1,
+    "sk": 1.5,
+    "tc": 20,
+    "d2": 2542.0,
+    "d2_trades": 5,
+    "label": "vmr-ema120-te1-sk1.5-tc20"
+  },
+  {
+    "ema": 80,
+    "te": 2,
+    "sk": 1.5,
+    "tc": 50,
+    "d2": 2533.0,
+    "d2_trades": 4,
+    "label": "vmr-ema80-te2-sk1.5-tc50"
+  },
+  {
+    "ema": 80,
+    "te": 2,
+    "sk": 2.0,
+    "tc": 50,
+    "d2": 2533.0,
+    "d2_trades": 4,
+    "label": "vmr-ema80-te2-sk2.0-tc50"
+  },
+  {
+    "ema": 120,
+    "te": 2,
+    "sk": 1.5,
+    "tc": 50,
+    "d2": 2533.0,
+    "d2_trades": 4,
+    "label": "vmr-ema120-te2-sk1.5-tc50"
+  },
+  {
+    "ema": 120,
+    "te": 2,
+    "sk": 2.0,
+    "tc": 50,
+    "d2": 2533.0,
+    "d2_trades": 4,
+    "label": "vmr-ema120-te2-sk2.0-tc50"
+  },
+  {
+    "ema": 120,
+    "te": 2,
+    "sk": 2.5,
+    "tc": 50,
+    "d2": 2533.0,
+    "d2_trades": 4,
+    "label": "vmr-ema120-te2-sk2.5-tc50"
+  },
+  {
+    "ema": 30,
+    "te": 2,
+    "sk": 2.5,
+    "tc": 30,
+    "d2": 2513.0,
+    "d2_trades": 17,
+    "label": "vmr-ema30-te2-sk2.5-tc30"
+  },
+  {
+    "ema": 30,
+    "te": 2,
+    "sk": 3.0,
+    "tc": 30,
+    "d2": 2513.0,
+    "d2_trades": 17,
+    "label": "vmr-ema30-te2-sk3.0-tc30"
+  },
+  {
+    "ema": 50,
+    "te": 0,
+    "sk": 1.0,
+    "tc": 20,
+    "d2": 2495.5,
+    "d2_trades": 49,
+    "label": "vmr-ema50-te0-sk1.0-tc20"
+  },
+  {
+    "ema": 50,
+    "te": 0,
+    "sk": 1.5,
+    "tc": 20,
+    "d2": 2495.5,
+    "d2_trades": 49,
+    "label": "vmr-ema50-te0-sk1.5-tc20"
+  },
+  {
+    "ema": 50,
+    "te": 0,
+    "sk": 2.5,
+    "tc": 20,
+    "d2": 2441.5,
+    "d2_trades": 50,
+    "label": "vmr-ema50-te0-sk2.5-tc20"
+  },
+  {
+    "ema": 50,
+    "te": 0,
+    "sk": 2.0,
+    "tc": 20,
+    "d2": 2440.5,
+    "d2_trades": 50,
+    "label": "vmr-ema50-te0-sk2.0-tc20"
+  },
+  {
+    "ema": 80,
+    "te": 0,
+    "sk": 2.0,
+    "tc": 20,
+    "d2": 2362.5,
+    "d2_trades": 26,
+    "label": "vmr-ema80-te0-sk2.0-tc20"
+  },
+  {
+    "ema": 30,
+    "te": 0,
+    "sk": 0.5,
+    "tc": 20,
+    "d2": 2278.0,
+    "d2_trades": 70,
+    "label": "vmr-ema30-te0-sk0.5-tc20"
+  },
+  {
+    "ema": 50,
+    "te": 0,
+    "sk": 0.5,
+    "tc": 20,
+    "d2": 2268.0,
+    "d2_trades": 27,
+    "label": "vmr-ema50-te0-sk0.5-tc20"
+  },
+  {
+    "ema": 50,
+    "te": 0,
+    "sk": 1.0,
+    "tc": 30,
+    "d2": 2176.5,
+    "d2_trades": 45,
+    "label": "vmr-ema50-te0-sk1.0-tc30"
+  },
+  {
+    "ema": 50,
+    "te": 0,
+    "sk": 1.5,
+    "tc": 30,
+    "d2": 2176.5,
+    "d2_trades": 45,
+    "label": "vmr-ema50-te0-sk1.5-tc30"
+  },
+  {
+    "ema": 30,
+    "te": 0,
+    "sk": 1.0,
+    "tc": 20,
+    "d2": 1969.0,
+    "d2_trades": 70,
+    "label": "vmr-ema30-te0-sk1.0-tc20"
+  },
+  {
+    "ema": 30,
+    "te": 0,
+    "sk": 1.5,
+    "tc": 20,
+    "d2": 1969.0,
+    "d2_trades": 70,
+    "label": "vmr-ema30-te0-sk1.5-tc20"
+  },
+  {
+    "ema": 30,
+    "te": 0,
+    "sk": 3.0,
+    "tc": 30,
+    "d2": 1824.0,
+    "d2_trades": 64,
+    "label": "vmr-ema30-te0-sk3.0-tc30"
+  },
+  {
+    "ema": 30,
+    "te": 0,
+    "sk": 2.5,
+    "tc": 30,
+    "d2": 1816.0,
+    "d2_trades": 64,
+    "label": "vmr-ema30-te0-sk2.5-tc30"
+  },
+  {
+    "ema": 30,
+    "te": 0,
+    "sk": 3.0,
+    "tc": 20,
+    "d2": 1746.5,
+    "d2_trades": 70,
+    "label": "vmr-ema30-te0-sk3.0-tc20"
+  },
+  {
+    "ema": 30,
+    "te": 0,
+    "sk": 1.0,
+    "tc": 30,
+    "d2": 1555.5,
+    "d2_trades": 63,
+    "label": "vmr-ema30-te0-sk1.0-tc30"
+  },
+  {
+    "ema": 30,
+    "te": 0,
+    "sk": 1.5,
+    "tc": 30,
+    "d2": 1548.5,
+    "d2_trades": 63,
+    "label": "vmr-ema30-te0-sk1.5-tc30"
+  },
+  {
+    "ema": 30,
+    "te": 0,
+    "sk": 0.5,
+    "tc": 30,
+    "d2": 1547.5,
+    "d2_trades": 63,
+    "label": "vmr-ema30-te0-sk0.5-tc30"
+  },
+  {
+    "ema": 80,
+    "te": 0,
+    "sk": 1.5,
+    "tc": 50,
+    "d2": 1329.5,
+    "d2_trades": 107,
+    "label": "vmr-ema80-te0-sk1.5-tc50"
+  },
+  {
+    "ema": 80,
+    "te": 0,
+    "sk": 2.0,
+    "tc": 50,
+    "d2": 1274.5,
+    "d2_trades": 109,
+    "label": "vmr-ema80-te0-sk2.0-tc50"
+  },
+  {
+    "ema": 50,
+    "te": 0,
+    "sk": 3.0,
+    "tc": 30,
+    "d2": 353.0,
+    "d2_trades": 134,
+    "label": "vmr-ema50-te0-sk3.0-tc30"
+  },
+  {
+    "ema": 50,
+    "te": 0,
+    "sk": 2.0,
+    "tc": 50,
+    "d2": -376.0,
+    "d2_trades": 136,
+    "label": "vmr-ema50-te0-sk2.0-tc50"
+  },
+  {
+    "ema": 120,
+    "te": 2,
+    "sk": 3.0,
+    "tc": 30,
+    "d2": -1573.5,
+    "d2_trades": 46,
+    "label": "vmr-ema120-te2-sk3.0-tc30"
+  },
+  {
+    "ema": 80,
+    "te": 1,
+    "sk": 1.5,
+    "tc": 20,
+    "d2": -1641.5,
+    "d2_trades": 41,
+    "label": "vmr-ema80-te1-sk1.5-tc20"
+  },
+  {
+    "ema": 80,
+    "te": 1,
+    "sk": 1.5,
+    "tc": 50,
+    "d2": -1847.0,
+    "d2_trades": 10,
+    "label": "vmr-ema80-te1-sk1.5-tc50"
+  },
+  {
+    "ema": 80,
+    "te": 1,
+    "sk": 2.0,
+    "tc": 50,
+    "d2": -1847.0,
+    "d2_trades": 10,
+    "label": "vmr-ema80-te1-sk2.0-tc50"
+  },
+  {
+    "ema": 80,
+    "te": 1,
+    "sk": 2.0,
+    "tc": 30,
+    "d2": -1849.5,
+    "d2_trades": 12,
+    "label": "vmr-ema80-te1-sk2.0-tc30"
+  },
+  {
+    "ema": 120,
+    "te": 1,
+    "sk": 1.5,
+    "tc": 30,
+    "d2": -1852.5,
+    "d2_trades": 12,
+    "label": "vmr-ema120-te1-sk1.5-tc30"
+  },
+  {
+    "ema": 120,
+    "te": 1,
+    "sk": 2.0,
+    "tc": 30,
+    "d2": -1852.5,
+    "d2_trades": 12,
+    "label": "vmr-ema120-te1-sk2.0-tc30"
+  },
+  {
+    "ema": 80,
+    "te": 1,
+    "sk": 2.5,
+    "tc": 30,
+    "d2": -1854.5,
+    "d2_trades": 50,
+    "label": "vmr-ema80-te1-sk2.5-tc30"
+  },
+  {
+    "ema": 80,
+    "te": 1,
+    "sk": 1.0,
+    "tc": 50,
+    "d2": -1855.0,
+    "d2_trades": 10,
+    "label": "vmr-ema80-te1-sk1.0-tc50"
+  },
+  {
+    "ema": 80,
+    "te": 1,
+    "sk": 0.5,
+    "tc": 50,
+    "d2": -1858.0,
+    "d2_trades": 10,
+    "label": "vmr-ema80-te1-sk0.5-tc50"
+  },
+  {
+    "ema": 120,
+    "te": 1,
+    "sk": 1.0,
+    "tc": 50,
+    "d2": -1868.0,
+    "d2_trades": 9,
+    "label": "vmr-ema120-te1-sk1.0-tc50"
+  },
+  {
+    "ema": 120,
+    "te": 1,
+    "sk": 1.5,
+    "tc": 50,
+    "d2": -1868.0,
+    "d2_trades": 9,
+    "label": "vmr-ema120-te1-sk1.5-tc50"
+  },
+  {
+    "ema": 120,
+    "te": 1,
+    "sk": 2.0,
+    "tc": 50,
+    "d2": -1868.0,
+    "d2_trades": 9,
+    "label": "vmr-ema120-te1-sk2.0-tc50"
+  },
+  {
+    "ema": 120,
+    "te": 1,
+    "sk": 2.5,
+    "tc": 50,
+    "d2": -1868.0,
+    "d2_trades": 9,
+    "label": "vmr-ema120-te1-sk2.5-tc50"
+  },
+  {
+    "ema": 120,
+    "te": 1,
+    "sk": 3.0,
+    "tc": 50,
+    "d2": -1868.0,
+    "d2_trades": 9,
+    "label": "vmr-ema120-te1-sk3.0-tc50"
+  },
+  {
+    "ema": 120,
+    "te": 1,
+    "sk": 0.5,
+    "tc": 50,
+    "d2": -1876.0,
+    "d2_trades": 9,
+    "label": "vmr-ema120-te1-sk0.5-tc50"
+  },
+  {
+    "ema": 80,
+    "te": 3,
+    "sk": 3.0,
+    "tc": 20,
+    "d2": -1884.0,
+    "d2_trades": 12,
+    "label": "vmr-ema80-te3-sk3.0-tc20"
+  },
+  {
+    "ema": 120,
+    "te": 3,
+    "sk": 2.5,
+    "tc": 20,
+    "d2": -1886.5,
+    "d2_trades": 14,
+    "label": "vmr-ema120-te3-sk2.5-tc20"
+  },
+  {
+    "ema": 80,
+    "te": 0,
+    "sk": 2.0,
+    "tc": 30,
+    "d2": -1892.5,
+    "d2_trades": 13,
+    "label": "vmr-ema80-te0-sk2.0-tc30"
+  },
+  {
+    "ema": 80,
+    "te": 0,
+    "sk": 2.5,
+    "tc": 30,
+    "d2": -1892.5,
+    "d2_trades": 13,
+    "label": "vmr-ema80-te0-sk2.5-tc30"
+  },
+  {
+    "ema": 80,
+    "te": 0,
+    "sk": 3.0,
+    "tc": 30,
+    "d2": -1892.5,
+    "d2_trades": 13,
+    "label": "vmr-ema80-te0-sk3.0-tc30"
+  },
+  {
+    "ema": 120,
+    "te": 0,
+    "sk": 2.5,
+    "tc": 30,
+    "d2": -1892.5,
+    "d2_trades": 13,
+    "label": "vmr-ema120-te0-sk2.5-tc30"
+  },
+  {
+    "ema": 120,
+    "te": 0,
+    "sk": 3.0,
+    "tc": 30,
+    "d2": -1892.5,
+    "d2_trades": 13,
+    "label": "vmr-ema120-te0-sk3.0-tc30"
+  },
+  {
+    "ema": 120,
+    "te": 0,
+    "sk": 2.0,
+    "tc": 30,
+    "d2": -1895.5,
+    "d2_trades": 13,
+    "label": "vmr-ema120-te0-sk2.0-tc30"
+  },
+  {
+    "ema": 50,
+    "te": 3,
+    "sk": 1.5,
+    "tc": 20,
+    "d2": -1904.0,
+    "d2_trades": 12,
+    "label": "vmr-ema50-te3-sk1.5-tc20"
+  },
+  {
+    "ema": 80,
+    "te": 3,
+    "sk": 1.5,
+    "tc": 20,
+    "d2": -1906.5,
+    "d2_trades": 14,
+    "label": "vmr-ema80-te3-sk1.5-tc20"
+  },
+  {
+    "ema": 120,
+    "te": 3,
+    "sk": 1.5,
+    "tc": 20,
+    "d2": -1906.5,
+    "d2_trades": 14,
+    "label": "vmr-ema120-te3-sk1.5-tc20"
+  },
+  {
+    "ema": 120,
+    "te": 3,
+    "sk": 2.0,
+    "tc": 20,
+    "d2": -1906.5,
+    "d2_trades": 14,
+    "label": "vmr-ema120-te3-sk2.0-tc20"
+  },
+  {
+    "ema": 80,
+    "te": 3,
+    "sk": 1.0,
+    "tc": 20,
+    "d2": -1914.5,
+    "d2_trades": 14,
+    "label": "vmr-ema80-te3-sk1.0-tc20"
+  },
+  {
+    "ema": 80,
+    "te": 0,
+    "sk": 0.5,
+    "tc": 20,
+    "d2": -1920.0,
+    "d2_trades": 14,
+    "label": "vmr-ema80-te0-sk0.5-tc20"
+  },
+  {
+    "ema": 80,
+    "te": 0,
+    "sk": 1.0,
+    "tc": 20,
+    "d2": -1920.0,
+    "d2_trades": 14,
+    "label": "vmr-ema80-te0-sk1.0-tc20"
+  },
+  {
+    "ema": 80,
+    "te": 0,
+    "sk": 1.5,
+    "tc": 20,
+    "d2": -1920.0,
+    "d2_trades": 14,
+    "label": "vmr-ema80-te0-sk1.5-tc20"
+  },
+  {
+    "ema": 120,
+    "te": 0,
+    "sk": 1.5,
+    "tc": 20,
+    "d2": -1920.0,
+    "d2_trades": 14,
+    "label": "vmr-ema120-te0-sk1.5-tc20"
+  },
+  {
+    "ema": 50,
+    "te": 2,
+    "sk": 0.5,
+    "tc": 30,
+    "d2": -1925.0,
+    "d2_trades": 11,
+    "label": "vmr-ema50-te2-sk0.5-tc30"
+  },
+  {
+    "ema": 50,
+    "te": 2,
+    "sk": 1.0,
+    "tc": 30,
+    "d2": -1925.0,
+    "d2_trades": 11,
+    "label": "vmr-ema50-te2-sk1.0-tc30"
+  },
+  {
+    "ema": 50,
+    "te": 2,
+    "sk": 0.5,
+    "tc": 20,
+    "d2": -1935.0,
+    "d2_trades": 12,
+    "label": "vmr-ema50-te2-sk0.5-tc20"
+  },
+  {
+    "ema": 50,
+    "te": 2,
+    "sk": 1.0,
+    "tc": 20,
+    "d2": -1935.0,
+    "d2_trades": 12,
+    "label": "vmr-ema50-te2-sk1.0-tc20"
+  },
+  {
+    "ema": 50,
+    "te": 3,
+    "sk": 1.5,
+    "tc": 50,
+    "d2": -1935.0,
+    "d2_trades": 10,
+    "label": "vmr-ema50-te3-sk1.5-tc50"
+  },
+  {
+    "ema": 80,
+    "te": 3,
+    "sk": 3.0,
+    "tc": 50,
+    "d2": -1935.0,
+    "d2_trades": 10,
+    "label": "vmr-ema80-te3-sk3.0-tc50"
+  },
+  {
+    "ema": 30,
+    "te": 1,
+    "sk": 3.0,
+    "tc": 20,
+    "d2": -1939.5,
+    "d2_trades": 13,
+    "label": "vmr-ema30-te1-sk3.0-tc20"
+  },
+  {
+    "ema": 50,
+    "te": 1,
+    "sk": 1.0,
+    "tc": 20,
+    "d2": -1941.5,
+    "d2_trades": 15,
+    "label": "vmr-ema50-te1-sk1.0-tc20"
+  },
+  {
+    "ema": 50,
+    "te": 1,
+    "sk": 1.5,
+    "tc": 20,
+    "d2": -1941.5,
+    "d2_trades": 15,
+    "label": "vmr-ema50-te1-sk1.5-tc20"
+  },
+  {
+    "ema": 50,
+    "te": 1,
+    "sk": 2.0,
+    "tc": 20,
+    "d2": -1941.5,
+    "d2_trades": 15,
+    "label": "vmr-ema50-te1-sk2.0-tc20"
+  },
+  {
+    "ema": 50,
+    "te": 1,
+    "sk": 2.5,
+    "tc": 20,
+    "d2": -1941.5,
+    "d2_trades": 15,
+    "label": "vmr-ema50-te1-sk2.5-tc20"
+  },
+  {
+    "ema": 50,
+    "te": 1,
+    "sk": 3.0,
+    "tc": 20,
+    "d2": -1941.5,
+    "d2_trades": 15,
+    "label": "vmr-ema50-te1-sk3.0-tc20"
+  },
+  {
+    "ema": 80,
+    "te": 1,
+    "sk": 2.5,
+    "tc": 20,
+    "d2": -1941.5,
+    "d2_trades": 15,
+    "label": "vmr-ema80-te1-sk2.5-tc20"
+  },
+  {
+    "ema": 80,
+    "te": 1,
+    "sk": 3.0,
+    "tc": 20,
+    "d2": -1941.5,
+    "d2_trades": 15,
+    "label": "vmr-ema80-te1-sk3.0-tc20"
+  },
+  {
+    "ema": 120,
+    "te": 1,
+    "sk": 3.0,
+    "tc": 20,
+    "d2": -1941.5,
+    "d2_trades": 15,
+    "label": "vmr-ema120-te1-sk3.0-tc20"
+  },
+  {
+    "ema": 50,
+    "te": 1,
+    "sk": 0.5,
+    "tc": 20,
+    "d2": -1949.5,
+    "d2_trades": 15,
+    "label": "vmr-ema50-te1-sk0.5-tc20"
+  },
+  {
+    "ema": 30,
+    "te": 1,
+    "sk": 0.5,
+    "tc": 50,
+    "d2": -1950.0,
+    "d2_trades": 9,
+    "label": "vmr-ema30-te1-sk0.5-tc50"
+  },
+  {
+    "ema": 30,
+    "te": 1,
+    "sk": 1.0,
+    "tc": 50,
+    "d2": -1950.0,
+    "d2_trades": 9,
+    "label": "vmr-ema30-te1-sk1.0-tc50"
+  },
+  {
+    "ema": 30,
+    "te": 1,
+    "sk": 1.5,
+    "tc": 50,
+    "d2": -1950.0,
+    "d2_trades": 9,
+    "label": "vmr-ema30-te1-sk1.5-tc50"
+  },
+  {
+    "ema": 30,
+    "te": 1,
+    "sk": 2.0,
+    "tc": 50,
+    "d2": -1950.0,
+    "d2_trades": 9,
+    "label": "vmr-ema30-te1-sk2.0-tc50"
+  },
+  {
+    "ema": 50,
+    "te": 3,
+    "sk": 1.5,
+    "tc": 30,
+    "d2": -1955.0,
+    "d2_trades": 11,
+    "label": "vmr-ema50-te3-sk1.5-tc30"
+  },
+  {
+    "ema": 80,
+    "te": 3,
+    "sk": 1.0,
+    "tc": 50,
+    "d2": -1957.5,
+    "d2_trades": 12,
+    "label": "vmr-ema80-te3-sk1.0-tc50"
+  },
+  {
+    "ema": 120,
+    "te": 3,
+    "sk": 3.0,
+    "tc": 20,
+    "d2": -1966.5,
+    "d2_trades": 12,
+    "label": "vmr-ema120-te3-sk3.0-tc20"
+  },
+  {
+    "ema": 80,
+    "te": 2,
+    "sk": 1.0,
+    "tc": 20,
+    "d2": -1969.0,
+    "d2_trades": 14,
+    "label": "vmr-ema80-te2-sk1.0-tc20"
+  },
+  {
+    "ema": 80,
+    "te": 2,
+    "sk": 0.5,
+    "tc": 20,
+    "d2": -1977.0,
+    "d2_trades": 14,
+    "label": "vmr-ema80-te2-sk0.5-tc20"
+  },
+  {
+    "ema": 50,
+    "te": 3,
+    "sk": 2.5,
+    "tc": 20,
+    "d2": -1984.0,
+    "d2_trades": 10,
+    "label": "vmr-ema50-te3-sk2.5-tc20"
+  },
+  {
+    "ema": 50,
+    "te": 3,
+    "sk": 3.0,
+    "tc": 20,
+    "d2": -1984.0,
+    "d2_trades": 10,
+    "label": "vmr-ema50-te3-sk3.0-tc20"
+  },
+  {
+    "ema": 50,
+    "te": 2,
+    "sk": 0.5,
+    "tc": 50,
+    "d2": -1984.5,
+    "d2_trades": 10,
+    "label": "vmr-ema50-te2-sk0.5-tc50"
+  },
+  {
+    "ema": 50,
+    "te": 2,
+    "sk": 1.0,
+    "tc": 50,
+    "d2": -1984.5,
+    "d2_trades": 10,
+    "label": "vmr-ema50-te2-sk1.0-tc50"
+  },
+  {
+    "ema": 80,
+    "te": 3,
+    "sk": 2.0,
+    "tc": 20,
+    "d2": -1986.5,
+    "d2_trades": 12,
+    "label": "vmr-ema80-te3-sk2.0-tc20"
+  },
+  {
+    "ema": 80,
+    "te": 3,
+    "sk": 2.5,
+    "tc": 20,
+    "d2": -1986.5,
+    "d2_trades": 12,
+    "label": "vmr-ema80-te3-sk2.5-tc20"
+  },
+  {
+    "ema": 50,
+    "te": 1,
+    "sk": 0.5,
+    "tc": 50,
+    "d2": -2000.0,
+    "d2_trades": 9,
+    "label": "vmr-ema50-te1-sk0.5-tc50"
+  },
+  {
+    "ema": 50,
+    "te": 1,
+    "sk": 1.0,
+    "tc": 50,
+    "d2": -2000.0,
+    "d2_trades": 9,
+    "label": "vmr-ema50-te1-sk1.0-tc50"
+  },
+  {
+    "ema": 50,
+    "te": 1,
+    "sk": 1.5,
+    "tc": 50,
+    "d2": -2000.0,
+    "d2_trades": 9,
+    "label": "vmr-ema50-te1-sk1.5-tc50"
+  },
+  {
+    "ema": 50,
+    "te": 1,
+    "sk": 2.0,
+    "tc": 50,
+    "d2": -2000.0,
+    "d2_trades": 9,
+    "label": "vmr-ema50-te1-sk2.0-tc50"
+  },
+  {
+    "ema": 50,
+    "te": 1,
+    "sk": 2.5,
+    "tc": 50,
+    "d2": -2000.0,
+    "d2_trades": 9,
+    "label": "vmr-ema50-te1-sk2.5-tc50"
+  },
+  {
+    "ema": 50,
+    "te": 1,
+    "sk": 3.0,
+    "tc": 50,
+    "d2": -2000.0,
+    "d2_trades": 9,
+    "label": "vmr-ema50-te1-sk3.0-tc50"
+  },
+  {
+    "ema": 80,
+    "te": 1,
+    "sk": 2.5,
+    "tc": 50,
+    "d2": -2000.0,
+    "d2_trades": 9,
+    "label": "vmr-ema80-te1-sk2.5-tc50"
+  },
+  {
+    "ema": 80,
+    "te": 1,
+    "sk": 3.0,
+    "tc": 50,
+    "d2": -2000.0,
+    "d2_trades": 9,
+    "label": "vmr-ema80-te1-sk3.0-tc50"
+  },
+  {
+    "ema": 50,
+    "te": 4,
+    "sk": 3.0,
+    "tc": 20,
+    "d2": -2003.0,
+    "d2_trades": 11,
+    "label": "vmr-ema50-te4-sk3.0-tc20"
+  },
+  {
+    "ema": 50,
+    "te": 4,
+    "sk": 3.0,
+    "tc": 30,
+    "d2": -2003.0,
+    "d2_trades": 11,
+    "label": "vmr-ema50-te4-sk3.0-tc30"
+  },
+  {
+    "ema": 50,
+    "te": 4,
+    "sk": 3.0,
+    "tc": 50,
+    "d2": -2003.0,
+    "d2_trades": 11,
+    "label": "vmr-ema50-te4-sk3.0-tc50"
+  },
+  {
+    "ema": 50,
+    "te": 3,
+    "sk": 2.5,
+    "tc": 50,
+    "d2": -2004.0,
+    "d2_trades": 10,
+    "label": "vmr-ema50-te3-sk2.5-tc50"
+  },
+  {
+    "ema": 50,
+    "te": 2,
+    "sk": 2.0,
+    "tc": 30,
+    "d2": -2005.0,
+    "d2_trades": 9,
+    "label": "vmr-ema50-te2-sk2.0-tc30"
+  },
+  {
+    "ema": 50,
+    "te": 3,
+    "sk": 1.0,
+    "tc": 20,
+    "d2": -2006.5,
+    "d2_trades": 12,
+    "label": "vmr-ema50-te3-sk1.0-tc20"
+  },
+  {
+    "ema": 80,
+    "te": 4,
+    "sk": 1.0,
+    "tc": 20,
+    "d2": -2010.0,
+    "d2_trades": 16,
+    "label": "vmr-ema80-te4-sk1.0-tc20"
+  },
+  {
+    "ema": 80,
+    "te": 4,
+    "sk": 1.0,
+    "tc": 30,
+    "d2": -2010.0,
+    "d2_trades": 16,
+    "label": "vmr-ema80-te4-sk1.0-tc30"
+  },
+  {
+    "ema": 80,
+    "te": 4,
+    "sk": 1.0,
+    "tc": 50,
+    "d2": -2010.0,
+    "d2_trades": 16,
+    "label": "vmr-ema80-te4-sk1.0-tc50"
+  },
+  {
+    "ema": 80,
+    "te": 4,
+    "sk": 1.5,
+    "tc": 20,
+    "d2": -2010.0,
+    "d2_trades": 16,
+    "label": "vmr-ema80-te4-sk1.5-tc20"
+  },
+  {
+    "ema": 80,
+    "te": 4,
+    "sk": 1.5,
+    "tc": 30,
+    "d2": -2010.0,
+    "d2_trades": 16,
+    "label": "vmr-ema80-te4-sk1.5-tc30"
+  },
+  {
+    "ema": 80,
+    "te": 4,
+    "sk": 1.5,
+    "tc": 50,
+    "d2": -2010.0,
+    "d2_trades": 16,
+    "label": "vmr-ema80-te4-sk1.5-tc50"
+  },
+  {
+    "ema": 120,
+    "te": 4,
+    "sk": 1.5,
+    "tc": 20,
+    "d2": -2010.0,
+    "d2_trades": 16,
+    "label": "vmr-ema120-te4-sk1.5-tc20"
+  },
+  {
+    "ema": 120,
+    "te": 4,
+    "sk": 1.5,
+    "tc": 30,
+    "d2": -2010.0,
+    "d2_trades": 16,
+    "label": "vmr-ema120-te4-sk1.5-tc30"
+  },
+  {
+    "ema": 120,
+    "te": 4,
+    "sk": 1.5,
+    "tc": 50,
+    "d2": -2010.0,
+    "d2_trades": 16,
+    "label": "vmr-ema120-te4-sk1.5-tc50"
+  },
+  {
+    "ema": 120,
+    "te": 4,
+    "sk": 2.0,
+    "tc": 20,
+    "d2": -2010.0,
+    "d2_trades": 16,
+    "label": "vmr-ema120-te4-sk2.0-tc20"
+  },
+  {
+    "ema": 120,
+    "te": 4,
+    "sk": 2.0,
+    "tc": 30,
+    "d2": -2010.0,
+    "d2_trades": 16,
+    "label": "vmr-ema120-te4-sk2.0-tc30"
+  },
+  {
+    "ema": 120,
+    "te": 4,
+    "sk": 2.0,
+    "tc": 50,
+    "d2": -2010.0,
+    "d2_trades": 16,
+    "label": "vmr-ema120-te4-sk2.0-tc50"
+  },
+  {
+    "ema": 120,
+    "te": 4,
+    "sk": 2.5,
+    "tc": 20,
+    "d2": -2010.0,
+    "d2_trades": 16,
+    "label": "vmr-ema120-te4-sk2.5-tc20"
+  },
+  {
+    "ema": 120,
+    "te": 4,
+    "sk": 2.5,
+    "tc": 30,
+    "d2": -2010.0,
+    "d2_trades": 16,
+    "label": "vmr-ema120-te4-sk2.5-tc30"
+  },
+  {
+    "ema": 120,
+    "te": 4,
+    "sk": 2.5,
+    "tc": 50,
+    "d2": -2010.0,
+    "d2_trades": 16,
+    "label": "vmr-ema120-te4-sk2.5-tc50"
+  },
+  {
+    "ema": 50,
+    "te": 3,
+    "sk": 0.5,
+    "tc": 20,
+    "d2": -2014.5,
+    "d2_trades": 12,
+    "label": "vmr-ema50-te3-sk0.5-tc20"
+  },
+  {
+    "ema": 80,
+    "te": 4,
+    "sk": 3.0,
+    "tc": 20,
+    "d2": -2016.5,
+    "d2_trades": 13,
+    "label": "vmr-ema80-te4-sk3.0-tc20"
+  },
+  {
+    "ema": 80,
+    "te": 4,
+    "sk": 3.0,
+    "tc": 30,
+    "d2": -2016.5,
+    "d2_trades": 13,
+    "label": "vmr-ema80-te4-sk3.0-tc30"
+  },
+  {
+    "ema": 80,
+    "te": 4,
+    "sk": 3.0,
+    "tc": 50,
+    "d2": -2016.5,
+    "d2_trades": 13,
+    "label": "vmr-ema80-te4-sk3.0-tc50"
+  },
+  {
+    "ema": 50,
+    "te": 2,
+    "sk": 1.5,
+    "tc": 30,
+    "d2": -2026.5,
+    "d2_trades": 12,
+    "label": "vmr-ema50-te2-sk1.5-tc30"
+  },
+  {
+    "ema": 30,
+    "te": 1,
+    "sk": 2.5,
+    "tc": 30,
+    "d2": -2032.5,
+    "d2_trades": 12,
+    "label": "vmr-ema30-te1-sk2.5-tc30"
+  },
+  {
+    "ema": 30,
+    "te": 1,
+    "sk": 3.0,
+    "tc": 30,
+    "d2": -2032.5,
+    "d2_trades": 12,
+    "label": "vmr-ema30-te1-sk3.0-tc30"
+  },
+  {
+    "ema": 50,
+    "te": 3,
+    "sk": 2.5,
+    "tc": 30,
+    "d2": -2035.0,
+    "d2_trades": 9,
+    "label": "vmr-ema50-te3-sk2.5-tc30"
+  },
+  {
+    "ema": 50,
+    "te": 3,
+    "sk": 3.0,
+    "tc": 30,
+    "d2": -2035.0,
+    "d2_trades": 9,
+    "label": "vmr-ema50-te3-sk3.0-tc30"
+  },
+  {
+    "ema": 50,
+    "te": 2,
+    "sk": 1.5,
+    "tc": 20,
+    "d2": -2036.5,
+    "d2_trades": 13,
+    "label": "vmr-ema50-te2-sk1.5-tc20"
+  },
+  {
+    "ema": 50,
+    "te": 4,
+    "sk": 1.5,
+    "tc": 20,
+    "d2": -2036.5,
+    "d2_trades": 13,
+    "label": "vmr-ema50-te4-sk1.5-tc20"
+  },
+  {
+    "ema": 50,
+    "te": 4,
+    "sk": 1.5,
+    "tc": 30,
+    "d2": -2036.5,
+    "d2_trades": 13,
+    "label": "vmr-ema50-te4-sk1.5-tc30"
+  },
+  {
+    "ema": 50,
+    "te": 4,
+    "sk": 1.5,
+    "tc": 50,
+    "d2": -2036.5,
+    "d2_trades": 13,
+    "label": "vmr-ema50-te4-sk1.5-tc50"
+  },
+  {
+    "ema": 80,
+    "te": 2,
+    "sk": 3.0,
+    "tc": 20,
+    "d2": -2036.5,
+    "d2_trades": 13,
+    "label": "vmr-ema80-te2-sk3.0-tc20"
+  },
+  {
+    "ema": 50,
+    "te": 3,
+    "sk": 0.5,
+    "tc": 50,
+    "d2": -2037.5,
+    "d2_trades": 10,
+    "label": "vmr-ema50-te3-sk0.5-tc50"
+  },
+  {
+    "ema": 50,
+    "te": 3,
+    "sk": 1.0,
+    "tc": 50,
+    "d2": -2037.5,
+    "d2_trades": 10,
+    "label": "vmr-ema50-te3-sk1.0-tc50"
+  },
+  {
+    "ema": 50,
+    "te": 3,
+    "sk": 0.5,
+    "tc": 30,
+    "d2": -2057.5,
+    "d2_trades": 11,
+    "label": "vmr-ema50-te3-sk0.5-tc30"
+  },
+  {
+    "ema": 50,
+    "te": 3,
+    "sk": 2.0,
+    "tc": 20,
+    "d2": -2066.5,
+    "d2_trades": 10,
+    "label": "vmr-ema50-te3-sk2.0-tc20"
+  },
+  {
+    "ema": 120,
+    "te": 0,
+    "sk": 1.0,
+    "tc": 20,
+    "d2": -2069.0,
+    "d2_trades": 14,
+    "label": "vmr-ema120-te0-sk1.0-tc20"
+  },
+  {
+    "ema": 30,
+    "te": 2,
+    "sk": 0.5,
+    "tc": 30,
+    "d2": -2074.0,
+    "d2_trades": 8,
+    "label": "vmr-ema30-te2-sk0.5-tc30"
+  },
+  {
+    "ema": 30,
+    "te": 3,
+    "sk": 2.5,
+    "tc": 20,
+    "d2": -2076.0,
+    "d2_trades": 8,
+    "label": "vmr-ema30-te3-sk2.5-tc20"
+  },
+  {
+    "ema": 30,
+    "te": 3,
+    "sk": 2.5,
+    "tc": 30,
+    "d2": -2076.0,
+    "d2_trades": 8,
+    "label": "vmr-ema30-te3-sk2.5-tc30"
+  },
+  {
+    "ema": 30,
+    "te": 3,
+    "sk": 2.5,
+    "tc": 50,
+    "d2": -2076.0,
+    "d2_trades": 8,
+    "label": "vmr-ema30-te3-sk2.5-tc50"
+  },
+  {
+    "ema": 30,
+    "te": 3,
+    "sk": 3.0,
+    "tc": 20,
+    "d2": -2076.0,
+    "d2_trades": 8,
+    "label": "vmr-ema30-te3-sk3.0-tc20"
+  },
+  {
+    "ema": 30,
+    "te": 3,
+    "sk": 3.0,
+    "tc": 30,
+    "d2": -2076.0,
+    "d2_trades": 8,
+    "label": "vmr-ema30-te3-sk3.0-tc30"
+  },
+  {
+    "ema": 30,
+    "te": 3,
+    "sk": 3.0,
+    "tc": 50,
+    "d2": -2076.0,
+    "d2_trades": 8,
+    "label": "vmr-ema30-te3-sk3.0-tc50"
+  },
+  {
+    "ema": 120,
+    "te": 0,
+    "sk": 0.5,
+    "tc": 20,
+    "d2": -2077.0,
+    "d2_trades": 14,
+    "label": "vmr-ema120-te0-sk0.5-tc20"
+  },
+  {
+    "ema": 30,
+    "te": 3,
+    "sk": 1.0,
+    "tc": 20,
+    "d2": -2084.0,
+    "d2_trades": 8,
+    "label": "vmr-ema30-te3-sk1.0-tc20"
+  },
+  {
+    "ema": 30,
+    "te": 3,
+    "sk": 1.0,
+    "tc": 30,
+    "d2": -2084.0,
+    "d2_trades": 8,
+    "label": "vmr-ema30-te3-sk1.0-tc30"
+  },
+  {
+    "ema": 30,
+    "te": 3,
+    "sk": 1.0,
+    "tc": 50,
+    "d2": -2084.0,
+    "d2_trades": 8,
+    "label": "vmr-ema30-te3-sk1.0-tc50"
+  },
+  {
+    "ema": 30,
+    "te": 3,
+    "sk": 1.5,
+    "tc": 20,
+    "d2": -2084.0,
+    "d2_trades": 8,
+    "label": "vmr-ema30-te3-sk1.5-tc20"
+  },
+  {
+    "ema": 30,
+    "te": 3,
+    "sk": 1.5,
+    "tc": 30,
+    "d2": -2084.0,
+    "d2_trades": 8,
+    "label": "vmr-ema30-te3-sk1.5-tc30"
+  },
+  {
+    "ema": 30,
+    "te": 3,
+    "sk": 1.5,
+    "tc": 50,
+    "d2": -2084.0,
+    "d2_trades": 8,
+    "label": "vmr-ema30-te3-sk1.5-tc50"
+  },
+  {
+    "ema": 30,
+    "te": 3,
+    "sk": 2.0,
+    "tc": 20,
+    "d2": -2084.0,
+    "d2_trades": 8,
+    "label": "vmr-ema30-te3-sk2.0-tc20"
+  },
+  {
+    "ema": 30,
+    "te": 3,
+    "sk": 2.0,
+    "tc": 30,
+    "d2": -2084.0,
+    "d2_trades": 8,
+    "label": "vmr-ema30-te3-sk2.0-tc30"
+  },
+  {
+    "ema": 30,
+    "te": 3,
+    "sk": 2.0,
+    "tc": 50,
+    "d2": -2084.0,
+    "d2_trades": 8,
+    "label": "vmr-ema30-te3-sk2.0-tc50"
+  },
+  {
+    "ema": 120,
+    "te": 0,
+    "sk": 3.0,
+    "tc": 50,
+    "d2": -2090.0,
+    "d2_trades": 10,
+    "label": "vmr-ema120-te0-sk3.0-tc50"
+  },
+  {
+    "ema": 30,
+    "te": 2,
+    "sk": 0.5,
+    "tc": 20,
+    "d2": -2095.0,
+    "d2_trades": 8,
+    "label": "vmr-ema30-te2-sk0.5-tc20"
+  },
+  {
+    "ema": 30,
+    "te": 4,
+    "sk": 1.0,
+    "tc": 20,
+    "d2": -2103.0,
+    "d2_trades": 9,
+    "label": "vmr-ema30-te4-sk1.0-tc20"
+  },
+  {
+    "ema": 30,
+    "te": 4,
+    "sk": 1.0,
+    "tc": 30,
+    "d2": -2103.0,
+    "d2_trades": 9,
+    "label": "vmr-ema30-te4-sk1.0-tc30"
+  },
+  {
+    "ema": 30,
+    "te": 4,
+    "sk": 1.0,
+    "tc": 50,
+    "d2": -2103.0,
+    "d2_trades": 9,
+    "label": "vmr-ema30-te4-sk1.0-tc50"
+  },
+  {
+    "ema": 30,
+    "te": 4,
+    "sk": 1.5,
+    "tc": 20,
+    "d2": -2103.0,
+    "d2_trades": 9,
+    "label": "vmr-ema30-te4-sk1.5-tc20"
+  },
+  {
+    "ema": 30,
+    "te": 4,
+    "sk": 1.5,
+    "tc": 30,
+    "d2": -2103.0,
+    "d2_trades": 9,
+    "label": "vmr-ema30-te4-sk1.5-tc30"
+  },
+  {
+    "ema": 30,
+    "te": 4,
+    "sk": 1.5,
+    "tc": 50,
+    "d2": -2103.0,
+    "d2_trades": 9,
+    "label": "vmr-ema30-te4-sk1.5-tc50"
+  },
+  {
+    "ema": 80,
+    "te": 1,
+    "sk": 0.5,
+    "tc": 30,
+    "d2": -2105.0,
+    "d2_trades": 11,
+    "label": "vmr-ema80-te1-sk0.5-tc30"
+  },
+  {
+    "ema": 80,
+    "te": 1,
+    "sk": 1.0,
+    "tc": 30,
+    "d2": -2105.0,
+    "d2_trades": 11,
+    "label": "vmr-ema80-te1-sk1.0-tc30"
+  },
+  {
+    "ema": 80,
+    "te": 1,
+    "sk": 1.5,
+    "tc": 30,
+    "d2": -2105.0,
+    "d2_trades": 11,
+    "label": "vmr-ema80-te1-sk1.5-tc30"
+  },
+  {
+    "ema": 120,
+    "te": 1,
+    "sk": 0.5,
+    "tc": 30,
+    "d2": -2105.0,
+    "d2_trades": 11,
+    "label": "vmr-ema120-te1-sk0.5-tc30"
+  },
+  {
+    "ema": 120,
+    "te": 1,
+    "sk": 1.0,
+    "tc": 30,
+    "d2": -2105.0,
+    "d2_trades": 11,
+    "label": "vmr-ema120-te1-sk1.0-tc30"
+  },
+  {
+    "ema": 50,
+    "te": 4,
+    "sk": 2.0,
+    "tc": 20,
+    "d2": -2105.5,
+    "d2_trades": 11,
+    "label": "vmr-ema50-te4-sk2.0-tc20"
+  },
+  {
+    "ema": 50,
+    "te": 4,
+    "sk": 2.0,
+    "tc": 30,
+    "d2": -2105.5,
+    "d2_trades": 11,
+    "label": "vmr-ema50-te4-sk2.0-tc30"
+  },
+  {
+    "ema": 50,
+    "te": 4,
+    "sk": 2.0,
+    "tc": 50,
+    "d2": -2105.5,
+    "d2_trades": 11,
+    "label": "vmr-ema50-te4-sk2.0-tc50"
+  },
+  {
+    "ema": 80,
+    "te": 2,
+    "sk": 2.5,
+    "tc": 50,
+    "d2": -2107.0,
+    "d2_trades": 10,
+    "label": "vmr-ema80-te2-sk2.5-tc50"
+  },
+  {
+    "ema": 80,
+    "te": 2,
+    "sk": 3.0,
+    "tc": 50,
+    "d2": -2107.0,
+    "d2_trades": 10,
+    "label": "vmr-ema80-te2-sk3.0-tc50"
+  },
+  {
+    "ema": 50,
+    "te": 2,
+    "sk": 2.5,
+    "tc": 20,
+    "d2": -2116.5,
+    "d2_trades": 11,
+    "label": "vmr-ema50-te2-sk2.5-tc20"
+  },
+  {
+    "ema": 50,
+    "te": 2,
+    "sk": 3.0,
+    "tc": 20,
+    "d2": -2116.5,
+    "d2_trades": 11,
+    "label": "vmr-ema50-te2-sk3.0-tc20"
+  },
+  {
+    "ema": 50,
+    "te": 4,
+    "sk": 2.5,
+    "tc": 20,
+    "d2": -2116.5,
+    "d2_trades": 11,
+    "label": "vmr-ema50-te4-sk2.5-tc20"
+  },
+  {
+    "ema": 50,
+    "te": 4,
+    "sk": 2.5,
+    "tc": 30,
+    "d2": -2116.5,
+    "d2_trades": 11,
+    "label": "vmr-ema50-te4-sk2.5-tc30"
+  },
+  {
+    "ema": 50,
+    "te": 4,
+    "sk": 2.5,
+    "tc": 50,
+    "d2": -2116.5,
+    "d2_trades": 11,
+    "label": "vmr-ema50-te4-sk2.5-tc50"
+  },
+  {
+    "ema": 50,
+    "te": 3,
+    "sk": 2.0,
+    "tc": 50,
+    "d2": -2117.5,
+    "d2_trades": 8,
+    "label": "vmr-ema50-te3-sk2.0-tc50"
+  },
+  {
+    "ema": 80,
+    "te": 4,
+    "sk": 2.0,
+    "tc": 20,
+    "d2": -2119.0,
+    "d2_trades": 13,
+    "label": "vmr-ema80-te4-sk2.0-tc20"
+  },
+  {
+    "ema": 80,
+    "te": 4,
+    "sk": 2.0,
+    "tc": 30,
+    "d2": -2119.0,
+    "d2_trades": 13,
+    "label": "vmr-ema80-te4-sk2.0-tc30"
+  },
+  {
+    "ema": 80,
+    "te": 4,
+    "sk": 2.0,
+    "tc": 50,
+    "d2": -2119.0,
+    "d2_trades": 13,
+    "label": "vmr-ema80-te4-sk2.0-tc50"
+  },
+  {
+    "ema": 80,
+    "te": 4,
+    "sk": 2.5,
+    "tc": 20,
+    "d2": -2119.0,
+    "d2_trades": 13,
+    "label": "vmr-ema80-te4-sk2.5-tc20"
+  },
+  {
+    "ema": 80,
+    "te": 4,
+    "sk": 2.5,
+    "tc": 30,
+    "d2": -2119.0,
+    "d2_trades": 13,
+    "label": "vmr-ema80-te4-sk2.5-tc30"
+  },
+  {
+    "ema": 80,
+    "te": 4,
+    "sk": 2.5,
+    "tc": 50,
+    "d2": -2119.0,
+    "d2_trades": 13,
+    "label": "vmr-ema80-te4-sk2.5-tc50"
+  },
+  {
+    "ema": 120,
+    "te": 4,
+    "sk": 3.0,
+    "tc": 20,
+    "d2": -2119.0,
+    "d2_trades": 13,
+    "label": "vmr-ema120-te4-sk3.0-tc20"
+  },
+  {
+    "ema": 120,
+    "te": 4,
+    "sk": 3.0,
+    "tc": 30,
+    "d2": -2119.0,
+    "d2_trades": 13,
+    "label": "vmr-ema120-te4-sk3.0-tc30"
+  },
+  {
+    "ema": 120,
+    "te": 4,
+    "sk": 3.0,
+    "tc": 50,
+    "d2": -2119.0,
+    "d2_trades": 13,
+    "label": "vmr-ema120-te4-sk3.0-tc50"
+  },
+  {
+    "ema": 120,
+    "te": 3,
+    "sk": 2.0,
+    "tc": 50,
+    "d2": -2121.5,
+    "d2_trades": 13,
+    "label": "vmr-ema120-te3-sk2.0-tc50"
+  },
+  {
+    "ema": 120,
+    "te": 3,
+    "sk": 2.5,
+    "tc": 50,
+    "d2": -2121.5,
+    "d2_trades": 13,
+    "label": "vmr-ema120-te3-sk2.5-tc50"
+  },
+  {
+    "ema": 50,
+    "te": 4,
+    "sk": 0.5,
+    "tc": 20,
+    "d2": -2127.0,
+    "d2_trades": 13,
+    "label": "vmr-ema50-te4-sk0.5-tc20"
+  },
+  {
+    "ema": 50,
+    "te": 4,
+    "sk": 0.5,
+    "tc": 30,
+    "d2": -2127.0,
+    "d2_trades": 13,
+    "label": "vmr-ema50-te4-sk0.5-tc30"
+  },
+  {
+    "ema": 50,
+    "te": 4,
+    "sk": 0.5,
+    "tc": 50,
+    "d2": -2127.0,
+    "d2_trades": 13,
+    "label": "vmr-ema50-te4-sk0.5-tc50"
+  },
+  {
+    "ema": 50,
+    "te": 4,
+    "sk": 1.0,
+    "tc": 20,
+    "d2": -2127.0,
+    "d2_trades": 13,
+    "label": "vmr-ema50-te4-sk1.0-tc20"
+  },
+  {
+    "ema": 50,
+    "te": 4,
+    "sk": 1.0,
+    "tc": 30,
+    "d2": -2127.0,
+    "d2_trades": 13,
+    "label": "vmr-ema50-te4-sk1.0-tc30"
+  },
+  {
+    "ema": 50,
+    "te": 4,
+    "sk": 1.0,
+    "tc": 50,
+    "d2": -2127.0,
+    "d2_trades": 13,
+    "label": "vmr-ema50-te4-sk1.0-tc50"
+  },
+  {
+    "ema": 80,
+    "te": 3,
+    "sk": 3.0,
+    "tc": 30,
+    "d2": -2139.0,
+    "d2_trades": 12,
+    "label": "vmr-ema80-te3-sk3.0-tc30"
+  },
+  {
+    "ema": 80,
+    "te": 3,
+    "sk": 1.5,
+    "tc": 50,
+    "d2": -2141.5,
+    "d2_trades": 13,
+    "label": "vmr-ema80-te3-sk1.5-tc50"
+  },
+  {
+    "ema": 120,
+    "te": 3,
+    "sk": 1.5,
+    "tc": 50,
+    "d2": -2141.5,
+    "d2_trades": 13,
+    "label": "vmr-ema120-te3-sk1.5-tc50"
+  },
+  {
+    "ema": 120,
+    "te": 3,
+    "sk": 2.0,
+    "tc": 30,
+    "d2": -2141.5,
+    "d2_trades": 14,
+    "label": "vmr-ema120-te3-sk2.0-tc30"
+  },
+  {
+    "ema": 120,
+    "te": 3,
+    "sk": 2.5,
+    "tc": 30,
+    "d2": -2141.5,
+    "d2_trades": 14,
+    "label": "vmr-ema120-te3-sk2.5-tc30"
+  },
+  {
+    "ema": 30,
+    "te": 4,
+    "sk": 3.0,
+    "tc": 20,
+    "d2": -2148.5,
+    "d2_trades": 9,
+    "label": "vmr-ema30-te4-sk3.0-tc20"
+  },
+  {
+    "ema": 30,
+    "te": 4,
+    "sk": 3.0,
+    "tc": 30,
+    "d2": -2148.5,
+    "d2_trades": 9,
+    "label": "vmr-ema30-te4-sk3.0-tc30"
+  },
+  {
+    "ema": 30,
+    "te": 4,
+    "sk": 3.0,
+    "tc": 50,
+    "d2": -2148.5,
+    "d2_trades": 9,
+    "label": "vmr-ema30-te4-sk3.0-tc50"
+  },
+  {
+    "ema": 30,
+    "te": 2,
+    "sk": 0.5,
+    "tc": 50,
+    "d2": -2153.5,
+    "d2_trades": 8,
+    "label": "vmr-ema30-te2-sk0.5-tc50"
+  },
+  {
+    "ema": 30,
+    "te": 4,
+    "sk": 2.0,
+    "tc": 20,
+    "d2": -2156.5,
+    "d2_trades": 9,
+    "label": "vmr-ema30-te4-sk2.0-tc20"
+  },
+  {
+    "ema": 30,
+    "te": 4,
+    "sk": 2.0,
+    "tc": 30,
+    "d2": -2156.5,
+    "d2_trades": 9,
+    "label": "vmr-ema30-te4-sk2.0-tc30"
+  },
+  {
+    "ema": 30,
+    "te": 4,
+    "sk": 2.0,
+    "tc": 50,
+    "d2": -2156.5,
+    "d2_trades": 9,
+    "label": "vmr-ema30-te4-sk2.0-tc50"
+  },
+  {
+    "ema": 30,
+    "te": 4,
+    "sk": 2.5,
+    "tc": 20,
+    "d2": -2156.5,
+    "d2_trades": 9,
+    "label": "vmr-ema30-te4-sk2.5-tc20"
+  },
+  {
+    "ema": 30,
+    "te": 4,
+    "sk": 2.5,
+    "tc": 30,
+    "d2": -2156.5,
+    "d2_trades": 9,
+    "label": "vmr-ema30-te4-sk2.5-tc30"
+  },
+  {
+    "ema": 30,
+    "te": 4,
+    "sk": 2.5,
+    "tc": 50,
+    "d2": -2156.5,
+    "d2_trades": 9,
+    "label": "vmr-ema30-te4-sk2.5-tc50"
+  },
+  {
+    "ema": 80,
+    "te": 3,
+    "sk": 1.5,
+    "tc": 30,
+    "d2": -2161.5,
+    "d2_trades": 14,
+    "label": "vmr-ema80-te3-sk1.5-tc30"
+  },
+  {
+    "ema": 120,
+    "te": 3,
+    "sk": 1.5,
+    "tc": 30,
+    "d2": -2161.5,
+    "d2_trades": 14,
+    "label": "vmr-ema120-te3-sk1.5-tc30"
+  },
+  {
+    "ema": 80,
+    "te": 3,
+    "sk": 1.0,
+    "tc": 30,
+    "d2": -2169.5,
+    "d2_trades": 14,
+    "label": "vmr-ema80-te3-sk1.0-tc30"
+  },
+  {
+    "ema": 30,
+    "te": 3,
+    "sk": 0.5,
+    "tc": 20,
+    "d2": -2186.5,
+    "d2_trades": 8,
+    "label": "vmr-ema30-te3-sk0.5-tc20"
+  },
+  {
+    "ema": 30,
+    "te": 3,
+    "sk": 0.5,
+    "tc": 30,
+    "d2": -2186.5,
+    "d2_trades": 8,
+    "label": "vmr-ema30-te3-sk0.5-tc30"
+  },
+  {
+    "ema": 30,
+    "te": 3,
+    "sk": 0.5,
+    "tc": 50,
+    "d2": -2186.5,
+    "d2_trades": 8,
+    "label": "vmr-ema30-te3-sk0.5-tc50"
+  },
+  {
+    "ema": 50,
+    "te": 3,
+    "sk": 3.0,
+    "tc": 50,
+    "d2": -2197.5,
+    "d2_trades": 11,
+    "label": "vmr-ema50-te3-sk3.0-tc50"
+  },
+  {
+    "ema": 120,
+    "te": 3,
+    "sk": 3.0,
+    "tc": 30,
+    "d2": -2201.5,
+    "d2_trades": 12,
+    "label": "vmr-ema120-te3-sk3.0-tc30"
+  },
+  {
+    "ema": 80,
+    "te": 3,
+    "sk": 2.0,
+    "tc": 50,
+    "d2": -2221.5,
+    "d2_trades": 11,
+    "label": "vmr-ema80-te3-sk2.0-tc50"
+  },
+  {
+    "ema": 80,
+    "te": 3,
+    "sk": 2.5,
+    "tc": 30,
+    "d2": -2221.5,
+    "d2_trades": 12,
+    "label": "vmr-ema80-te3-sk2.5-tc30"
+  },
+  {
+    "ema": 80,
+    "te": 3,
+    "sk": 2.5,
+    "tc": 50,
+    "d2": -2221.5,
+    "d2_trades": 11,
+    "label": "vmr-ema80-te3-sk2.5-tc50"
+  },
+  {
+    "ema": 120,
+    "te": 3,
+    "sk": 3.0,
+    "tc": 50,
+    "d2": -2221.5,
+    "d2_trades": 11,
+    "label": "vmr-ema120-te3-sk3.0-tc50"
+  },
+  {
+    "ema": 50,
+    "te": 3,
+    "sk": 1.0,
+    "tc": 30,
+    "d2": -2241.5,
+    "d2_trades": 12,
+    "label": "vmr-ema50-te3-sk1.0-tc30"
+  },
+  {
+    "ema": 80,
+    "te": 3,
+    "sk": 2.0,
+    "tc": 30,
+    "d2": -2241.5,
+    "d2_trades": 12,
+    "label": "vmr-ema80-te3-sk2.0-tc30"
+  },
+  {
+    "ema": 30,
+    "te": 1,
+    "sk": 1.5,
+    "tc": 30,
+    "d2": -2250.5,
+    "d2_trades": 68,
+    "label": "vmr-ema30-te1-sk1.5-tc30"
+  },
+  {
+    "ema": 50,
+    "te": 2,
+    "sk": 2.0,
+    "tc": 50,
+    "d2": -2267.0,
+    "d2_trades": 88,
+    "label": "vmr-ema50-te2-sk2.0-tc50"
+  },
+  {
+    "ema": 30,
+    "te": 4,
+    "sk": 0.5,
+    "tc": 20,
+    "d2": -2299.0,
+    "d2_trades": 9,
+    "label": "vmr-ema30-te4-sk0.5-tc20"
+  },
+  {
+    "ema": 30,
+    "te": 4,
+    "sk": 0.5,
+    "tc": 30,
+    "d2": -2299.0,
+    "d2_trades": 9,
+    "label": "vmr-ema30-te4-sk0.5-tc30"
+  },
+  {
+    "ema": 30,
+    "te": 4,
+    "sk": 0.5,
+    "tc": 50,
+    "d2": -2299.0,
+    "d2_trades": 9,
+    "label": "vmr-ema30-te4-sk0.5-tc50"
+  },
+  {
+    "ema": 50,
+    "te": 3,
+    "sk": 2.0,
+    "tc": 30,
+    "d2": -2321.5,
+    "d2_trades": 10,
+    "label": "vmr-ema50-te3-sk2.0-tc30"
+  },
+  {
+    "ema": 30,
+    "te": 0,
+    "sk": 2.5,
+    "tc": 50,
+    "d2": -2408.5,
+    "d2_trades": 8,
+    "label": "vmr-ema30-te0-sk2.5-tc50"
+  },
+  {
+    "ema": 30,
+    "te": 0,
+    "sk": 3.0,
+    "tc": 50,
+    "d2": -2408.5,
+    "d2_trades": 8,
+    "label": "vmr-ema30-te0-sk3.0-tc50"
+  },
+  {
+    "ema": 30,
+    "te": 0,
+    "sk": 0.5,
+    "tc": 50,
+    "d2": -2416.5,
+    "d2_trades": 8,
+    "label": "vmr-ema30-te0-sk0.5-tc50"
+  },
+  {
+    "ema": 30,
+    "te": 0,
+    "sk": 1.0,
+    "tc": 50,
+    "d2": -2416.5,
+    "d2_trades": 8,
+    "label": "vmr-ema30-te0-sk1.0-tc50"
+  },
+  {
+    "ema": 30,
+    "te": 0,
+    "sk": 1.5,
+    "tc": 50,
+    "d2": -2416.5,
+    "d2_trades": 8,
+    "label": "vmr-ema30-te0-sk1.5-tc50"
+  },
+  {
+    "ema": 30,
+    "te": 0,
+    "sk": 2.0,
+    "tc": 50,
+    "d2": -2416.5,
+    "d2_trades": 8,
+    "label": "vmr-ema30-te0-sk2.0-tc50"
+  },
+  {
+    "ema": 50,
+    "te": 1,
+    "sk": 2.0,
+    "tc": 30,
+    "d2": -2420.5,
+    "d2_trades": 69,
+    "label": "vmr-ema50-te1-sk2.0-tc30"
+  },
+  {
+    "ema": 50,
+    "te": 2,
+    "sk": 2.5,
+    "tc": 30,
+    "d2": -2432.5,
+    "d2_trades": 10,
+    "label": "vmr-ema50-te2-sk2.5-tc30"
+  },
+  {
+    "ema": 50,
+    "te": 2,
+    "sk": 3.0,
+    "tc": 30,
+    "d2": -2432.5,
+    "d2_trades": 10,
+    "label": "vmr-ema50-te2-sk3.0-tc30"
+  },
+  {
+    "ema": 30,
+    "te": 2,
+    "sk": 1.0,
+    "tc": 20,
+    "d2": -2522.5,
+    "d2_trades": 9,
+    "label": "vmr-ema30-te2-sk1.0-tc20"
+  },
+  {
+    "ema": 30,
+    "te": 2,
+    "sk": 1.5,
+    "tc": 20,
+    "d2": -2522.5,
+    "d2_trades": 9,
+    "label": "vmr-ema30-te2-sk1.5-tc20"
+  },
+  {
+    "ema": 30,
+    "te": 2,
+    "sk": 2.0,
+    "tc": 20,
+    "d2": -2522.5,
+    "d2_trades": 9,
+    "label": "vmr-ema30-te2-sk2.0-tc20"
+  },
+  {
+    "ema": 30,
+    "te": 2,
+    "sk": 2.5,
+    "tc": 20,
+    "d2": -2522.5,
+    "d2_trades": 9,
+    "label": "vmr-ema30-te2-sk2.5-tc20"
+  },
+  {
+    "ema": 30,
+    "te": 2,
+    "sk": 3.0,
+    "tc": 20,
+    "d2": -2522.5,
+    "d2_trades": 9,
+    "label": "vmr-ema30-te2-sk3.0-tc20"
+  },
+  {
+    "ema": 50,
+    "te": 2,
+    "sk": 3.0,
+    "tc": 50,
+    "d2": -2537.5,
+    "d2_trades": 63,
+    "label": "vmr-ema50-te2-sk3.0-tc50"
+  },
+  {
+    "ema": 50,
+    "te": 2,
+    "sk": 2.5,
+    "tc": 50,
+    "d2": -2604.0,
+    "d2_trades": 86,
+    "label": "vmr-ema50-te2-sk2.5-tc50"
+  },
+  {
+    "ema": 80,
+    "te": 0,
+    "sk": 1.0,
+    "tc": 50,
+    "d2": -2620.5,
+    "d2_trades": 42,
+    "label": "vmr-ema80-te0-sk1.0-tc50"
+  },
+  {
+    "ema": 80,
+    "te": 0,
+    "sk": 0.5,
+    "tc": 50,
+    "d2": -2623.5,
+    "d2_trades": 42,
+    "label": "vmr-ema80-te0-sk0.5-tc50"
+  },
+  {
+    "ema": 80,
+    "te": 0,
+    "sk": 3.0,
+    "tc": 20,
+    "d2": -2666.5,
+    "d2_trades": 87,
+    "label": "vmr-ema80-te0-sk3.0-tc20"
+  },
+  {
+    "ema": 80,
+    "te": 0,
+    "sk": 2.5,
+    "tc": 20,
+    "d2": -2721.5,
+    "d2_trades": 87,
+    "label": "vmr-ema80-te0-sk2.5-tc20"
+  },
+  {
+    "ema": 30,
+    "te": 1,
+    "sk": 2.0,
+    "tc": 30,
+    "d2": -2764.0,
+    "d2_trades": 95,
+    "label": "vmr-ema30-te1-sk2.0-tc30"
+  },
+  {
+    "ema": 50,
+    "te": 1,
+    "sk": 2.5,
+    "tc": 30,
+    "d2": -2882.0,
+    "d2_trades": 98,
+    "label": "vmr-ema50-te1-sk2.5-tc30"
+  },
+  {
+    "ema": 50,
+    "te": 1,
+    "sk": 3.0,
+    "tc": 30,
+    "d2": -3052.5,
+    "d2_trades": 98,
+    "label": "vmr-ema50-te1-sk3.0-tc30"
+  },
+  {
+    "ema": 30,
+    "te": 1,
+    "sk": 2.5,
+    "tc": 50,
+    "d2": -3314.0,
+    "d2_trades": 85,
+    "label": "vmr-ema30-te1-sk2.5-tc50"
+  },
+  {
+    "ema": 30,
+    "te": 1,
+    "sk": 3.0,
+    "tc": 50,
+    "d2": -3613.0,
+    "d2_trades": 88,
+    "label": "vmr-ema30-te1-sk3.0-tc50"
+  },
+  {
+    "ema": 50,
+    "te": 0,
+    "sk": 2.0,
+    "tc": 30,
+    "d2": -3913.0,
+    "d2_trades": 78,
+    "label": "vmr-ema50-te0-sk2.0-tc30"
+  },
+  {
+    "ema": 80,
+    "te": 0,
+    "sk": 2.5,
+    "tc": 50,
+    "d2": -4756.5,
+    "d2_trades": 149,
+    "label": "vmr-ema80-te0-sk2.5-tc50"
+  },
+  {
+    "ema": 80,
+    "te": 0,
+    "sk": 3.0,
+    "tc": 50,
+    "d2": -4908.5,
+    "d2_trades": 150,
+    "label": "vmr-ema80-te0-sk3.0-tc50"
+  },
+  {
+    "ema": 50,
+    "te": 0,
+    "sk": 1.0,
+    "tc": 50,
+    "d2": -5390.5,
+    "d2_trades": 78,
+    "label": "vmr-ema50-te0-sk1.0-tc50"
+  },
+  {
+    "ema": 50,
+    "te": 0,
+    "sk": 1.5,
+    "tc": 50,
+    "d2": -5392.0,
+    "d2_trades": 80,
+    "label": "vmr-ema50-te0-sk1.5-tc50"
+  },
+  {
+    "ema": 50,
+    "te": 0,
+    "sk": 0.5,
+    "tc": 50,
+    "d2": -5410.5,
+    "d2_trades": 78,
+    "label": "vmr-ema50-te0-sk0.5-tc50"
+  },
+  {
+    "ema": 30,
+    "te": 0,
+    "sk": 2.0,
+    "tc": 20,
+    "d2": -5563.5,
+    "d2_trades": 121,
+    "label": "vmr-ema30-te0-sk2.0-tc20"
+  },
+  {
+    "ema": 50,
+    "te": 0,
+    "sk": 2.5,
+    "tc": 30,
+    "d2": -5699.0,
+    "d2_trades": 117,
+    "label": "vmr-ema50-te0-sk2.5-tc30"
+  },
+  {
+    "ema": 30,
+    "te": 0,
+    "sk": 2.5,
+    "tc": 20,
+    "d2": -5710.0,
+    "d2_trades": 122,
+    "label": "vmr-ema30-te0-sk2.5-tc20"
+  },
+  {
+    "ema": 30,
+    "te": 0,
+    "sk": 2.0,
+    "tc": 30,
+    "d2": -6038.5,
+    "d2_trades": 108,
+    "label": "vmr-ema30-te0-sk2.0-tc30"
+  },
+  {
+    "ema": 50,
+    "te": 0,
+    "sk": 2.5,
+    "tc": 50,
+    "d2": -6055.5,
+    "d2_trades": 162,
+    "label": "vmr-ema50-te0-sk2.5-tc50"
+  },
+  {
+    "ema": 50,
+    "te": 0,
+    "sk": 3.0,
+    "tc": 50,
+    "d2": -6159.5,
+    "d2_trades": 161,
+    "label": "vmr-ema50-te0-sk3.0-tc50"
+  }
+]

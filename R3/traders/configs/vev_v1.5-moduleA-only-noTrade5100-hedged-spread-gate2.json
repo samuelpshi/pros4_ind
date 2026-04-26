@@ -1,0 +1,65 @@
+{
+  "active_strikes": [
+    5000,
+    5200,
+    5300,
+    5400,
+    5500
+  ],
+  "smile_fit_strikes": [
+    5000,
+    5100,
+    5200,
+    5300,
+    5400,
+    5500
+  ],
+  "smile_fit_min_strikes": 4,
+  "smile_hardcoded_fallback": {
+    "a": 0.143,
+    "b": -0.002,
+    "c": 0.236
+  },
+  "ema_demean_window": 20,
+  "zscore_stdev_window": 100,
+  "z_open_threshold": 2.0,
+  "z_close_threshold": 0.5,
+  "strike_position_caps": {
+    "5000": 60,
+    "5100": 80,
+    "5200": 120,
+    "5300": 120,
+    "5400": 80,
+    "5500": 60
+  },
+  "base_iv_zscore_window": 500,
+  "base_iv_z_open": 1.5,
+  "base_iv_z_close": 0.5,
+  "base_iv_position_size": 25,
+  "voucher_position_limit": 300,
+  "round_day_to_tte_days": {
+    "0": 8,
+    "1": 7,
+    "2": 6,
+    "3": 5,
+    "4": 4,
+    "5": 3
+  },
+  "current_day": 0,
+  "min_hold_ticks": 5,
+  "cooldown_ticks": 10,
+  "passive_wait_ticks": 8,
+  "aggressive_z_threshold": 3.5,
+  "max_step_size": 5,
+  "enable_module_b": false,
+  "enable_delta_hedge": true,
+  "delta_hedge_band": 30,
+  "delta_hedge_agg_band": 60,
+  "delta_hedge_throttle_ticks": 100,
+  "delta_hedge_max_step": 30,
+  "vev_position_limit": 200,
+  "exit_mode": "legacy",
+  "hold_ticks": 200,
+  "enable_spread_gate": true,
+  "spread_gate_max_ticks": 2
+}

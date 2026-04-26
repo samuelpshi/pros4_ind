@@ -1,0 +1,698 @@
+{
+ "legacy": {
+  "run_id": "1777189677739",
+  "per_day": {
+   "0": {
+    "n_fills": 11,
+    "n_round_trips": 3,
+    "closed_rt_pnl": -4.0,
+    "win_rate": 0.6666666666666666,
+    "n_wins": 2,
+    "n_losses": 1,
+    "mean_win": 3.0,
+    "mean_loss": -10.0,
+    "hold_ticks_stats": {
+     "n": 3,
+     "mean": 462,
+     "median": 379,
+     "min": 379,
+     "max": 628,
+     "p25": 379,
+     "p75": 628,
+     "stdev": 117.37972567696688
+    },
+    "close_trigger_counts": {
+     "z": 1167,
+     "t": 0
+    },
+    "close_trigger_per_K": {
+     "5000": {
+      "z": 228,
+      "t": 0
+     },
+     "5200": {
+      "z": 221,
+      "t": 0
+     },
+     "5300": {
+      "z": 223,
+      "t": 0
+     },
+     "5400": {
+      "z": 247,
+      "t": 0
+     },
+     "5500": {
+      "z": 248,
+      "t": 0
+     }
+    }
+   },
+   "1": {
+    "n_fills": 10,
+    "n_round_trips": 3,
+    "closed_rt_pnl": -6.999999999999986,
+    "win_rate": 0.3333333333333333,
+    "n_wins": 1,
+    "n_losses": 2,
+    "mean_win": 11.000000000000014,
+    "mean_loss": -9.0,
+    "hold_ticks_stats": {
+     "n": 3,
+     "mean": 636.6666666666666,
+     "median": 535,
+     "min": 491,
+     "max": 884,
+     "p25": 491,
+     "p75": 884,
+     "stdev": 175.8111360396592
+    },
+    "close_trigger_counts": {
+     "z": 1180,
+     "t": 0
+    },
+    "close_trigger_per_K": {
+     "5000": {
+      "z": 248,
+      "t": 0
+     },
+     "5200": {
+      "z": 220,
+      "t": 0
+     },
+     "5300": {
+      "z": 240,
+      "t": 0
+     },
+     "5400": {
+      "z": 232,
+      "t": 0
+     },
+     "5500": {
+      "z": 240,
+      "t": 0
+     }
+    }
+   },
+   "2": {
+    "n_fills": 73,
+    "n_round_trips": 1,
+    "closed_rt_pnl": -75.0,
+    "win_rate": 0.0,
+    "n_wins": 0,
+    "n_losses": 1,
+    "mean_win": null,
+    "mean_loss": -75.0,
+    "hold_ticks_stats": {
+     "n": 1,
+     "mean": 116,
+     "median": 116,
+     "min": 116,
+     "max": 116,
+     "p25": 116,
+     "p75": 116,
+     "stdev": 0.0
+    },
+    "close_trigger_counts": {
+     "z": 1202,
+     "t": 0
+    },
+    "close_trigger_per_K": {
+     "5000": {
+      "z": 234,
+      "t": 0
+     },
+     "5200": {
+      "z": 223,
+      "t": 0
+     },
+     "5300": {
+      "z": 251,
+      "t": 0
+     },
+     "5400": {
+      "z": 236,
+      "t": 0
+     },
+     "5500": {
+      "z": 258,
+      "t": 0
+     }
+    }
+   }
+  },
+  "aggregate": {
+   "n_round_trips": 7,
+   "closed_rt_pnl_3d": -85.99999999999999,
+   "win_rate": 0.42857142857142855,
+   "mean_win": 5.666666666666671,
+   "mean_loss": -25.75,
+   "hold_ticks_stats": {
+    "n": 7,
+    "mean": 487.42857142857144,
+    "median": 491,
+    "min": 116,
+    "max": 884,
+    "p25": 116,
+    "p75": 628,
+    "stdev": 220.64118068086225
+   },
+   "close_trigger_counts_3d": {
+    "z": 3549,
+    "t": 0
+   },
+   "pnl_distribution": {
+    "n": 7,
+    "mean": -12.285714285714283,
+    "median": -6.0,
+    "min": -75.0,
+    "max": 11.000000000000014,
+    "p25": -75.0,
+    "p75": 5.0,
+    "stdev": 26.713903740584687
+   }
+  }
+ },
+ "loose_z": {
+  "run_id": "1777189696343",
+  "per_day": {
+   "0": {
+    "n_fills": 4,
+    "n_round_trips": 2,
+    "closed_rt_pnl": -5.0,
+    "win_rate": 0.5,
+    "n_wins": 1,
+    "n_losses": 1,
+    "mean_win": 5.0,
+    "mean_loss": -10.0,
+    "hold_ticks_stats": {
+     "n": 2,
+     "mean": 379,
+     "median": 379.0,
+     "min": 379,
+     "max": 379,
+     "p25": 379,
+     "p75": 379,
+     "stdev": 0.0
+    },
+    "close_trigger_counts": {
+     "z": 1209,
+     "t": 0
+    },
+    "close_trigger_per_K": {
+     "5000": {
+      "z": 233,
+      "t": 0
+     },
+     "5200": {
+      "z": 231,
+      "t": 0
+     },
+     "5300": {
+      "z": 232,
+      "t": 0
+     },
+     "5400": {
+      "z": 255,
+      "t": 0
+     },
+     "5500": {
+      "z": 258,
+      "t": 0
+     }
+    }
+   },
+   "1": {
+    "n_fills": 8,
+    "n_round_trips": 3,
+    "closed_rt_pnl": -61.999999999999986,
+    "win_rate": 0.0,
+    "n_wins": 0,
+    "n_losses": 3,
+    "mean_win": null,
+    "mean_loss": -20.66666666666666,
+    "hold_ticks_stats": {
+     "n": 3,
+     "mean": 680,
+     "median": 535,
+     "min": 491,
+     "max": 1014,
+     "p25": 491,
+     "p75": 1014,
+     "stdev": 236.8557929767956
+    },
+    "close_trigger_counts": {
+     "z": 1226,
+     "t": 0
+    },
+    "close_trigger_per_K": {
+     "5000": {
+      "z": 258,
+      "t": 0
+     },
+     "5200": {
+      "z": 233,
+      "t": 0
+     },
+     "5300": {
+      "z": 250,
+      "t": 0
+     },
+     "5400": {
+      "z": 237,
+      "t": 0
+     },
+     "5500": {
+      "z": 248,
+      "t": 0
+     }
+    }
+   },
+   "2": {
+    "n_fills": 31,
+    "n_round_trips": 1,
+    "closed_rt_pnl": -75.0,
+    "win_rate": 0.0,
+    "n_wins": 0,
+    "n_losses": 1,
+    "mean_win": null,
+    "mean_loss": -75.0,
+    "hold_ticks_stats": {
+     "n": 1,
+     "mean": 116,
+     "median": 116,
+     "min": 116,
+     "max": 116,
+     "p25": 116,
+     "p75": 116,
+     "stdev": 0.0
+    },
+    "close_trigger_counts": {
+     "z": 1253,
+     "t": 0
+    },
+    "close_trigger_per_K": {
+     "5000": {
+      "z": 245,
+      "t": 0
+     },
+     "5200": {
+      "z": 228,
+      "t": 0
+     },
+     "5300": {
+      "z": 258,
+      "t": 0
+     },
+     "5400": {
+      "z": 252,
+      "t": 0
+     },
+     "5500": {
+      "z": 270,
+      "t": 0
+     }
+    }
+   }
+  },
+  "aggregate": {
+   "n_round_trips": 6,
+   "closed_rt_pnl_3d": -142.0,
+   "win_rate": 0.16666666666666666,
+   "mean_win": 5.0,
+   "mean_loss": -29.4,
+   "hold_ticks_stats": {
+    "n": 6,
+    "mean": 485.6666666666667,
+    "median": 435.0,
+    "min": 116,
+    "max": 1014,
+    "p25": 116,
+    "p75": 535,
+    "stdev": 271.11108834243987
+   },
+   "close_trigger_counts_3d": {
+    "z": 3688,
+    "t": 0
+   },
+   "pnl_distribution": {
+    "n": 6,
+    "mean": -23.666666666666664,
+    "median": -11.0,
+    "min": -75.0,
+    "max": 5.0,
+    "p25": -75.0,
+    "p75": -6.0,
+    "stdev": 27.402351886086144
+   }
+  }
+ },
+ "time_based": {
+  "run_id": "1777189713599",
+  "per_day": {
+   "0": {
+    "n_fills": 45,
+    "n_round_trips": 7,
+    "closed_rt_pnl": -12.0,
+    "win_rate": 0.2857142857142857,
+    "n_wins": 2,
+    "n_losses": 2,
+    "mean_win": 1.0,
+    "mean_loss": -7.0,
+    "hold_ticks_stats": {
+     "n": 7,
+     "mean": 473.85714285714283,
+     "median": 379,
+     "min": 175,
+     "max": 1101,
+     "p25": 175,
+     "p75": 628,
+     "stdev": 284.7156117810134
+    },
+    "close_trigger_counts": {
+     "z": 0,
+     "t": 14
+    },
+    "close_trigger_per_K": {
+     "5000": {
+      "z": 0,
+      "t": 4
+     },
+     "5200": {
+      "z": 0,
+      "t": 2
+     },
+     "5300": {
+      "z": 0,
+      "t": 4
+     },
+     "5400": {
+      "z": 0,
+      "t": 2
+     },
+     "5500": {
+      "z": 0,
+      "t": 2
+     }
+    }
+   },
+   "1": {
+    "n_fills": 93,
+    "n_round_trips": 3,
+    "closed_rt_pnl": -86.99999999999996,
+    "win_rate": 0.6666666666666666,
+    "n_wins": 2,
+    "n_losses": 1,
+    "mean_win": 20.0,
+    "mean_loss": -126.99999999999996,
+    "hold_ticks_stats": {
+     "n": 3,
+     "mean": 2402,
+     "median": 1684,
+     "min": 859,
+     "max": 4663,
+     "p25": 859,
+     "p75": 4663,
+     "stdev": 1633.8598471105163
+    },
+    "close_trigger_counts": {
+     "z": 0,
+     "t": 16
+    },
+    "close_trigger_per_K": {
+     "5000": {
+      "z": 0,
+      "t": 4
+     },
+     "5200": {
+      "z": 0,
+      "t": 6
+     },
+     "5300": {
+      "z": 0,
+      "t": 2
+     },
+     "5400": {
+      "z": 0,
+      "t": 2
+     },
+     "5500": {
+      "z": 0,
+      "t": 2
+     }
+    }
+   },
+   "2": {
+    "n_fills": 118,
+    "n_round_trips": 4,
+    "closed_rt_pnl": -635.0,
+    "win_rate": 0.5,
+    "n_wins": 2,
+    "n_losses": 2,
+    "mean_win": 37.5,
+    "mean_loss": -355.0,
+    "hold_ticks_stats": {
+     "n": 4,
+     "mean": 2433,
+     "median": 1599.0,
+     "min": 1033,
+     "max": 5501,
+     "p25": 1033,
+     "p75": 5501,
+     "stdev": 1787.890376952681
+    },
+    "close_trigger_counts": {
+     "z": 0,
+     "t": 9
+    },
+    "close_trigger_per_K": {
+     "5000": {
+      "z": 0,
+      "t": 3
+     },
+     "5200": {
+      "z": 0,
+      "t": 4
+     },
+     "5300": {
+      "z": 0,
+      "t": 1
+     },
+     "5400": {
+      "z": 0,
+      "t": 1
+     },
+     "5500": {
+      "z": 0,
+      "t": 0
+     }
+    }
+   }
+  },
+  "aggregate": {
+   "n_round_trips": 14,
+   "closed_rt_pnl_3d": -734.0,
+   "win_rate": 0.42857142857142855,
+   "mean_win": 19.5,
+   "mean_loss": -170.2,
+   "hold_ticks_stats": {
+    "n": 14,
+    "mean": 1446.7857142857142,
+    "median": 946.0,
+    "min": 175,
+    "max": 5501,
+    "p25": 338,
+    "p75": 1684,
+    "stdev": 1572.4423758949656
+   },
+   "close_trigger_counts_3d": {
+    "z": 0,
+    "t": 39
+   },
+   "pnl_distribution": {
+    "n": 14,
+    "mean": -52.42857142857142,
+    "median": 0.0,
+    "min": -668.0000000000007,
+    "max": 70.0,
+    "p25": -41.99999999999932,
+    "p75": 5.000000000000007,
+    "stdev": 175.59641807513157
+   }
+  }
+ },
+ "hybrid": {
+  "run_id": "1777189730662",
+  "per_day": {
+   "0": {
+    "n_fills": 4,
+    "n_round_trips": 2,
+    "closed_rt_pnl": -5.0,
+    "win_rate": 0.5,
+    "n_wins": 1,
+    "n_losses": 1,
+    "mean_win": 5.0,
+    "mean_loss": -10.0,
+    "hold_ticks_stats": {
+     "n": 2,
+     "mean": 379,
+     "median": 379.0,
+     "min": 379,
+     "max": 379,
+     "p25": 379,
+     "p75": 379,
+     "stdev": 0.0
+    },
+    "close_trigger_counts": {
+     "z": 1209,
+     "t": 0
+    },
+    "close_trigger_per_K": {
+     "5000": {
+      "z": 233,
+      "t": 0
+     },
+     "5200": {
+      "z": 231,
+      "t": 0
+     },
+     "5300": {
+      "z": 232,
+      "t": 0
+     },
+     "5400": {
+      "z": 255,
+      "t": 0
+     },
+     "5500": {
+      "z": 258,
+      "t": 0
+     }
+    }
+   },
+   "1": {
+    "n_fills": 8,
+    "n_round_trips": 3,
+    "closed_rt_pnl": -61.999999999999986,
+    "win_rate": 0.0,
+    "n_wins": 0,
+    "n_losses": 3,
+    "mean_win": null,
+    "mean_loss": -20.66666666666666,
+    "hold_ticks_stats": {
+     "n": 3,
+     "mean": 680,
+     "median": 535,
+     "min": 491,
+     "max": 1014,
+     "p25": 491,
+     "p75": 1014,
+     "stdev": 236.8557929767956
+    },
+    "close_trigger_counts": {
+     "z": 1226,
+     "t": 0
+    },
+    "close_trigger_per_K": {
+     "5000": {
+      "z": 258,
+      "t": 0
+     },
+     "5200": {
+      "z": 233,
+      "t": 0
+     },
+     "5300": {
+      "z": 250,
+      "t": 0
+     },
+     "5400": {
+      "z": 237,
+      "t": 0
+     },
+     "5500": {
+      "z": 248,
+      "t": 0
+     }
+    }
+   },
+   "2": {
+    "n_fills": 31,
+    "n_round_trips": 1,
+    "closed_rt_pnl": -75.0,
+    "win_rate": 0.0,
+    "n_wins": 0,
+    "n_losses": 1,
+    "mean_win": null,
+    "mean_loss": -75.0,
+    "hold_ticks_stats": {
+     "n": 1,
+     "mean": 116,
+     "median": 116,
+     "min": 116,
+     "max": 116,
+     "p25": 116,
+     "p75": 116,
+     "stdev": 0.0
+    },
+    "close_trigger_counts": {
+     "z": 1253,
+     "t": 0
+    },
+    "close_trigger_per_K": {
+     "5000": {
+      "z": 245,
+      "t": 0
+     },
+     "5200": {
+      "z": 228,
+      "t": 0
+     },
+     "5300": {
+      "z": 258,
+      "t": 0
+     },
+     "5400": {
+      "z": 252,
+      "t": 0
+     },
+     "5500": {
+      "z": 270,
+      "t": 0
+     }
+    }
+   }
+  },
+  "aggregate": {
+   "n_round_trips": 6,
+   "closed_rt_pnl_3d": -142.0,
+   "win_rate": 0.16666666666666666,
+   "mean_win": 5.0,
+   "mean_loss": -29.4,
+   "hold_ticks_stats": {
+    "n": 6,
+    "mean": 485.6666666666667,
+    "median": 435.0,
+    "min": 116,
+    "max": 1014,
+    "p25": 116,
+    "p75": 535,
+    "stdev": 271.11108834243987
+   },
+   "close_trigger_counts_3d": {
+    "z": 3688,
+    "t": 0
+   },
+   "pnl_distribution": {
+    "n": 6,
+    "mean": -23.666666666666664,
+    "median": -11.0,
+    "min": -75.0,
+    "max": 5.0,
+    "p25": -75.0,
+    "p75": -6.0,
+    "stdev": 27.402351886086144
+   }
+  }
+ }
+}

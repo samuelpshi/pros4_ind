@@ -1,0 +1,375 @@
+Running 360 combos (PILOT D2 only)...
+[  1/360] vmr-ema30-te0-sk0.5-tc20           d2=   2278.0 trd=  70  eta=4.1min
+[  2/360] vmr-ema30-te0-sk0.5-tc30           d2=   1547.5 trd=  63  eta=4.0min
+[  3/360] vmr-ema30-te0-sk0.5-tc50           d2=  -2416.5 trd=   8  eta=4.1min
+[  4/360] vmr-ema30-te0-sk1.0-tc20           d2=   1969.0 trd=  70  eta=4.1min
+[  5/360] vmr-ema30-te0-sk1.0-tc30           d2=   1555.5 trd=  63  eta=4.0min
+[  6/360] vmr-ema30-te0-sk1.0-tc50           d2=  -2416.5 trd=   8  eta=4.0min
+[  7/360] vmr-ema30-te0-sk1.5-tc20           d2=   1969.0 trd=  70  eta=3.9min
+[  8/360] vmr-ema30-te0-sk1.5-tc30           d2=   1548.5 trd=  63  eta=3.9min
+[  9/360] vmr-ema30-te0-sk1.5-tc50           d2=  -2416.5 trd=   8  eta=3.9min
+[ 10/360] vmr-ema30-te0-sk2.0-tc20           d2=  -5563.5 trd= 121  eta=3.8min
+[ 11/360] vmr-ema30-te0-sk2.0-tc30           d2=  -6038.5 trd= 108  eta=3.8min
+[ 12/360] vmr-ema30-te0-sk2.0-tc50           d2=  -2416.5 trd=   8  eta=3.8min
+[ 13/360] vmr-ema30-te0-sk2.5-tc20           d2=  -5710.0 trd= 122  eta=3.8min
+[ 14/360] vmr-ema30-te0-sk2.5-tc30           d2=   1816.0 trd=  64  eta=3.8min
+[ 15/360] vmr-ema30-te0-sk2.5-tc50           d2=  -2408.5 trd=   8  eta=3.8min
+[ 16/360] vmr-ema30-te0-sk3.0-tc20           d2=   1746.5 trd=  70  eta=3.8min
+[ 17/360] vmr-ema30-te0-sk3.0-tc30           d2=   1824.0 trd=  64  eta=3.7min
+[ 18/360] vmr-ema30-te0-sk3.0-tc50           d2=  -2408.5 trd=   8  eta=3.7min
+[ 19/360] vmr-ema30-te1-sk0.5-tc20           d2=   2718.0 trd=  26  eta=3.7min
+[ 20/360] vmr-ema30-te1-sk0.5-tc30           d2=   3754.5 trd=  58  eta=3.7min
+[ 21/360] vmr-ema30-te1-sk0.5-tc50           d2=  -1950.0 trd=   9  eta=3.7min
+[ 22/360] vmr-ema30-te1-sk1.0-tc20           d2=   2726.0 trd=  26  eta=3.7min
+[ 23/360] vmr-ema30-te1-sk1.0-tc30           d2=   3758.5 trd=  58  eta=3.7min
+[ 24/360] vmr-ema30-te1-sk1.0-tc50           d2=  -1950.0 trd=   9  eta=3.7min
+[ 25/360] vmr-ema30-te1-sk1.5-tc20           d2=   2726.0 trd=  26  eta=3.7min
+[ 26/360] vmr-ema30-te1-sk1.5-tc30           d2=  -2250.5 trd=  68  eta=3.7min
+[ 27/360] vmr-ema30-te1-sk1.5-tc50           d2=  -1950.0 trd=   9  eta=3.7min
+[ 28/360] vmr-ema30-te1-sk2.0-tc20           d2=   2726.0 trd=  26  eta=3.6min
+[ 29/360] vmr-ema30-te1-sk2.0-tc30           d2=  -2764.0 trd=  95  eta=3.6min
+[ 30/360] vmr-ema30-te1-sk2.0-tc50           d2=  -1950.0 trd=   9  eta=3.6min
+[ 31/360] vmr-ema30-te1-sk2.5-tc20           d2=   2821.5 trd=  25  eta=3.6min
+[ 32/360] vmr-ema30-te1-sk2.5-tc30           d2=  -2032.5 trd=  12  eta=3.6min
+[ 33/360] vmr-ema30-te1-sk2.5-tc50           d2=  -3314.0 trd=  85  eta=3.6min
+[ 34/360] vmr-ema30-te1-sk3.0-tc20           d2=  -1939.5 trd=  13  eta=3.6min
+[ 35/360] vmr-ema30-te1-sk3.0-tc30           d2=  -2032.5 trd=  12  eta=3.6min
+[ 36/360] vmr-ema30-te1-sk3.0-tc50           d2=  -3613.0 trd=  88  eta=3.6min
+[ 37/360] vmr-ema30-te2-sk0.5-tc20           d2=  -2095.0 trd=   8  eta=3.5min
+[ 38/360] vmr-ema30-te2-sk0.5-tc30           d2=  -2074.0 trd=   8  eta=3.5min
+[ 39/360] vmr-ema30-te2-sk0.5-tc50           d2=  -2153.5 trd=   8  eta=3.5min
+[ 40/360] vmr-ema30-te2-sk1.0-tc20           d2=  -2522.5 trd=   9  eta=3.5min
+[ 41/360] vmr-ema30-te2-sk1.0-tc30           d2=   2656.5 trd=  17  eta=3.5min
+[ 42/360] vmr-ema30-te2-sk1.0-tc50           d2=   4119.0 trd=  52  eta=3.5min
+[ 43/360] vmr-ema30-te2-sk1.5-tc20           d2=  -2522.5 trd=   9  eta=3.5min
+[ 44/360] vmr-ema30-te2-sk1.5-tc30           d2=   3697.0 trd=  36  eta=3.5min
+[ 45/360] vmr-ema30-te2-sk1.5-tc50           d2=   2579.0 trd=  16  eta=3.5min
+[ 46/360] vmr-ema30-te2-sk2.0-tc20           d2=  -2522.5 trd=   9  eta=3.5min
+[ 47/360] vmr-ema30-te2-sk2.0-tc30           d2=   3858.0 trd=  52  eta=3.4min
+[ 48/360] vmr-ema30-te2-sk2.0-tc50           d2=   2579.0 trd=  16  eta=3.4min
+[ 49/360] vmr-ema30-te2-sk2.5-tc20           d2=  -2522.5 trd=   9  eta=3.4min
+[ 50/360] vmr-ema30-te2-sk2.5-tc30           d2=   2513.0 trd=  17  eta=3.4min
+[ 51/360] vmr-ema30-te2-sk2.5-tc50           d2=   3753.0 trd=  56  eta=3.4min
+[ 52/360] vmr-ema30-te2-sk3.0-tc20           d2=  -2522.5 trd=   9  eta=3.4min
+[ 53/360] vmr-ema30-te2-sk3.0-tc30           d2=   2513.0 trd=  17  eta=3.4min
+[ 54/360] vmr-ema30-te2-sk3.0-tc50           d2=   2781.0 trd=  36  eta=3.4min
+[ 55/360] vmr-ema30-te3-sk0.5-tc20           d2=  -2186.5 trd=   8  eta=3.4min
+[ 56/360] vmr-ema30-te3-sk0.5-tc30           d2=  -2186.5 trd=   8  eta=3.4min
+[ 57/360] vmr-ema30-te3-sk0.5-tc50           d2=  -2186.5 trd=   8  eta=3.3min
+[ 58/360] vmr-ema30-te3-sk1.0-tc20           d2=  -2084.0 trd=   8  eta=3.3min
+[ 59/360] vmr-ema30-te3-sk1.0-tc30           d2=  -2084.0 trd=   8  eta=3.3min
+[ 60/360] vmr-ema30-te3-sk1.0-tc50           d2=  -2084.0 trd=   8  eta=3.3min
+[ 61/360] vmr-ema30-te3-sk1.5-tc20           d2=  -2084.0 trd=   8  eta=3.3min
+[ 62/360] vmr-ema30-te3-sk1.5-tc30           d2=  -2084.0 trd=   8  eta=3.3min
+[ 63/360] vmr-ema30-te3-sk1.5-tc50           d2=  -2084.0 trd=   8  eta=3.3min
+[ 64/360] vmr-ema30-te3-sk2.0-tc20           d2=  -2084.0 trd=   8  eta=3.3min
+[ 65/360] vmr-ema30-te3-sk2.0-tc30           d2=  -2084.0 trd=   8  eta=3.3min
+[ 66/360] vmr-ema30-te3-sk2.0-tc50           d2=  -2084.0 trd=   8  eta=3.3min
+[ 67/360] vmr-ema30-te3-sk2.5-tc20           d2=  -2076.0 trd=   8  eta=3.3min
+[ 68/360] vmr-ema30-te3-sk2.5-tc30           d2=  -2076.0 trd=   8  eta=3.3min
+[ 69/360] vmr-ema30-te3-sk2.5-tc50           d2=  -2076.0 trd=   8  eta=3.2min
+[ 70/360] vmr-ema30-te3-sk3.0-tc20           d2=  -2076.0 trd=   8  eta=3.2min
+[ 71/360] vmr-ema30-te3-sk3.0-tc30           d2=  -2076.0 trd=   8  eta=3.2min
+[ 72/360] vmr-ema30-te3-sk3.0-tc50           d2=  -2076.0 trd=   8  eta=3.2min
+[ 73/360] vmr-ema30-te4-sk0.5-tc20           d2=  -2299.0 trd=   9  eta=3.2min
+[ 74/360] vmr-ema30-te4-sk0.5-tc30           d2=  -2299.0 trd=   9  eta=3.2min
+[ 75/360] vmr-ema30-te4-sk0.5-tc50           d2=  -2299.0 trd=   9  eta=3.2min
+[ 76/360] vmr-ema30-te4-sk1.0-tc20           d2=  -2103.0 trd=   9  eta=3.2min
+[ 77/360] vmr-ema30-te4-sk1.0-tc30           d2=  -2103.0 trd=   9  eta=3.2min
+[ 78/360] vmr-ema30-te4-sk1.0-tc50           d2=  -2103.0 trd=   9  eta=3.2min
+[ 79/360] vmr-ema30-te4-sk1.5-tc20           d2=  -2103.0 trd=   9  eta=3.1min
+[ 80/360] vmr-ema30-te4-sk1.5-tc30           d2=  -2103.0 trd=   9  eta=3.1min
+[ 81/360] vmr-ema30-te4-sk1.5-tc50           d2=  -2103.0 trd=   9  eta=3.1min
+[ 82/360] vmr-ema30-te4-sk2.0-tc20           d2=  -2156.5 trd=   9  eta=3.1min
+[ 83/360] vmr-ema30-te4-sk2.0-tc30           d2=  -2156.5 trd=   9  eta=3.1min
+[ 84/360] vmr-ema30-te4-sk2.0-tc50           d2=  -2156.5 trd=   9  eta=3.1min
+[ 85/360] vmr-ema30-te4-sk2.5-tc20           d2=  -2156.5 trd=   9  eta=3.1min
+[ 86/360] vmr-ema30-te4-sk2.5-tc30           d2=  -2156.5 trd=   9  eta=3.1min
+[ 87/360] vmr-ema30-te4-sk2.5-tc50           d2=  -2156.5 trd=   9  eta=3.1min
+[ 88/360] vmr-ema30-te4-sk3.0-tc20           d2=  -2148.5 trd=   9  eta=3.1min
+[ 89/360] vmr-ema30-te4-sk3.0-tc30           d2=  -2148.5 trd=   9  eta=3.0min
+[ 90/360] vmr-ema30-te4-sk3.0-tc50           d2=  -2148.5 trd=   9  eta=3.0min
+[ 91/360] vmr-ema50-te0-sk0.5-tc20           d2=   2268.0 trd=  27  eta=3.0min
+[ 92/360] vmr-ema50-te0-sk0.5-tc30           d2=   2837.5 trd=   4  eta=3.0min
+[ 93/360] vmr-ema50-te0-sk0.5-tc50           d2=  -5410.5 trd=  78  eta=3.0min
+[ 94/360] vmr-ema50-te0-sk1.0-tc20           d2=   2495.5 trd=  49  eta=3.0min
+[ 95/360] vmr-ema50-te0-sk1.0-tc30           d2=   2176.5 trd=  45  eta=3.0min
+[ 96/360] vmr-ema50-te0-sk1.0-tc50           d2=  -5390.5 trd=  78  eta=3.0min
+[ 97/360] vmr-ema50-te0-sk1.5-tc20           d2=   2495.5 trd=  49  eta=3.0min
+[ 98/360] vmr-ema50-te0-sk1.5-tc30           d2=   2176.5 trd=  45  eta=3.0min
+[ 99/360] vmr-ema50-te0-sk1.5-tc50           d2=  -5392.0 trd=  80  eta=2.9min
+[100/360] vmr-ema50-te0-sk2.0-tc20           d2=   2440.5 trd=  50  eta=2.9min
+[101/360] vmr-ema50-te0-sk2.0-tc30           d2=  -3913.0 trd=  78  eta=2.9min
+[102/360] vmr-ema50-te0-sk2.0-tc50           d2=   -376.0 trd= 136  eta=2.9min
+[103/360] vmr-ema50-te0-sk2.5-tc20           d2=   2441.5 trd=  50  eta=2.9min
+[104/360] vmr-ema50-te0-sk2.5-tc30           d2=  -5699.0 trd= 117  eta=2.9min
+[105/360] vmr-ema50-te0-sk2.5-tc50           d2=  -6055.5 trd= 162  eta=2.9min
+[106/360] vmr-ema50-te0-sk3.0-tc20           d2=   2610.5 trd=  51  eta=2.9min
+[107/360] vmr-ema50-te0-sk3.0-tc30           d2=    353.0 trd= 134  eta=2.9min
+[108/360] vmr-ema50-te0-sk3.0-tc50           d2=  -6159.5 trd= 161  eta=2.9min
+[109/360] vmr-ema50-te1-sk0.5-tc20           d2=  -1949.5 trd=  15  eta=2.8min
+[110/360] vmr-ema50-te1-sk0.5-tc30           d2=   2704.5 trd=  22  eta=2.8min
+[111/360] vmr-ema50-te1-sk0.5-tc50           d2=  -2000.0 trd=   9  eta=2.8min
+[112/360] vmr-ema50-te1-sk1.0-tc20           d2=  -1941.5 trd=  15  eta=2.8min
+[113/360] vmr-ema50-te1-sk1.0-tc30           d2=   4400.0 trd=  77  eta=2.8min
+[114/360] vmr-ema50-te1-sk1.0-tc50           d2=  -2000.0 trd=   9  eta=2.8min
+[115/360] vmr-ema50-te1-sk1.5-tc20           d2=  -1941.5 trd=  15  eta=2.8min
+[116/360] vmr-ema50-te1-sk1.5-tc30           d2=   2911.5 trd=  40  eta=2.8min
+[117/360] vmr-ema50-te1-sk1.5-tc50           d2=  -2000.0 trd=   9  eta=2.7min
+[118/360] vmr-ema50-te1-sk2.0-tc20           d2=  -1941.5 trd=  15  eta=2.7min
+[119/360] vmr-ema50-te1-sk2.0-tc30           d2=  -2420.5 trd=  69  eta=2.7min
+[120/360] vmr-ema50-te1-sk2.0-tc50           d2=  -2000.0 trd=   9  eta=2.7min
+[121/360] vmr-ema50-te1-sk2.5-tc20           d2=  -1941.5 trd=  15  eta=2.7min
+[122/360] vmr-ema50-te1-sk2.5-tc30           d2=  -2882.0 trd=  98  eta=2.7min
+[123/360] vmr-ema50-te1-sk2.5-tc50           d2=  -2000.0 trd=   9  eta=2.7min
+[124/360] vmr-ema50-te1-sk3.0-tc20           d2=  -1941.5 trd=  15  eta=2.7min
+[125/360] vmr-ema50-te1-sk3.0-tc30           d2=  -3052.5 trd=  98  eta=2.7min
+[126/360] vmr-ema50-te1-sk3.0-tc50           d2=  -2000.0 trd=   9  eta=2.6min
+[127/360] vmr-ema50-te2-sk0.5-tc20           d2=  -1935.0 trd=  12  eta=2.6min
+[128/360] vmr-ema50-te2-sk0.5-tc30           d2=  -1925.0 trd=  11  eta=2.6min
+[129/360] vmr-ema50-te2-sk0.5-tc50           d2=  -1984.5 trd=  10  eta=2.6min
+[130/360] vmr-ema50-te2-sk1.0-tc20           d2=  -1935.0 trd=  12  eta=2.6min
+[131/360] vmr-ema50-te2-sk1.0-tc30           d2=  -1925.0 trd=  11  eta=2.6min
+[132/360] vmr-ema50-te2-sk1.0-tc50           d2=  -1984.5 trd=  10  eta=2.6min
+[133/360] vmr-ema50-te2-sk1.5-tc20           d2=  -2036.5 trd=  13  eta=2.6min
+[134/360] vmr-ema50-te2-sk1.5-tc30           d2=  -2026.5 trd=  12  eta=2.6min
+[135/360] vmr-ema50-te2-sk1.5-tc50           d2=   3138.0 trd=  40  eta=2.5min
+[136/360] vmr-ema50-te2-sk2.0-tc20           d2=   2698.5 trd=  21  eta=2.5min
+[137/360] vmr-ema50-te2-sk2.0-tc30           d2=  -2005.0 trd=   9  eta=2.5min
+[138/360] vmr-ema50-te2-sk2.0-tc50           d2=  -2267.0 trd=  88  eta=2.5min
+[139/360] vmr-ema50-te2-sk2.5-tc20           d2=  -2116.5 trd=  11  eta=2.5min
+[140/360] vmr-ema50-te2-sk2.5-tc30           d2=  -2432.5 trd=  10  eta=2.5min
+[141/360] vmr-ema50-te2-sk2.5-tc50           d2=  -2604.0 trd=  86  eta=2.5min
+[142/360] vmr-ema50-te2-sk3.0-tc20           d2=  -2116.5 trd=  11  eta=2.5min
+[143/360] vmr-ema50-te2-sk3.0-tc30           d2=  -2432.5 trd=  10  eta=2.4min
+[144/360] vmr-ema50-te2-sk3.0-tc50           d2=  -2537.5 trd=  63  eta=2.4min
+[145/360] vmr-ema50-te3-sk0.5-tc20           d2=  -2014.5 trd=  12  eta=2.4min
+[146/360] vmr-ema50-te3-sk0.5-tc30           d2=  -2057.5 trd=  11  eta=2.4min
+[147/360] vmr-ema50-te3-sk0.5-tc50           d2=  -2037.5 trd=  10  eta=2.4min
+[148/360] vmr-ema50-te3-sk1.0-tc20           d2=  -2006.5 trd=  12  eta=2.4min
+[149/360] vmr-ema50-te3-sk1.0-tc30           d2=  -2241.5 trd=  12  eta=2.4min
+[150/360] vmr-ema50-te3-sk1.0-tc50           d2=  -2037.5 trd=  10  eta=2.4min
+[151/360] vmr-ema50-te3-sk1.5-tc20           d2=  -1904.0 trd=  12  eta=2.3min
+[152/360] vmr-ema50-te3-sk1.5-tc30           d2=  -1955.0 trd=  11  eta=2.3min
+[153/360] vmr-ema50-te3-sk1.5-tc50           d2=  -1935.0 trd=  10  eta=2.3min
+[154/360] vmr-ema50-te3-sk2.0-tc20           d2=  -2066.5 trd=  10  eta=2.3min
+[155/360] vmr-ema50-te3-sk2.0-tc30           d2=  -2321.5 trd=  10  eta=2.3min
+[156/360] vmr-ema50-te3-sk2.0-tc50           d2=  -2117.5 trd=   8  eta=2.3min
+[157/360] vmr-ema50-te3-sk2.5-tc20           d2=  -1984.0 trd=  10  eta=2.3min
+[158/360] vmr-ema50-te3-sk2.5-tc30           d2=  -2035.0 trd=   9  eta=2.3min
+[159/360] vmr-ema50-te3-sk2.5-tc50           d2=  -2004.0 trd=  10  eta=2.3min
+[160/360] vmr-ema50-te3-sk3.0-tc20           d2=  -1984.0 trd=  10  eta=2.2min
+[161/360] vmr-ema50-te3-sk3.0-tc30           d2=  -2035.0 trd=   9  eta=2.2min
+[162/360] vmr-ema50-te3-sk3.0-tc50           d2=  -2197.5 trd=  11  eta=2.2min
+[163/360] vmr-ema50-te4-sk0.5-tc20           d2=  -2127.0 trd=  13  eta=2.2min
+[164/360] vmr-ema50-te4-sk0.5-tc30           d2=  -2127.0 trd=  13  eta=2.2min
+[165/360] vmr-ema50-te4-sk0.5-tc50           d2=  -2127.0 trd=  13  eta=2.2min
+[166/360] vmr-ema50-te4-sk1.0-tc20           d2=  -2127.0 trd=  13  eta=2.2min
+[167/360] vmr-ema50-te4-sk1.0-tc30           d2=  -2127.0 trd=  13  eta=2.2min
+[168/360] vmr-ema50-te4-sk1.0-tc50           d2=  -2127.0 trd=  13  eta=2.2min
+[169/360] vmr-ema50-te4-sk1.5-tc20           d2=  -2036.5 trd=  13  eta=2.1min
+[170/360] vmr-ema50-te4-sk1.5-tc30           d2=  -2036.5 trd=  13  eta=2.1min
+[171/360] vmr-ema50-te4-sk1.5-tc50           d2=  -2036.5 trd=  13  eta=2.1min
+[172/360] vmr-ema50-te4-sk2.0-tc20           d2=  -2105.5 trd=  11  eta=2.1min
+[173/360] vmr-ema50-te4-sk2.0-tc30           d2=  -2105.5 trd=  11  eta=2.1min
+[174/360] vmr-ema50-te4-sk2.0-tc50           d2=  -2105.5 trd=  11  eta=2.1min
+[175/360] vmr-ema50-te4-sk2.5-tc20           d2=  -2116.5 trd=  11  eta=2.1min
+[176/360] vmr-ema50-te4-sk2.5-tc30           d2=  -2116.5 trd=  11  eta=2.1min
+[177/360] vmr-ema50-te4-sk2.5-tc50           d2=  -2116.5 trd=  11  eta=2.1min
+[178/360] vmr-ema50-te4-sk3.0-tc20           d2=  -2003.0 trd=  11  eta=2.0min
+[179/360] vmr-ema50-te4-sk3.0-tc30           d2=  -2003.0 trd=  11  eta=2.0min
+[180/360] vmr-ema50-te4-sk3.0-tc50           d2=  -2003.0 trd=  11  eta=2.0min
+[181/360] vmr-ema80-te0-sk0.5-tc20           d2=  -1920.0 trd=  14  eta=2.0min
+[182/360] vmr-ema80-te0-sk0.5-tc30           d2=   2837.5 trd=   4  eta=2.0min
+[183/360] vmr-ema80-te0-sk0.5-tc50           d2=  -2623.5 trd=  42  eta=2.0min
+[184/360] vmr-ema80-te0-sk1.0-tc20           d2=  -1920.0 trd=  14  eta=2.0min
+[185/360] vmr-ema80-te0-sk1.0-tc30           d2=   2837.5 trd=   4  eta=2.0min
+[186/360] vmr-ema80-te0-sk1.0-tc50           d2=  -2620.5 trd=  42  eta=1.9min
+[187/360] vmr-ema80-te0-sk1.5-tc20           d2=  -1920.0 trd=  14  eta=1.9min
+[188/360] vmr-ema80-te0-sk1.5-tc30           d2=   2837.5 trd=   4  eta=1.9min
+[189/360] vmr-ema80-te0-sk1.5-tc50           d2=   1329.5 trd= 107  eta=1.9min
+[190/360] vmr-ema80-te0-sk2.0-tc20           d2=   2362.5 trd=  26  eta=1.9min
+[191/360] vmr-ema80-te0-sk2.0-tc30           d2=  -1892.5 trd=  13  eta=1.9min
+[192/360] vmr-ema80-te0-sk2.0-tc50           d2=   1274.5 trd= 109  eta=1.9min
+[193/360] vmr-ema80-te0-sk2.5-tc20           d2=  -2721.5 trd=  87  eta=1.9min
+[194/360] vmr-ema80-te0-sk2.5-tc30           d2=  -1892.5 trd=  13  eta=1.9min
+[195/360] vmr-ema80-te0-sk2.5-tc50           d2=  -4756.5 trd= 149  eta=1.8min
+[196/360] vmr-ema80-te0-sk3.0-tc20           d2=  -2666.5 trd=  87  eta=1.8min
+[197/360] vmr-ema80-te0-sk3.0-tc30           d2=  -1892.5 trd=  13  eta=1.8min
+[198/360] vmr-ema80-te0-sk3.0-tc50           d2=  -4908.5 trd= 150  eta=1.8min
+[199/360] vmr-ema80-te1-sk0.5-tc20           d2=   2542.0 trd=   5  eta=1.8min
+[200/360] vmr-ema80-te1-sk0.5-tc30           d2=  -2105.0 trd=  11  eta=1.8min
+[201/360] vmr-ema80-te1-sk0.5-tc50           d2=  -1858.0 trd=  10  eta=1.8min
+[202/360] vmr-ema80-te1-sk1.0-tc20           d2=   2542.0 trd=   5  eta=1.8min
+[203/360] vmr-ema80-te1-sk1.0-tc30           d2=  -2105.0 trd=  11  eta=1.8min
+[204/360] vmr-ema80-te1-sk1.0-tc50           d2=  -1855.0 trd=  10  eta=1.7min
+[205/360] vmr-ema80-te1-sk1.5-tc20           d2=  -1641.5 trd=  41  eta=1.7min
+[206/360] vmr-ema80-te1-sk1.5-tc30           d2=  -2105.0 trd=  11  eta=1.7min
+[207/360] vmr-ema80-te1-sk1.5-tc50           d2=  -1847.0 trd=  10  eta=1.7min
+[208/360] vmr-ema80-te1-sk2.0-tc20           d2=   2610.0 trd=  26  eta=1.7min
+[209/360] vmr-ema80-te1-sk2.0-tc30           d2=  -1849.5 trd=  12  eta=1.7min
+[210/360] vmr-ema80-te1-sk2.0-tc50           d2=  -1847.0 trd=  10  eta=1.7min
+[211/360] vmr-ema80-te1-sk2.5-tc20           d2=  -1941.5 trd=  15  eta=1.7min
+[212/360] vmr-ema80-te1-sk2.5-tc30           d2=  -1854.5 trd=  50  eta=1.7min
+[213/360] vmr-ema80-te1-sk2.5-tc50           d2=  -2000.0 trd=   9  eta=1.6min
+[214/360] vmr-ema80-te1-sk3.0-tc20           d2=  -1941.5 trd=  15  eta=1.6min
+[215/360] vmr-ema80-te1-sk3.0-tc30           d2=   3041.0 trd=  40  eta=1.6min
+[216/360] vmr-ema80-te1-sk3.0-tc50           d2=  -2000.0 trd=   9  eta=1.6min
+[217/360] vmr-ema80-te2-sk0.5-tc20           d2=  -1977.0 trd=  14  eta=1.6min
+[218/360] vmr-ema80-te2-sk0.5-tc30           d2=   2745.0 trd=   4  eta=1.6min
+[219/360] vmr-ema80-te2-sk0.5-tc50           d2=   2623.0 trd=   3  eta=1.6min
+[220/360] vmr-ema80-te2-sk1.0-tc20           d2=  -1969.0 trd=  14  eta=1.6min
+[221/360] vmr-ema80-te2-sk1.0-tc30           d2=   2745.0 trd=   4  eta=1.5min
+[222/360] vmr-ema80-te2-sk1.0-tc50           d2=   2623.0 trd=   3  eta=1.5min
+[223/360] vmr-ema80-te2-sk1.5-tc20           d2=   3188.5 trd=  25  eta=1.5min
+[224/360] vmr-ema80-te2-sk1.5-tc30           d2=   2655.0 trd=   5  eta=1.5min
+[225/360] vmr-ema80-te2-sk1.5-tc50           d2=   2533.0 trd=   4  eta=1.5min
+[226/360] vmr-ema80-te2-sk2.0-tc20           d2=   3251.0 trd=  48  eta=1.5min
+[227/360] vmr-ema80-te2-sk2.0-tc30           d2=   2854.0 trd=  21  eta=1.5min
+[228/360] vmr-ema80-te2-sk2.0-tc50           d2=   2533.0 trd=   4  eta=1.5min
+[229/360] vmr-ema80-te2-sk2.5-tc20           d2=   3032.5 trd=  43  eta=1.5min
+[230/360] vmr-ema80-te2-sk2.5-tc30           d2=   2611.0 trd=  21  eta=1.4min
+[231/360] vmr-ema80-te2-sk2.5-tc50           d2=  -2107.0 trd=  10  eta=1.4min
+[232/360] vmr-ema80-te2-sk3.0-tc20           d2=  -2036.5 trd=  13  eta=1.4min
+[233/360] vmr-ema80-te2-sk3.0-tc30           d2=   3039.5 trd=  40  eta=1.4min
+[234/360] vmr-ema80-te2-sk3.0-tc50           d2=  -2107.0 trd=  10  eta=1.4min
+[235/360] vmr-ema80-te3-sk0.5-tc20           d2=   2708.0 trd=   5  eta=1.4min
+[236/360] vmr-ema80-te3-sk0.5-tc30           d2=   2708.0 trd=   5  eta=1.4min
+[237/360] vmr-ema80-te3-sk0.5-tc50           d2=   2708.0 trd=   5  eta=1.4min
+[238/360] vmr-ema80-te3-sk1.0-tc20           d2=  -1914.5 trd=  14  eta=1.4min
+[239/360] vmr-ema80-te3-sk1.0-tc30           d2=  -2169.5 trd=  14  eta=1.3min
+[240/360] vmr-ema80-te3-sk1.0-tc50           d2=  -1957.5 trd=  12  eta=1.3min
+[241/360] vmr-ema80-te3-sk1.5-tc20           d2=  -1906.5 trd=  14  eta=1.3min
+[242/360] vmr-ema80-te3-sk1.5-tc30           d2=  -2161.5 trd=  14  eta=1.3min
+[243/360] vmr-ema80-te3-sk1.5-tc50           d2=  -2141.5 trd=  13  eta=1.3min
+[244/360] vmr-ema80-te3-sk2.0-tc20           d2=  -1986.5 trd=  12  eta=1.3min
+[245/360] vmr-ema80-te3-sk2.0-tc30           d2=  -2241.5 trd=  12  eta=1.3min
+[246/360] vmr-ema80-te3-sk2.0-tc50           d2=  -2221.5 trd=  11  eta=1.3min
+[247/360] vmr-ema80-te3-sk2.5-tc20           d2=  -1986.5 trd=  12  eta=1.3min
+[248/360] vmr-ema80-te3-sk2.5-tc30           d2=  -2221.5 trd=  12  eta=1.2min
+[249/360] vmr-ema80-te3-sk2.5-tc50           d2=  -2221.5 trd=  11  eta=1.2min
+[250/360] vmr-ema80-te3-sk3.0-tc20           d2=  -1884.0 trd=  12  eta=1.2min
+[251/360] vmr-ema80-te3-sk3.0-tc30           d2=  -2139.0 trd=  12  eta=1.2min
+[252/360] vmr-ema80-te3-sk3.0-tc50           d2=  -1935.0 trd=  10  eta=1.2min
+[253/360] vmr-ema80-te4-sk0.5-tc20           d2=   2708.0 trd=   5  eta=1.2min
+[254/360] vmr-ema80-te4-sk0.5-tc30           d2=   2708.0 trd=   5  eta=1.2min
+[255/360] vmr-ema80-te4-sk0.5-tc50           d2=   2708.0 trd=   5  eta=1.2min
+[256/360] vmr-ema80-te4-sk1.0-tc20           d2=  -2010.0 trd=  16  eta=1.2min
+[257/360] vmr-ema80-te4-sk1.0-tc30           d2=  -2010.0 trd=  16  eta=1.1min
+[258/360] vmr-ema80-te4-sk1.0-tc50           d2=  -2010.0 trd=  16  eta=1.1min
+[259/360] vmr-ema80-te4-sk1.5-tc20           d2=  -2010.0 trd=  16  eta=1.1min
+[260/360] vmr-ema80-te4-sk1.5-tc30           d2=  -2010.0 trd=  16  eta=1.1min
+[261/360] vmr-ema80-te4-sk1.5-tc50           d2=  -2010.0 trd=  16  eta=1.1min
+[262/360] vmr-ema80-te4-sk2.0-tc20           d2=  -2119.0 trd=  13  eta=1.1min
+[263/360] vmr-ema80-te4-sk2.0-tc30           d2=  -2119.0 trd=  13  eta=1.1min
+[264/360] vmr-ema80-te4-sk2.0-tc50           d2=  -2119.0 trd=  13  eta=1.1min
+[265/360] vmr-ema80-te4-sk2.5-tc20           d2=  -2119.0 trd=  13  eta=1.1min
+[266/360] vmr-ema80-te4-sk2.5-tc30           d2=  -2119.0 trd=  13  eta=1.0min
+[267/360] vmr-ema80-te4-sk2.5-tc50           d2=  -2119.0 trd=  13  eta=1.0min
+[268/360] vmr-ema80-te4-sk3.0-tc20           d2=  -2016.5 trd=  13  eta=1.0min
+[269/360] vmr-ema80-te4-sk3.0-tc30           d2=  -2016.5 trd=  13  eta=1.0min
+[270/360] vmr-ema80-te4-sk3.0-tc50           d2=  -2016.5 trd=  13  eta=1.0min
+[271/360] vmr-ema120-te0-sk0.5-tc20          d2=  -2077.0 trd=  14  eta=1.0min
+[272/360] vmr-ema120-te0-sk0.5-tc30          d2=   2837.5 trd=   4  eta=1.0min
+[273/360] vmr-ema120-te0-sk0.5-tc50          d2=   2591.5 trd=  35  eta=1.0min
+[274/360] vmr-ema120-te0-sk1.0-tc20          d2=  -2069.0 trd=  14  eta=1.0min
+[275/360] vmr-ema120-te0-sk1.0-tc30          d2=   2837.5 trd=   4  eta=0.9min
+[276/360] vmr-ema120-te0-sk1.0-tc50          d2=   2594.5 trd=  35  eta=0.9min
+[277/360] vmr-ema120-te0-sk1.5-tc20          d2=  -1920.0 trd=  14  eta=0.9min
+[278/360] vmr-ema120-te0-sk1.5-tc30          d2=   2837.5 trd=   4  eta=0.9min
+[279/360] vmr-ema120-te0-sk1.5-tc50          d2=   2602.5 trd=  35  eta=0.9min
+[280/360] vmr-ema120-te0-sk2.0-tc20          d2=   2722.0 trd=  25  eta=0.9min
+[281/360] vmr-ema120-te0-sk2.0-tc30          d2=  -1895.5 trd=  13  eta=0.9min
+[282/360] vmr-ema120-te0-sk2.0-tc50          d2=   2608.5 trd=  35  eta=0.9min
+[283/360] vmr-ema120-te0-sk2.5-tc20          d2=   2725.0 trd=  25  eta=0.9min
+[284/360] vmr-ema120-te0-sk2.5-tc30          d2=  -1892.5 trd=  13  eta=0.8min
+[285/360] vmr-ema120-te0-sk2.5-tc50          d2=   2604.5 trd=  35  eta=0.8min
+[286/360] vmr-ema120-te0-sk3.0-tc20          d2=   2642.5 trd=  24  eta=0.8min
+[287/360] vmr-ema120-te0-sk3.0-tc30          d2=  -1892.5 trd=  13  eta=0.8min
+[288/360] vmr-ema120-te0-sk3.0-tc50          d2=  -2090.0 trd=  10  eta=0.8min
+[289/360] vmr-ema120-te1-sk0.5-tc20          d2=   2542.0 trd=   5  eta=0.8min
+[290/360] vmr-ema120-te1-sk0.5-tc30          d2=  -2105.0 trd=  11  eta=0.8min
+[291/360] vmr-ema120-te1-sk0.5-tc50          d2=  -1876.0 trd=   9  eta=0.8min
+[292/360] vmr-ema120-te1-sk1.0-tc20          d2=   2542.0 trd=   5  eta=0.8min
+[293/360] vmr-ema120-te1-sk1.0-tc30          d2=  -2105.0 trd=  11  eta=0.7min
+[294/360] vmr-ema120-te1-sk1.0-tc50          d2=  -1868.0 trd=   9  eta=0.7min
+[295/360] vmr-ema120-te1-sk1.5-tc20          d2=   2542.0 trd=   5  eta=0.7min
+[296/360] vmr-ema120-te1-sk1.5-tc30          d2=  -1852.5 trd=  12  eta=0.7min
+[297/360] vmr-ema120-te1-sk1.5-tc50          d2=  -1868.0 trd=   9  eta=0.7min
+[298/360] vmr-ema120-te1-sk2.0-tc20          d2=   2782.0 trd=  26  eta=0.7min
+[299/360] vmr-ema120-te1-sk2.0-tc30          d2=  -1852.5 trd=  12  eta=0.7min
+[300/360] vmr-ema120-te1-sk2.0-tc50          d2=  -1868.0 trd=   9  eta=0.7min
+[301/360] vmr-ema120-te1-sk2.5-tc20          d2=   3223.5 trd=  26  eta=0.7min
+[302/360] vmr-ema120-te1-sk2.5-tc30          d2=   3238.0 trd=  40  eta=0.6min
+[303/360] vmr-ema120-te1-sk2.5-tc50          d2=  -1868.0 trd=   9  eta=0.6min
+[304/360] vmr-ema120-te1-sk3.0-tc20          d2=  -1941.5 trd=  15  eta=0.6min
+[305/360] vmr-ema120-te1-sk3.0-tc30          d2=   2679.0 trd=  18  eta=0.6min
+[306/360] vmr-ema120-te1-sk3.0-tc50          d2=  -1868.0 trd=   9  eta=0.6min
+[307/360] vmr-ema120-te2-sk0.5-tc20          d2=   2830.0 trd=   6  eta=0.6min
+[308/360] vmr-ema120-te2-sk0.5-tc30          d2=   2867.0 trd=   4  eta=0.6min
+[309/360] vmr-ema120-te2-sk0.5-tc50          d2=   2891.0 trd=   4  eta=0.6min
+[310/360] vmr-ema120-te2-sk1.0-tc20          d2=   2830.0 trd=   6  eta=0.6min
+[311/360] vmr-ema120-te2-sk1.0-tc30          d2=   2867.0 trd=   4  eta=0.5min
+[312/360] vmr-ema120-te2-sk1.0-tc50          d2=   2891.0 trd=   4  eta=0.5min
+[313/360] vmr-ema120-te2-sk1.5-tc20          d2=   2797.5 trd=  25  eta=0.5min
+[314/360] vmr-ema120-te2-sk1.5-tc30          d2=   3172.5 trd=  20  eta=0.5min
+[315/360] vmr-ema120-te2-sk1.5-tc50          d2=   2533.0 trd=   4  eta=0.5min
+[316/360] vmr-ema120-te2-sk2.0-tc20          d2=   2883.5 trd=  27  eta=0.5min
+[317/360] vmr-ema120-te2-sk2.0-tc30          d2=   3172.5 trd=  20  eta=0.5min
+[318/360] vmr-ema120-te2-sk2.0-tc50          d2=   2533.0 trd=   4  eta=0.5min
+[319/360] vmr-ema120-te2-sk2.5-tc20          d2=   2854.5 trd=  25  eta=0.5min
+[320/360] vmr-ema120-te2-sk2.5-tc30          d2=   3170.0 trd=  20  eta=0.4min
+[321/360] vmr-ema120-te2-sk2.5-tc50          d2=   2533.0 trd=   4  eta=0.4min
+[322/360] vmr-ema120-te2-sk3.0-tc20          d2=   2865.5 trd=  24  eta=0.4min
+[323/360] vmr-ema120-te2-sk3.0-tc30          d2=  -1573.5 trd=  46  eta=0.4min
+[324/360] vmr-ema120-te2-sk3.0-tc50          d2=   2721.0 trd=  17  eta=0.4min
+[325/360] vmr-ema120-te3-sk0.5-tc20          d2=   2708.0 trd=   5  eta=0.4min
+[326/360] vmr-ema120-te3-sk0.5-tc30          d2=   2708.0 trd=   5  eta=0.4min
+[327/360] vmr-ema120-te3-sk0.5-tc50          d2=   2708.0 trd=   5  eta=0.4min
+[328/360] vmr-ema120-te3-sk1.0-tc20          d2=   2708.0 trd=   5  eta=0.4min
+[329/360] vmr-ema120-te3-sk1.0-tc30          d2=   2708.0 trd=   5  eta=0.3min
+[330/360] vmr-ema120-te3-sk1.0-tc50          d2=   2708.0 trd=   5  eta=0.3min
+[331/360] vmr-ema120-te3-sk1.5-tc20          d2=  -1906.5 trd=  14  eta=0.3min
+[332/360] vmr-ema120-te3-sk1.5-tc30          d2=  -2161.5 trd=  14  eta=0.3min
+[333/360] vmr-ema120-te3-sk1.5-tc50          d2=  -2141.5 trd=  13  eta=0.3min
+[334/360] vmr-ema120-te3-sk2.0-tc20          d2=  -1906.5 trd=  14  eta=0.3min
+[335/360] vmr-ema120-te3-sk2.0-tc30          d2=  -2141.5 trd=  14  eta=0.3min
+[336/360] vmr-ema120-te3-sk2.0-tc50          d2=  -2121.5 trd=  13  eta=0.3min
+[337/360] vmr-ema120-te3-sk2.5-tc20          d2=  -1886.5 trd=  14  eta=0.3min
+[338/360] vmr-ema120-te3-sk2.5-tc30          d2=  -2141.5 trd=  14  eta=0.2min
+[339/360] vmr-ema120-te3-sk2.5-tc50          d2=  -2121.5 trd=  13  eta=0.2min
+[340/360] vmr-ema120-te3-sk3.0-tc20          d2=  -1966.5 trd=  12  eta=0.2min
+[341/360] vmr-ema120-te3-sk3.0-tc30          d2=  -2201.5 trd=  12  eta=0.2min
+[342/360] vmr-ema120-te3-sk3.0-tc50          d2=  -2221.5 trd=  11  eta=0.2min
+[343/360] vmr-ema120-te4-sk0.5-tc20          d2=   2708.0 trd=   5  eta=0.2min
+[344/360] vmr-ema120-te4-sk0.5-tc30          d2=   2708.0 trd=   5  eta=0.2min
+[345/360] vmr-ema120-te4-sk0.5-tc50          d2=   2708.0 trd=   5  eta=0.2min
+[346/360] vmr-ema120-te4-sk1.0-tc20          d2=   2708.0 trd=   5  eta=0.2min
+[347/360] vmr-ema120-te4-sk1.0-tc30          d2=   2708.0 trd=   5  eta=0.1min
+[348/360] vmr-ema120-te4-sk1.0-tc50          d2=   2708.0 trd=   5  eta=0.1min
+[349/360] vmr-ema120-te4-sk1.5-tc20          d2=  -2010.0 trd=  16  eta=0.1min
+[350/360] vmr-ema120-te4-sk1.5-tc30          d2=  -2010.0 trd=  16  eta=0.1min
+[351/360] vmr-ema120-te4-sk1.5-tc50          d2=  -2010.0 trd=  16  eta=0.1min
+[352/360] vmr-ema120-te4-sk2.0-tc20          d2=  -2010.0 trd=  16  eta=0.1min
+[353/360] vmr-ema120-te4-sk2.0-tc30          d2=  -2010.0 trd=  16  eta=0.1min
+[354/360] vmr-ema120-te4-sk2.0-tc50          d2=  -2010.0 trd=  16  eta=0.1min
+[355/360] vmr-ema120-te4-sk2.5-tc20          d2=  -2010.0 trd=  16  eta=0.1min
+[356/360] vmr-ema120-te4-sk2.5-tc30          d2=  -2010.0 trd=  16  eta=0.0min
+[357/360] vmr-ema120-te4-sk2.5-tc50          d2=  -2010.0 trd=  16  eta=0.0min
+[358/360] vmr-ema120-te4-sk3.0-tc20          d2=  -2119.0 trd=  13  eta=0.0min
+[359/360] vmr-ema120-te4-sk3.0-tc30          d2=  -2119.0 trd=  13  eta=0.0min
+[360/360] vmr-ema120-te4-sk3.0-tc50          d2=  -2119.0 trd=  13  eta=0.0min
+
+Results written to /Users/samuelshi/IMC-Prosperity-2026-personal/R3/analysis/sweep_vev_meanrev_pilot.json
+
+Top 10:
+  vmr-ema50-te1-sk1.0-tc30           d2=   4400.0 trd=  77
+  vmr-ema30-te2-sk1.0-tc50           d2=   4119.0 trd=  52
+  vmr-ema30-te2-sk2.0-tc30           d2=   3858.0 trd=  52
+  vmr-ema30-te1-sk1.0-tc30           d2=   3758.5 trd=  58
+  vmr-ema30-te1-sk0.5-tc30           d2=   3754.5 trd=  58
+  vmr-ema30-te2-sk2.5-tc50           d2=   3753.0 trd=  56
+  vmr-ema30-te2-sk1.5-tc30           d2=   3697.0 trd=  36
+  vmr-ema80-te2-sk2.0-tc20           d2=   3251.0 trd=  48
+  vmr-ema120-te1-sk2.5-tc30          d2=   3238.0 trd=  40
+  vmr-ema120-te1-sk2.5-tc20          d2=   3223.5 trd=  26

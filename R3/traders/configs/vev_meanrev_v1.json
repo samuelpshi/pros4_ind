@@ -1,0 +1,12 @@
+{
+  "fair_value_ema_window": 120,
+  "quote_offset": 2,
+  "skew_strength": 2.0,
+  "take_edge": 2,
+  "passive_quote_size": 20,
+  "aggressive_take_size_cap": 30,
+  "position_limit": 200,
+  "kill_threshold": 150,
+  "kill_dwell_ticks": 500,
+  "kill_release": 100
+}

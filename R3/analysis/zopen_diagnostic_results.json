@@ -1,0 +1,1892 @@
+[
+  {
+    "z_open": 1.5,
+    "config": "vev_v1.5-moduleA-only-zopen-1.5.json",
+    "per_day": {
+      "0": {
+        "total_pnl": -49.0,
+        "own_trades_total": 21,
+        "run_dir": "runs/backtest-1777185791439-round3-day-0",
+        "per_strike_fills": {
+          "5000": 0,
+          "5100": 28,
+          "5200": 20,
+          "5300": 2,
+          "5400": 26,
+          "5500": 10
+        },
+        "per_strike_pnl": {
+          "5000": 0.0,
+          "5100": 118.0,
+          "5200": -111.0,
+          "5300": 2.0,
+          "5400": -38.0,
+          "5500": -20.0
+        },
+        "per_strike_diagnostics": {
+          "5000": {
+            "n_round_trips": 0,
+            "n_fills": 0,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": null,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 0,
+            "n_untagged": 0
+          },
+          "5100": {
+            "n_round_trips": 1,
+            "n_fills": 7,
+            "hit_rate": 1.0,
+            "avg_rt_pnl_per_share": 12.0,
+            "avg_residual_capture": 0.1339313538019269,
+            "avg_spread_paid": 1.0,
+            "capture_to_cost": 0.1339313538019269,
+            "passive_fill_rate": 0.0,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 7,
+            "n_untagged": 0
+          },
+          "5200": {
+            "n_round_trips": 0,
+            "n_fills": 5,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": 0.0,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 5,
+            "n_untagged": 0
+          },
+          "5300": {
+            "n_round_trips": 1,
+            "n_fills": 2,
+            "hit_rate": 1.0,
+            "avg_rt_pnl_per_share": 2.0,
+            "avg_residual_capture": -1.0693921192803373,
+            "avg_spread_paid": -0.25,
+            "capture_to_cost": 4.277568477121349,
+            "passive_fill_rate": 0.5,
+            "passive_fill_capture": 2,
+            "n_passive": 1,
+            "n_aggressive": 1,
+            "n_untagged": 0
+          },
+          "5400": {
+            "n_round_trips": 3,
+            "n_fills": 8,
+            "hit_rate": 0.3333333333333333,
+            "avg_rt_pnl_per_share": -1.2916666666666667,
+            "avg_residual_capture": -0.41809441205494596,
+            "avg_spread_paid": 0.5,
+            "capture_to_cost": -0.8361888241098919,
+            "passive_fill_rate": 0.0,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 8,
+            "n_untagged": 0
+          },
+          "5500": {
+            "n_round_trips": 1,
+            "n_fills": 2,
+            "hit_rate": 0.0,
+            "avg_rt_pnl_per_share": -4.0,
+            "avg_residual_capture": 0.0991185997712023,
+            "avg_spread_paid": 0.5,
+            "capture_to_cost": 0.1982371995424046,
+            "passive_fill_rate": 0.0,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 2,
+            "n_untagged": 0
+          }
+        }
+      },
+      "1": {
+        "total_pnl": -86.5,
+        "own_trades_total": 30,
+        "run_dir": "runs/backtest-1777185791439-round3-day-1",
+        "per_strike_fills": {
+          "5000": 5,
+          "5100": 0,
+          "5200": 0,
+          "5300": 10,
+          "5400": 12,
+          "5500": 104
+        },
+        "per_strike_pnl": {
+          "5000": -77.5,
+          "5100": 0.0,
+          "5200": 0.0,
+          "5300": -16.0,
+          "5400": -1.0,
+          "5500": 8.0
+        },
+        "per_strike_diagnostics": {
+          "5000": {
+            "n_round_trips": 0,
+            "n_fills": 1,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": 0.0,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 1,
+            "n_untagged": 0
+          },
+          "5100": {
+            "n_round_trips": 0,
+            "n_fills": 0,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": null,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 0,
+            "n_untagged": 0
+          },
+          "5200": {
+            "n_round_trips": 0,
+            "n_fills": 0,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": null,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 0,
+            "n_untagged": 0
+          },
+          "5300": {
+            "n_round_trips": 2,
+            "n_fills": 4,
+            "hit_rate": 0.0,
+            "avg_rt_pnl_per_share": -3.5,
+            "avg_residual_capture": -0.2999325381970266,
+            "avg_spread_paid": 0.125,
+            "capture_to_cost": -2.3994603055762127,
+            "passive_fill_rate": 0.25,
+            "passive_fill_capture": 2,
+            "n_passive": 1,
+            "n_aggressive": 3,
+            "n_untagged": 0
+          },
+          "5400": {
+            "n_round_trips": 1,
+            "n_fills": 4,
+            "hit_rate": 0.0,
+            "avg_rt_pnl_per_share": -6.0,
+            "avg_residual_capture": 0.6329614753416308,
+            "avg_spread_paid": 0.0,
+            "capture_to_cost": null,
+            "passive_fill_rate": 0.25,
+            "passive_fill_capture": 1,
+            "n_passive": 1,
+            "n_aggressive": 3,
+            "n_untagged": 0
+          },
+          "5500": {
+            "n_round_trips": 4,
+            "n_fills": 23,
+            "hit_rate": 0.25,
+            "avg_rt_pnl_per_share": -0.9666666666666666,
+            "avg_residual_capture": 0.18872538199094951,
+            "avg_spread_paid": 0.5,
+            "capture_to_cost": 0.37745076398189903,
+            "passive_fill_rate": 0.0,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 23,
+            "n_untagged": 0
+          }
+        }
+      },
+      "2": {
+        "total_pnl": -984.0,
+        "own_trades_total": 55,
+        "run_dir": "runs/backtest-1777185791439-round3-day-2",
+        "per_strike_fills": {
+          "5000": 76,
+          "5100": 62,
+          "5200": 5,
+          "5300": 48,
+          "5400": 14,
+          "5500": 34
+        },
+        "per_strike_pnl": {
+          "5000": -365.0,
+          "5100": -401.0,
+          "5200": -175.0,
+          "5300": -11.0,
+          "5400": -6.0,
+          "5500": -26.0
+        },
+        "per_strike_diagnostics": {
+          "5000": {
+            "n_round_trips": 5,
+            "n_fills": 22,
+            "hit_rate": 0.0,
+            "avg_rt_pnl_per_share": -11.303076923076919,
+            "avg_residual_capture": 1.6182563618276185,
+            "avg_spread_paid": 2.098717948717949,
+            "capture_to_cost": 0.7710690056356397,
+            "passive_fill_rate": 0.0,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 22,
+            "n_untagged": 0
+          },
+          "5100": {
+            "n_round_trips": 1,
+            "n_fills": 13,
+            "hit_rate": 0.0,
+            "avg_rt_pnl_per_share": -11.0,
+            "avg_residual_capture": 0.4726438097159189,
+            "avg_spread_paid": 0.75,
+            "capture_to_cost": 0.6301917462878919,
+            "passive_fill_rate": 0.0,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 13,
+            "n_untagged": 0
+          },
+          "5200": {
+            "n_round_trips": 0,
+            "n_fills": 1,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": 0.0,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 1,
+            "n_untagged": 0
+          },
+          "5300": {
+            "n_round_trips": 2,
+            "n_fills": 11,
+            "hit_rate": 0.5,
+            "avg_rt_pnl_per_share": -2.1315789473684212,
+            "avg_residual_capture": 0.8625058544986981,
+            "avg_spread_paid": 0.625,
+            "capture_to_cost": 1.380009367197917,
+            "passive_fill_rate": 0.09090909090909091,
+            "passive_fill_capture": 2,
+            "n_passive": 1,
+            "n_aggressive": 10,
+            "n_untagged": 0
+          },
+          "5400": {
+            "n_round_trips": 2,
+            "n_fills": 4,
+            "hit_rate": 0.5,
+            "avg_rt_pnl_per_share": 0.0,
+            "avg_residual_capture": 0.19046499037688136,
+            "avg_spread_paid": 0.25,
+            "capture_to_cost": 0.7618599615075254,
+            "passive_fill_rate": 0.25,
+            "passive_fill_capture": 1,
+            "n_passive": 1,
+            "n_aggressive": 3,
+            "n_untagged": 0
+          },
+          "5500": {
+            "n_round_trips": 1,
+            "n_fills": 8,
+            "hit_rate": 0.0,
+            "avg_rt_pnl_per_share": -0.08333333333333304,
+            "avg_residual_capture": 0.9318177052219219,
+            "avg_spread_paid": 0.5,
+            "capture_to_cost": 1.8636354104438437,
+            "passive_fill_rate": 0.0,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 8,
+            "n_untagged": 0
+          }
+        }
+      }
+    },
+    "summary": {
+      "mean_pnl": -373.1666666666667,
+      "stdev_pnl": 529.3293713117886,
+      "trades_total": 106,
+      "trades_per_day": 35.333333333333336,
+      "per_day_pnl": {
+        "0": -49.0,
+        "1": -86.5,
+        "2": -984.0
+      },
+      "per_strike_fills_3d": {
+        "5000": 81,
+        "5100": 90,
+        "5200": 25,
+        "5300": 60,
+        "5400": 52,
+        "5500": 148
+      },
+      "per_strike_pnl_3d": {
+        "5000": -442.5,
+        "5100": -283.0,
+        "5200": -286.0,
+        "5300": -25.0,
+        "5400": -45.0,
+        "5500": -38.0
+      },
+      "per_strike_n_rt_3d": {
+        "5000": 5,
+        "5100": 2,
+        "5200": 0,
+        "5300": 5,
+        "5400": 6,
+        "5500": 6
+      },
+      "per_strike_avg_rt_pnl_per_share": {
+        "5000": -11.303076923076919,
+        "5100": 0.5,
+        "5200": null,
+        "5300": -1.2105263157894737,
+        "5400": -2.4305555555555554,
+        "5500": -1.6833333333333331
+      },
+      "per_strike_avg_capture_to_cost": {
+        "5000": 0.7710690056356397,
+        "5100": 0.3820615500449094,
+        "5200": null,
+        "5300": 1.0860391795810178,
+        "5400": -0.03716443130118324,
+        "5500": 0.8131077913227158
+      }
+    }
+  },
+  {
+    "z_open": 2.0,
+    "config": "vev_v1.5-moduleA-only-zopen-2.0.json",
+    "per_day": {
+      "0": {
+        "total_pnl": -9.0,
+        "own_trades_total": 17,
+        "run_dir": "runs/backtest-1777185811594-round3-day-0",
+        "per_strike_fills": {
+          "5000": 0,
+          "5100": 28,
+          "5200": 20,
+          "5300": 0,
+          "5400": 10,
+          "5500": 12
+        },
+        "per_strike_pnl": {
+          "5000": 0.0,
+          "5100": -4.0,
+          "5200": -1.0,
+          "5300": 0.0,
+          "5400": 5.0,
+          "5500": -9.0
+        },
+        "per_strike_diagnostics": {
+          "5000": {
+            "n_round_trips": 0,
+            "n_fills": 0,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": null,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 0,
+            "n_untagged": 0
+          },
+          "5100": {
+            "n_round_trips": 0,
+            "n_fills": 6,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": 0.0,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 6,
+            "n_untagged": 0
+          },
+          "5200": {
+            "n_round_trips": 0,
+            "n_fills": 5,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": 0.0,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 5,
+            "n_untagged": 0
+          },
+          "5300": {
+            "n_round_trips": 0,
+            "n_fills": 0,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": null,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 0,
+            "n_untagged": 0
+          },
+          "5400": {
+            "n_round_trips": 1,
+            "n_fills": 2,
+            "hit_rate": 1.0,
+            "avg_rt_pnl_per_share": 1.0,
+            "avg_residual_capture": 0.22404432247481054,
+            "avg_spread_paid": 0.5,
+            "capture_to_cost": 0.4480886449496211,
+            "passive_fill_rate": 0.0,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 2,
+            "n_untagged": 0
+          },
+          "5500": {
+            "n_round_trips": 2,
+            "n_fills": 4,
+            "hit_rate": 0.5,
+            "avg_rt_pnl_per_share": -0.5,
+            "avg_residual_capture": 0.1637437239014048,
+            "avg_spread_paid": 0.375,
+            "capture_to_cost": 0.4366499304037461,
+            "passive_fill_rate": 0.25,
+            "passive_fill_capture": 1,
+            "n_passive": 1,
+            "n_aggressive": 3,
+            "n_untagged": 0
+          }
+        }
+      },
+      "1": {
+        "total_pnl": -79.5,
+        "own_trades_total": 10,
+        "run_dir": "runs/backtest-1777185811594-round3-day-1",
+        "per_strike_fills": {
+          "5000": 5,
+          "5100": 0,
+          "5200": 0,
+          "5300": 12,
+          "5400": 20,
+          "5500": 0
+        },
+        "per_strike_pnl": {
+          "5000": -77.5,
+          "5100": 0.0,
+          "5200": 0.0,
+          "5300": 11.0,
+          "5400": -13.0,
+          "5500": 0.0
+        },
+        "per_strike_diagnostics": {
+          "5000": {
+            "n_round_trips": 0,
+            "n_fills": 1,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": 0.0,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 1,
+            "n_untagged": 0
+          },
+          "5100": {
+            "n_round_trips": 0,
+            "n_fills": 0,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": null,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 0,
+            "n_untagged": 0
+          },
+          "5200": {
+            "n_round_trips": 0,
+            "n_fills": 0,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": null,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 0,
+            "n_untagged": 0
+          },
+          "5300": {
+            "n_round_trips": 1,
+            "n_fills": 4,
+            "hit_rate": 1.0,
+            "avg_rt_pnl_per_share": 1.8333333333333357,
+            "avg_residual_capture": -0.019932534725967344,
+            "avg_spread_paid": 0.125,
+            "capture_to_cost": -0.15946027780773875,
+            "passive_fill_rate": 0.25,
+            "passive_fill_capture": 2,
+            "n_passive": 1,
+            "n_aggressive": 3,
+            "n_untagged": 0
+          },
+          "5400": {
+            "n_round_trips": 2,
+            "n_fills": 6,
+            "hit_rate": 0.0,
+            "avg_rt_pnl_per_share": -4.5,
+            "avg_residual_capture": 1.0797615160564646,
+            "avg_spread_paid": 0.25,
+            "capture_to_cost": 4.319046064225859,
+            "passive_fill_rate": 0.16666666666666666,
+            "passive_fill_capture": 1,
+            "n_passive": 1,
+            "n_aggressive": 5,
+            "n_untagged": 0
+          },
+          "5500": {
+            "n_round_trips": 0,
+            "n_fills": 0,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": null,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 0,
+            "n_untagged": 0
+          }
+        }
+      },
+      "2": {
+        "total_pnl": -217.0,
+        "own_trades_total": 84,
+        "run_dir": "runs/backtest-1777185811594-round3-day-2",
+        "per_strike_fills": {
+          "5000": 103,
+          "5100": 55,
+          "5200": 0,
+          "5300": 139,
+          "5400": 0,
+          "5500": 70
+        },
+        "per_strike_pnl": {
+          "5000": 859.5,
+          "5100": -1472.5,
+          "5200": 0.0,
+          "5300": 486.0,
+          "5400": 0.0,
+          "5500": -90.0
+        },
+        "per_strike_diagnostics": {
+          "5000": {
+            "n_round_trips": 1,
+            "n_fills": 25,
+            "hit_rate": 0.0,
+            "avg_rt_pnl_per_share": -25.0,
+            "avg_residual_capture": 0.41803080651243363,
+            "avg_spread_paid": 2.0,
+            "capture_to_cost": 0.20901540325621681,
+            "passive_fill_rate": 0.0,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 25,
+            "n_untagged": 0
+          },
+          "5100": {
+            "n_round_trips": 0,
+            "n_fills": 11,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": 0.0,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 11,
+            "n_untagged": 0
+          },
+          "5200": {
+            "n_round_trips": 0,
+            "n_fills": 0,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": null,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 0,
+            "n_untagged": 0
+          },
+          "5300": {
+            "n_round_trips": 0,
+            "n_fills": 34,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": 0.058823529411764705,
+            "passive_fill_capture": 2,
+            "n_passive": 2,
+            "n_aggressive": 32,
+            "n_untagged": 0
+          },
+          "5400": {
+            "n_round_trips": 0,
+            "n_fills": 0,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": null,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 0,
+            "n_untagged": 0
+          },
+          "5500": {
+            "n_round_trips": 0,
+            "n_fills": 14,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": 0.0,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 14,
+            "n_untagged": 0
+          }
+        }
+      }
+    },
+    "summary": {
+      "mean_pnl": -101.83333333333333,
+      "stdev_pnl": 105.78319022100503,
+      "trades_total": 111,
+      "trades_per_day": 37.0,
+      "per_day_pnl": {
+        "0": -9.0,
+        "1": -79.5,
+        "2": -217.0
+      },
+      "per_strike_fills_3d": {
+        "5000": 108,
+        "5100": 83,
+        "5200": 20,
+        "5300": 151,
+        "5400": 30,
+        "5500": 82
+      },
+      "per_strike_pnl_3d": {
+        "5000": 782.0,
+        "5100": -1476.5,
+        "5200": -1.0,
+        "5300": 497.0,
+        "5400": -8.0,
+        "5500": -99.0
+      },
+      "per_strike_n_rt_3d": {
+        "5000": 1,
+        "5100": 0,
+        "5200": 0,
+        "5300": 1,
+        "5400": 3,
+        "5500": 2
+      },
+      "per_strike_avg_rt_pnl_per_share": {
+        "5000": -25.0,
+        "5100": null,
+        "5200": null,
+        "5300": 1.8333333333333357,
+        "5400": -1.75,
+        "5500": -0.5
+      },
+      "per_strike_avg_capture_to_cost": {
+        "5000": 0.20901540325621681,
+        "5100": null,
+        "5200": null,
+        "5300": -0.15946027780773875,
+        "5400": 2.38356735458774,
+        "5500": 0.4366499304037461
+      }
+    }
+  },
+  {
+    "z_open": 2.5,
+    "config": "vev_v1.5-moduleA-only-zopen-2.5.json",
+    "per_day": {
+      "0": {
+        "total_pnl": 129.0,
+        "own_trades_total": 11,
+        "run_dir": "runs/backtest-1777185828190-round3-day-0",
+        "per_strike_fills": {
+          "5000": 0,
+          "5100": 30,
+          "5200": 20,
+          "5300": 0,
+          "5400": 0,
+          "5500": 0
+        },
+        "per_strike_pnl": {
+          "5000": 0.0,
+          "5100": 130.0,
+          "5200": -1.0,
+          "5300": 0.0,
+          "5400": 0.0,
+          "5500": 0.0
+        },
+        "per_strike_diagnostics": {
+          "5000": {
+            "n_round_trips": 0,
+            "n_fills": 0,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": null,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 0,
+            "n_untagged": 0
+          },
+          "5100": {
+            "n_round_trips": 0,
+            "n_fills": 6,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": 0.0,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 6,
+            "n_untagged": 0
+          },
+          "5200": {
+            "n_round_trips": 0,
+            "n_fills": 5,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": 0.0,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 5,
+            "n_untagged": 0
+          },
+          "5300": {
+            "n_round_trips": 0,
+            "n_fills": 0,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": null,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 0,
+            "n_untagged": 0
+          },
+          "5400": {
+            "n_round_trips": 0,
+            "n_fills": 0,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": null,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 0,
+            "n_untagged": 0
+          },
+          "5500": {
+            "n_round_trips": 0,
+            "n_fills": 0,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": null,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 0,
+            "n_untagged": 0
+          }
+        }
+      },
+      "1": {
+        "total_pnl": -13.0,
+        "own_trades_total": 8,
+        "run_dir": "runs/backtest-1777185828190-round3-day-1",
+        "per_strike_fills": {
+          "5000": 0,
+          "5100": 0,
+          "5200": 0,
+          "5300": 0,
+          "5400": 36,
+          "5500": 0
+        },
+        "per_strike_pnl": {
+          "5000": 0.0,
+          "5100": 0.0,
+          "5200": 0.0,
+          "5300": 0.0,
+          "5400": -13.0,
+          "5500": 0.0
+        },
+        "per_strike_diagnostics": {
+          "5000": {
+            "n_round_trips": 0,
+            "n_fills": 0,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": null,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 0,
+            "n_untagged": 0
+          },
+          "5100": {
+            "n_round_trips": 0,
+            "n_fills": 0,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": null,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 0,
+            "n_untagged": 0
+          },
+          "5200": {
+            "n_round_trips": 0,
+            "n_fills": 0,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": null,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 0,
+            "n_untagged": 0
+          },
+          "5300": {
+            "n_round_trips": 0,
+            "n_fills": 0,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": null,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 0,
+            "n_untagged": 0
+          },
+          "5400": {
+            "n_round_trips": 4,
+            "n_fills": 12,
+            "hit_rate": 0.25,
+            "avg_rt_pnl_per_share": -2.75,
+            "avg_residual_capture": 1.1558896909160978,
+            "avg_spread_paid": 0.375,
+            "capture_to_cost": 3.0823725091095944,
+            "passive_fill_rate": 0.08333333333333333,
+            "passive_fill_capture": 1,
+            "n_passive": 1,
+            "n_aggressive": 11,
+            "n_untagged": 0
+          },
+          "5500": {
+            "n_round_trips": 0,
+            "n_fills": 0,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": null,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 0,
+            "n_untagged": 0
+          }
+        }
+      },
+      "2": {
+        "total_pnl": -1364.0,
+        "own_trades_total": 36,
+        "run_dir": "runs/backtest-1777185828190-round3-day-2",
+        "per_strike_fills": {
+          "5000": 85,
+          "5100": 55,
+          "5200": 0,
+          "5300": 16,
+          "5400": 0,
+          "5500": 0
+        },
+        "per_strike_pnl": {
+          "5000": 220.5,
+          "5100": -1662.5,
+          "5200": 0.0,
+          "5300": 78.0,
+          "5400": 0.0,
+          "5500": 0.0
+        },
+        "per_strike_diagnostics": {
+          "5000": {
+            "n_round_trips": 0,
+            "n_fills": 20,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": 0.0,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 20,
+            "n_untagged": 0
+          },
+          "5100": {
+            "n_round_trips": 0,
+            "n_fills": 11,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": 0.0,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 11,
+            "n_untagged": 0
+          },
+          "5200": {
+            "n_round_trips": 0,
+            "n_fills": 0,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": null,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 0,
+            "n_untagged": 0
+          },
+          "5300": {
+            "n_round_trips": 2,
+            "n_fills": 6,
+            "hit_rate": 1.0,
+            "avg_rt_pnl_per_share": 5.0,
+            "avg_residual_capture": 0.9828850973580074,
+            "avg_spread_paid": 0.0,
+            "capture_to_cost": null,
+            "passive_fill_rate": 0.5,
+            "passive_fill_capture": 2,
+            "n_passive": 3,
+            "n_aggressive": 3,
+            "n_untagged": 0
+          },
+          "5400": {
+            "n_round_trips": 0,
+            "n_fills": 0,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": null,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 0,
+            "n_untagged": 0
+          },
+          "5500": {
+            "n_round_trips": 0,
+            "n_fills": 0,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": null,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 0,
+            "n_untagged": 0
+          }
+        }
+      }
+    },
+    "summary": {
+      "mean_pnl": -416.0,
+      "stdev_pnl": 824.0564301065796,
+      "trades_total": 55,
+      "trades_per_day": 18.333333333333332,
+      "per_day_pnl": {
+        "0": 129.0,
+        "1": -13.0,
+        "2": -1364.0
+      },
+      "per_strike_fills_3d": {
+        "5000": 85,
+        "5100": 85,
+        "5200": 20,
+        "5300": 16,
+        "5400": 36,
+        "5500": 0
+      },
+      "per_strike_pnl_3d": {
+        "5000": 220.5,
+        "5100": -1532.5,
+        "5200": -1.0,
+        "5300": 78.0,
+        "5400": -13.0,
+        "5500": 0.0
+      },
+      "per_strike_n_rt_3d": {
+        "5000": 0,
+        "5100": 0,
+        "5200": 0,
+        "5300": 2,
+        "5400": 4,
+        "5500": 0
+      },
+      "per_strike_avg_rt_pnl_per_share": {
+        "5000": null,
+        "5100": null,
+        "5200": null,
+        "5300": 5.0,
+        "5400": -2.75,
+        "5500": null
+      },
+      "per_strike_avg_capture_to_cost": {
+        "5000": null,
+        "5100": null,
+        "5200": null,
+        "5300": null,
+        "5400": 3.0823725091095944,
+        "5500": null
+      }
+    }
+  },
+  {
+    "z_open": 3.0,
+    "config": "vev_v1.5-moduleA-only-zopen-3.0.json",
+    "per_day": {
+      "0": {
+        "total_pnl": 130.0,
+        "own_trades_total": 6,
+        "run_dir": "runs/backtest-1777185844469-round3-day-0",
+        "per_strike_fills": {
+          "5000": 0,
+          "5100": 30,
+          "5200": 0,
+          "5300": 0,
+          "5400": 0,
+          "5500": 0
+        },
+        "per_strike_pnl": {
+          "5000": 0.0,
+          "5100": 130.0,
+          "5200": 0.0,
+          "5300": 0.0,
+          "5400": 0.0,
+          "5500": 0.0
+        },
+        "per_strike_diagnostics": {
+          "5000": {
+            "n_round_trips": 0,
+            "n_fills": 0,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": null,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 0,
+            "n_untagged": 0
+          },
+          "5100": {
+            "n_round_trips": 0,
+            "n_fills": 6,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": 0.0,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 6,
+            "n_untagged": 0
+          },
+          "5200": {
+            "n_round_trips": 0,
+            "n_fills": 0,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": null,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 0,
+            "n_untagged": 0
+          },
+          "5300": {
+            "n_round_trips": 0,
+            "n_fills": 0,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": null,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 0,
+            "n_untagged": 0
+          },
+          "5400": {
+            "n_round_trips": 0,
+            "n_fills": 0,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": null,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 0,
+            "n_untagged": 0
+          },
+          "5500": {
+            "n_round_trips": 0,
+            "n_fills": 0,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": null,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 0,
+            "n_untagged": 0
+          }
+        }
+      },
+      "1": {
+        "total_pnl": -13.0,
+        "own_trades_total": 8,
+        "run_dir": "runs/backtest-1777185844469-round3-day-1",
+        "per_strike_fills": {
+          "5000": 0,
+          "5100": 0,
+          "5200": 0,
+          "5300": 0,
+          "5400": 36,
+          "5500": 0
+        },
+        "per_strike_pnl": {
+          "5000": 0.0,
+          "5100": 0.0,
+          "5200": 0.0,
+          "5300": 0.0,
+          "5400": -13.0,
+          "5500": 0.0
+        },
+        "per_strike_diagnostics": {
+          "5000": {
+            "n_round_trips": 0,
+            "n_fills": 0,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": null,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 0,
+            "n_untagged": 0
+          },
+          "5100": {
+            "n_round_trips": 0,
+            "n_fills": 0,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": null,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 0,
+            "n_untagged": 0
+          },
+          "5200": {
+            "n_round_trips": 0,
+            "n_fills": 0,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": null,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 0,
+            "n_untagged": 0
+          },
+          "5300": {
+            "n_round_trips": 0,
+            "n_fills": 0,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": null,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 0,
+            "n_untagged": 0
+          },
+          "5400": {
+            "n_round_trips": 4,
+            "n_fills": 12,
+            "hit_rate": 0.25,
+            "avg_rt_pnl_per_share": -2.75,
+            "avg_residual_capture": 1.1558896909160978,
+            "avg_spread_paid": 0.375,
+            "capture_to_cost": 3.0823725091095944,
+            "passive_fill_rate": 0.08333333333333333,
+            "passive_fill_capture": 1,
+            "n_passive": 1,
+            "n_aggressive": 11,
+            "n_untagged": 0
+          },
+          "5500": {
+            "n_round_trips": 0,
+            "n_fills": 0,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": null,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 0,
+            "n_untagged": 0
+          }
+        }
+      },
+      "2": {
+        "total_pnl": -1364.0,
+        "own_trades_total": 36,
+        "run_dir": "runs/backtest-1777185844469-round3-day-2",
+        "per_strike_fills": {
+          "5000": 85,
+          "5100": 55,
+          "5200": 0,
+          "5300": 16,
+          "5400": 0,
+          "5500": 0
+        },
+        "per_strike_pnl": {
+          "5000": 220.5,
+          "5100": -1662.5,
+          "5200": 0.0,
+          "5300": 78.0,
+          "5400": 0.0,
+          "5500": 0.0
+        },
+        "per_strike_diagnostics": {
+          "5000": {
+            "n_round_trips": 0,
+            "n_fills": 20,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": 0.0,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 20,
+            "n_untagged": 0
+          },
+          "5100": {
+            "n_round_trips": 0,
+            "n_fills": 11,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": 0.0,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 11,
+            "n_untagged": 0
+          },
+          "5200": {
+            "n_round_trips": 0,
+            "n_fills": 0,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": null,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 0,
+            "n_untagged": 0
+          },
+          "5300": {
+            "n_round_trips": 2,
+            "n_fills": 6,
+            "hit_rate": 1.0,
+            "avg_rt_pnl_per_share": 5.0,
+            "avg_residual_capture": 0.9828850973580074,
+            "avg_spread_paid": 0.0,
+            "capture_to_cost": null,
+            "passive_fill_rate": 0.5,
+            "passive_fill_capture": 2,
+            "n_passive": 3,
+            "n_aggressive": 3,
+            "n_untagged": 0
+          },
+          "5400": {
+            "n_round_trips": 0,
+            "n_fills": 0,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": null,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 0,
+            "n_untagged": 0
+          },
+          "5500": {
+            "n_round_trips": 0,
+            "n_fills": 0,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": null,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 0,
+            "n_untagged": 0
+          }
+        }
+      }
+    },
+    "summary": {
+      "mean_pnl": -415.6666666666667,
+      "stdev_pnl": 824.3872471923212,
+      "trades_total": 50,
+      "trades_per_day": 16.666666666666668,
+      "per_day_pnl": {
+        "0": 130.0,
+        "1": -13.0,
+        "2": -1364.0
+      },
+      "per_strike_fills_3d": {
+        "5000": 85,
+        "5100": 85,
+        "5200": 0,
+        "5300": 16,
+        "5400": 36,
+        "5500": 0
+      },
+      "per_strike_pnl_3d": {
+        "5000": 220.5,
+        "5100": -1532.5,
+        "5200": 0.0,
+        "5300": 78.0,
+        "5400": -13.0,
+        "5500": 0.0
+      },
+      "per_strike_n_rt_3d": {
+        "5000": 0,
+        "5100": 0,
+        "5200": 0,
+        "5300": 2,
+        "5400": 4,
+        "5500": 0
+      },
+      "per_strike_avg_rt_pnl_per_share": {
+        "5000": null,
+        "5100": null,
+        "5200": null,
+        "5300": 5.0,
+        "5400": -2.75,
+        "5500": null
+      },
+      "per_strike_avg_capture_to_cost": {
+        "5000": null,
+        "5100": null,
+        "5200": null,
+        "5300": null,
+        "5400": 3.0823725091095944,
+        "5500": null
+      }
+    }
+  },
+  {
+    "z_open": 3.5,
+    "config": "vev_v1.5-moduleA-only-zopen-3.5.json",
+    "per_day": {
+      "0": {
+        "total_pnl": 0.0,
+        "own_trades_total": 0,
+        "run_dir": "runs/backtest-1777185860985-round3-day-0",
+        "per_strike_fills": {
+          "5000": 0,
+          "5100": 0,
+          "5200": 0,
+          "5300": 0,
+          "5400": 0,
+          "5500": 0
+        },
+        "per_strike_pnl": {
+          "5000": 0.0,
+          "5100": 0.0,
+          "5200": 0.0,
+          "5300": 0.0,
+          "5400": 0.0,
+          "5500": 0.0
+        },
+        "per_strike_diagnostics": {
+          "5000": {
+            "n_round_trips": 0,
+            "n_fills": 0,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": null,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 0,
+            "n_untagged": 0
+          },
+          "5100": {
+            "n_round_trips": 0,
+            "n_fills": 0,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": null,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 0,
+            "n_untagged": 0
+          },
+          "5200": {
+            "n_round_trips": 0,
+            "n_fills": 0,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": null,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 0,
+            "n_untagged": 0
+          },
+          "5300": {
+            "n_round_trips": 0,
+            "n_fills": 0,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": null,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 0,
+            "n_untagged": 0
+          },
+          "5400": {
+            "n_round_trips": 0,
+            "n_fills": 0,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": null,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 0,
+            "n_untagged": 0
+          },
+          "5500": {
+            "n_round_trips": 0,
+            "n_fills": 0,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": null,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 0,
+            "n_untagged": 0
+          }
+        }
+      },
+      "1": {
+        "total_pnl": 0.0,
+        "own_trades_total": 0,
+        "run_dir": "runs/backtest-1777185860985-round3-day-1",
+        "per_strike_fills": {
+          "5000": 0,
+          "5100": 0,
+          "5200": 0,
+          "5300": 0,
+          "5400": 0,
+          "5500": 0
+        },
+        "per_strike_pnl": {
+          "5000": 0.0,
+          "5100": 0.0,
+          "5200": 0.0,
+          "5300": 0.0,
+          "5400": 0.0,
+          "5500": 0.0
+        },
+        "per_strike_diagnostics": {
+          "5000": {
+            "n_round_trips": 0,
+            "n_fills": 0,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": null,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 0,
+            "n_untagged": 0
+          },
+          "5100": {
+            "n_round_trips": 0,
+            "n_fills": 0,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": null,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 0,
+            "n_untagged": 0
+          },
+          "5200": {
+            "n_round_trips": 0,
+            "n_fills": 0,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": null,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 0,
+            "n_untagged": 0
+          },
+          "5300": {
+            "n_round_trips": 0,
+            "n_fills": 0,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": null,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 0,
+            "n_untagged": 0
+          },
+          "5400": {
+            "n_round_trips": 0,
+            "n_fills": 0,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": null,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 0,
+            "n_untagged": 0
+          },
+          "5500": {
+            "n_round_trips": 0,
+            "n_fills": 0,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": null,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 0,
+            "n_untagged": 0
+          }
+        }
+      },
+      "2": {
+        "total_pnl": 62.0,
+        "own_trades_total": 2,
+        "run_dir": "runs/backtest-1777185860985-round3-day-2",
+        "per_strike_fills": {
+          "5000": 0,
+          "5100": 0,
+          "5200": 0,
+          "5300": 6,
+          "5400": 0,
+          "5500": 0
+        },
+        "per_strike_pnl": {
+          "5000": 0.0,
+          "5100": 0.0,
+          "5200": 0.0,
+          "5300": 62.0,
+          "5400": 0.0,
+          "5500": 0.0
+        },
+        "per_strike_diagnostics": {
+          "5000": {
+            "n_round_trips": 0,
+            "n_fills": 0,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": null,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 0,
+            "n_untagged": 0
+          },
+          "5100": {
+            "n_round_trips": 0,
+            "n_fills": 0,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": null,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 0,
+            "n_untagged": 0
+          },
+          "5200": {
+            "n_round_trips": 0,
+            "n_fills": 0,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": null,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 0,
+            "n_untagged": 0
+          },
+          "5300": {
+            "n_round_trips": 0,
+            "n_fills": 2,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": 0.5,
+            "passive_fill_capture": 2,
+            "n_passive": 1,
+            "n_aggressive": 1,
+            "n_untagged": 0
+          },
+          "5400": {
+            "n_round_trips": 0,
+            "n_fills": 0,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": null,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 0,
+            "n_untagged": 0
+          },
+          "5500": {
+            "n_round_trips": 0,
+            "n_fills": 0,
+            "hit_rate": null,
+            "avg_rt_pnl_per_share": null,
+            "avg_residual_capture": null,
+            "avg_spread_paid": null,
+            "capture_to_cost": null,
+            "passive_fill_rate": null,
+            "passive_fill_capture": null,
+            "n_passive": 0,
+            "n_aggressive": 0,
+            "n_untagged": 0
+          }
+        }
+      }
+    },
+    "summary": {
+      "mean_pnl": 20.666666666666668,
+      "stdev_pnl": 35.795716689756794,
+      "trades_total": 2,
+      "trades_per_day": 0.6666666666666666,
+      "per_day_pnl": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 62.0
+      },
+      "per_strike_fills_3d": {
+        "5000": 0,
+        "5100": 0,
+        "5200": 0,
+        "5300": 6,
+        "5400": 0,
+        "5500": 0
+      },
+      "per_strike_pnl_3d": {
+        "5000": 0.0,
+        "5100": 0.0,
+        "5200": 0.0,
+        "5300": 62.0,
+        "5400": 0.0,
+        "5500": 0.0
+      },
+      "per_strike_n_rt_3d": {
+        "5000": 0,
+        "5100": 0,
+        "5200": 0,
+        "5300": 0,
+        "5400": 0,
+        "5500": 0
+      },
+      "per_strike_avg_rt_pnl_per_share": {
+        "5000": null,
+        "5100": null,
+        "5200": null,
+        "5300": null,
+        "5400": null,
+        "5500": null
+      },
+      "per_strike_avg_capture_to_cost": {
+        "5000": null,
+        "5100": null,
+        "5200": null,
+        "5300": null,
+        "5400": null,
+        "5500": null
+      }
+    }
+  }
+]
