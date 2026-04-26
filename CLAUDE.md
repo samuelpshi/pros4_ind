@@ -88,7 +88,7 @@ IMC-Prosperity-2026-personal/
 ├── R1/                                           ← R1 archive (complete, inactive)
 ├── R2/                                           ← R2 archive (complete, inactive)
 │   └── [structure mirrors R1 where applicable]
-└── Round 3/                                      ← ACTIVE
+└── R3/                                          ← ACTIVE (directory is `R3/`, not `Round 3/`)
     ├── R3_wiki.html                              ← IMC R3 round brief
     ├── FH_trader.py                              ← Frankfurt Hedgehogs reference (DO NOT EDIT)
     ├── R3_INVESTIGATION_CHECKLIST.md             ← synthesis of P3 voucher writeups
@@ -99,19 +99,32 @@ IMC-Prosperity-2026-personal/
     │   ├── trades_round_3_day_0.csv
     │   ├── trades_round_3_day_1.csv
     │   └── trades_round_3_day_2.csv
-    ├── analysis/                                 ← EDA notebooks (created by agents)
+    ├── analysis/                                 ← EDA notebooks + Phase 2 sweeps/audits
     │   ├── 01_underlying_eda.ipynb
     │   ├── 02_voucher_market_structure.ipynb
     │   ├── 03_iv_smile_analysis.ipynb
     │   ├── 04_signal_validation_and_fh_features.ipynb
-    │   ├── agent_logs/                           ← per-agent work logs
+    │   ├── 05_sweep_v1_5_heatmaps.ipynb          ← Phase 2 sweep visualizations
+    │   ├── _build_n4.py                          ← helper for N4 notebook build
+    │   ├── sweep_v1_5.py                         ← Phase 2 parameter sweep driver
+    │   ├── sweep_v1_5.log                        ← sweep stdout log
+    │   ├── sweep_v1_5_results.json               ← sweep results (machine-readable)
+    │   ├── diagnostics_v1_5.py                   ← v1.5 diagnostic script
+    │   ├── trader_audit_v1.md                    ← code audit of v1 traders
+    │   ├── imc_vs_local_divergence.md            ← IMC site vs local backtester divergence notes
+    │   ├── agent_logs/                           ← per-agent work logs (N1-N4, P2_*)
+    │   ├── cache/                                ← intermediate computed artifacts
+    │   ├── figures_n1-4/                         ← exported plots from EDA notebooks
     │   ├── backtest_results.csv                  ← machine-readable backtest log (append-only)
     │   └── backtest_results.md                   ← human-readable backtest commentary
     ├── traders/                                  ← naming: trader-r3-v<N>-<suffix>.py
-    │   └── (created after EDA)
-    ├── docs/
-    │   └── r3_product_mechanics.md               ← extracted from R3_wiki.html
-    └── logs/
+    │   ├── trader-r3-v1-hydrogel.py              ← HYDROGEL_PACK delta-1 strategy
+    │   ├── trader-r3-v1-vev.py                   ← VEV voucher baseline
+    │   ├── trader-r3-v1-vev-v1.{1,2,3,4,5}*.py   ← VEV iteration variants
+    │   └── configs/                              ← JSON config sidecars (loaded via pathlib)
+    ├── logs/                                     ← trader run logs (e.g. trader-r3-v1-hydrogel.log)
+    └── docs/
+        └── r3_product_mechanics.md               ← extracted from R3_wiki.html (if present)
 ```
 
 ## Data Format Reference
@@ -139,6 +152,7 @@ IMC-Prosperity-2026-personal/
 7. **No silent error handling.** Wrap try/except only with documented reason.
 8. **R3-specific — always know your net delta.** Even if not hedging every tick, compute and log net portfolio delta from voucher positions. FH skipped explicit hedging because their TTE=3d positions had small delta; our TTE=5d positions will be larger.
 9. **R3-specific — replicate before improving.** For each FH feature (hardcoded smile, wall mid signal, EMA demeaning, switch gate, strike segmentation), backtest the FH version first as a baseline, then test variations.
+10. **NEVER use `import os` in trader files.** This is a HARD constraint: the IMC submission filter rejects any code matching the regex `import\s*os` with `Code submitted contains malicious statements`. **Also avoid `from os import ...`** for the same reason — the safe convention is to never reference the `os` module at all in trader code. For environment-style configuration, read JSON or text files via the built-in `open()` and resolve paths via `pathlib.Path(__file__).parent / ...`; inline the submission-time config as a module-level dict so the uploaded `.py` is self-contained even if the JSON sidecar is absent. Day inference uses a `_current_day.txt` sidecar via `pathlib` (see `R3/traders/trader-r3-v1-vev-v1.4.py` lines 76–93). Pattern first documented in `R3/analysis/agent_logs/P2_v1_hydrogel_log.md` (2026-04-26 entry).
 
 ## Position-Limit Rules (confirmed from IMC docs)
 
