@@ -1,0 +1,106 @@
+=== #3 Microprice-based edge per fill, per trader ===
+            n  edge_mid_5k_per_fill  edge_micro_5k_per_fill  edge_close_per_fill
+trader                                                                          
+Mark 67   165                 10.58                   10.35               165.22
+Mark 14  2172                 22.94                   22.88                19.43
+Mark 01  1843                  5.58                    5.56                 5.48
+Mark 22  1584                 -2.33                   -2.33               -10.98
+Mark 55  1198                -11.05                  -10.92               -11.02
+Mark 38  1478                -29.56                  -29.55               -22.75
+Mark 49   122                 -9.75                   -9.34              -125.79
+
+Difference (micro - mid) per fill:
+trader
+Mark 67   -0.23
+Mark 14   -0.06
+Mark 01   -0.02
+Mark 22    0.00
+Mark 55    0.13
+Mark 38    0.01
+Mark 49    0.41
+
+=== #10 Mark 67 inter-arrival pacing on VELVETFRUIT ===
+Mean inter-arrival (ts): 18033, median: 13300, p10: 2030, p90: 38680
+
+Forward edge by pacing bucket:
+             n    avg_dt  fwd_5k_ret  fwd_close_ret   qty
+pace_q                                                   
+compressed  54   3624.07        2.59          20.30  8.98
+normal      54  12872.22        0.56          14.53  9.61
+slow        54  37603.70        2.39          19.59  8.87
+
+=== Mark 49 inter-arrival pacing on VELVETFRUIT ===
+             n    avg_dt  fwd_close_ret    qty
+pace_q                                        
+compressed  34   4614.71          13.76   9.50
+normal      34  20761.76          15.51  10.41
+slow        34  59205.88          17.71  10.88
+
+=== #11 Pre-jump trader composition (3-sigma jumps in VELVETFRUIT) ===
+
+-- VELVETFRUIT_EXTRACT --
+  day 1 ts=727400 | jump UP +24.0 (sigma=7.04) | pre-window n_trades=9 | net flow: Mark 55+15, Mark 49-13, Mark 67+13, Mark 14-10, Mark 01-5
+  day 1 ts=727500 | jump UP +23.5 (sigma=7.04) | pre-window n_trades=9 | net flow: Mark 55+15, Mark 49-13, Mark 67+13, Mark 14-10, Mark 01-5
+  day 1 ts=729100 | jump UP +23.0 (sigma=7.04) | pre-window n_trades=10 | net flow: Mark 55+20, Mark 14-15, Mark 49-13, Mark 67+13, Mark 01-5
+  day 1 ts=939200 | jump DOWN -23.0 (sigma=7.04) | pre-window n_trades=5 | net flow: Mark 55-22, Mark 01+12, Mark 14+10
+  day 1 ts=939100 | jump DOWN -23.0 (sigma=7.04) | pre-window n_trades=5 | net flow: Mark 55-22, Mark 01+12, Mark 14+10
+  day 2 ts=594600 | jump UP +26.0 (sigma=6.31) | pre-window n_trades=7 | net flow: Mark 14+12, Mark 55-9, Mark 01-3
+  day 2 ts=594500 | jump UP +26.0 (sigma=6.31) | pre-window n_trades=7 | net flow: Mark 14+12, Mark 55-9, Mark 01-3
+  day 2 ts=594700 | jump UP +24.0 (sigma=6.31) | pre-window n_trades=7 | net flow: Mark 14+12, Mark 55-9, Mark 01-3
+  day 2 ts=594400 | jump UP +24.0 (sigma=6.31) | pre-window n_trades=7 | net flow: Mark 14+12, Mark 55-9, Mark 01-3
+  day 2 ts=596000 | jump UP +23.0 (sigma=6.31) | pre-window n_trades=7 | net flow: Mark 14+12, Mark 55-9, Mark 01-3
+  day 3 ts=37300 | jump DOWN -24.5 (sigma=6.74) | pre-window n_trades=7 | net flow: Mark 14+10, Mark 55-8, Mark 22-7, Mark 67+7, Mark 01-2
+  day 3 ts=38100 | jump DOWN -24.0 (sigma=6.74) | pre-window n_trades=7 | net flow: Mark 14+10, Mark 55-8, Mark 22-7, Mark 67+7, Mark 01-2
+  day 3 ts=36900 | jump DOWN -23.5 (sigma=6.74) | pre-window n_trades=8 | net flow: Mark 55-13, Mark 14+10, Mark 22-7, Mark 67+7, Mark 01+3
+  day 3 ts=37700 | jump DOWN -23.0 (sigma=6.74) | pre-window n_trades=7 | net flow: Mark 14+10, Mark 55-8, Mark 22-7, Mark 67+7, Mark 01-2
+  day 3 ts=36800 | jump DOWN -23.0 (sigma=6.74) | pre-window n_trades=8 | net flow: Mark 55-13, Mark 14+10, Mark 22-7, Mark 67+7, Mark 01+3
+
+-- HYDROGEL_PACK --
+  day 1 ts=259100 | jump UP +41.0 (sigma=13.24) | pre-window n_trades=10 | net flow: Mark 14+5, Mark 38-5
+  day 2 ts=292700 | jump UP +45.0 (sigma=12.98) | pre-window n_trades=14 | net flow: Mark 14-27, Mark 38+27
+  day 2 ts=293100 | jump UP +44.0 (sigma=12.98) | pre-window n_trades=14 | net flow: Mark 14-28, Mark 38+28
+  day 2 ts=292500 | jump UP +43.0 (sigma=12.98) | pre-window n_trades=14 | net flow: Mark 14-27, Mark 38+27
+  day 2 ts=293000 | jump UP +43.0 (sigma=12.98) | pre-window n_trades=14 | net flow: Mark 14-28, Mark 38+28
+  day 2 ts=292900 | jump UP +43.0 (sigma=12.98) | pre-window n_trades=15 | net flow: Mark 14-33, Mark 38+33
+  day 3 ts=232800 | jump UP +44.0 (sigma=12.91) | pre-window n_trades=8 | net flow: Mark 14+3, Mark 22-3, Mark 38+0
+  day 3 ts=222100 | jump DOWN -43.0 (sigma=12.91) | pre-window n_trades=12 | net flow: Mark 14+31, Mark 38-28, Mark 22-3
+  day 3 ts=222200 | jump DOWN -43.0 (sigma=12.91) | pre-window n_trades=12 | net flow: Mark 14+31, Mark 38-28, Mark 22-3
+  day 3 ts=232900 | jump UP +42.5 (sigma=12.91) | pre-window n_trades=8 | net flow: Mark 14+3, Mark 22-3, Mark 38+0
+  day 3 ts=222300 | jump DOWN -42.0 (sigma=12.91) | pre-window n_trades=11 | net flow: Mark 14+26, Mark 38-23, Mark 22-3
+
+=== #12 Cross-day stability ranking — per (trader, symbol) edge_close per unit ===
+
+Stable POSITIVE-edge cells (winning every day, |total_qty| >= 30):
+ trader              symbol     1     2     3  mean  total_qty
+Mark 14            VEV_4000 11.14 10.52 10.10 10.59        870
+Mark 14       HYDROGEL_PACK 10.19  0.88  6.26  5.77       4022
+Mark 14 VELVETFRUIT_EXTRACT  3.51  0.06  2.33  1.97       3524
+Mark 01 VELVETFRUIT_EXTRACT  2.73  1.28  0.72  1.58       2792
+Mark 01            VEV_6000  0.50  0.50  0.50  0.50       1105
+Mark 01            VEV_6500  0.50  0.50  0.50  0.50       1105
+
+Stable NEGATIVE-edge cells (losing every day):
+ trader              symbol      1      2      3   mean  total_qty
+Mark 38            VEV_4000 -11.01 -10.52 -10.04 -10.52        876
+Mark 38       HYDROGEL_PACK  -9.94  -0.91  -6.22  -5.69       4096
+Mark 55 VELVETFRUIT_EXTRACT  -3.12  -1.09  -1.91  -2.04       6551
+Mark 22            VEV_6000  -0.50  -0.50  -0.50  -0.50       1105
+Mark 22            VEV_6500  -0.50  -0.50  -0.50  -0.50       1105
+
+UNSTABLE cells (sign flipped across days), top by |mean|:
+ trader              symbol      1      2     3   mean   std  total_qty
+Mark 22            VEV_5200 -15.91 -36.31  1.50 -16.91 18.92        162
+Mark 14            VEV_5200  15.93  36.31 -4.07  16.06 20.19        122
+Mark 67 VELVETFRUIT_EXTRACT  17.42  38.42 -8.41  15.81 23.46       1510
+Mark 49 VELVETFRUIT_EXTRACT -12.37 -31.92  9.28 -11.67 20.61       1186
+Mark 22 VELVETFRUIT_EXTRACT -12.46 -22.74  3.85 -10.45 13.41        843
+Mark 01            VEV_5300   8.51  14.57 -3.33   6.58  9.11        439
+Mark 22            VEV_5300  -7.79 -14.78  3.49  -6.36  9.22        548
+Mark 01            VEV_5200    NaN    NaN  4.56   4.56   NaN         34
+Mark 14            VEV_5300   3.47  15.18 -5.13   4.51 10.19        105
+Mark 01            VEV_5400   2.43   7.20 -2.05   2.53  4.62        911
+Mark 22            VEV_5400  -2.14  -7.14  2.14  -2.38  4.64        959
+Mark 22       HYDROGEL_PACK -10.72   2.09  4.29  -1.45  8.11         74
+Mark 01            VEV_5500   0.55   2.23 -0.13   0.88  1.22       1042
+Mark 22            VEV_5500  -0.51  -2.20  0.13  -0.86  1.20       1069
+Mark 14            VEV_5400  -1.95   4.71 -3.64  -0.29  4.42         48
