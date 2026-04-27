@@ -1,0 +1,25 @@
+trader,counterparty,edge_close_sum,n_fills
+Mark 01,Mark 22,5734.0,1339
+Mark 01,Mark 55,4366.5,504
+Mark 14,Mark 22,1643.5,83
+Mark 14,Mark 38,33656.0,1442
+Mark 14,Mark 55,6906.0,647
+Mark 22,Mark 01,-5734.0,1339
+Mark 22,Mark 14,-1643.5,83
+Mark 22,Mark 38,-34.0,36
+Mark 22,Mark 49,377.0,19
+Mark 22,Mark 55,1019.5,32
+Mark 22,Mark 67,-11380.0,75
+Mark 38,Mark 14,-33656.0,1442
+Mark 38,Mark 22,34.0,36
+Mark 49,Mark 22,-377.0,19
+Mark 49,Mark 55,921.0,14
+Mark 49,Mark 67,-15890.0,89
+Mark 55,Mark 01,-4366.5,504
+Mark 55,Mark 14,-6906.0,647
+Mark 55,Mark 22,-1019.5,32
+Mark 55,Mark 49,-921.0,14
+Mark 55,Mark 67,9.0,1
+Mark 67,Mark 22,11380.0,75
+Mark 67,Mark 49,15890.0,89
+Mark 67,Mark 55,-9.0,1

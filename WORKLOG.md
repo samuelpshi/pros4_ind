@@ -1,4 +1,163 @@
-# R3 WORKLOG
+# R3 + R4 WORKLOG
+
+## 2026-04-26 — R4 Part 3 probes + v1 M67 sweep + v2 combined trader (HYDROGEL added)
+
+### What we did
+
+Wrapped up the R4 counterparty-analysis "sophisticated probes" series and shipped
+the first follower trader. Ran `R4/analysis/counterparty/sophisticated2.py`
+covering four probes (#3 microprice edge, #10 M67 inter-arrival pacing,
+#11 pre-jump trader composition, #12 cross-day stability ranking). Wrote up
+results in `R4/analysis/counterparty/FINDINGS_PART3.md` and amended the
+implementation playbook in `R4/analysis/counterparty/FH_OLIVIA_BLUEPRINT.md`
+(new §8 with five subsections updating the trader plan).
+
+Verified strip-trade mechanics empirically by hand against `prices_round_4_day_1.csv`:
+the original blueprint's "lift Mark 22's ask" plan was based on a misread —
+actual mechanic is Mark 22 *hits* Mark 01's resting bid at price 0 on
+VEV_6000/6500, so we'd queue behind Mark 01 and rarely fill. Updated §8.3 of
+the blueprint to reflect this and demoted strip from priority #1 to a free
+side-leg (passive 0-bid).
+
+Coded `trader-r4-v1-velvetfruit-follow67.py` (Mark 67 follower with reactive
+lift + persistent skewed MM + Mark 55 jump overlay + Mark 49 weak counter +
+passive 0-bid strip leg). Backtested on full round4 dataset (3 days). Ran
+five tuning variants v1.1–v1.5 sweeping target size, reactive window,
+realised-edge gate, and MM on/off. Recorded all six runs in
+`R4/analysis/backtest_results.md`.
+
+### Findings
+
+**Part 3 sophisticated probes (`FINDINGS_PART3.md`):**
+
+- **Mark 67's per-unit close-edge on VFX is NOT stationary**: +$17/u (D1),
+  +$38/u (D2), **−$8/u (D3)**. Cross-day stability ranking puts him in the
+  unstable bucket. Headline +$165/fill from FINDINGS.md was D1+D2 dominated.
+  → forced down-weighting in trader implementation.
+- **Mark 01 ↔ Mark 22 strip is mechanical, not exploitable as front-runner**:
+  all 634 fills (317 each on VEV_6000 and VEV_6500) print at price exactly
+  $0.00 with day_close $0.50 → +$0.50/u for Mark 01 every time. But the
+  L1 book has bid=0 (vol 14-30) and ask=1 (vol 18-30); Mark 22's small
+  dumps (2-5 lots) hit Mark 01's resting bid. We can't beat M01's queue
+  position by joining the bid at 0, so this is at best a passive freebie.
+- **Mark 55 surfaced as low-confidence VFX jump front-runner**: correct side
+  of 4 of 5 3σ jump events on VFX, despite overall bleed of −$2/u. n=5 is
+  too small to size aggressively; added as overlay only when M67 silent.
+- **Microprice edge probe (#3) negative**: |micro − mid| ≤ $0.41/fill across
+  all traders. Drop microprice from feature pipeline.
+- **M67 inter-arrival pacing probe (#10) negative**: forward edge flat across
+  compressed/normal/slow buckets (~14-20 SeaShells in all three). No pacing
+  signal.
+
+**Trader v1 sweep (6 variants, all from `R4/traders/`):**
+
+| Variant | Total PnL (3 days) | D1 / D2 / D3 | Note |
+|---------|---------------------|---------------|------|
+| v1 baseline | +3,484 | +2230 / +3759 / −2505 | Reference |
+| v1.1 + edge gate | +3,275 | +2230 / +3714 / −2669 | Gate too late within a day |
+| v1.2 wider window 5000 | +3,138 | +2246 / +3561 / −2669 | Marginal |
+| v1.3 bigger target ±100/200 | +2,332 | +2119 / +3231 / −3018 | Counter-intuitive: HURTS |
+| **v1.4 tighter target ±30/60** | **+3,559** | +2246 / +3550 / −2237 | **WINNER** |
+| v1.5 no MM legs | +1,341 | +1290 / +1941 / −1890 | MM contributed ~$2k |
+
+Mean PnL v1.4 = $1,186/day, std ≈ $3,000, mean/std = 0.40. Still well below
+"straight-line-up" hard rule #3 standard — the D3 loss is structural to the
+M67 signal, not a tuning bug. Further parameter optimization plateaus here.
+
+**v2 combined trader (M67 + HYDROGEL_PACK + strip):**
+
+| Day | Total | HYDROGEL | VFX | Own trades |
+|-----|-------|----------|-----|------------|
+| 1   | +7,244 | +4,998 | +2,246 | 21 |
+| 2   | +5,269 | +1,719 | +3,550 | 100 |
+| 3   | −2,358 | −121 | −2,237 | 40 |
+| **Total** | **+10,155** | +6,596 | +3,559 | 161 |
+
+v2 = v1.4's M67 leg verbatim + R3's `trader-r3-v1-hydrogel.py` ported verbatim
+(EMA-50 fair value, take_edge 4, quote_offset 3, passive_size 30, skew 1.0).
+VEV_4000 intentionally NOT traded (Mark 14 captures spread there, defensive
+avoidance per FH_OLIVIA_BLUEPRINT §8). Strip leg still $0 (Mark 01 queue
+priority blocks fills, as predicted).
+
+Mean = $3,385/day, std = $5,071, **mean/std = 0.67** (1.7× v1.4's 0.40).
+HYDROGEL contributed 65% of total PnL across 3 days. Critically, HYDROGEL was
+near-zero on D3 (−$121), diluting the M67 D3 risk. v2 is the production
+candidate.
+
+### Files touched
+
+New / authored this session:
+
+- `R4/analysis/counterparty/FINDINGS_PART3.md`
+- `R4/analysis/counterparty/sophisticated2.out` (captured stdout)
+- `R4/traders/trader-r4-v1-velvetfruit-follow67.py`
+- `R4/traders/trader-r4-v1.1-edge-gated.py`
+- `R4/traders/trader-r4-v1.2-wider-window.py`
+- `R4/traders/trader-r4-v1.3-bigger-target.py`
+- `R4/traders/trader-r4-v1.4-tighter-target.py`
+- `R4/traders/trader-r4-v1.5-no-mm.py`
+- `R4/traders/trader-r4-v2-combined.py` (M67 + HYDROGEL + strip)
+- `R4/analysis/backtest_results.md` (new file for R4)
+
+Modified:
+
+- `R4/analysis/counterparty/FH_OLIVIA_BLUEPRINT.md` (added §8 amendments
+  reflecting Part 3 results: §8.1 down-weight M67, §8.2 add M55 overlay,
+  §8.3 verify strip mechanics + downgrade, §8.4 drop microprice/pacing,
+  §8.5 revised priority order).
+
+### Next session starts with
+
+**v2 is the production candidate** ($10,155 total / 3 days, mean $3,385,
+mean/std 0.67). Two directions to consider:
+
+1. **v2.1 — cautious VEV_4000 participation**: currently avoided defensively.
+   Could try posting passive quotes inside Mark 14's spread on VEV_4000 (no
+   crossing). Risk: we become Mark 38 (the patsy losing $-10.52/u every day)
+   if we miscalibrate. Test would be a quick join-the-spread-only quoter,
+   reverted if mean PnL drops on any day.
+2. **v3 — voucher BS pricing**: bigger build. The 9 VEV strikes (4500,
+   5000, 5100, 5200, 5300, 5400, 5500, 6000, 6500) we don't trade actively
+   may have edge from BS-pricing residuals. Requires a smile fit + delta
+   hedging — significant work. Best done as a separate side trader rather
+   than bolted onto v2.
+
+Recommendation: ship v2 as-is, mark it as the R4 baseline, and decide v2.1
+vs v3 based on remaining time before R4 close.
+
+### Suggested commit message
+
+```
+R4 v2 combined trader: M67 follower + HYDROGEL_PACK MM = $10,155 / 3 days
+
+Three-part progress:
+
+1. Sophisticated probes round 2 (FINDINGS_PART3.md). Mark 67's
+   per-unit edge on VELVETFRUIT is NOT stationary across days
+   (+$17/+$38/-$8), forcing target down-weighting. Mark 01/22 strip
+   cannot be front-run (Mark 01 queue priority on the price-0 bid).
+   Mark 55 surfaced as low-confidence VFX jump front-runner (4/5
+   correct on 3-sigma jumps).
+
+2. v1 family sweep (6 variants of the M67 follower). Best is v1.4
+   (tighter target +/-30/+/-60) at +3,559 across 3 days, mean/std
+   0.40. Bigger target HURTS, MM legs contribute net positive, gate
+   too late within a day.
+
+3. v2 combined trader (M67 verbatim + HYDROGEL_PACK from R3 ported
+   verbatim + strip). +10,155 across 3 days, mean $3,385, std
+   $5,071, mean/std 0.67. HYDROGEL_PACK contributes 65% of PnL and
+   critically dilutes M67 D3 risk (HG flat on D3 at -$121).
+   VEV_4000 intentionally not traded (Mark 14 dominates). Strip
+   captures $0 as predicted.
+
+v2 is the R4 production candidate.
+
+Adds FINDINGS_PART3.md, FH_OLIVIA_BLUEPRINT.md §8 amendments,
+R4/analysis/backtest_results.md, 7 trader files in R4/traders/.
+```
+
+---
 
 ## 2026-04-25 — Phase 1 EDA complete (N1-N4, parallel notebooks)
 
